@@ -14,7 +14,7 @@ UUC　　Unusable capacity
 RUC　　Remaining usable capacity    
 SoC　　State of charge    
 OCV　　Open circuit voltage
-
+<!--more-->
 SOC=(RC-CC-UUC)/(FCC-UUC)
 RUC=RC-CC-UUC
 ##电池电量决定因素
