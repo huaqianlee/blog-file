@@ -24,7 +24,11 @@ Who am I ? I don't know either. just: 爱生活，爱Android；爱编程，爱�
 SUMMARY
 -------
 
-　　祖籍四川达州，現居深圳，平时主要使用Ubuntu与windows操作系统。热爱技术热爱开源，为Linux、Android而着迷。时常关注一些新技术，关注开源项目，并喜欢贡献自己一份力量。目前为止主要从事底层及系统级工作，对app及web很感兴趣，乐于花几乎所有业余时间在英语、Android等学习上面。
+　　祖籍四川达州，現居深圳，现主要使用Ubuntu与windows操作系统。热爱技术热爱开源，为Linux、Android而着迷。时常关注一些新技术，关注开源项目，并喜欢贡献自己一份力量。目前为止主要从事底层及系统级工作，对app及web很感兴趣，乐于花几乎所有业余时间在英语、Android等学习上面。
+
+HOBBY
+-------
+Basketball、walk、cycle；music、movie、American dramas,all cool things.
 
 INTRODUCTION
 ------------------
