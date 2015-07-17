@@ -70,11 +70,12 @@ struct pc_temp_ocv_lut {
 ```
 
 ##calculate percentcharge  function
-
+```bash
 int linear_interpolate(int y0, int x0, int y1, int x1, int x)
 	if (y0 == y1 || x == x0)	return y0;
 	if (x1 == x0 || x == x1)	return y1;
 	return y0 + ((y1 - y0) * (x - x0) / (x1 - x0));
+```
 ##驱动分析
 
 ###关键函数： 
