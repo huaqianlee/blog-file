@@ -3,7 +3,7 @@ date: 2014-12-21 20:10:01
 categories: Linux
 tags: shell
 ---
-　　或许我是一个geek范的人，又或许是想显得很有逼格， whatever， 反正我就喜欢Linux的命令行，喜欢黑黑的geek风，这样完全体现出了技术的酷炫。现将一些自己觉得很有用能让自己显得很牛的装X快捷键和指令总结如下，其中有一部分相当有用，使用后逼格瞬间提升。
+　　或许我是一个geek范的人，又或许是想显得很有逼格， whatever， 反正我就喜欢Linux的命令行，喜欢黑黑的geek风，这样完全体现出了技术的酷炫。现将一些自己觉得很有用能让自己显得很牛的装X快捷键和指令总结如下，其中有一部分相当有用，使用后逼格瞬间提升，不信看文章最后的后记。
 
 ##Shell终端常用快捷键
 　　当进行命令行操作时，使用快捷键将极大提高工作效率，如下：
@@ -43,8 +43,9 @@ ethtool eth0            #如果要查看某个网络接口的详细信息，例�
 ```
 
 ###系统相关命令
+
+####内核相关命令
 ```bash
-#内核相关命令
 uname -a                #查看版本当前操作系统内核信息）
 cat /proc/version       #查看当前操作系统版本信息
 cat /etc/issue          #查看版本当前操作系统发行版信息
@@ -52,8 +53,10 @@ cat /etc/redhat-release #同上
 cat /etc/SuSE-release   #suse系统下才可使用
 lsb_release -a          #用来查看linux兼容性的发行版信息
 lsmod                   #列出加载的内核模块
+```
 
-#网络常用命令
+####网络常用命令
+```bash
 ifconfig                #查看所有网络接口的属性
 iptables -L             #查看防火墙设置
 service iptables status #查看防火墙状态
@@ -65,8 +68,9 @@ netstat -s              #查看网络统计信息进程
 netstat -at             #列出所有tcp端口
 netstat -au             #列出所有udp端口
 netstat -lt             #只列出所有监听tcp端口
-
-#管理常用命令
+```
+####管理常用命令
+```bash
 top                     #查看系统所有进程的详细信息，比如CPU、内存等,信息很多！
 df -lh                  #查看硬盘大小及使用率
 mount                   #挂接远程目录、NFS、本地共享目录到linux下
@@ -83,8 +87,10 @@ rpm -qa                 #查看所有安装的软件包
 uptime                  #查看系统运行时间、用户数、负载    
 /sbin/chkconfig --list  #查看系统自动启动列表
 /sbin/chkconfig　–add　mysql #把MySQL添加到系统的启动服务组里面
+```
 
-#文件操作常用命令
+####文件操作常用命令
+```bash
 ranger               #文件浏览系统，需要先安装ranger，超级方便，用了就知道
 ls -lht                 #列出一个文件夹下所有文件及大小、访问权限
 du -sh <dir>            #查看指定目录的大小 
@@ -92,8 +98,10 @@ du -lh <dir>            #查看指定目录及各文件的大小
 ln -s                   #建立软链接
 ls -lh                  #以M为单位显示文件大小，去掉h，则单位为k
 du -skh  file        #以M为单位显示文件大小 
+```
 
-#进程相关命令
+####进程相关命令
+```bash
 htop                      #在终端以列表形式查看进程，需要安装htop，比ps好看好用太多了
 pstree -p pid           #查看一个进程下的所有线程
 pstree  -a              #显示所有进程的所有详细信息，遇到相同的进程名可以压缩显示。
@@ -103,14 +111,19 @@ kill all test           #杀死进程
 kill -9 `pgrep test`    #杀死进程
 ./test.sh &             #使程序在后台运行
 nohup ./test.sh &       #使程序在后台运行
+```
 
-压缩解压缩 
+####压缩解压缩 
+```bash
 zip -r dir.zip dir file  #将目录dir、文件file等压缩到zip包,
 zip -re dir.zip dir file #创建zip包，且加密
 unzip dir.zip            #解压
 tar -zcvf dir.tar.gz dir file    #将目录dir、文件file等压缩到tar包
 tar -xf dir.tar.gz       #解压
+```
 
+####screen命令
+```bash
 #screen命令，screen命令运行的服务不受shell终端影响，即使shell终端关闭仍存在
 screen -S test          #创建一个名字为test的screen
 screen -r test          #打开名字为test的screen
@@ -119,8 +132,10 @@ screen -ls              #列出所有的screen
 ctrl + a,d              #当在一个screen时，退出screen
 ctrl + a,n              #当在一个screen时，切换到下一个窗口
 ctrl + a,c              #当在一个screen时，创建一个新的窗口
+```
 
-#远程拷贝
+####远程拷贝
+```bash
 scp local_file remote_username@remote_ip:remote_dir    #拷贝本地文件到远程机器上
 scp -r local_dir remote_username@remote_ip:remote_dir  #拷贝本地整个目录到远程机器上
 ```

@@ -151,7 +151,8 @@ Lee:还有很多其他定义和语法，这里就不一一分析，不过从变�
 - 该编译类型适合用于最终发布阶段。
 - 安装所有带有 user 标签的模块
 - 安装所有没有标签的非 APK 模块
-- 安装所有产品定义文件中指定的 APK 模块，APK 模块的标签将被忽略　
+- 安装所有产品定义文件中指定的 APK 模块，APK 模块的标签将被忽略
+
 ####userdebug
 该编译类型适合用于debug阶段。该类型和user一样，另：
 - 会安装包含debug标签的模块
@@ -161,12 +162,12 @@ Lee:还有很多其他定义和语法，这里就不一一分析，不过从变�
 　
 　　除此以外，Build 系统中还定义了一些便捷的函数以便在 Android.mk 中使用，如下：
 ```bash
-\$(call my-dir)：获取当前文件夹路径。
-\$(call all-java-files-under, <src>)：获取指定目录下的所有 Java 文件。
-\$(call all-c-files-under, <src>)：获取指定目录下的所有 C 语言文件。
-\$(call all-Iaidl-files-under, <src>) ：获取指定目录下的所有 AIDL 文件。
-\$(call all-makefiles-under, <folder>)：获取指定目录下的所有 Make 文件。
-\$(call intermediates-dir-for, <class>, <app_name>, <host or target>, <common?> )：获取 Build 输出的目标文件夹路径。
+$(call my-dir)：获取当前文件夹路径。
+$(call all-java-files-under, <src>)：获取指定目录下的所有 Java 文件。
+$(call all-c-files-under, <src>)：获取指定目录下的所有 C 语言文件。
+$(call all-Iaidl-files-under, <src>) ：获取指定目录下的所有 AIDL 文件。
+$(call all-makefiles-under, <folder>)：获取指定目录下的所有 Make 文件。
+$(call intermediates-dir-for, <class>, <app_name>, <host or target>, <common?> )：获取 Build 输出的目标文件夹路径。
 ```
 ###LOCAL_CERTIFICATE 
 　　分析了Android.mk,再来详细说说我之前问题相关的一个属性：LOCAL_CERTIFICATE ，用于指定签名是使用的key，如不指定默认testkey。

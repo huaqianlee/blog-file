@@ -1,7 +1,7 @@
 title: Build person blog with hexo and  github
 date: 2014-10-24 01:12:15
-categories: Tools
-tags: Hexo
+categories: Hexo
+tags: Tools
 ---
 　　基于Hexo和Github的个人博客构建，我参照[hexo你的博客](http://ibruce.info/2013/11/22/hexo-your-blog/)、[hexo官方文档](http://hexo.io/docs/)及[github官方文档](https://help.github.com/articles/set-up-git/)完成了自己的个人blog。通过前段时间学习Android和这些天build自己的github、个人blog，关于学习新东西有一个新的体会，就是官方文档和帮助是最好的资料，虽然是英文的，但是看官方的源文档能提升自己的效率。
 

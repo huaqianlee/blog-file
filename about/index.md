@@ -1,14 +1,14 @@
 layout: About
 title: About Me
 ---
-李 华 乾 | Andy Lee
+李 华 乾 | Andy Lee　
 =============
 
 **Welcome!**
 
 Who am I ? I don't know either. just: 爱生活，爱Android；爱编程，爱技术；Google脑残粉。
 
-- 联系电话: [185-\****-0564](tel://180-\****-0564)
+- 联系电话: [185-\*\*\*\*-0564](tel://180-\*\*\*\*-0564)
 - 电子邮箱: <huaqianlee@gmail.com>
 - 个人博客: [huaqianlee.me](http://huaqianlee.me)
 - Github : [http://github.com/AndyLee-Github](http://github.com/AndyLee-Github)
@@ -24,11 +24,11 @@ Who am I ? I don't know either. just: 爱生活，爱Android；爱编程，爱�
 SUMMARY
 -------
 
-　　祖籍四川达州，現居深圳，现主要使用Ubuntu与windows操作系统。热爱技术热爱开源，为Linux、Android而着迷。时常关注一些新技术，关注开源项目，并喜欢贡献自己一份力量。目前为止主要从事底层及系统级工作，对app及web很感兴趣，乐于花几乎所有业余时间在英语、Android等学习上面。
+祖籍四川达州，現居深圳，现主要使用ubuntu与windows操作系统，正准备切换为ubuntu+Mac os。热爱技术热爱开源，为Linux、Android而着迷。时常关注一些新技术，关注开源项目，并喜欢贡献自己一份力量。目前为止主要从事底层及系统级工作，对app及web很感兴趣，乐于花几乎所有业余时间在英语、Android等学习上面。
 
 HOBBY
 -------
-Basketball、walk、cycle；music、movie、American dramas,all cool things.
+Basketball，Walk，Cycle；Music，Movie，American Dramas；All cool things。
 
 INTRODUCTION
 ------------------
@@ -41,4 +41,4 @@ RESUME
 
 POSTSCRIPT
 ------------------
-　　或许我是一个宅男，成天喜欢和电脑呆在一块，但我也很期待结交一些志同道合的朋友。理想或者说目标是英语能像母语一样溜，用自己的技术做一些自己喜欢并且很cool的东西。我现在还有很长的路要走，如果你愿意指导我或者一起聊聊生活谈谈人生，欢迎联系我，我愿意请你去咖啡厅偷得半日闲暇。
+或许我是一个宅男，成天喜欢和电脑呆在一块，但我也很期待结交一些志同道合的朋友。理想或者说目标是英语能像母语一样溜，用自己的技术做一些自己喜欢并且很cool的东西。我现在还有很长的路要走，如果你愿意指导我或者找我一起聊聊生活谈谈人生，欢迎联系我，我愿意请你去咖啡厅偷得半日闲暇。
