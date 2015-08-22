@@ -1,7 +1,7 @@
 title: "Android不带电量计的电量计算"
 date: 2015-01-21 20:10:01
 categories: Android
-tags: 
+tags: [源码分析,Qualcomm]
 ---
 　　一直比较好奇，Android的电量是怎么计算出来的，今天就借用qualcomm平台的8916芯片研究了一下，因为其不带电量计，所以是通过一个bms系统计算出来的，下面就来详细分析一下计算方法。
 

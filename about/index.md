@@ -4,7 +4,7 @@ title: About Me
 李 华 乾 | Andy Lee　
 =============
 
-**Welcome!**
+**Welcome to my personal homepage !**
 
 Who am I ? I don't know either. just: 爱生活，爱Android；爱编程，爱技术；Google脑残粉。
 
@@ -37,7 +37,7 @@ A boy who wants to make a cool app and to make the world different.
 
 RESUME
 ------------------
-在线简历：[我的简历](../resume.html)
+在线简历：[我的简历(CN)](../resume.html)　or　[我的简历(EN)](../resume.html)
 
 POSTSCRIPT
 ------------------

@@ -1,7 +1,7 @@
 title: "Android中adb(Android Debug Bridge)命令的用法"
 date: 2015-07-19 19:29:58
-categories: [Android,译文]
-tags: Tools
+categories: Android
+tags: [Tools,译文]
 ---
 　　昨天写Android日志系统相关博客时发觉自己对adb命令认知十分不够，所以特意去[http://developer.android.com/tools/help/adb.html](http://developer.android.com/tools/help/adb.html)学习了一下,今天准备按照自己的理解加以修改总结并整理出一篇博文。
 

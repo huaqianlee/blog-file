@@ -92,7 +92,7 @@ git diff --cached   # 比较暂存区和版本库差异
 git diff --stat     # 仅仅比较统计信息
 ```
 
-###分支管理  
+###本地分支管理  
 ```bash
 git branch  #查看本地分支
 git branch  -r    # 查看远程分支

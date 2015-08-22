@@ -1,7 +1,7 @@
 title: "Android编译过程详解之三"
 date: 2015-07-12 16:43:04
 categories: Android
-tags: 编译
+tags: [编译,源码分析,Qualcomm]
 ---
 　　[Android编译过程详解之一](http://huaqianlee.me/2015/07/11/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%B8%80/)
 　　[Android编译过程详解之二](http://huaqianlee.me/2015/07/12/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%BA%8C/)

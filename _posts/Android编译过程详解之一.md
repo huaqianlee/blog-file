@@ -1,7 +1,7 @@
 title: "Android编译过程详解之一"
 date: 2015-07-11 19:43:04
 categories: Android
-tags: 编译
+tags: [编译,源码分析,Qualcomm]
 ---
 **　　Platform Information :
 　　　System:    Ａndroid4.4.4 

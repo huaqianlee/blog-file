@@ -1,7 +1,7 @@
 title: "Android日志系统(logging system)详解"
 date: 2015-07-18 13:43:04
-categories: [Android,译文]
-tags: Log
+categories: Android
+tags: [Log,译文]
 ---
 　　[Android日志系统详解](http://huaqianlee.me/2015/07/18/Android-Logging-system-Android%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3/)
 　　[How to debug with Android logging](http://huaqianlee.me/2015/07/18/%E6%80%8E%E4%B9%88%E7%94%A8Android%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E6%9B%B4%E5%A5%BD%E5%9C%B0%E5%8E%BB%E8%B0%83%E8%AF%95-How-to-debug-with-Android-logging/)
