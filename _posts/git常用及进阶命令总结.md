@@ -11,7 +11,8 @@ tags: Tools
 ##Git配置
 ```bash
 git config --global user.name "huaqianlee"   
-git config --global user.email "huaqianlee@gmail.com"
+git config --global user.email "huaqianlee@gmail.com" 
+  
 git config --global color.ui true
 git config --global alias.co checkout # 配置别名，co 配为checkout 别名， 不过我没用
 git config --global alias.ci commit
@@ -46,7 +47,7 @@ git rm <file> --cached  # 从版本库中删除文件，但不删除文件
 
 ###撤销回退
 ```bash
-git checkout — xx  #撤销xx文件修改
+git checkout -- xx  #撤销xx文件修改
 git checkout .     #撤销工作区修改
 git revert <$id>    # 恢复某次提交的状态，恢复动作本身也创建了一次提交对象
 git revert HEAD     # 恢复最后一次提交的状态
@@ -154,7 +155,7 @@ git push origin :<remote_branch>  #先删除本地分支(git br -d <branch>)，�
 ###远程仓库管理
 ```bash
 git remote  #查看远程库的信息
-git remote –v  #查看远程库的详细信息
+git remote –v  #查看远程库地址和名称
 git remote show origin           # 查看远程服务器仓库状态
 git remote add origin git@github:robbin/robbin_site.git         # 添加远程仓库地址
 git remote set-url origin git@github.com:robbin/robbin_site.git # 设置远程仓库地址(用于修改远程仓库地址)
