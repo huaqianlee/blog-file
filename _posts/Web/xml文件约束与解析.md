@@ -1,6 +1,6 @@
 title: "xml文件约束与解析"
 date: 2015-01-19 23:12:35
-categories: Javaweb
+categories: Web
 tags: [xml]
 ---
 在XML技术里，可以编写一个文档来约束一个XML文档的书写规范，这称之为XML约束,常用的约束技术: 

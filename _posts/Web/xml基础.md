@@ -1,6 +1,6 @@
 title: "xml基础"
 date: 2015-01-18 00:13:28
-categories: Javaweb
+categories: Web
 tags: xml
 ---
 XML 是有w3c组织发布的一种可扩展标记语言(Extensible Markup Language)。

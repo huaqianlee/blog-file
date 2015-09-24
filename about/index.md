@@ -41,9 +41,9 @@ CONTACT ME
 - 联系电话: [185-\*\*\*\*-0564](tel://180-\*\*\*\*-0564)
 - 电子邮箱: <huaqianlee@gmail.com>
 - 个人博客: [huaqianlee.me](http://huaqianlee.me)
-- Github : [http://github.com/AndyLee-Github](http://github.com/AndyLee-Github)
+- Github : [http://github.com/huaqianlee](http://github.com/huaqianlee)
 - 微博： [http://weibo.com/huaqianlee](http://weibo.com/huaqianlee)
-- Twitter：[https://twitter.com/Andylee_sarah](http://weibo.com/huaqianlee)
+- Twitter：[https://twitter.com/Andylee_sarah](https://twitter.com/Andylee_sarah)
 - Facebook：[https://facebook.com/huaqianlee](https://facebook.com/huaqianlee)
 - Google Plus：[https://plus.google.com/u/0/107850537041795428182](https://plus.google.com/u/0/107850537041795428182)
 - stackoverflow：[http://stackoverflow.com/users/4511267/huaqian-lee](http://stackoverflow.com/users/4511267/huaqian-lee)
