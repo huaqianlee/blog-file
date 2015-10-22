@@ -359,5 +359,5 @@ $(3)是一个变量列表
 
 #include $(call all-makefiles-under,$(LOCAL_PATH)) # 导入所有mk文件
 ```
-> 模块mk文件详见Android.mk解析：[Android.mk解析](http://huaqianlee.me/2015/07/12/About-ActivityNotFoundException-Unable-to-find-explicit-activity-class-Android-mk%E8%A7%A3%E6%9E%90/#more)
+> 模块mk文件详见Android.mk解析：[Android.mk解析](http://huaqianlee.me/2015/07/12/Android/About-ActivityNotFoundException-Unable-to-find-explicit-activity-class-Android-mk%E8%A7%A3%E6%9E%90/#more)
 

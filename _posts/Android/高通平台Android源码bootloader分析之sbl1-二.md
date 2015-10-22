@@ -3,9 +3,9 @@ date: 2015-08-15 20:44:46
 categories: Android
 tags: [源码分析,Qualcomm]
 ---
-[高通平台Android源码bootloader分析之sbl1(一)](http://huaqianlee.me/2015/08/15/%E9%AB%98%E9%80%9A%E5%B9%B3%E5%8F%B0Android%E6%BA%90%E7%A0%81bootloader%E5%88%86%E6%9E%90%E4%B9%8Bsbl1-%E4%B8%80/)
-[高通平台Android源码bootloader分析之sbl1(二)](http://huaqianlee.me/2015/08/15/%E9%AB%98%E9%80%9A%E5%B9%B3%E5%8F%B0Android%E6%BA%90%E7%A0%81bootloader%E5%88%86%E6%9E%90%E4%B9%8Bsbl1-%E4%BA%8C/)
-[高通平台Android源码bootloader分析之sbl1(三)](http://huaqianlee.me/2015/08/18/%E9%AB%98%E9%80%9A%E5%B9%B3%E5%8F%B0Android%E6%BA%90%E7%A0%81bootloader%E5%88%86%E6%9E%90%E4%B9%8Bsbl1-%E4%B8%89/)
+[高通平台Android源码bootloader分析之sbl1(一)](http://huaqianlee.me/2015/08/15/Android/%E9%AB%98%E9%80%9A%E5%B9%B3%E5%8F%B0Android%E6%BA%90%E7%A0%81bootloader%E5%88%86%E6%9E%90%E4%B9%8Bsbl1-%E4%B8%80/)
+[高通平台Android源码bootloader分析之sbl1(二)](http://huaqianlee.me/2015/08/15/Android/%E9%AB%98%E9%80%9A%E5%B9%B3%E5%8F%B0Android%E6%BA%90%E7%A0%81bootloader%E5%88%86%E6%9E%90%E4%B9%8Bsbl1-%E4%BA%8C/)
+[高通平台Android源码bootloader分析之sbl1(三)](http://huaqianlee.me/2015/08/18/Android/%E9%AB%98%E9%80%9A%E5%B9%B3%E5%8F%B0Android%E6%BA%90%E7%A0%81bootloader%E5%88%86%E6%9E%90%E4%B9%8Bsbl1-%E4%B8%89/)
 
 
 在上一篇博文中主要描述了启动流程，及代码执行流程，并重点介绍了一下我重点关注的部分。这个sbl部分也算有点庞大，我们没有精力也没有必要去分析全部，所以接下来就来分析一下sbl1中另外几个需要格外关注的部分：

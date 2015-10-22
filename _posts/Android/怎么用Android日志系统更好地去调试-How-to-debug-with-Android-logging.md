@@ -3,12 +3,12 @@ date: 2015-07-18 15:43:04
 categories: Android
 tags: Log
 ---
-　　[Android日志系统详解](http://huaqianlee.me/2015/07/18/Android-Logging-system-Android%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3/)
-　　[How to debug with Android logging](http://huaqianlee.me/2015/07/18/%E6%80%8E%E4%B9%88%E7%94%A8Android%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E6%9B%B4%E5%A5%BD%E5%9C%B0%E5%8E%BB%E8%B0%83%E8%AF%95-How-to-debug-with-Android-logging/)
-　　[怎么抓取Android日志文件](http://huaqianlee.me/2015/07/19/%E6%80%8E%E4%B9%88%E6%8A%93%E5%8F%96Android%E6%B5%8B%E8%AF%95%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6-How-to-get-android-log-file/)
+　　[Android日志系统详解](http://huaqianlee.me/2015/07/18/Android/Android-Logging-system-Android%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3/)
+　　[How to debug with Android logging](http://huaqianlee.me/2015/07/18/Android/%E6%80%8E%E4%B9%88%E7%94%A8Android%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E6%9B%B4%E5%A5%BD%E5%9C%B0%E5%8E%BB%E8%B0%83%E8%AF%95-How-to-debug-with-Android-logging/)
+　　[怎么抓取Android日志文件](http://huaqianlee.me/2015/07/19/Android/%E6%80%8E%E4%B9%88%E6%8A%93%E5%8F%96Android%E6%B5%8B%E8%AF%95%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6-How-to-get-android-log-file/)
 
 
-　　Android logging system为logging系统提供了一个Java类android.util.Log，也提供了一个c/c++的log库，在kernel中有四个设备节点，详细见：[Android日志系统详解](http://huaqianlee.me/2015/07/18/Android-Logging-system-Android%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3/)。其系统架构如下：
+　　Android logging system为logging系统提供了一个Java类android.util.Log，也提供了一个c/c++的log库，在kernel中有四个设备节点，详细见：[Android日志系统详解](http://huaqianlee.me/2015/07/18/Android/Android-Logging-system-Android%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3/)。其系统架构如下：
 　　　![image by simon](http://7xjdax.com1.z0.glb.clouddn.com/blogaplogd.jpg)
 >此图与4.0以上的系统有些差异,新版Android增加了log_system
 

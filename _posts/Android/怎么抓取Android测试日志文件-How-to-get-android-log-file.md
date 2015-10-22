@@ -3,9 +3,9 @@ date: 2015-07-19 11:43:04
 categories: Android
 tags: Log
 ---
-　　[Android日志系统详解](http://huaqianlee.me/2015/07/18/Android-Logging-system-Android%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3/)
-　　[How to debug with Android logging](http://huaqianlee.me/2015/07/18/%E6%80%8E%E4%B9%88%E7%94%A8Android%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E6%9B%B4%E5%A5%BD%E5%9C%B0%E5%8E%BB%E8%B0%83%E8%AF%95-How-to-debug-with-Android-logging/)
-　　[怎么抓取Android日志文件](http://huaqianlee.me/2015/07/19/%E6%80%8E%E4%B9%88%E6%8A%93%E5%8F%96Android%E6%B5%8B%E8%AF%95%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6-How-to-get-android-log-file/)
+　　[Android日志系统详解](http://huaqianlee.me/2015/07/18/Android/Android-Logging-system-Android%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3/)
+　　[How to debug with Android logging](http://huaqianlee.me/2015/07/18/Android/%E6%80%8E%E4%B9%88%E7%94%A8Android%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E6%9B%B4%E5%A5%BD%E5%9C%B0%E5%8E%BB%E8%B0%83%E8%AF%95-How-to-debug-with-Android-logging/)
+　　[怎么抓取Android日志文件](http://huaqianlee.me/2015/07/19/Android/%E6%80%8E%E4%B9%88%E6%8A%93%E5%8F%96Android%E6%B5%8B%E8%AF%95%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6-How-to-get-android-log-file/)
 
 　　前两篇blog分别介绍了Android logging系统及编程时怎么应用，关于kernel中的log系统，前面只是大概提及了一下，下次再详细分析。相信大家都知道调试时需要打开USB调试模式，接下来就分析一下怎么抓取日志文件。
 

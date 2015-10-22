@@ -3,14 +3,14 @@ date: 2015-08-15 20:44:33
 categories: Android
 tags: [源码分析,Qualcomm]
 ---
-[高通平台Android源码bootloader分析之sbl1(一)](http://huaqianlee.me/2015/08/15/%E9%AB%98%E9%80%9A%E5%B9%B3%E5%8F%B0Android%E6%BA%90%E7%A0%81bootloader%E5%88%86%E6%9E%90%E4%B9%8Bsbl1-%E4%B8%80/)
-[高通平台Android源码bootloader分析之sbl1(二)](http://huaqianlee.me/2015/08/15/%E9%AB%98%E9%80%9A%E5%B9%B3%E5%8F%B0Android%E6%BA%90%E7%A0%81bootloader%E5%88%86%E6%9E%90%E4%B9%8Bsbl1-%E4%BA%8C/)
-[高通平台Android源码bootloader分析之sbl1(三)](http://huaqianlee.me/2015/08/18/%E9%AB%98%E9%80%9A%E5%B9%B3%E5%8F%B0Android%E6%BA%90%E7%A0%81bootloader%E5%88%86%E6%9E%90%E4%B9%8Bsbl1-%E4%B8%89/)
+[高通平台Android源码bootloader分析之sbl1(一)](http://huaqianlee.me/2015/08/15/Android/%E9%AB%98%E9%80%9A%E5%B9%B3%E5%8F%B0Android%E6%BA%90%E7%A0%81bootloader%E5%88%86%E6%9E%90%E4%B9%8Bsbl1-%E4%B8%80/)
+[高通平台Android源码bootloader分析之sbl1(二)](http://huaqianlee.me/2015/08/15/Android/%E9%AB%98%E9%80%9A%E5%B9%B3%E5%8F%B0Android%E6%BA%90%E7%A0%81bootloader%E5%88%86%E6%9E%90%E4%B9%8Bsbl1-%E4%BA%8C/)
+[高通平台Android源码bootloader分析之sbl1(三)](http://huaqianlee.me/2015/08/18/Android/%E9%AB%98%E9%80%9A%E5%B9%B3%E5%8F%B0Android%E6%BA%90%E7%A0%81bootloader%E5%88%86%E6%9E%90%E4%B9%8Bsbl1-%E4%B8%89/)
 
 
 
 
-高通8k平台的boot过程搞得比较复杂， 我也是前段时间遇到一些问题深入研究了一下才搞明白。不过虽然弄得很复杂，我们需要动的东西其实很少，modem侧基本就sbl1（全称：Secondary boot loader）的代码需要动一下，ap侧就APPSBL代码需要动（对此部分不了解，可参照：[bootable源码解析](http://huaqianlee.me/2015/07/25/Android%E6%BA%90%E7%A0%81bootable%E8%A7%A3%E6%9E%90%E4%B9%8BLK-bootloader-little-kernel/)），其他的都是高通搞好了的，甚至有些我们看不到代码。今天就要分析一下开机前几秒钟起着关键作用的sbl1， 这套代码在modem侧的boot_images\中。
+高通8k平台的boot过程搞得比较复杂， 我也是前段时间遇到一些问题深入研究了一下才搞明白。不过虽然弄得很复杂，我们需要动的东西其实很少，modem侧基本就sbl1（全称：Secondary boot loader）的代码需要动一下，ap侧就APPSBL代码需要动（对此部分不了解，可参照：[bootable源码解析](http://huaqianlee.me/2015/07/25/Android/Android%E6%BA%90%E7%A0%81bootable%E8%A7%A3%E6%9E%90%E4%B9%8BLK-bootloader-little-kernel/)），其他的都是高通搞好了的，甚至有些我们看不到代码。今天就要分析一下开机前几秒钟起着关键作用的sbl1， 这套代码在modem侧的boot_images\中。
 
 ##启动流程
 首先来看一下高通的bootloader流程框图，主要由ap、RPM及modem三部分构成，由于我工作主要涉及到ap侧，所以对RPM和modem侧代码不了解，以后有空时间的话到可以研究一下，框图如下：
@@ -37,7 +37,7 @@ tags: [源码分析,Qualcomm]
 
 10. 由内核来加载文件系统等完成整个Android系统的启动。
 
->HLOS APPSBL即为ap侧的bootloader，见：[bootable源码解析](http://huaqianlee.me/2015/07/25/Android%E6%BA%90%E7%A0%81bootable%E8%A7%A3%E6%9E%90%E4%B9%8BLK-bootloader-little-kernel/)
+>HLOS APPSBL即为ap侧的bootloader，见：[bootable源码解析](http://huaqianlee.me/2015/07/25/Android/Android%E6%BA%90%E7%A0%81bootable%E8%A7%A3%E6%9E%90%E4%B9%8BLK-bootloader-little-kernel/)
 
 　　
 modem侧主要是射频网络相关的代码，我没有研究过也不了解，RPM侧的代码也没怎么研究，高通文档对其介绍如下：

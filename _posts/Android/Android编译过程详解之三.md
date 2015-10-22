@@ -3,10 +3,10 @@ date: 2015-07-12 16:43:04
 categories: Android
 tags: [编译,源码分析,Qualcomm]
 ---
-　　[Android编译过程详解之一](http://huaqianlee.me/2015/07/11/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%B8%80/)
-　　[Android编译过程详解之二](http://huaqianlee.me/2015/07/12/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%BA%8C/)
-　　[Android编译过程详解之三](http://huaqianlee.me/2015/07/12/Andro%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%B8%89/)
-　　[Android.mk解析](http://huaqianlee.me/2015/07/12/About-ActivityNotFoundException-Unable-to-find-explicit-activity-class-Android-mk%E8%A7%A3%E6%9E%90/)
+　　[Android编译过程详解之一](http://huaqianlee.me/2015/07/12/Android/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%B8%80/)
+　　[Android编译过程详解之二](http://huaqianlee.me/2015/07/12/Android/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%BA%8C/)
+　　[Android编译过程详解之三](http://huaqianlee.me/2015/07/12/Android/Andro%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%B8%89/)
+　　[Android.mk解析](http://huaqianlee.me/2015/07/12/Android/About-ActivityNotFoundException-Unable-to-find-explicit-activity-class-Android-mk%E8%A7%A3%E6%9E%90/)
 
 　　前两个篇基本完全涉及到了整个编译过程，接下来着重分析一下和公司产品相关的mk文件。有两个路径前面没有怎么提到过，如下：      
 ```bash
@@ -90,7 +90,7 @@ $(call inherit-product, device/qcom/common/common.mk) # 继承common.mk，此文
 
 
 ##后记
-　　只有代码不会说谎，此文可能过时, 不过可以给你一个大致的脉络，然后再跟一下代码，就ok了。另，如需了解模块mk文件，参考我的另一篇博文：[Android.mk解析](http://huaqianlee.me/2015/07/12/About-ActivityNotFoundException-Unable-to-find-explicit-activity-class-Android-mk%E8%A7%A3%E6%9E%90/)。我写这系列博客，主要参考了Google官网和另外两篇网上Google出来的文章，地址见下References，感谢Google，感谢另两篇文章的作者。
+　　只有代码不会说谎，此文可能过时, 不过可以给你一个大致的脉络，然后再跟一下代码，就ok了。另，如需了解模块mk文件，参考我的另一篇博文：[Android.mk解析](http://huaqianlee.me/2015/07/12/Android/About-ActivityNotFoundException-Unable-to-find-explicit-activity-class-Android-mk%E8%A7%A3%E6%9E%90/)。我写这系列博客，主要参考了Google官网和另外两篇网上Google出来的文章，地址见下References，感谢Google，感谢另两篇文章的作者。
 　　　
 ##References
 [http://source.android.com/source/initializing.html](http://source.android.com/source/initializing.html) （需翻墙）
