@@ -11,9 +11,9 @@ tags: [编译,源码分析,Qualcomm]
 
 **欢迎指出错误，共同学习，共同进步**
 
-　　[Android编译过程详解之一](http://huaqianlee.me/2015/07/12/Android/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%B8%80/)
+　　[Android编译过程详解之一](http://huaqianlee.me/2015/07/11/Android/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%B8%80/)
 　　[Android编译过程详解之二](http://huaqianlee.me/2015/07/12/Android/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%BA%8C/)
-　　[Android编译过程详解之三](http://huaqianlee.me/2015/07/12/Android/Andro%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%B8%89/)
+　　[Android编译过程详解之三](http://huaqianlee.me/2015/07/12/Android/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%B8%89/)
 　　[Android.mk解析](http://huaqianlee.me/2015/07/12/Android/About-ActivityNotFoundException-Unable-to-find-explicit-activity-class-Android-mk%E8%A7%A3%E6%9E%90/)
 　
 　　Google给出的编译环境和构建方法见：[http://source.android.com/source/initializing.html](http://source.android.com/source/initializing.html)，过程见：[http://source.android.com/source/building.html](http://source.android.com/source/building.html)，不过这是解释怎么编译一个通用的系统，没有详细描述细节，而且需要翻墙。接下来我就准备跟着高通平台的编译过程来详细了解一下。

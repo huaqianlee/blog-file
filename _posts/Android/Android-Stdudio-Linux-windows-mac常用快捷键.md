@@ -42,6 +42,7 @@ tags: [Android Studio,Tools]
 |查找|Ctrl + F|Cmd + F|
 |查找+替换|Ctrl + R|Cmd + R|
 |上下移动代码|Alt + Shift + Up/Down|Option + Shift + Up/Down|
+|撤销恢复|Ctrl + Z/Ctrl + Shift + Z||
 |删除行|Ctrl + Y|Cmd + Delete/Backspace|
 |重命名|Ctrl+Shift+R||
 |以代码块单位移动光标|Alt+Up/Down||

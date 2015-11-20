@@ -71,6 +71,8 @@ lsmod                   #列出加载的内核模块
 
 ####网络常用命令
 ```bash
+ssh -l remote_username(root) remote_ip   #远程登录
+scp -r dir/file (remote_username:)remote_ip:dir #从本地copy到远端
 ifconfig                #查看所有网络接口的属性
 iptables -L             #查看防火墙设置
 service iptables status #查看防火墙状态

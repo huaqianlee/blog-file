@@ -52,6 +52,7 @@ git rm <file> --cached  # 从版本库中删除文件，但不删除文件
 ```bash
 git checkout -- xx  #撤销xx文件修改
 git checkout .     #撤销工作区修改
+git checkout ${commit} /path/to/file #撤销指定文件到指定版本
 git revert <$id>    # 恢复某次提交的状态，恢复动作本身也创建了一次提交对象
 git revert HEAD     # 恢复最后一次提交的状态
 git reset <file>    # 从暂存区恢复某一文件
