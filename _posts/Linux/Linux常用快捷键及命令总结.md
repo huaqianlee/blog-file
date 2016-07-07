@@ -124,6 +124,11 @@ tail (-n N) file     #查看文件末尾10行(N行)
 less file            #分页查看文件, Ctrl+F 向前翻页   Ctrl+B 向后翻页
 grep [option] "string" file #查找字符串 ,-i  不区分大小写
 find <dir> -name file #查找文件,-iname 不区分大小写
+split -l 300 large_file.log new_file_prefix  将文本文件分割为300行的n个新文件
+split -b 10m server.log server_prefix    将二进制文件分割为10M的n个新文件
+split -b 10m file.tar.gz file_   把文件file.tar.gz拆分成以“file_”为文件名前缀，大小为10M的文件
+cat small_files* > large_file  合并拆分的文件
+cat file_* > file.tar.gz   合并拆分的文件
 ```
 
 ####进程相关命令

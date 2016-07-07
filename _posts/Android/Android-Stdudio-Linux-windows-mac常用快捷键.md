@@ -3,7 +3,7 @@ date: 2015-05-29 20:10:41
 categories: Android
 tags: [Android Studio,Tools]
 ---
-　　前些时间把Android Studio的环境折腾好，典型的geek风一下子完全吸引了我，比eclipse好用太多了，有很多意外的功能,快捷键可以自定义，但我基本都用的默认的。本来用Macbook Pro做Android开发是最好的选择，但自己平时要搞Linux/Android底层相关的东西，thinkpad就成为最好的选择，所以就入手了thinkpad，用着Ubuntu和Windows，先总结我使用环境下的快捷键，等入手Mac后再添加Mac的快捷键。
+　　前些时间把Android Studio的环境折腾好，典型的geek风一下子完全吸引了我，比eclipse好用太多了，有很多意外的功能,快捷键可以自定义，但我基本都用的默认的。或许用Macbook Pro做Android开发是最好的选择，但自己平时要搞Linux/Android底层相关的东西，thinkpad就成为最好的选择，所以就入手了thinkpad，用着Ubuntu和Windows，先总结我使用环境下的快捷键。
 <!--more-->　　
 ##AS快捷键
 |Action|Win/Linux|Mac|
@@ -62,5 +62,4 @@ tags: [Android Studio,Tools]
 |跳出函数|F7||
 |执行到下一断点|F8||　
 
-
->计划过些时间入手一台MacBook Pro， 到时候再将Mac的快捷方式加进来，并在使用中不断完善此表格.
+......

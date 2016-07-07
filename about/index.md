@@ -8,10 +8,12 @@ title: About Me
 
 What am I ?　I don't know either, just： 爱生活，爱Android；爱编程，爱技术；Google脑残粉。
 
+>**此博客主要记录我的学习笔记和一些经验想法,有时有从我找到的资源里直接截图copy, 要是不小心有侵权行为,麻烦告知,我将第一时间删除**
+
 SUMMARY
 -------
 
-祖籍四川达州，現居深圳，现主要使用ubuntu与windows操作系统，正准备切换为ubuntu+Mac os。热爱技术热爱开源，为Linux、Android而着迷。时常关注一些新技术，关注开源项目，并喜欢贡献自己一份力量。目前为止主要从事底层及系统级工作，对App及Web很感兴趣。最后，我还很喜欢英语。
+祖籍四川达州，現居深圳，现主要使用ubuntu与windows操作系统。热爱技术热爱开源，为Linux、Android而着迷。时常关注一些新技术，关注开源项目，并希望贡献自己一份力量。目前为止主要从事底层及系统级工作，对App及Web很感兴趣。最后，我很想學好英语。
 
 RESUME
 ------
@@ -43,7 +45,7 @@ CONTACT ME
 - 个人博客: [huaqianlee.me](http://huaqianlee.me)
 - Github : [http://github.com/huaqianlee](http://github.com/huaqianlee)
 - 微博： [http://weibo.com/huaqianlee](http://weibo.com/huaqianlee)
-- Twitter：[https://twitter.com/Andylee_sarah](https://twitter.com/Andylee_sarah)
+- Twitter：[https://twitter.com/huaqianlee](https://twitter.com/huaqianlee)
 - Facebook：[https://facebook.com/huaqianlee](https://facebook.com/huaqianlee)
 - Google Plus：[https://plus.google.com/u/0/107850537041795428182](https://plus.google.com/u/0/107850537041795428182)
 - stackoverflow：[http://stackoverflow.com/users/4511267/huaqian-lee](http://stackoverflow.com/users/4511267/huaqian-lee)
