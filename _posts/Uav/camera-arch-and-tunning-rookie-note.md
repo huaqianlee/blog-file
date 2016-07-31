@@ -1,14 +1,15 @@
-title: "camera arch and tunning - rookie note"
+title: "camera架构与调试-菜鸟笔记"
 date: 2016-07-07 23:37:41
 categories: Uav
-tags: 
+tags: Qualcomm 
 ---
->**菜鸟笔记，因为对camera不是很了解，肯定会有很多疏漏，也会记录一些现在不是很明白的杂乱信息，以便以后知识面扩展了后看到有所帮助。笔记图片中的字很丑，将就将就**
+>菜鸟笔记，因为对camera不是很了解，肯定会有很多疏漏，也会记录一些现在不是很明白的杂乱信息，以便以后知识面扩展了后看到有所帮助。笔记图片中的字很丑，将就将就
 
 ##VFE
 VFE为Video Front End的简写，这属于硬件部分，对于高通通过Chromatix 工具，可以产生对此流程有用的tuning file，用于配置。 VFE 流程图如下：
 ![VFE FLOW](http://7xjdax.com1.z0.glb.clouddn.com/vfe.png)
 
+<!--more-->
 ###MIPI
 现在的camera基本都采用MIPI接口， MIPI以一种采用差分方式按位传输数据的接口。只有四条引脚（DN、DP，CN、CP）。
 
@@ -95,7 +96,7 @@ Chromatix Tool会用到的一个Sensor info文件，内容与<root_dir>\mm-camer
 3. max line count in max fps. # max line count = FL - offset
 4. max line count  ---> FL * (maxfps/minfps) - offset
 5.raw image width
-6. raw image height 
+6. raw image height
 7. bayer pattern
 8.bits per pixel
 9. packed or not ---> 1: mipi; 0: others,depend on sensor
