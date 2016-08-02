@@ -1,10 +1,10 @@
-My blog files
+## My blog files
 -----------
 博客地址: [huaqianlee.github.io](http://huaqianlee.github.io)
 
-### Android
+Android
 -----------
-[Android电池监控系统BMS之电池系统架构](../../_post/Android/Android电池监控系统-BMS-之电池系统架构.md) 
+[Android电池监控系统BMS之电池系统架构](../../tree/master/_post/Android/Android电池监控系统-BMS-之电池系统架构.md) 
 
 [Android源码bootable解析之LK](./_post/Android/Android源码bootable解析之LK-bootloader-little-kernel.md) 
 
@@ -63,5 +63,5 @@ My blog files
 [](_post/Android/)
 
 -----------
-###附录
+## 附录
 _config.yml 为根目录文件的备份
