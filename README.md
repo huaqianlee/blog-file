@@ -3,9 +3,10 @@ My blog files
 博客地址: [huaqianlee.github.io](http://huaqianlee.github.io)
 
 ### Android
-[Android电池监控系统BMS之电池系统架构](_post/Android/Android电池监控系统-BMS-之电池系统架构.md) 
+-----------
+[Android电池监控系统BMS之电池系统架构](./_post/Android/Android电池监控系统-BMS-之电池系统架构.md) 
 
-[Android源码bootable解析之LK](_post/Android/Android源码bootable解析之LK-bootloader-little-kernel.md) 
+[Android源码bootable解析之LK](./_post/Android/Android源码bootable解析之LK-bootloader-little-kernel.md) 
 
 [Android电源管理架构](_post/Android/Android电源管理架构.md) 
 
@@ -40,7 +41,8 @@ My blog files
 [怎么抓取Android测试日志文件](_post/Android/怎么抓取Android测试日志文件-How-to-get-android-log-file.md)
 
 ### Git
-[](_post/Android/)
+-----------
+[](_post/Git/)
 
 ### Hexo
 [](_post/Android/)
