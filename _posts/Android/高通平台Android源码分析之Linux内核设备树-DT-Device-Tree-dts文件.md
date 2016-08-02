@@ -636,7 +636,7 @@ EXPORT_SYMBOL_GPL(of_clk_get_parent_name);
 
 ##高通Android源码中dts文件
 ###AndroidBoard.mk
-Android编译过程（如想了解更多可参考：[Android编译过程详解](http://huaqianlee.me/2015/07/11/Android/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%B8%80/)）中会解析到device\qcom\msm8916_32\AndroidBoard.mk，此文件中选择了kernel的默认配置文件，如下：
+Android编译过程（如想了解更多可参考：[Android编译过程详解](http://huaqianlee.github.io/2015/07/11/Android/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%B8%80/)）中会解析到device\qcom\msm8916_32\AndroidBoard.mk，此文件中选择了kernel的默认配置文件，如下：
 ```mk
 # device\qcom\msm8916_32\AndroidBoard.mk
 

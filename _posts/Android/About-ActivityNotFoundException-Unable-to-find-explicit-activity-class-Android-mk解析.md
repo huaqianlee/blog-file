@@ -3,13 +3,13 @@ date: 2015-07-12 14:06:35
 categories: Android
 tags: [Bug,编译]
 ---
-　　[Android编译过程详解之一](http://huaqianlee.me/2015/07/11/Android/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%B8%80/)
-　　[Android编译过程详解之二](http://huaqianlee.me/2015/07/12/Android/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%BA%8C/)
-　　[Android编译过程详解之三](http://huaqianlee.me/2015/07/12/Android/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%B8%89/)
-　　[Android.mk解析](http://huaqianlee.me/2015/07/12/Android/About-ActivityNotFoundException-Unable-to-find-explicit-activity-class-Android-mk%E8%A7%A3%E6%9E%90/)
+　　[Android编译过程详解之一](http://huaqianlee.github.io/2015/07/11/Android/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%B8%80/)
+　　[Android编译过程详解之二](http://huaqianlee.github.io/2015/07/12/Android/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%BA%8C/)
+　　[Android编译过程详解之三](http://huaqianlee.github.io/2015/07/12/Android/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%B8%89/)
+　　[Android.mk解析](http://huaqianlee.github.io/2015/07/12/Android/About-ActivityNotFoundException-Unable-to-find-explicit-activity-class-Android-mk%E8%A7%A3%E6%9E%90/)
 
 ##ActivityNotFoundException 　
-　　最近将Android从4.4移植到5.1时，添加一个从拨号界面输入\*#360\*#进入battery info查看界面的功能时（如感兴趣，详情见[Android电池监控系统(bms)之一电池系统架构](http://huaqianlee.me/2015/06/06/Android/Android%E7%94%B5%E6%B1%A0%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F-BMS-%E4%B9%8B%E7%94%B5%E6%B1%A0%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84/)），activity跳转部分代码如下： 
+　　最近将Android从4.4移植到5.1时，添加一个从拨号界面输入\*#360\*#进入battery info查看界面的功能时（如感兴趣，详情见[Android电池监控系统(bms)之一电池系统架构](http://huaqianlee.github.io/2015/06/06/Android/Android%E7%94%B5%E6%B1%A0%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F-BMS-%E4%B9%8B%E7%94%B5%E6%B1%A0%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84/)），activity跳转部分代码如下： 
 ```java
         else if(input.equals(BATTERY_INFO))
         {//added by lihuaqian
@@ -158,7 +158,7 @@ Lee:还有很多其他定义和语法，这里就不一一分析，不过从变�
 - 会安装包含debug标签的模块
 - 编译出的系统具有root访问权限
 
-　　build/core/config.mk中已经定义好了各种类型模块的编译方式。所以要执行编译，只需通过常量的方式引入对应的 Make 文件即可。详见[Android编译过程详解之二](http://huaqianlee.me/2015/07/12/Android/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%BA%8C/)，例如，要编译一个 APK 文件，只需要在 Android.mk 文件中，加入“include $(BUILD_PACKAGE)。
+　　build/core/config.mk中已经定义好了各种类型模块的编译方式。所以要执行编译，只需通过常量的方式引入对应的 Make 文件即可。详见[Android编译过程详解之二](http://huaqianlee.github.io/2015/07/12/Android/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%BA%8C/)，例如，要编译一个 APK 文件，只需要在 Android.mk 文件中，加入“include $(BUILD_PACKAGE)。
 　
 　　除此以外，Build 系统中还定义了一些便捷的函数以便在 Android.mk 中使用，如下：
 ```bash

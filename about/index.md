@@ -11,7 +11,7 @@ title: About Me
 SUMMARY
 -------
 
-祖籍四川达州，現居深圳。热爱技术热爱开源，为Linux、Android而着迷。时常关注一些新技术，关注开源项目，并希望贡献自己一份力量。目前为止主要从事底层及系统级工作，对App及Web很感兴趣。
+祖籍四川达州，現居深圳。目前为止主要从事底层及系统级工作，对App及Web很感兴趣。
 
 RESUME
 ------
@@ -24,9 +24,9 @@ POSTSCRIPT
 
 CONTACT ME
 ------------------
-联系电话: [185-\*\*\*\*-0564](tel://180-\*\*\*\*-0564)
+联系电话: [185-\*\*\*\*-0564](tel://185-\7\5\5\9-0564)
 电子邮箱: <huaqianlee@gmail.com>
-个人博客: [huaqianlee.me](http://huaqianlee.me)
+个人博客: [huaqianlee.github.io](http://huaqianlee.github.io)
 微博： [http://weibo.com/huaqianlee](http://weibo.com/huaqianlee)
 Github : [http://github.com/huaqianlee](http://github.com/huaqianlee)
 Twitter：[https://twitter.com/huaqianlee](https://twitter.com/huaqianlee)

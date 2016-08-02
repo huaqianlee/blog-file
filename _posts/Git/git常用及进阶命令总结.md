@@ -182,4 +182,21 @@ git branch --set-upstream master origin/master
 git branch --set-upstream develop origin/develop
 ```
 
+
+### create a new repository on the command line
+```bash
+echo "# hexo-theme" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:huaqianlee/hexo-theme.git
+git push -u origin master
+```
+
+### push an existing repository from the command line
+```bash
+git remote add origin git@github.com:huaqianlee/hexo-theme.git
+git push -u origin master
+```
+
 >目前先这么多，后续再补充更高级的命令， 也可参考：[git进阶](http://www.imooc.com/article/1089)，[git资料整理](https://github.com/xirong/my-git)。

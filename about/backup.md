@@ -42,7 +42,7 @@ CONTACT ME
 ------------------
 - 联系电话: [185-\*\*\*\*-0564](tel://180-\*\*\*\*-0564)
 - 电子邮箱: <huaqianlee@gmail.com>
-- 个人博客: [huaqianlee.me](http://huaqianlee.me)
+- 个人博客: [huaqianlee.github.io](http://huaqianlee.github.io)
 - Github : [http://github.com/huaqianlee](http://github.com/huaqianlee)
 - 微博： [http://weibo.com/huaqianlee](http://weibo.com/huaqianlee)
 - Twitter：[https://twitter.com/huaqianlee](https://twitter.com/huaqianlee)

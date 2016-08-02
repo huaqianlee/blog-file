@@ -17,3 +17,14 @@ git rm (--cached) files directories -r -f
 git commit
 ```  
 <!--more-->
+
+
+## 问题二  已经添加文件或路径, 提示untracked
+**现象：**
+已经将某文件夹添加到暂存区, git status 仍提示: modified: next (modified content, untracked content)
+
+**原因：**
+此文件夹中有.git , git将其识别为submodule.
+
+**解决：**
+删除文件夹中.git.

@@ -11,7 +11,7 @@ tags: [源码分析,Qualcomm]
 
 **如有错误欢迎指出，共同学习，共同进步**
 　
-在我第一次接触Android得时候，我就很想知道Android设备在按下电源键后是怎么启动到主界面的，但是到现在为止也没有完全理清这个过程，所以就决定从按下power键开始来分析一下这个流程。虽然Android基于Linux内核开发的一个操作系统，但是在init进程后Android附加了很多其他操作，所以其启动流程还是有比较大的差别的，关于Linux系统的启动流程可以参考我的另一篇博文：[深入理解linux启动过程](http://huaqianlee.me/2015/08/21/Linux/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Linux%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B/)。
+在我第一次接触Android得时候，我就很想知道Android设备在按下电源键后是怎么启动到主界面的，但是到现在为止也没有完全理清这个过程，所以就决定从按下power键开始来分析一下这个流程。虽然Android基于Linux内核开发的一个操作系统，但是在init进程后Android附加了很多其他操作，所以其启动流程还是有比较大的差别的，关于Linux系统的启动流程可以参考我的另一篇博文：[深入理解linux启动过程](http://huaqianlee.github.io/2015/08/21/Linux/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Linux%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B/)。
 
 因为我现在工作中用到的是高通的源码，并且高通也是目前Android手机的主流芯片，所以我就按照高通的msm8916来分析了，不过其他的也应该大同小异。
 　
@@ -97,13 +97,13 @@ MSM8916芯片内部有很多不同的处理器，如下：
 ###第一阶段引导程序和第二阶段引导程序
 由PBL加载的sbl1是第一阶段引导程序，APP SBL为第二阶段引导程序。这两部分代码的作用在上面**启动栈**和**引导代码流程**中已有一个简单的描述，如果想了解更多请参考我另外两篇博文：
 
-[Android源码bootable解析之bootloader LK(little kernel)](http://huaqianlee.me/2015/07/25/Android/Android%E6%BA%90%E7%A0%81bootable%E8%A7%A3%E6%9E%90%E4%B9%8BLK-bootloader-little-kernel/)
-[高通平台Android源码bootloader分析之sbl1(一)](http://huaqianlee.me/2015/08/15/Android/%E9%AB%98%E9%80%9A%E5%B9%B3%E5%8F%B0Android%E6%BA%90%E7%A0%81bootloader%E5%88%86%E6%9E%90%E4%B9%8Bsbl1-%E4%B8%80/)
+[Android源码bootable解析之bootloader LK(little kernel)](http://huaqianlee.github.io/2015/07/25/Android/Android%E6%BA%90%E7%A0%81bootable%E8%A7%A3%E6%9E%90%E4%B9%8BLK-bootloader-little-kernel/)
+[高通平台Android源码bootloader分析之sbl1(一)](http://huaqianlee.github.io/2015/08/15/Android/%E9%AB%98%E9%80%9A%E5%B9%B3%E5%8F%B0Android%E6%BA%90%E7%A0%81bootloader%E5%88%86%E6%9E%90%E4%B9%8Bsbl1-%E4%B8%80/)
 
 ##内核
 Android的内核就是用的Linux的内核，只是针对移动设备做了一些优化，所有Android内核与linux内核启动的方式差不多。内核主要设置缓存、被保护存储器、计划列表，加载驱动等。当内核完成这些系统设置后，它首先在系统文件中寻找”init”文件，然后启动root进程或者系统的第一个进程。这部分可以参考我的另一篇博文：
 
-[深入理解linux启动过程](http://huaqianlee.me/2015/08/21/Linux/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Linux%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B/)
+[深入理解linux启动过程](http://huaqianlee.github.io/2015/08/21/Linux/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Linux%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B/)
 
 ##init进程
 init进程时Android的第一个用户空间进程，是所有进程的父进程。init进程主要有两个任务，一是挂载目录，比如/sys、/dev、/proc，二是读取解析init.rc脚本，将其中的元素整理成自己的数据结构（链表）。
