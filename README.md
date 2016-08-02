@@ -3,9 +3,9 @@ My blog files
 博客地址: [huaqianlee.github.io](http://huaqianlee.github.io)
 
 ### Android
-[Android电池监控系统BMS之电池系统架构](_post/Android/Android电池监控系统-BMS-之电池系统架构.md)
-[Android源码bootable解析之LK](_post/Android/Android源码bootable解析之LK-bootloader-little-kernel.md)
-[Android电源管理架构](_post/Android/Android电源管理架构.md)
+[Android电池监控系统BMS之电池系统架构](_post/Android/Android电池监控系统-BMS-之电池系统架构.md) 
+[Android源码bootable解析之LK](_post/Android/Android源码bootable解析之LK-bootloader-little-kernel.md) 
+[Android电源管理架构](_post/Android/Android电源管理架构.md) 
 [Android中adb命令的用法](_post/Android/Android中adb-Android-Debug-Bridge-命令的用法.md)
 [Android Stdudio常用快捷键](_post/Android/Android-Stdudio-Linux-windows-mac常用快捷键.md)
 [高通Android不带电量计的电量计算方式](_post/Android/高通Android不带电量计的电量计算方式.md)
