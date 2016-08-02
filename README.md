@@ -4,7 +4,7 @@ My blog files
 
 ### Android
 -----------
-[Android电池监控系统BMS之电池系统架构](./_post/Android/Android电池监控系统-BMS-之电池系统架构.md) 
+[Android电池监控系统BMS之电池系统架构](../../_post/Android/Android电池监控系统-BMS-之电池系统架构.md) 
 
 [Android源码bootable解析之LK](./_post/Android/Android源码bootable解析之LK-bootloader-little-kernel.md) 
 
