@@ -1,13 +1,14 @@
 ## My blog files
 如果对我写的文章感兴趣, 欢迎访问我的个人博客, 你将获得更好的阅读体验.
 
-博客地址: [huaqianlee.github.io](http://huaqianlee.github.io)
+*博客地址:* [Andy Lee's Blog](http://huaqianlee.github.io)
 
 Uav
 -----------
 - [无人机主板调试](_posts/Uav/uav-board-debugging.md)
 - [高通无人机8074BLSP接口说明](_posts/Uav/Qualcomm-uav-blsp-port.md)
 - [手机无人机常用sensor介绍](_posts/Uav/mobile-and-uav-sensors.md)
+- [高通px4代码阅读笔记](_posts/Uav/qualcomm-px4-code-reading-note.md)
 - [camera架构与调试-菜鸟笔记](_posts/Uav/camera-arch-and-tunning-rookie-note.md)
 
 Android
@@ -42,6 +43,7 @@ Linux
 - [Linux文件IO操作及网络架构](_posts/Linux/Linux文件IO操作及网络架构.md)
 - [如何在内核里操作读写文件](_posts/Linux/如何在内核里操作读写文件-create-open-read-write.md)
 - [深入理解Linux启动过程](_posts/Linux/深入理解Linux启动过程.md)
+- [linux系统使用问题集](_posts/Linux/linux-problem-set.md)
 
 Hexo
 -----------

@@ -25,7 +25,7 @@ POSTSCRIPT
 CONTACT ME
 ------------------
 联系电话: [185-\*\*\*\*-0564](tel://185-\7\5\5\9-0564)
-电子邮箱: <huaqianlee@gmail.com>
+电子邮箱: <huaqianlee@gmail.com> | <huaqianlee@outlook.com>
 个人博客: [huaqianlee.github.io](http://huaqianlee.github.io)
 微博： [http://weibo.com/huaqianlee](http://weibo.com/huaqianlee)
 Github : [http://github.com/huaqianlee](http://github.com/huaqianlee)
