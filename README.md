@@ -10,7 +10,7 @@ Uav
 - [手机无人机常用sensor介绍](_posts/Uav/mobile-and-uav-sensors.md)
 - [高通px4代码阅读笔记](_posts/Uav/qualcomm-px4-code-reading-note.md)
 - [camera架构与调试-菜鸟笔记](_posts/Uav/camera-arch-and-tunning-rookie-note.md)
-- [PX4 for Snapdragon Flight](_posts/Uav/PX4 for Snapdragon Flight.md)
+- [PX4 for Snapdragon Flight](_posts/Uav/PX4-for-Snapdragon-Flight.md)
 
 Android
 -----------
