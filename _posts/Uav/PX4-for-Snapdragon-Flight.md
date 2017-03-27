@@ -5,7 +5,7 @@ tags:
  - PX4
 ---
 >公司刚好有基于8074的无人机主板,虽然与官方snapdragon board有些差异,但也差不多,本文就是自己在此板上跑px4的阶段笔记,写的比较简单粗糙. 
- 　　
+
 # 快速驱动无人机升空
 主要通过PX4+QGroundcontrol+DX9的方式，手机APP+Qgroundcontrol+DX9也类似,只是将遥控器换成了APP(Android版地址: [DroneControl](https://github.com/ATLFlight/drone-controller))，准备好环境，有问题主要参考如下三个地址：
 
