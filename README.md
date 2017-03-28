@@ -15,8 +15,8 @@ Uav
 学习笔记
 ----------------
 *第一行代码*
-[第一行代码思维导图及学习笔记目录](http://huaqianlee.github.io/2017/03/24/Android/The-departure-of-FirstCode-learning-notes/)
-[第一行代码学习笔记之项目结构与活动](http://huaqianlee.github.io/2017/03/24/Android/FirstCode-learning-note-project-structure-and-activity/)
+- [第一行代码思维导图及学习笔记目录](http://huaqianlee.github.io/2017/03/24/Android/The-departure-of-FirstCode-learning-notes/)
+- [第一行代码学习笔记之项目结构与活动](http://huaqianlee.github.io/2017/03/24/Android/FirstCode-learning-note-project-structure-and-activity/)
 
 *Android群英传*
 
