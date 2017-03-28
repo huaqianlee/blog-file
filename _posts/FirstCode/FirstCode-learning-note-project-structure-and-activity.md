@@ -1,8 +1,9 @@
 title: "第一行代码学习笔记之项目结构与活动"
 date: 2017-03-24 20:07:01
-categories: Android
-tags: [App,学习笔记]
+categories: 学习笔记
+tags: [App,FirstCode]
 ---
+《第一行代码》第二版思维导图及所有学习笔记目录：
 [第一行代码思维导图及学习笔记目录](http://huaqianlee.github.io/2017/03/24/Android/The-departure-of-FirstCode-learning-notes/)
 
 # 第一个应用
@@ -253,15 +254,98 @@ finish();
 # 为了在按返回键时也返回数据,需要重写onBackPressed()方法,并加入如上内容.
 ```
 ## 活动的生命周期
+![lifecycle](http://7xjdax.com1.z0.glb.clouddn.com/image/firstcode/lifecycle.gif)
 
+根据生命周期，活动存在被回收的可能性，所以为了有好的体验，需要保存数据。
+```bash
+@Overide
+protected void onSaveInstanceState(Bundle outState) {
+    super.onSaveInstanceState(outState);
+    String tempData = "**********";
+    outState.putString("data_key", tempData);
+}
+```
+恢复数据:
+```bash
+protected void onCreate(Bundle savedInstanceState) {
+    ....
+    if(savedInstanceState != null){
+        String tmpData = savedInstaceState.getString("data_key");
+    }
+}
+```
+>Bundle对象亦可放在Intent对象中传递.
 
+## 活动的启动模式
+活动启动模式一共4种：standard、singleTop、singleTask和singleInstance。AndroidManifest.xml中<activity/>指定android:launchMode属性来选择。
+### standard
+系统默认，每启动一个活动就在栈顶创建，即使已经存在。
+![standard](http://7xjdax.com1.z0.glb.clouddn.com/image/firstcode/standard.jpg)
 
+### singleTop
+活动启动时，栈顶如果不存在此活动，则创建此活动。
+![singleTop](http://7xjdax.com1.z0.glb.clouddn.com/image/firstcode/singleTop.jpg)
 
+### singleTask
+活动启动时，如果栈里存在此活动，则将之前的全部出栈，将此活动置于栈顶。
+![singleTask](http://7xjdax.com1.z0.glb.clouddn.com/image/firstcode/singleTask.jpg)
 
+### singleInstance
+启动活动时，单独创建一个返回栈来管理，这样所有应用可以共用返回栈，访问此活动。
+![singleInstance](http://7xjdax.com1.z0.glb.clouddn.com/image/firstcode/singleInstance.jpg)
 
+## 最佳实践及有用的技巧
+### 随时随地退出程序
+随时随地退出程序，建一个ActivityCollector类和所有新建类的基类BaseActivity类。
+```bash
+public class ActivityCollector {
+    public static List<Activity> activities = new ArrayList<>();
 
+    public static void addActivity(Activity activity) {
+        activities.add(activity);
+    }
+    public static void removeActivity(Activity activity) {
+        activities.remove(activity);
+    }
 
+    public static void finishAll() {
+        for(Acitivity activity : activities) {
+            if(!activity.isFinishing()) {
+                activity.finish();
+            }
+        }
+    }
+}
 
+public class BaseActivity extends AppCompatActivity {
+    protected void onCreate(Bundle saveInstanceState) {
+        ...
+        ActivityCollector.addActivity(this);
+    }
+
+    protected void onDestory () {
+        ...
+        ActivityCollector.removeActivity(this);
+    }
+}
+```
+当需要销毁所有活动时
+```bash
+ActivityCollector.finishAll();
+android.os.Process.killProcess(android.os.Process.myPid());
+# kill掉当前进程， 确保万一的语句
+```
+
+### 项目合作时启动活动的最佳写法
+在需要被启动的活动中实现actionStart()方法。
+```bash
+public static void actionStart(Context context, String data1, String data2) {
+    Intent intent = new Intent(context, xxx.class);
+    intent.putExtra("param1",data1);
+    intent.putExtra("param2",data2);
+    context.startActivity(intent);
+}
+```
 
 
 

@@ -12,6 +12,14 @@ Uav
 - [camera架构与调试-菜鸟笔记](_posts/Uav/camera-arch-and-tunning-rookie-note.md)
 - [PX4 for Snapdragon Flight](_posts/Uav/PX4-for-Snapdragon-Flight.md)
 
+学习笔记
+----------------
+*第一行代码*
+[第一行代码思维导图及学习笔记目录](http://huaqianlee.github.io/2017/03/24/Android/The-departure-of-FirstCode-learning-notes/)
+[第一行代码学习笔记之项目结构与活动](http://huaqianlee.github.io/2017/03/24/Android/FirstCode-learning-note-project-structure-and-activity/)
+
+*Android群英传*
+
 Android
 -----------
 - [Android电池监控系统BMS之电池系统架构](_posts/Android/Android电池监控系统-BMS-之电池系统架构.md)
