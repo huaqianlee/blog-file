@@ -11,4 +11,4 @@ tags: [App,FirstCode]
 <!--more-->
 
 《第一行代码》学习笔记目录:
-[第一行代码学习笔记之项目结构与活动](http://huaqianlee.github.io/2017/03/24/Android/FirstCode-learning-note-project-structure-and-activity/)
+[第一行代码学习笔记之项目结构与活动](http://huaqianlee.github.io/2017/03/24/FirstCode/FirstCode-learning-note-project-structure-and-activity/)

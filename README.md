@@ -5,6 +5,7 @@
 
 Uav
 -----------
+- [PX4之外设代码结构及流程-IMU](_posts/Uav/px4-imu-mpu9250-code-structure.md)
 - [无人机主板调试](_posts/Uav/uav-board-debugging.md)
 - [高通无人机8074BLSP接口说明](_posts/Uav/Qualcomm-uav-blsp-port.md)
 - [手机无人机常用sensor介绍](_posts/Uav/mobile-and-uav-sensors.md)
@@ -15,8 +16,8 @@ Uav
 学习笔记
 ----------------
 *第一行代码*
-- [第一行代码思维导图及学习笔记目录](http://huaqianlee.github.io/2017/03/24/Android/The-departure-of-FirstCode-learning-notes/)
-- [第一行代码学习笔记之项目结构与活动](http://huaqianlee.github.io/2017/03/24/Android/FirstCode-learning-note-project-structure-and-activity/)
+- [第一行代码思维导图及学习笔记目录](_posts/FirstCode/The-departure-of-FirstCode-learning-notes.md)
+- [第一行代码学习笔记之项目结构与活动](_posts/FirstCode/FirstCode-learning-note-project-structure-and-activity.md)
 
 *Android群英传*
 

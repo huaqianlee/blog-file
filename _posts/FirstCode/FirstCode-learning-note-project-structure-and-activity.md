@@ -3,8 +3,7 @@ date: 2017-03-24 20:07:01
 categories: 学习笔记
 tags: [App,FirstCode]
 ---
-《第一行代码》第二版思维导图及所有学习笔记目录：
-[第一行代码思维导图及学习笔记目录](http://huaqianlee.github.io/2017/03/24/Android/The-departure-of-FirstCode-learning-notes/)
+ [《第一行代码》第2版思维导图及所有学习笔记目录](http://huaqianlee.github.io/2017/03/24/FirstCode/The-departure-of-FirstCode-learning-notes/)
 
 # 第一个应用
 ## 项目结构
