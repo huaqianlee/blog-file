@@ -6,12 +6,13 @@
 Uav
 -----------
 - [PX4之外设代码结构及流程-IMU](_posts/Uav/px4-imu-mpu9250-code-structure.md)
+- [PX4 for Snapdragon Flight](_posts/Uav/PX4-for-Snapdragon-Flight.md)
+- [高通px4代码阅读笔记](_posts/Uav/qualcomm-px4-code-reading-note.md)
 - [无人机主板调试](_posts/Uav/uav-board-debugging.md)
 - [高通无人机8074BLSP接口说明](_posts/Uav/Qualcomm-uav-blsp-port.md)
 - [手机无人机常用sensor介绍](_posts/Uav/mobile-and-uav-sensors.md)
-- [高通px4代码阅读笔记](_posts/Uav/qualcomm-px4-code-reading-note.md)
 - [camera架构与调试-菜鸟笔记](_posts/Uav/camera-arch-and-tunning-rookie-note.md)
-- [PX4 for Snapdragon Flight](_posts/Uav/PX4-for-Snapdragon-Flight.md)
+
 
 学习笔记
 ----------------
