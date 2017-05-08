@@ -8,9 +8,10 @@ tags: [App,FirstCode]
 # 第一个应用
 ## 项目结构
 很早以前第一次接触Android代码的项目结构的时候确实够头疼滴.
+<!--more-->
 
 ![项目结构](http://7xjdax.com1.z0.glb.clouddn.com/image/firstcode/prj_struct.png)
-<!--more-->
+
 * .gradle & .idea  
 Android Studio自动生成, 无需关心, 版本管理时,一般将其忽略(即.gitignore文件).
 * app

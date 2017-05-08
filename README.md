@@ -13,12 +13,16 @@ Uav
 - [手机无人机常用sensor介绍](_posts/Uav/mobile-and-uav-sensors.md)
 - [camera架构与调试-菜鸟笔记](_posts/Uav/camera-arch-and-tunning-rookie-note.md)
 
+英语
+-----------
+- [英式音标与美式音标]((_posts/English/Americal-and-english-phonetic.md))
 
 学习笔记
 ----------------
 *第一行代码*
 - [第一行代码思维导图及学习笔记目录](_posts/FirstCode/The-departure-of-FirstCode-learning-notes.md)
 - [第一行代码学习笔记之项目结构与活动](_posts/FirstCode/FirstCode-learning-note-project-structure-and-activity.md)
+- 
 
 *Android群英传*
 
