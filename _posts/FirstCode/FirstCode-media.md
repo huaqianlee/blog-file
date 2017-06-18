@@ -3,6 +3,8 @@ date: 2017-05-06 23:57:26
 categories: 学习笔记
 tags: [App,FirstCode]
 ---
+[《第一行代码》第2版思维导图及所有学习笔记目录](http://huaqianlee.github.io/2017/03/24/FirstCode/The-departure-of-FirstCode-learning-notes/)
+
 ## 使用通知
 ### 通知基本用法
 获取通知:

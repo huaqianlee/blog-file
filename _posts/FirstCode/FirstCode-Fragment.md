@@ -3,6 +3,8 @@ date: 2017-05-10 12:24:05
 categories: 学习笔记
 tags: [App,FirstCode]
 ---
+[《第一行代码》第2版思维导图及所有学习笔记目录](http://huaqianlee.github.io/2017/03/24/FirstCode/The-departure-of-FirstCode-learning-notes/)
+
 ## 碎片的使用
 ### 碎片的简单用法
 新建一个示例包含两个碎片，平分活动空间，新建左侧碎片布局，如下：

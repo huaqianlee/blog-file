@@ -3,6 +3,9 @@ date: 2017-05-06 23:58:30
 categories: 学习笔记
 tags: [App,FirstCode]
 ---
+[《第一行代码》第2版思维导图及所有学习笔记目录](http://huaqianlee.github.io/2017/03/24/FirstCode/The-departure-of-FirstCode-learning-notes/)
+
+
 ## 多线程编程
 ### 线程基本用法
 方式一：

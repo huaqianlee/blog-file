@@ -3,6 +3,8 @@ date: 2017-04-29 18:35:49
 categories: 学习笔记
 tags: [App,FirstCode]
 ---
+[《第一行代码》第2版思维导图及所有学习笔记目录](http://huaqianlee.github.io/2017/03/24/FirstCode/The-departure-of-FirstCode-learning-notes/)
+
 ## 文件存储
 ### 数据存到文件
 Context类提供了一个openFileOutput()方法，可以用于文件存储，此方法有两个参数：

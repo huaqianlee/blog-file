@@ -12,13 +12,23 @@ tags: [App,FirstCode]
 
 《第一行代码》学习笔记目录:
 [第一行代码之项目结构与活动](http://huaqianlee.github.io/2017/03/24/FirstCode/FirstCode-learning-note-project-structure-and-activity/)
+
 [第一行代码之UI](http://huaqianlee.github.io/2017/03/25/FirstCode/firstcode-note-UI/)
+
 [第一行代码之广播机制](http://huaqianlee.github.io/2017/03/25/FirstCode/FirstCode-Broadcast-Receiver/)
+
 [第一行代码之数据存储](http://huaqianlee.github.io/2017/04/29/FirstCode/FirstCode-data-storage/)
+
 [第一行代码之跨程序共享数据-内容提供器](http://huaqianlee.github.io/2017/05/03/FirstCode/FirstCode-Content-Provider/)
+
 [第一行代码之手机多媒体](http://huaqianlee.github.io/2017/05/06/FirstCode/FirstCode-media/)
+
 [第一行代码之服务](http://huaqianlee.github.io/2017/05/06/FirstCode/FirstCode-Service/)
+
 [第一行代码之网络](http://huaqianlee.github.io/2017/05/09/FirstCode/FirstCode-Network/)
+
 [第一行代码之碎片](http://huaqianlee.github.io/2017/05/10/FirstCode/FirstCode-Fragment/)
+
 [第一行代码之Material Design](http://huaqianlee.github.io/2017/05/10/FirstCode/FirstCode-Material-Design/)
+
 [第一行代码之高级技巧](http://huaqianlee.github.io/2017/05/13/FirstCode/FirstCode-advanced-skills/)
