@@ -78,7 +78,7 @@ Response response  = client.newCall(request).execute();
 # 获取具体内容
 String responseData = response.body().string();
 
-# 如果发齐POST请求，需先构建Body对象存储提交的参数
+# 如果发起POST请求，需先构建Body对象存储提交的参数
 RequestBody requestBOdy = new FormBody.Builder()
     .add("username","admin")
     .add("password","123456")

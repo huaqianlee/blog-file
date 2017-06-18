@@ -82,13 +82,15 @@ Uri uri = Uri.parse("content://authority/path")
 Cursor cursor = getContentResolver().query(uri,projection,selecton,selectionArgs,sortOrder);
 ```
 ContentResolver的查询方法参数解释如下：
+
 |参数|对应SQL部分|描述|
-|:----:|:--:|--|
+|:--:|:---------:|:--:|
 |uri|from table_name|指定查询某应用程序下一张表|
 |projection|select column1,column2|指定查询的列名|
 |selection|where column=value|指定where条件|
 |selectionArgs|-|为where重占位符提供值|
-|orderBy|order by column1,column2|指定查询结果排序方式
+|orderBy|order by column1,column2|指定查询结果排序方式|
+
 获取到Cursor对象后，就能方便取出数据了：
 ```java
 if(cursor=!null) {

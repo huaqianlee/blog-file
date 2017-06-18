@@ -242,7 +242,7 @@ public class MyService extends Service {
     }
 ```
 ### 使用IntentService
-**服务默认运行于主线程**，所以耗时逻辑得通过多线程技术处理。
+**服务默认运行于主线程**，所以耗时逻辑得通过多线程技术处理。IntentService的好处就是新开线程来处理耗时操作。
 标准写法：
 ```java
 onStartCommand(){
@@ -257,6 +257,7 @@ onStartCommand(){
 ```
 IntentService方式：
 >AS自动创建IntentService会生成一大堆用不到的代码，因此手动创建
+
 ```java
 public class MyIntentService extends IntentService {
     public MyIntentService() {
