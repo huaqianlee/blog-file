@@ -1,4 +1,4 @@
-title: "第一行代码学习笔记之UI"
+title: "第一行代码之UI"
 date: 2017-03-25 08:34:40
 categories: 学习笔记
 tags: [App,FirstCode]

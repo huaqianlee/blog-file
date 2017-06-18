@@ -1,4 +1,4 @@
-title: "第一行代码学习笔记之项目结构与活动"
+title: "第一行代码之项目结构与活动"
 date: 2017-03-24 20:07:01
 categories: 学习笔记
 tags: [App,FirstCode]

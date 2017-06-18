@@ -1,4 +1,4 @@
-title: "第一行代码学习笔记之广播机制"
+title: "第一行代码之广播机制"
 date: 2017-03-25 21:06:00
 categories: 学习笔记
 tags: [App,FirstCode]

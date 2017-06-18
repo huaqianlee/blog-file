@@ -1,4 +1,4 @@
-title: "第一行代码学习笔记之数据存储"
+title: "第一行代码之数据存储"
 date: 2017-04-29 18:35:49
 categories: 学习笔记
 tags: [App,FirstCode]

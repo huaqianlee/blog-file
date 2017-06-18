@@ -7,6 +7,8 @@ tags: 英语
 
 ## 美式音标
 ![美式音标](http://7xjdax.com1.z0.glb.clouddn.com/english/America_ph.png)
+>**[m] [n] [ŋ] [l] [r] - 母音前母音后发音不同**
+
 <!--more-->
 ## 美式音标与英式音标的区别
 两种音标有很大的区别容易混淆，需要注意。如下：

@@ -1,4 +1,4 @@
-title: "第一行代码学习笔记之手机多媒体"
+title: "第一行代码之手机多媒体"
 date: 2017-05-06 23:57:26
 categories: 学习笔记
 tags: [App,FirstCode]

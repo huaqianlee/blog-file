@@ -1,4 +1,4 @@
-title: "第一行代码学习笔记之跨程序共享数据-内容提供器"
+title: "第一行代码之跨程序共享数据-内容提供器"
 date: 2017-05-03 21:51:23
 categories: 学习笔记
 tags: [App,FirstCode]
