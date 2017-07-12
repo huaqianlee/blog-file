@@ -150,8 +150,9 @@ MainActivity activity = (MainActivity)getActivity();//获取碎片相关联的�
 这样布局后，手机就会默认加载第一个布局，平板则加载large布局。
 
 Android中场景限定符（Qualifiers）如下：
+
 |限定符|描述|
-|------|----|
+|:----:|:--:|
 |small|小屏设备的资源|
 |normal|中等屏设备的资源|
 |large|大屏设备的资源|
@@ -163,6 +164,7 @@ Android中场景限定符（Qualifiers）如下：
 |xxhdpi|超超高分辨率设备的资源（320～480dpi）|
 |land|横屏设备的资源|
 |port|竖屏设备的资源|
+
 
 ### 使用最小宽度限定符
 不用large，新建res/layout-sw600dp/activity_main.xml。这样在屏幕宽度大于600dp时，则会自动调此布局。

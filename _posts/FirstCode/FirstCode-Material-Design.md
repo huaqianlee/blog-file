@@ -741,6 +741,17 @@ public class FruitActivity extends AppCompatActivity {
     android:theme="@style/FruitActivityTheme"
 </activiy>
 ```
+
+android5.0以上的版本还有一种融合及透明状态栏的方式：
+```java
+# 参考coolweather融合必应图片，及头布局间隔设置
+if (Build.VERSION.SDK_INT >= 21) {
+    View decorView = getWindow().getDecorView();
+    decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+    getWindow().setStatusBarColor(Color.TRANSPARENT);
+}
+```
+
 效果图如下：
 
 ![待补充]()

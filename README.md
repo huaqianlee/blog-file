@@ -37,6 +37,8 @@ Uav
 
 Android
 -----------
+- [MTK-Modem-问题集](_posts/Android/MTK-Modem-问题集.md)
+- [实现真正意义上的第一个APP之启程](_posts/Android/实现真正意义上的第一个APP之启程.md)
 - [Android电池监控系统BMS之电池系统架构](_posts/Android/Android电池监控系统-BMS-之电池系统架构.md)
 - [Android源码bootable解析之LK](./_posts/Android/Android源码bootable解析之LK-bootloader-little-kernel.md)
 - [Android电源管理架构](_posts/Android/Android电源管理架构.md)
@@ -55,6 +57,10 @@ Android
 - [高通平台Android源码分析之Linux内核设备树dts文件](_posts/Android/高通平台Android源码分析之Linux内核设备树-DT-Device-Tree-dts文件.md)
 - [怎么用Android日志系统更好地去调试](_posts/Android/怎么用Android日志系统更好地去调试-How-to-debug-with-Android-logging.md)
 - [怎么抓取Android测试日志文件](_posts/Android/怎么抓取Android测试日志文件-How-to-get-android-log-file.md)
+
+Kotlin
+-----------
+- [Android Kotlin之曲折HelloWord](_posts/Kotlin/Kotlin-HElloWorld.md)
 
 Git
 -----------
