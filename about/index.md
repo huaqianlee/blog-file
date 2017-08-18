@@ -11,10 +11,6 @@ SUMMARY
 
 祖籍四川达州，現居深圳。目前为止主要从事底层及系统级工作，对App及Web很感兴趣。
 
-RESUME
-------
-**在线简历：[中文简历](../resume_cn.html)　|　[英文简历](../resume_en.html)**
-
 
 POSTSCRIPT
 ------------------
@@ -22,7 +18,6 @@ POSTSCRIPT
 
 CONTACT ME
 ------------------
-联系电话: [185-\*\*\*\*-0564](tel://185-\*\*\*\*-0564)
 电子邮箱: <huaqianlee@gmail.com> | <huaqianlee@outlook.com>
 个人博客: [huaqianlee.github.io](http://huaqianlee.github.io)
 微博： [http://weibo.com/huaqianlee](http://weibo.com/huaqianlee)

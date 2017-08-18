@@ -37,13 +37,20 @@ Uav
 
 Android
 -----------
-- [MTK-Modem-问题集](_posts/Android/MTK-Modem-问题集.md)
+*APP*
+- [通过RecyclerView Item侧边导航栏动态加载布局](_posts/Android/Dynamic-loading-layout-by-recyclerview-item.md)
+- [按返回键只关闭DrawerLayout侧边栏不退出Activity的解决方案](_posts/Android/hides-navigation-in-drawerlayou.md)
+- [基于DrawerLayout打造卡片式Navigation](_posts/Android/the-card-navigation-base-on-drawerlayout.md)
+- [RecyclerView Item选中效果及点击事件的实现](_posts/Android/the-selected-effect-of-recyclerview-item.md)   
 - [实现真正意义上的第一个APP之启程](_posts/Android/实现真正意义上的第一个APP之启程.md)
+- [Android中adb命令的用法](_posts/Android/Android中adb-Android-Debug-Bridge-命令的用法.md)
+- [Android Stdudio常用快捷键](_posts/Android/Android-Stdudio-Linux-windows-mac常用快捷键.md)
+ 
+*System*
+- [MTK-Modem-问题集](_posts/Android/MTK-Modem-问题集.md)
 - [Android电池监控系统BMS之电池系统架构](_posts/Android/Android电池监控系统-BMS-之电池系统架构.md)
 - [Android源码bootable解析之LK](./_posts/Android/Android源码bootable解析之LK-bootloader-little-kernel.md)
 - [Android电源管理架构](_posts/Android/Android电源管理架构.md)
-- [Android中adb命令的用法](_posts/Android/Android中adb-Android-Debug-Bridge-命令的用法.md)
-- [Android Stdudio常用快捷键](_posts/Android/Android-Stdudio-Linux-windows-mac常用快捷键.md)
 - [高通Android不带电量计的电量计算方式](_posts/Android/高通Android不带电量计的电量计算方式.md)
 - [About ActivityNotFoundException Unable to find explicit activity class && Android.mk解析](_posts/Android/About-ActivityNotFoundException-Unable-to-find-explicit-activity-class-Android-mk解析.md)
 - [Android日志系统详解](_posts/Android/Android-Logging-system-Android日志系统详解.md)

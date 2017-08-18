@@ -443,7 +443,7 @@ public class FruitAdapter extends RecyclerView.Adapter<FruitAdapter.ViewHolder> 
             mContext = parent.getContext();
         }
         View view = LayoutInflater.from(mContext).inflate(R.layout.fruit_item, parent, false);
-        return view;
+        return viewHolder(view);
     }
 
     @Override
@@ -754,7 +754,7 @@ if (Build.VERSION.SDK_INT >= 21) {
 
 效果图如下：
 
-![待补充]()
+![fruit_effect](http://7xjdax.com1.z0.glb.clouddn.com/fruit_effct.gif)
 
 ## 示例源码
 整个Material Design示例源码的地址如下：
