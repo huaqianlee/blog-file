@@ -1,4 +1,4 @@
-title: "通过RecyclerView Item侧边导航栏动态加载布局"
+title: "通过自定义侧边导航栏的RecyclerView动态加载布局"
 date: 2017-08-18 22:45:08
 categories: Android
 tags: App
@@ -106,3 +106,5 @@ adapter.setOnItemClickListener(new NavFuncAdapter.OnItemClickListener() {
 ## 源码地址
 [ForMe](https://github.com/huaqianlee/ForMe)
 
+## 效果
+![effect]()

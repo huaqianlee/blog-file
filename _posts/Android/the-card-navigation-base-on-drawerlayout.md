@@ -380,7 +380,7 @@ recyclerView.setAdapter(adapter);
 这样子就实现了卡片式侧边栏了，效果如下：
 ![nav_custom](http://7xjdax.com1.z0.glb.clouddn.com/nav_card_p.jpg)
 
-Item选中效果的实现方式见：![RecyclerView选中效果的实现](http://huaqianlee.github.io/2017/08/17/Android/the-selected-effect-of-recyclerview-item/) .
+Item选中效果的实现方式见：[RecyclerView选中效果的实现](http://huaqianlee.github.io/2017/08/17/Android/the-selected-effect-of-recyclerview-item/) .
 
 今天先这样子粗糙地写这篇博客，后续完善了有时间再更新一下。
 

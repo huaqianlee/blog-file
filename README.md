@@ -38,8 +38,8 @@ Uav
 Android
 -----------
 *APP*
-- [通过RecyclerView Item侧边导航栏动态加载布局](_posts/Android/Dynamic-loading-layout-by-recyclerview-item.md)
-- [按返回键只关闭DrawerLayout侧边栏不退出Activity的解决方案](_posts/Android/hides-navigation-in-drawerlayou.md)
+- [通过自定义侧边导航栏的RecyclerView动态加载布局](_posts/Android/Dynamic-loading-layout-by-recyclerview-item.md)
+- [按返回键只关闭DrawerLayout侧边栏不退出Activity的实现方案](_posts/Android/hides-navigation-in-drawerlayou.md)
 - [基于DrawerLayout打造卡片式Navigation](_posts/Android/the-card-navigation-base-on-drawerlayout.md)
 - [RecyclerView Item选中效果及点击事件的实现](_posts/Android/the-selected-effect-of-recyclerview-item.md)   
 - [实现真正意义上的第一个APP之启程](_posts/Android/实现真正意义上的第一个APP之启程.md)

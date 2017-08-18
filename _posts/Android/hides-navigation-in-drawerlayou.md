@@ -1,4 +1,4 @@
-title: "按返回键只关闭DrawerLayout侧边栏不退出Activity的解决方案"
+title: "按返回键只关闭DrawerLayout侧边栏不退出Activity的实现方案"
 date: 2017-08-18 22:44:17
 categories: Android
 tags: App
