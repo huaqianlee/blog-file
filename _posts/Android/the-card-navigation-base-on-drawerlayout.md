@@ -5,7 +5,7 @@ tags: App
 ---
 前段时间开始了利用空闲时间做一个练习APP [ForMe](https://github.com/huaqianlee/ForMe)。根据设计APP需要通过左边导航栏切换主界面功能，自己平时在使用Google的NewsTab，觉得很不错，就准备参考其界面来设计。
 
-![newsTab](http://7xjdax.com1.z0.glb.clouddn.com/newstab_pic.jpg)
+![newsTab](http://7xjdax.com1.z0.glb.clouddn.com/blog/app/newstab_view.jpg)
 
 <!--more-->
 ## 尝试通过NavigationView实现
@@ -126,7 +126,7 @@ if (actionBar != null) {
 ```
 好了，这样子效果就出来了：
 
-![nav_view](http://7xjdax.com1.z0.glb.clouddn.com/android/firtcode/navigationview_ex.jpg)
+![nav_view](http://7xjdax.com1.z0.glb.clouddn.com/blog/app/navigation_view.jpg)
 
 可是这样子只能做到菜单式的侧边栏，不能实现我的需求。我尝试着找到一种方式来实现卡片式显示，但是最终没能找到。
 

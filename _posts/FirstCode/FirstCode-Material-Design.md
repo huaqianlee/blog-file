@@ -291,7 +291,7 @@ navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSel
     }
 ```
 效果如下：
-![NavigationView滑动菜单界面](http://7xjdax.com1.z0.glb.clouddn.com/android/firtcode/navigationview_ex.jpg)
+![NavigationView滑动菜单界面](http://7xjdax.com1.z0.glb.clouddn.com/blog/app/navigation_view.jpg)
 
 ## 悬浮按钮和可交互提示
 ### FloatingActionButton
