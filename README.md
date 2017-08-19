@@ -17,24 +17,6 @@ Uav
 -----------
 - [英式音标与美式音标]((_posts/English/Americal-and-english-phonetic.md))
 
-学习笔记
-----------------
-*第一行代码*
-- [第一行代码思维导图及学习笔记目录](_posts/FirstCode/The-departure-of-FirstCode-learning-notes.md)
-- [第一行代码之项目结构与活动](_posts/FirstCode/FirstCode-learning-note-project-structure-and-activity.md)
-- [第一行代码之UI](http://huaqianlee.github.io/2017/03/25/FirstCode/firstcode-note-UI/)
-- [第一行代码之广播机制](http://huaqianlee.github.io/2017/03/25/FirstCode/FirstCode-Broadcast-Receiver/)
-- [第一行代码之数据存储](_posts/FirstCode/FirstCode-data-storage/)
-- [第一行代码之跨程序共享数据-内容提供器](_posts/FirstCode/FirstCode-Content-Provider/)
-- [第一行代码之手机多媒体](_posts/FirstCode/FirstCode-media/)
-- [第一行代码之服务](_posts/FirstCode/FirstCode-Service/)
-- [第一行代码之网络](_posts/FirstCode/FirstCode-Network/)
-- [第一行代码之碎片](_posts/FirstCode/FirstCode-Fragment/)
-- [第一行代码之Material Design](_posts/FirstCode/FirstCode-Material-Design/)
-- [第一行代码之高级技巧](_posts/FirstCode/FirstCode-advanced-skills/)
-
-*Android群英传*
-
 Android
 -----------
 *APP*
@@ -68,6 +50,25 @@ Android
 Kotlin
 -----------
 - [Android Kotlin之曲折HelloWord](_posts/Kotlin/Kotlin-HElloWorld.md)
+
+
+学习笔记
+----------------
+*第一行代码*
+- [第一行代码思维导图及学习笔记目录](_posts/FirstCode/The-departure-of-FirstCode-learning-notes.md)
+- [第一行代码之项目结构与活动](_posts/FirstCode/FirstCode-learning-note-project-structure-and-activity.md)
+- [第一行代码之UI](http://huaqianlee.github.io/2017/03/25/FirstCode/firstcode-note-UI/)
+- [第一行代码之广播机制](http://huaqianlee.github.io/2017/03/25/FirstCode/FirstCode-Broadcast-Receiver/)
+- [第一行代码之数据存储](_posts/FirstCode/FirstCode-data-storage/)
+- [第一行代码之跨程序共享数据-内容提供器](_posts/FirstCode/FirstCode-Content-Provider/)
+- [第一行代码之手机多媒体](_posts/FirstCode/FirstCode-media/)
+- [第一行代码之服务](_posts/FirstCode/FirstCode-Service/)
+- [第一行代码之网络](_posts/FirstCode/FirstCode-Network/)
+- [第一行代码之碎片](_posts/FirstCode/FirstCode-Fragment/)
+- [第一行代码之Material Design](_posts/FirstCode/FirstCode-Material-Design/)
+- [第一行代码之高级技巧](_posts/FirstCode/FirstCode-advanced-skills/)
+
+*Android群英传*
 
 Git
 -----------
