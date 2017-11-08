@@ -105,7 +105,7 @@ Web
 
 Other
 -----------
-- [xml基础](_posts/other/MDB-ICP-protocol.md)
+- [纸币器和MDB协议](_posts/other/MDB-ICP-protocol.md)
 
 
 ## 附录
