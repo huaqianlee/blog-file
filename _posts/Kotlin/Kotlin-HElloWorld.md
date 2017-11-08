@@ -1,6 +1,6 @@
 title: "Android Kotlin之曲折HelloWord"
 date: 2017-05-23 08:09:56
-categories: [Kotlin,Android]
+categories: Kotlin
 tags: [App,Android Studio]
 ---
 最近工作业余时间一直在自学Android，Google I/O 2017 惊闻Kotlin成为Google支持的官方语言，当然得紧跟“中央”的脚步，开始程序入门必备之HelloWord，殊不知这个HelloWord充满了曲折。

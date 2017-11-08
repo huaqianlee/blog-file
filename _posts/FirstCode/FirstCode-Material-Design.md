@@ -185,6 +185,9 @@ if (actionBar != null) {
     actionBar.setDisplayHomeAsUpEnabled(true); // 显示导航按钮(HomeAsUp按钮)，默认是一个返回箭头
     actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);//设置图标
 }
+# 也可以直接在布局文件中加入：
+app:navigationIcon="@drawable/ic_menu"
+
 
 @Override
 public boolean onOptionsItemSelected(MenuItem item) {

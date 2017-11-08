@@ -18,7 +18,7 @@ POSTSCRIPT
 
 CONTACT ME
 ------------------
-电子邮箱: <huaqianlee@gmail.com> | <huaqianlee@outlook.com>
+电子邮箱: <huaqianlee@gmail.com>
 个人博客: [huaqianlee.github.io](http://huaqianlee.github.io)
 微博： [http://weibo.com/huaqianlee](http://weibo.com/huaqianlee)
 Github : [http://github.com/huaqianlee](http://github.com/huaqianlee)

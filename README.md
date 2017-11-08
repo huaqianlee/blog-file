@@ -20,6 +20,7 @@ Uav
 Android
 -----------
 *APP*
+- [Getting Started With RecyclerView and CardView on Android](_posts/Android/Getting-Started-With-RecyclerView-and-CardView-on-Android.md)
 - [通过自定义侧边导航栏的RecyclerView动态加载布局](_posts/Android/Dynamic-loading-layout-by-recyclerview-item.md)
 - [按返回键只关闭DrawerLayout侧边栏不退出Activity的实现方案](_posts/Android/hides-navigation-in-drawerlayou.md)
 - [基于DrawerLayout打造卡片式Navigation](_posts/Android/the-card-navigation-base-on-drawerlayout.md)
@@ -101,6 +102,10 @@ Web
 -----------
 - [xml基础](_posts/Web/xml基础.md)
 - [xml文件约束与解析](_posts/Web/xml文件约束与解析.md)
+
+Other
+-----------
+- [xml基础](_posts/other/MDB-ICP-protocol.md)
 
 
 ## 附录
