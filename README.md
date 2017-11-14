@@ -30,6 +30,7 @@ Android
 - [Android Stdudio常用快捷键](_posts/Android/Android-Stdudio-Linux-windows-mac常用快捷键.md)
  
 *System*
+- [Android Selinux 权限及问题](_posts/Android/Android-SELinux-Permison-and-Question.md)
 - [MTK-Modem-问题集](_posts/Android/MTK-Modem-问题集.md)
 - [Android电池监控系统BMS之电池系统架构](_posts/Android/Android电池监控系统-BMS-之电池系统架构.md)
 - [Android源码bootable解析之LK](./_posts/Android/Android源码bootable解析之LK-bootloader-little-kernel.md)
