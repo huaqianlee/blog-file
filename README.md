@@ -3,19 +3,6 @@
 
 *博客地址:* [Andy Lee's Blog](http://huaqianlee.github.io)
 
-Uav
------------
-- [PX4之外设代码结构及流程-IMU](_posts/Uav/px4-imu-mpu9250-code-structure.md)
-- [PX4 for Snapdragon Flight](_posts/Uav/PX4-for-Snapdragon-Flight.md)
-- [高通px4代码阅读笔记](_posts/Uav/qualcomm-px4-code-reading-note.md)
-- [无人机主板调试](_posts/Uav/uav-board-debugging.md)
-- [高通无人机8074BLSP接口说明](_posts/Uav/Qualcomm-uav-blsp-port.md)
-- [手机无人机常用sensor介绍](_posts/Uav/mobile-and-uav-sensors.md)
-- [camera架构与调试-菜鸟笔记](_posts/Uav/camera-arch-and-tunning-rookie-note.md)
-
-英语
------------
-- [英式音标与美式音标]((_posts/English/Americal-and-english-phonetic.md))
 
 Android
 -----------
@@ -30,6 +17,8 @@ Android
 - [Android Stdudio常用快捷键](_posts/Android/Android-Stdudio-Linux-windows-mac常用快捷键.md)
  
 *System*
+- [*Android 系统源码分析综述：整理总结源码分析的所有博客*](_posts/Android/A-summary-of-Android-source-analysis.md)
+- [Android 电源管理之电池管理系统(BMS)](_posts/Android/BMS-of-Android-Power-Management.md)
 - [Android Selinux 权限及问题](_posts/Android/Android-SELinux-Permison-and-Question.md)
 - [MTK-Modem-问题集](_posts/Android/MTK-Modem-问题集.md)
 - [Android电池监控系统BMS之电池系统架构](_posts/Android/Android电池监控系统-BMS-之电池系统架构.md)
@@ -48,6 +37,21 @@ Android
 - [高通平台Android源码分析之Linux内核设备树dts文件](_posts/Android/高通平台Android源码分析之Linux内核设备树-DT-Device-Tree-dts文件.md)
 - [怎么用Android日志系统更好地去调试](_posts/Android/怎么用Android日志系统更好地去调试-How-to-debug-with-Android-logging.md)
 - [怎么抓取Android测试日志文件](_posts/Android/怎么抓取Android测试日志文件-How-to-get-android-log-file.md)
+
+Uav
+-----------
+- [PX4之外设代码结构及流程-IMU](_posts/Uav/px4-imu-mpu9250-code-structure.md)
+- [PX4 for Snapdragon Flight](_posts/Uav/PX4-for-Snapdragon-Flight.md)
+- [高通px4代码阅读笔记](_posts/Uav/qualcomm-px4-code-reading-note.md)
+- [无人机主板调试](_posts/Uav/uav-board-debugging.md)
+- [高通无人机8074BLSP接口说明](_posts/Uav/Qualcomm-uav-blsp-port.md)
+- [手机无人机常用sensor介绍](_posts/Uav/mobile-and-uav-sensors.md)
+- [camera架构与调试-菜鸟笔记](_posts/Uav/camera-arch-and-tunning-rookie-note.md)
+
+英语
+-----------
+- [英式音标与美式音标]((_posts/English/Americal-and-english-phonetic.md))
+
 
 Kotlin
 -----------
@@ -107,6 +111,7 @@ Web
 Other
 -----------
 - [纸币器和MDB协议](_posts/other/MDB-ICP-protocol.md)
+- [Android快充介绍](_posts/Android/What-is-fast-charge-now？.md)
 
 
 ## 附录
