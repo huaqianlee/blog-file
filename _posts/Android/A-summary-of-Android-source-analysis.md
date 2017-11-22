@@ -1,5 +1,5 @@
-title: "Android 系统源码分析综述"
-date: 2017-11-21 21:55:43
+title: "Android 系统源码分析综述：整理总结源码分析的所有博客"
+date: 2020-11-21 21:55:43
 categories: Android
 tags: [源码分析,Qualcomm,MTK]
 ---
@@ -53,7 +53,7 @@ tags: [源码分析,Qualcomm,MTK]
 
 
 
-### 编译系统
+### 3.2.4 编译系统
 文章名 | 概述
 ---|---
 [Android编译过程详解之一](http://huaqianlee.github.io/2015/07/11/Android/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%B8%80/)|高通自定义脚本与lunch
