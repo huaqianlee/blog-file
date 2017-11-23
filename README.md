@@ -18,6 +18,7 @@ Android
  
 *System*
 - [**Android 系统源码分析综述：整理总结源码分析的所有博客**](_posts/Android/A-summary-of-Android-source-analysis.md)
+- [Android(Linux) 输入子系统解析](_posts/Android/Android-Linux-input-system-analysis.md)
 - [Android 电源管理之电池管理系统(BMS)](_posts/Android/BMS-of-Android-Power-Management.md)
 - [Android Selinux 权限及问题](_posts/Android/Android-SELinux-Permison-and-Question.md)
 - [MTK-Modem-问题集](_posts/Android/MTK-Modem-问题集.md)

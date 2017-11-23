@@ -3,6 +3,9 @@ date: 2017-11-21 21:56:28
 categories: Android
 tags: [源码分析,MTK]
 ---
+
+Android 源码分析系列综述博文： [Android 系统源码分析综述](http://huaqianlee.github.io/2017/11/21/Android/A-summary-of-Android-source-analysis/)
+
 *Platform information： MTK6797（X20）+ Android 7.0*
 
 之前做高通的时候，对高通此部分做过粗略的分析，不过当时胡乱做的些笔记，只简单整理了几篇博客，感兴趣可以参考如下路径：
@@ -19,35 +22,35 @@ tags: [源码分析,MTK]
 
 [Android电池监控系统-BMS-之电池系统架构 (有坑未填)](http://huaqianlee.github.io/2015/06/06/Android/Android%E7%94%B5%E6%B1%A0%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F-BMS-%E4%B9%8B%E7%94%B5%E6%B1%A0%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84/)
 
-# 零、充电简析
-## 0.1 充电状态机
+# 充电简析
+## 充电状态机
 电池充电过程分为预充、恒流充电（CC模式）、恒压充电（CV模式）、涓流充电四个流程，MTK的状态机如下：
 
 ![state](http://7xjdax.com1.z0.glb.clouddn.com/android/mtk/chargind_state.jpg)
 <!--more-->
-## 0.2 充电简要流程框图
+## 充电简要流程框图
 
 ![flow](http://7xjdax.com1.z0.glb.clouddn.com/android/mtkGauge_arch.jpg)
 
-# 一、BMS 架构
+# BMS 架构
 MTK 的 BMS 架构如下：
 ![bms](http://7xjdax.com1.z0.glb.clouddn.com/android/mtk/battery%20introduction.jpg)
 
 我准备将BMS从硬件到APP分为不同的架构层来分析。接下来分别分析下不同的架构层。
 
-## 1.1 硬件层
+## 硬件层
 硬件层主要分为三个部分：PMIC，Fuel Gauge 和 ADC。本文主要分析软件，所以硬件就不准备深入研究了。
 ### 1.1.1 PMIC
 智能手机方案一般都会有一个PMIC芯片，有些也还会采用外接充电IC，使不使用外接IC，软件驱动会有一些区别。
 
-### 1.1.2 Fuel Gauge
+### Fuel Gauge
 Fuel Gauge 是 MTK 为充放电、电量算法提供服务的一个硬件电路，电路中的电阻比较重要。
 
-### 1.1.3 ADC
+### ADC
 FGADC 和 AUXADC 分别采样电池的电流、电压（还会采样电池温度）。
 
 
-## 1.2 BootLoader层
+## BootLoader层
 BootLoader部分没有在上图表现出来，也可以将其归为driver部分。
 ### 1.2.1 Preloader层
 此部分会对充电做一些初始设置，比如设置手机尽早开始充电以避免电池低电压不能进入接下来的充电状态，关键路径如下：
@@ -55,10 +58,10 @@ BootLoader部分没有在上图表现出来，也可以将其归为driver部分�
 alps\vendor\mediatek\proprietary\bootable\bootloader\preloader\platform\mt6797\src\drivers\platform.c
 ```
 
-### 1.2.2 LK层
+### LK层
 此部分主要针对充电主要做三件事：1. 启动方式、充电状态监测；2. 初始化充电IC；3. 充电器状态监测处理。
 
-#### 1.2.2.1 启动方式、充电状态监测
+#### 启动方式、充电状态监测
 ```c
 # alps\vendor\mediatek\proprietary\bootable\bootloader\lk\platform\mt6797\include\platform\boot_mode.h
 # alps\vendor\mediatek\proprietary\bootable\bootloader\lk\platform\mt6797\boot_mode.c
@@ -95,7 +98,7 @@ kernel_power_off_charging_detection(void) { // 充电状态监测
 
 ```
 
-#### 1.2.2.2 初始化充电IC
+#### 初始化充电IC
 充电IC的初始化工作，有些可以被kernel驱动覆盖，有些不能，所以有时候一些修改记得在LK和kernel里面都得完成。
 ```c
 # alps\vendor\mediatek\proprietary\bootable\bootloader\lk\platform\mt6797\mt_battery.c
@@ -130,7 +133,7 @@ boot_linux_fdt() {
 	}
 }
 ```
-#### 1.2.2.4 充电图标
+#### 充电图标
 MTK之前很多方案是在lk里面绘制关机充电图标，然后采样IPO协议实现关机充电。不过现在已采取高通类似方案在Health部分绘制关机充电图标了。
 ```c
 # alps\vendor\mediatek\proprietary\bootable\bootloader\lk\platform\mt6755\mt_logo.c
@@ -140,7 +143,7 @@ IPO方式流程图如下：
 > 由于初次接触MTK，又没有深入研究此部分，此部分如有错误，敬请谅解和指出。
 
 
-## 1.3 Kernel层
+## Kernel层
 Kernel 部分软件流程框图，不过此图是我从MTK文档上截取没有做修改，所以图片中外部充电IC代码为Fan5405，对应于我的代码应该为bq24290（bq24296）。如下：
 ![arch](http://7xjdax.com1.z0.glb.clouddn.com/android/mtk/kernel_cod_arch.jpg)
 ### 1.3.1 ADC部分
@@ -151,7 +154,7 @@ pmic_auxadc_init()
 PMIC_IMM_GetCurrent // 算出电流
 ```
 
-### 1.3.2 Common部分
+### Common部分
 PMIC充电控制、充电控制主线程、SW FG算法等内容在此部分实现。battery_common*.c 是一个关键文件，其是充电控制的主线程，battery 设备也由此文件注册。
 ```c
 # alps\kernel-3.18\drivers\misc\mediatek\include\mt-plat\charging.h
@@ -203,7 +206,7 @@ Fuel Gauge Control 和 Charging Control 框图如下：
 
 ![FG&Charging Control](http://7xjdax.com1.z0.glb.clouddn.com/android/mtk/charging_control.jpg)
 
-### 1.3.3 HAL部分
+### HAL部分
 我所阅读的代码使用了外接充电 IC BQ24296（switch charger），驱动不会走 linear_charging.c，走 switch_charging.c + bq25896 驱动部分。
 ```c
 # alps\kernel-3.18\drivers\misc\mediatek\power\mt6797\charging_hw_pmic.c
@@ -240,7 +243,7 @@ charging_set_xx() // 封装后的 set 接口
 charging_set_current() // 设置充电电流
 ```
 
-### 1.3.4 客制化部分
+### 客制化部分
 不同于高通将电池曲线合入DTS，MTK是以头文件的形式合入电池曲线（好像也有DTS方式）。
 ```c
 # alps\kernel-3.18\drivers\misc\mediatek\include\mt-plat\mt6797\include\mach\mt_battery_meter_table.h
@@ -259,7 +262,7 @@ CUST_POWERON_DELTA_CAPACITY_TOLRANCE // 重启电量记录范围
 // 充电控制，充电电流、温度等宏定义
 ```
 
-### 1.3.5 文件节点
+### 文件节点
 电池状态、充电状态等文件节点的创建路径：
 ```c
 // Power Supply Class Node 
@@ -271,10 +274,10 @@ power_supply_attrs
 # alps\kernel-3.18\drivers\power\power_supply_leds.c
 ```
 
-### 1.4 Healthd模块
+### Healthd模块
 Healtdh模块是一个单独的进程，这部分主要做两件事：1. 读取电池数据，上报（BatteryService.java）； 2. 绘制关机图标。
 
-#### 1.4.1 Main函数
+#### Main函数
 healthd.cpp是Healthd模块的入口，也就是Main函数，如下：
 ```cpp
 # alps\system\core\healthd\healthd.cpp
@@ -320,7 +323,7 @@ main() // main函数,单独的进程
         healthd_mode_ops->heartbeat();
 ```
 
-#### 1.4.2 正常开机
+#### 正常开机
 正常开机时电池信息更新：
 ![update_battery](http://7xjdax.com1.z0.glb.clouddn.com/android/mtk/bat_update_func.jpg)
 
@@ -365,7 +368,7 @@ BatteryMonitor::init() //获取文件节点值，初始化（譬如加上节点�
 
 ```
 
-#### 1.4.3 关机充电
+#### 关机充电
 关机充电部分主要就是更新电量、充电状态，更新UI。
 ```bash
 # alps\system\core\healthd\healthd_mode_charger.cpp
@@ -381,8 +384,8 @@ healthd_mode_charger_init()
 healthd_mode_charger_battery_update()
 ```
 
-## 1.5 Framework层
-### 1.5.1 Native层
+## Framework层
+### Native层
 
 ```cpp
 # alps\frameworks\native\services\sensorservice\BatteryService.cpp
@@ -411,7 +414,7 @@ batteryPropertiesChanged()
 # alps\frameworks\native\services\batteryservice\IBatteryPropertiesRegistrar.cpp
 // BatteryManager.java和BatteryService.java通过其获取 batteryproperties ，与healthd中同步
 ```
-### 1.5.2 Framework部分
+### Framework部分
 ```java
 # alps\frameworks\base\services\core\java\com\android\server\BatteryService.java
 onStart() {
@@ -465,7 +468,7 @@ queryProperty() // 主动到 healthd 查询电池信息
 // 影响电池的所有信息及操作，时间以ms为单位
 ```
 
-### 1.5.3 APP部分
+### APP部分
 系统UI处理电流的部分路径主要如下：
 ```java
 # alps\frameworks\base\core\java\com\android\internal\os\BatterySipper.java
@@ -486,10 +489,10 @@ queryProperty() // 主动到 healthd 查询电池信息
 
 
 
-# 二、 关机充电流程
+# 关机充电流程
 关机充电也是在kernel里面充电，充电控制流程与开机是一致的，前面也分析到了。这里补充一个MTK软件流程图。如下：
 ![charging flow](http://7xjdax.com1.z0.glb.clouddn.com/android/mtk/power%20off%20charging2.jpg)
 
-# 三、总结
+# 总结
 先留一个坑，等有时间了，再来绘制一个清晰易懂的流程框图。
 
