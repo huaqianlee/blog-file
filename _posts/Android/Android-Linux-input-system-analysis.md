@@ -3,7 +3,7 @@ date: 2017-11-23 22:42:04
 categories: Android
 tags: [源码分析,MTK]
 ---
-Android 源码分析系列综述博文： [Android 系统源码分析综述](http://huaqianlee.github.io/2017/11/21/Android/A-summary-of-Android-source-analysis/)
+Android 源码分析系列综述博文： [Android 系统源码分析综述](http://huaqianlee.github.io/2020/11/21/Android/A-summary-of-Android-source-analysis/)
 
 
 # 前言
@@ -16,6 +16,8 @@ Android/Linux 输入设备总类繁杂，常见的有按键、键盘、触摸屏
 
 <!--more-->
 
+
+# 输入子系统分层解析
 ## Hardware层
 硬件层主要就是按键、触摸屏、Sensor等各种输入设备。
 
@@ -297,7 +299,7 @@ Framework 层涉及面太广，内容也多，我现在阅读这部分上层源�
 ```
 
 
-## 附 　Shell 操作路径
+# 附 Shell 操作路径
 在 Kernel 层生成三个路径及相关设备文件，如下
 ```bash
 # /sys/class/input/

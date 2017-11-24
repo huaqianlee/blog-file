@@ -24,6 +24,10 @@ tags: [源码分析,Qualcomm,MTK]
 [Android不带电量计的电量计算](http://huaqianlee.github.io/2015/01/21/Android/%E9%AB%98%E9%80%9AAndroid%E4%B8%8D%E5%B8%A6%E7%94%B5%E9%87%8F%E8%AE%A1%E7%9A%84%E7%94%B5%E9%87%8F%E8%AE%A1%E7%AE%97%E6%96%B9%E5%BC%8F/) | 高通不带库仑计电池电量算法
 [Android 电源管理架构](http://huaqianlee.github.io/2015/05/30/Android/Android%E7%94%B5%E6%BA%90%E7%AE%A1%E7%90%86%E6%9E%B6%E6%9E%84/) | 高通PMU架构与电源管理机制简析
 [Android电池监控系统-BMS (有坑未填)](http://huaqianlee.github.io/2015/06/06/Android/Android%E7%94%B5%E6%B1%A0%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F-BMS-%E4%B9%8B%E7%94%B5%E6%B1%A0%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84/) |高通BMS系统源码简析
+[高通电池管理系统（BMS）驱动分析](http://huaqianlee.github.io/2015/06/24/Android/qaulcomm-bms-driver-analysis/)|高通 BMS 系统与驱动分析
+[高通 smb135x charger 驱动分析](http://huaqianlee.github.io/2015/06/24/Android/smb135x-charger-driver/)|高通 smb135x 驱动简析
+[高通 PMIC 架构简析](http://huaqianlee.github.io/2015/06/24/Android/qcom-pmic-driver/)| 高通 PMIC 架构
+[高通 linear charger 驱动分析](http://huaqianlee.github.io/2015/06/24/Android/linear-charger-driver/)| 高通 linear charger 驱动简析
 
 ## 代码模块方向
 

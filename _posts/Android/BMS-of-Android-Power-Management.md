@@ -3,8 +3,7 @@ date: 2017-11-21 21:56:28
 categories: Android
 tags: [源码分析,MTK]
 ---
-
-Android 源码分析系列综述博文： [Android 系统源码分析综述](http://huaqianlee.github.io/2017/11/21/Android/A-summary-of-Android-source-analysis/)
+>Android 源码分析系列综述博文： [Android 系统源码分析综述](http://huaqianlee.github.io/2020/11/21/Android/A-summary-of-Android-source-analysis/)
 
 *Platform information： MTK6797（X20）+ Android 7.0*
 
