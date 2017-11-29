@@ -21,6 +21,14 @@ tags: [源码分析,MTK]
 
 [Android电池监控系统-BMS-之电池系统架构 (有坑未填)](http://huaqianlee.github.io/2015/06/06/Android/Android%E7%94%B5%E6%B1%A0%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F-BMS-%E4%B9%8B%E7%94%B5%E6%B1%A0%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84/)
 
+[高通电池管理系统（BMS）驱动分析](http://huaqianlee.github.io/2015/06/24/Android/qaulcomm-bms-driver-analysis/)
+
+[高通 smb135x charger 驱动分析](http://huaqianlee.github.io/2015/06/24/Android/smb135x-charger-driver/)
+
+[高通 PMIC 架构简析](http://huaqianlee.github.io/2015/06/24/Android/qcom-pmic-driver/)
+
+[高通 linear charger 驱动分析](http://huaqianlee.github.io/2015/06/24/Android/linear-charger-driver/)
+
 # 充电简析
 ## 充电状态机
 电池充电过程分为预充、恒流充电（CC模式）、恒压充电（CV模式）、涓流充电四个流程，MTK的状态机如下：
