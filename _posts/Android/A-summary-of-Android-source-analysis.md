@@ -1,5 +1,5 @@
 title: "【置顶】Android 系统源码分析综述：整理总结源码分析的所有博客"
-date: 2020-11-21 21:55:43
+date: 2100-11-21 21:55:43
 categories: Android
 tags: [源码分析,Qualcomm,MTK]
 ---
@@ -20,6 +20,7 @@ tags: [源码分析,Qualcomm,MTK]
 文章名 | 概述
 ---|---
 [Android(Linux) 输入子系统解析](http://huaqianlee.github.io/2017/11/23/Android/Android-Linux-input-system-analysis/)|从 HW 到 Framework 分析输入子系统
+[Android/Linux  I2C 驱动架构分析](http://huaqianlee.github.io/2017/12/03/Android/Android-Linux-i2c-driver-arch/)|I2C驱动架构分析
 [Android 电源管理之电池管理系统(BMS)](http://huaqianlee.github.io/2017/11/21/Android/BMS-of-Android-Power-Management/)|从 HW 到 APP 分析 BMS 系统  
 [Android不带电量计的电量计算](http://huaqianlee.github.io/2015/01/21/Android/%E9%AB%98%E9%80%9AAndroid%E4%B8%8D%E5%B8%A6%E7%94%B5%E9%87%8F%E8%AE%A1%E7%9A%84%E7%94%B5%E9%87%8F%E8%AE%A1%E7%AE%97%E6%96%B9%E5%BC%8F/) | 高通不带库仑计电池电量算法
 [Android 电源管理架构](http://huaqianlee.github.io/2015/05/30/Android/Android%E7%94%B5%E6%BA%90%E7%AE%A1%E7%90%86%E6%9E%B6%E6%9E%84/) | 高通PMU架构与电源管理机制简析
