@@ -19,6 +19,7 @@ tags: [源码分析,Qualcomm,MTK]
 
 文章名 | 概述
 ---|---
+[Android传感器（Sensor）架构简析 (╯_╰)](http://huaqianlee.github.io/2017/12/17/Android/android-sensor-arch-analysis/)|MTK 传感器架构简析 (╯_╰)
 [Android(Linux) 输入子系统解析](http://huaqianlee.github.io/2017/11/23/Android/Android-Linux-input-system-analysis/)|从 HW 到 Framework 分析输入子系统
 [Android/Linux  I2C 驱动架构分析](http://huaqianlee.github.io/2017/12/03/Android/Android-Linux-i2c-driver-arch/)|I2C驱动架构分析
 [Android 电源管理之电池管理系统(BMS)](http://huaqianlee.github.io/2017/11/21/Android/BMS-of-Android-Power-Management/)|从 HW 到 APP 分析 BMS 系统  

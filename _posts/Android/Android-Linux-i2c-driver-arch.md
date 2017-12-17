@@ -200,7 +200,7 @@ i2c_add_driver(driver)
     i2c_register_driver(THIS_MODULE, driver)
 
 ```
-> 注：主设备表示特定的驱动程序；次设备表示使用该设备的设备  
+> 注：主设备表示特定的驱动程序；次设备表示使用该设备驱动的设备  
 
 
 ## 设备驱动层（i2c-dev）

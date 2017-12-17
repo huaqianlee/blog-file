@@ -194,6 +194,18 @@ b.通过ZCV表格，将vbat转换成OCV
 c.ocv-vbat/r 来获取电流I
 d.对电流i 进行积分，获取电量。
 
+/*
+ * MTK vendor 封装了 FG2.0 算法，计算soc，然后通过netlink发送到Kernel
+ * 算法部分可以参考FG1.0的代码（battery_meter.c）
+ */
+BMT_status.SOC = battery_meter_get_battery_percentage()
+  gFG_capacity_by_c //库仑计计算的电量值
+    bmd_ctrl_cmd_from_user（）// meter  数据
+      memcpy(&gFG_capacity_by_c,...)
+        nl_data_handler（）->data = NLMSG_DATA(nlh)
+
+D0值：读取电池电压，将电池电压按对应电池的ZCV表查找对应的百分比，根据一定算法运算出的初始电量。
+
 
 # alps\kernel-3.18\drivers\power\mediatek\linear_charging.c
 // PMIC充电控制， CC模式CV模式切换
