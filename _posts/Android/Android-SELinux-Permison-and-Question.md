@@ -36,6 +36,7 @@ alps\device\mediatek\<platform>\sepolicy
 
 avc: denied {getattr read} for pid=7201 comm="xxx.xxx" scontext=u:r:system_app:s0 tcontext=u:r:shell_data_file:s0 tclass=dir permissive=0
 ``` 
+
 ## 权限修改
 主要有三种方式，前两种只能用来测试，第三种是推荐的正式处理方式。
 ### adb在线修改seLinux

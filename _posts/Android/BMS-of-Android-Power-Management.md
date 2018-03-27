@@ -3,7 +3,7 @@ date: 2017-11-21 21:56:28
 categories: Android
 tags: [源码分析,MTK]
 ---
->Android 源码分析系列综述博文： [Android 系统源码分析综述](http://huaqianlee.github.io/2020/11/21/Android/A-summary-of-Android-source-analysis/)
+>Android 源码分析系列综述博文： [Android 系统源码分析综述](http://huaqianlee.github.io/2100/11/21/Android/A-summary-of-Android-source-analysis/)
 
 *Platform information： MTK6797（X20）+ Android 7.0*
 
@@ -161,6 +161,44 @@ pmic_auxadc_init()
 PMIC_IMM_GetCurrent // 算出电流
 ```
 
+### HAL部分
+此 HAL 并不是真正的 HAL 层，实际是驱动部分，实现部分结构体，针对 MTK 不同充电方案提供支持，读取各项参数。我所阅读的代码使用了外接充电 IC BQ24296（switch charger），驱动不会走 linear_charging.c，走 switch_charging.c + bq25896 驱动部分。
+```c
+# alps\kernel-3.18\drivers\misc\mediatek\power\mt6797\charging_hw_pmic.c
+charging_value_to_parameter()
+charging_parameter_to_value()
+charging_hw_init() // PMIC初始化
+charging_get/set_current()
+charging_sw_init()
+chr_control_interface()
+
+# alps\kernel-3.18\drivers\misc\mediatek\include\mt-plat\battery_meter_hal.h
+BATTERY_METER_CTRL_CMD
+
+# alps\kernel-3.18\drivers\misc\mediatek\power\mt6797\battery_meter_hal.c
+get_hw_ocv
+read_adc_v_bat_sense()  // 读取电池电压，根据宏判断 batsense 还是 isense
+
+# alps\kernel-3.18\drivers\misc\mediatek\power\mt6797\bq25890.h
+// 硬件定义及接口
+
+# alps\kernel-3.18\drivers\misc\mediatek\power\mt6797\bq25890.c
+bq25890_driver_probe() // 注册驱动
+bq25890_get_xx() // get 接口
+bq25890_set_xx() // set 接口
+bq25890_hw_init() 
+
+# alps\kernel-3.18\drivers\misc\mediatek\power\mt6797\charging_hw_bq25890.c
+is_chr_det() // 充电器检测
+    val = pmic_get_register_value(MT6351_PMIC_RGS_CHRDET);
+charging_hw_init() // 充电IC初始化     
+charging_sw_init() // 充电IC初始化
+charging_get_xx() // 封装后的 get 接口
+charging_get_charger_type() // 获取充电器类型
+charging_set_xx() // 封装后的 set 接口
+charging_set_current() // 设置充电电流
+```
+
 ### Common部分
 PMIC充电控制、充电控制主线程、SW FG算法等内容在此部分实现。battery_common*.c 是一个关键文件，其是充电控制的主线程，battery 设备也由此文件注册。
 ```c
@@ -225,42 +263,6 @@ Fuel Gauge Control 和 Charging Control 框图如下：
 
 ![FG&Charging Control](http://7xjdax.com1.z0.glb.clouddn.com/android/mtk/charging_control.jpg)
 
-### HAL部分
-我所阅读的代码使用了外接充电 IC BQ24296（switch charger），驱动不会走 linear_charging.c，走 switch_charging.c + bq25896 驱动部分。
-```c
-# alps\kernel-3.18\drivers\misc\mediatek\power\mt6797\charging_hw_pmic.c
-charging_value_to_parameter()
-charging_parameter_to_value()
-charging_hw_init() // PMIC初始化
-charging_get/set_current()
-charging_sw_init()
-chr_control_interface()
-
-# alps\kernel-3.18\drivers\misc\mediatek\include\mt-plat\battery_meter_hal.h
-BATTERY_METER_CTRL_CMD
-
-# alps\kernel-3.18\drivers\misc\mediatek\power\mt6797\battery_meter_hal.c
-get_hw_ocv
-
-# alps\kernel-3.18\drivers\misc\mediatek\power\mt6797\bq25890.h
-// 硬件定义及接口
-
-# alps\kernel-3.18\drivers\misc\mediatek\power\mt6797\bq25890.c
-bq25890_driver_probe() // 注册驱动
-bq25890_get_xx() // get 接口
-bq25890_set_xx() // set 接口
-bq25890_hw_init() 
-
-# alps\kernel-3.18\drivers\misc\mediatek\power\mt6797\charging_hw_bq25890.c
-is_chr_det() // 充电器检测
-    val = pmic_get_register_value(MT6351_PMIC_RGS_CHRDET);
-charging_hw_init() // 充电IC初始化     
-charging_sw_init() // 充电IC初始化
-charging_get_xx() // 封装后的 get 接口
-charging_get_charger_type() // 获取充电器类型
-charging_set_xx() // 封装后的 set 接口
-charging_set_current() // 设置充电电流
-```
 
 ### 客制化部分
 不同于高通将电池曲线合入DTS，MTK是以头文件的形式合入电池曲线（好像也有DTS方式）。

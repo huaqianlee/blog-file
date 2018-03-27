@@ -60,6 +60,10 @@ git reset -- .      # 从暂存区恢复所有文件
 git reset  –hard HEAD^/HEAD~  #回退到上一版本
 git reset  –hard <commit_id>    #回退到指定版本
 git reset HEAD file  #取消add文件
+
+git revert <commit>  # 撤销提交
+git add (--all)/git rm/... # 当上次提交异常时，不能成功撤销，需要针对冲突进行处理，LOG 也会相应提示
+git revert --continue # 处理完后，重新提交
 ```
 
 ###提交
@@ -121,6 +125,11 @@ git merge <branch>               # 将branch分支合并到当前分支
 git merge origin/master --no-ff  # 不要Fast-Foward合并，这样可以生成merge提交
 git rebase master <branch>       # 将master rebase到branch，等同于：
 #git checkout   <branch> + git rebase master + git checkout  master + git merge <branch>
+
+git cherry-pick <commit>  # 合并其它分支的某一次提交
+# 合并其它分支一系列提交，first_commit ~ last_commit
+git checkout -b newbranch <last_commit> # 依据需要合并的最后一条 commit 创建新分支
+git rebase --onto master <first_commit>^  # 从新分支中需要合并的第一条 commit 开始合并
 ```
 
 ###补丁应用
