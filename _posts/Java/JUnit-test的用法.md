@@ -5,7 +5,7 @@ tags: 调试
 ---
 为了方便调试，不用每写一个类都需要写一个main方法对其测试，所以Java编写会经常用到JUnit测试。
 ###新建一个JUnit.test测试包，如下图:
-![new](https://github.com/huaqianlee/blog-file/blob/master/image/blognewjunit.png)
+![new](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/blognewjunit.png)
 ###JUnit测试
 
 可以在原文件类的方法上面加上@Test作为JUnit测试单元运行，也可以新建JUnit文件测试，编写方法如下:
@@ -50,7 +50,7 @@ public class PersonTest {
 ###运行JUnit
 
 可以单独运行某个测试方法,也可以选中类,运行所以的测试方法,如下图:
-![run](https://github.com/huaqianlee/blog-file/blob/master/image/blogrunjunit.png)
+![run](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/blogrunjunit.png)
 
 
 

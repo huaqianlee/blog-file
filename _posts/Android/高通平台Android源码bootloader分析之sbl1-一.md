@@ -15,7 +15,7 @@ tags: [源码分析,Qualcomm]
 ##启动流程
 首先来看一下高通的bootloader流程框图，主要由ap、RPM及modem三部分构成，由于我工作主要涉及到ap侧，所以对RPM和modem侧代码不了解，以后有空时间的话到可以研究一下，框图如下：
 <!--more-->
-![boot arch](https://github.com/huaqianlee/blog-file/blob/master/image/20155304921b788-8a63-472f-be7c-2220a98cf428.jpg)
+![boot arch](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/20155304921b788-8a63-472f-be7c-2220a98cf428.jpg)
 由上图可知，系统启动流程主要由以下几步组成：
 1. 系统上电或重启。
 
@@ -41,7 +41,7 @@ tags: [源码分析,Qualcomm]
 
 　　
 modem侧主要是射频网络相关的代码，我没有研究过也不了解，RPM侧的代码也没怎么研究，高通文档对其介绍如下：
-![RPM](https://github.com/huaqianlee/blog-file/blob/master/image/blogRPM.png)
+![RPM](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/blogRPM.png)
 
 ##sbl1流程分析
 接下来我就来跟一下sbl1的代码，总结出关键流程，此部分代码皆在modem侧。我平时主要会涉及的几个重要文件：

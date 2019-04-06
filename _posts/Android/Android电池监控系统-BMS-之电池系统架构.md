@@ -15,14 +15,14 @@ tags: [电源管理,源码分析]
 ##电池系统架构
 　　Android中的电池使用方式包括AC（即电源适配器）、Wireless（无线充电）、USB、Battery 等不同的模式。在APP层，通常包括电池状态显示等功能。在framework层 ，主要包括从底层获取电池信息、电池管理、LED控制、绘制更新充电图标等功能。因此，bms主要负责电池状态信息读取和更新相应状态。其架构如下：　
 　
-　　![电池系统架构](https://github.com/huaqianlee/blog-file/blob/master/image/201566Android-bms-arch.png)
+　　![电池系统架构](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/201566Android-bms-arch.png)
 
 自上而下，Android电池监控系统分为如下几个部分：
 
 ###电池信息查看APP
 　　此部分主要是指查看电池信息的APP，比如电池医生、手机内置的电池信息查看APP等。这里就用工作的为例，在拨号状态下输入\*#360\*#，则会打开电池信息查看APP。如下所示：
 <!--more-->　
-　　　![电池信息](https://github.com/huaqianlee/blog-file/blob/master/image/201566battery-info.png)
+　　　![电池信息](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/201566battery-info.png)
 
 　　代码主要路径：
 - packages\apps\Settings\src\com\android\settings\BatteryOemInfo.java  //APP

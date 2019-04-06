@@ -353,4 +353,4 @@ struct boot_img_hdr
 };
 ```
 当我们将编译生成的boot.img用文本编辑软件打开后，能看到boot_im_hdr格式定义的头，如下：
-　　![boot.img](https://github.com/huaqianlee/blog-file/blob/master/image/blogboot_img.png)
+　　![boot.img](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/blogboot_img.png)

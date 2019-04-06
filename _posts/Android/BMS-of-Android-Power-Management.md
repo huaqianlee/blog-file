@@ -33,15 +33,15 @@ tags: [源码分析,MTK]
 ## 充电状态机
 电池充电过程分为预充、恒流充电（CC模式）、恒压充电（CV模式）、涓流充电四个流程，MTK的状态机如下：
 
-![state](https://github.com/huaqianlee/blog-file/blob/master/image/android/mtk/chargind_state.jpg)
+![state](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/android/mtk/chargind_state.jpg)
 <!--more-->
 ## 充电简要流程框图
 
-![flow](https://github.com/huaqianlee/blog-file/blob/master/image/android/mtkGauge_arch.jpg)
+![flow](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/android/mtkGauge_arch.jpg)
 
 # BMS 架构
 MTK 的 BMS 架构如下：
-![bms](https://github.com/huaqianlee/blog-file/blob/master/image/android/mtk/battery%20introduction.jpg)
+![bms](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/android/mtk/battery%20introduction.jpg)
 
 我准备将BMS从硬件到APP分为不同的架构层来分析。接下来分别分析下不同的架构层。
 
@@ -146,13 +146,13 @@ MTK之前很多方案是在lk里面绘制关机充电图标，然后采样IPO协
 # alps\vendor\mediatek\proprietary\bootable\bootloader\lk\platform\mt6755\mt_logo.c
 ```
 IPO方式流程图如下：
-![IPO](https://github.com/huaqianlee/blog-file/blob/master/image/android/mtk/power%20off%20charging.jpg)
+![IPO](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/android/mtk/power%20off%20charging.jpg)
 > 由于初次接触MTK，又没有深入研究此部分，此部分如有错误，敬请谅解和指出。
 
 
 ## Kernel层
 Kernel 部分软件流程框图，不过此图是我从MTK文档上截取没有做修改，所以图片中外部充电IC代码为Fan5405，对应于我的代码应该为bq24290（bq24296）。如下：
-![arch](https://github.com/huaqianlee/blog-file/blob/master/image/android/mtk/kernel_cod_arch.jpg)
+![arch](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/android/mtk/kernel_cod_arch.jpg)
 ### 1.3.1 ADC部分
 电流电压采样部分代码没有深入查看，主要看了如下一个文件：
 ```c
@@ -261,7 +261,7 @@ charging_full_check()
 ```
 Fuel Gauge Control 和 Charging Control 框图如下：
 
-![FG&Charging Control](https://github.com/huaqianlee/blog-file/blob/master/image/android/mtk/charging_control.jpg)
+![FG&Charging Control](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/android/mtk/charging_control.jpg)
 
 
 ### 客制化部分
@@ -346,7 +346,7 @@ main() // main函数,单独的进程
 
 #### 正常开机
 正常开机时电池信息更新：
-![update_battery](https://github.com/huaqianlee/blog-file/blob/master/image/android/mtk/bat_update_func.jpg)
+![update_battery](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/android/mtk/bat_update_func.jpg)
 
 正常开机部分源码分析：
 ```cpp
@@ -512,7 +512,7 @@ queryProperty() // 主动到 healthd 查询电池信息
 
 # 关机充电流程
 关机充电也是在kernel里面充电，充电控制流程与开机是一致的，前面也分析到了。这里补充一个MTK软件流程图。如下：
-![charging flow](https://github.com/huaqianlee/blog-file/blob/master/image/android/mtk/power%20off%20charging2.jpg)
+![charging flow](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/android/mtk/power%20off%20charging2.jpg)
 
 # 总结
 先留一个坑，等有时间了，再来绘制一个清晰易懂的流程框图。

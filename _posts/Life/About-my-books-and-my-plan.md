@@ -3,7 +3,7 @@ date: 2017-03-24 21:47:41
 categories: Life
 tags: 成长
 ---
-![myBooks](https://github.com/huaqianlee/blog-file/blob/master/image/mybooks.jpg)
+![myBooks](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/mybooks.jpg)
 **书架一脚**
 
 <!--more-->

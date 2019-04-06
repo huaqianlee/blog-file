@@ -5,12 +5,12 @@ tags:
 ---
 ## 概述
 BLSP是高通对于低速接口的一种管理方式，8074 平台含有两个BLSP(BAM Low-Speed Peripheral) 块，对应于12个BLSP端口。 每一个BLSP块含有最多六个Qualcomm Universal Peripheral (QUP)或六个Uart cores，通过相关手册查询到每个外设属于BLSP多少。结构框图如下：
-![BLSP](https://github.com/huaqianlee/blog-file/blob/master/image/BLSP.png)
+![BLSP](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/BLSP.png)
 >1. BAM（Bus Access Manager）is used to move data to/from the peripheral buffers;  2.每个BLSP外设静态连接到一对BAM管道，BLSP支持BAM 和non-BAM-based 数据传输。
 
 <!--more-->
 每一个QUP可以被配置为I2C， SPI, UART, UIM接口等，如下：
-![blsp_pin](https://github.com/huaqianlee/blog-file/blob/master/image/blsp_pin.jpg)
+![blsp_pin](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/blsp_pin.jpg)
 
 ##自定义BLSP口，配置TZ
 这些端口在aDSP和应用处理器之间共享。为了让BLSP端口独立使用，我们可以在TrustZone（TZ）中定义BLSP 端口的分配，没有权限的子系统访问BLSP 端口将导致系统崩溃。 高通默认已经做好了配置。在DspAL中， 提供了一组设备文件路径映射到硬件，无人机用到的相关口已经在TZ中配置好了，如下：
@@ -22,14 +22,14 @@ UART: /dev/tty-[1-4]
 ```
 如果要自定义新的端口，需按于如下方式配置：
 ### 计算APPS BLSP值
-![apps-BLSP](https://github.com/huaqianlee/blog-file/blob/master/image/apps_blsp.jpg)
+![apps-BLSP](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/apps_blsp.jpg)
 根据倒数第二列（对应于BAM pipe）计算出结果如下：
 APPS BLSP1 : 0x00C3000C   [ Format : 0x00 (Apps BLSP1 QUP) ( Apps BLSP1 UART) ]
 APPS BLSP2 : 0x00F30F33   [ Format : 0x00 (Apps BLSP2 QUP) ( Apps BLSP2 UART) ]
 > Apps列对应Y，则表明BLSPx配为Uart或QUP，下同。
 
 ### 计算ADSP BLSP值
-![adsp-BLSP](https://github.com/huaqianlee/blog-file/blob/master/image/adsp_blsp.jpg)
+![adsp-BLSP](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/adsp_blsp.jpg)
 ADSP BLSP1 = 0x0003FF00   [ Format : 0x00 (Adsp BLSP1 QUP) ( Adsp BLSP1 UART) ]
 ADSP BLSP2 = 0x00FC00CC  [ Format : 0x00 (Adsp BLSP2 QUP) ( Adsp BLSP2 UART) ]
 

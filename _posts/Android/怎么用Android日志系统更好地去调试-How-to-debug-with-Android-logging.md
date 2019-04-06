@@ -9,7 +9,7 @@ tags: Log
 
 
 　　Android logging system为logging系统提供了一个Java类android.util.Log，也提供了一个c/c++的log库，在kernel中有四个设备节点，详细见：[Android日志系统详解](http://huaqianlee.github.io/2015/07/18/Android/Android-Logging-system-Android%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3/)。其系统架构如下：
-　　　![image by simon](https://github.com/huaqianlee/blog-file/blob/master/image/blogaplogd.jpg)
+　　　![image by simon](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/blogaplogd.jpg)
 >此图与4.0以上的系统有些差异,新版Android增加了log_system
 
 <!--more-->

@@ -6,7 +6,7 @@ tags: [App,FirstCode]
 [《第一行代码》第2版思维导图及所有学习笔记目录](http://huaqianlee.github.io/2017/03/24/FirstCode/The-departure-of-FirstCode-learning-notes/)
 
 本部分思维导图如下：
-![UI](https://github.com/huaqianlee/blog-file/blob/master/image/https://github.com/huaqianlee/blog-file/blob/master/image/firstcode/UI.png)
+![UI](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/firstcode/UI.png)
 <!--more-->
 
 ## 常用控件
@@ -75,7 +75,7 @@ dialog.show();
 ## 4种基本布局
 布局与控件嵌套结构如下：
 
-![布局与控件](https://github.com/huaqianlee/blog-file/blob/master/image/android/firstcode/layout_tool.jpg)
+![布局与控件](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/android/firstcode/layout_tool.jpg)
 
 ### 线性布局
 只有LinearLayout支持 android:layout_weight属性，指定了此属性后控件大小即由其来决定，举个简单例子：
@@ -108,7 +108,7 @@ app:layout_heightPercent="50%" # 指定高度为布局的50%
 
 ## 自定义控件
 所有控件和布局都是直接或间接继承自View，如下：
-![](https://github.com/huaqianlee/blog-file/blob/master/image/android/firstcode/view_extends_struc.png)
+![](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/android/firstcode/view_extends_struc.png)
 
 ### 引入布局
 自定义标题栏控件，针对自定义控件新建一布局文件title.xml。然后在主布局文件中引入title.xml。

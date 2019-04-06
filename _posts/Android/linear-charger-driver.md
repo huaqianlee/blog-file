@@ -8,11 +8,11 @@ acc: alam charger current (not sure, think so now)　
  
 
 ## QPNP Linear Charger Blocks
-![lcb](https://github.com/huaqianlee/blog-file/blob/master/image/android/qcom/linearcharger1.jpg)        
+![lcb](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/android/qcom/linearcharger1.jpg)        
 
 <!--more-->
 ## LBC Initialization Flowchart
-![lbc](https://github.com/huaqianlee/blog-file/blob/master/image/android/qcom/linearcharger2.jpg)  
+![lbc](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/android/qcom/linearcharger2.jpg)  
 lbc - linear Battery charger  (not sure)
 
 ## 架构分析
@@ -88,7 +88,7 @@ qpnp_lbc_fastchg_irq_handler()
 qpnp_lbc_chg_done_irq_handler()
 ```
 ### Association DTSI 
-![dts](https://github.com/huaqianlee/blog-file/blob/master/image/android/qcom/linearcharger3.jpg)      
+![dts](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/android/qcom/linearcharger3.jpg)      
 ## 驱动分析
 ### 主线一 : 
 ```bash

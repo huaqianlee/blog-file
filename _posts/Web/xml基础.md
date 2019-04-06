@@ -54,7 +54,7 @@ eg:
   ]]>
 ``` 
 ###转义字符
-![escape](https://github.com/huaqianlee/blog-file/blob/master/image/blogxml.png)        
+![escape](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/blogxml.png)        
 ###处理指令
 
 处理指令，简称PI （processing instruction）。处理指令用来指挥解析引擎如何解析XML文档内容。例如，在XML文档中可以使用xml-stylesheet指令，通知XML解析引擎，应用css文件显示xml文档内容。  

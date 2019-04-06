@@ -6,12 +6,12 @@ tags: [电源管理,源码分析,Qualcomm]
 　　对于移动设备，电源管理是相当重要的一部分，因为现在在公司主要负责电源管理部分，所以借用Google对其研究了一下，再结合自己的工作经验，准备接下来写一系列相关的文章。因为现在还研究得不够，所以最初的文章会不够深入。不过我会慢慢研究，然后写一些比较详细的解读。
 
 ##高通的引导体系结构
-![boot](https://github.com/huaqianlee/blog-file/blob/master/image/20155304921b788-8a63-472f-be7c-2220a98cf428.jpg)
+![boot](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/20155304921b788-8a63-472f-be7c-2220a98cf428.jpg)
 **SBL- Second BootLoader**
 <!--more-->
 ##电源管理框图
 　　这里先借用网上一张老版本的图片，后面再自己绘制一张详细的框图补上来。
-![power](https://github.com/huaqianlee/blog-file/blob/master/image/20155305061d93f-df42-46c4-ae36-bd18648583b1.jpg)
+![power](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/20155305061d93f-df42-46c4-ae36-bd18648583b1.jpg)
 
 ##主要文件及路径
 ```bash
@@ -61,8 +61,8 @@ hibernation// 所有内存镜像都被写入到磁盘中，然后系统关机，
 　　Android的电源管理主要通过锁和定时器来切换系统的状态(如上述三种低功耗状态),使系统功耗降到最低.
 　
 ####实现流程
-![framework](https://github.com/huaqianlee/blog-file/blob/master/image/2015530390bc951-ede6-47dd-83ce-c1a6aced6e82.png)
+![framework](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/2015530390bc951-ede6-47dd-83ce-c1a6aced6e82.png)
 　
 
 ####状态切换流程
-![state](https://github.com/huaqianlee/blog-file/blob/master/image/201553020e46e8e-7570-483b-9ea2-375cf4ae59d2.png)
+![state](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/201553020e46e8e-7570-483b-9ea2-375cf4ae59d2.png)
