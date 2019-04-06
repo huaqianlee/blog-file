@@ -19,7 +19,7 @@ Linux系统的启动过程由很多阶段组成，但是无论你是启动标准
 图一将为你展示两万英里的视图。
 
 **Figure 1. The 20,000-foot view of the Linux boot process**
-![Figure 1](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/blogfigure1.gif)
+![Figure 1](https://github.com/huaqianlee/blog-file/image/blogfigure1.gif)
 
 当系统第一次启动或重启时，处理器将执行一个已知地方的代码。对应个人电脑，这个地方是存在主板上内存内的BIOS；对于嵌入式系统中的cpu，将会加载引导区去启动flash/ROM中已知地址的程序。无论怎样，结果是相同的。个人电脑提供了很多灵和性，BIOS必须觉得哪些设备是候补准备启动，稍后再详细讲。
 
@@ -54,7 +54,7 @@ od命令：以hex和ASCII格式打印二进制文件
 初级引导程序位于512字节的MBR镜像，MBR镜像由一个小型分区表和代码组成（见Figure 2）。前446字节是初级引导程序代码，包括执行代码和错误信息。接下来的64字节是一个分区表，包含4个16字节的分区记录。MBR最后的两字节定义了一个magic数字（0xaa55）。这个magic数字用来校验检查MBR。
 
 **Figure 2. Anatomy of the MBR**
-![Figure 2](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/blogfigure2.gif)
+![Figure 2](https://github.com/huaqianlee/blog-file/image/blogfigure2.gif)
 
 初级引导程序主要就是找到并且加载第二阶段引导程序。其通过分区表寻找一个活动的分区。在找到一个活动的分区表后，其将扫描剩余的分区确定它们不是活动的。当这些被确定后，活动分区的启动启动记录将从设备加载到RAM并且执行。
 
@@ -108,7 +108,7 @@ Uncompressing Linux... Ok, booting the kernel.
 在这个新的startup_32函数（也叫清除程序或者进程0）中，会对页表进行初始化，并启用内存分页功能。然后会为任何可选的浮点单元（FPU）检测 CPU 的类型，并将其存储起来供以后使用。然后调用 start_kernel 函数（在 init/main.c 中），它会将您带入与体系结构无关的 Linux 内核部分。从本质上讲，这才是Linux内核的主要功能。
 
 **Figure 3. Major functions flow for the Linux kernel i386 boot**
-![Figure 3](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/blogfigure3.gif)
+![Figure 3](https://github.com/huaqianlee/blog-file/image/blogfigure3.gif)
 
 调用start_kernel函数之后，会调用一系列初始化函数来设置中断，执行进一步的内存配置，并加载初始RAM磁盘。最后将掉用kernel_thread（在arch/i386/kernel/process.c中）启动一个init函数，init函数是用户控件的第一个进程。最后，空闲进程将会开始执行并且进程调度器将获得控制权（当cpu调用cpu_idle后）。通过启用中断，抢占式的调度器就可以周期性地接管控制权，从而提供多任务处理能力。
 

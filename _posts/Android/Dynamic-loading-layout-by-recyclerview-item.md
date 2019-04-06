@@ -107,4 +107,4 @@ adapter.setOnItemClickListener(new NavFuncAdapter.OnItemClickListener() {
 [ForMe](https://github.com/huaqianlee/ForMe)
 
 ## 效果
-![effect](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/blog/app/dynamic_layout_effect.gif)
+![effect](https://github.com/huaqianlee/blog-file/image/blog/app/dynamic_layout_effect.gif)

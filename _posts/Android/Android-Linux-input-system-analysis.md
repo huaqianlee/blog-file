@@ -11,7 +11,7 @@ Android/Linux 输入设备总类繁杂，常见的有按键、键盘、触摸屏
 
 # 输入子系统架构
 输入子系统的系统架构如下图所示：
-![input_system_arch](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/android/mtk/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.png)
+![input_system_arch](https://github.com/huaqianlee/blog-file/image/android/mtk/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1.png)
 > Framework 层以上只是简单跟了一下源码，没有深入查看
 
 <!--more-->
