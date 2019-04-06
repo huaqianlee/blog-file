@@ -49,50 +49,50 @@ pxh>
 ## 运行QGroundcontrol
 ### 启动QGroundcontrol
 我们使用的Snapdragon板好像只能支持QGroundControl V2.7.1 （[QGroundControl-V2.7.1下载](http://pan.baidu.com/s/1sl2fXhF)），启动QGroundcontrol。
-![lanuch](image/start_qground.jpg)
+![lanuch](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/start_qground.jpg)
 
 ### 连接无人机
 1. File > Settings > CommLinks
-![](image/com_link1.jpg)
+![](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/com_link1.jpg)
 
 2. 点击ADD 添加新的远端连接
-![](image/com_link2.jpg)
+![](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/com_link2.jpg)
 
 3. 点击ADD 添加目标主机
-![](image/com_link3.jpg)
+![](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/com_link3.jpg)
 
 4. 完成，如下
-![](image/com_link.jpg)
+![](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/com_link.jpg)
 
 5. 连接无人机，就在上一界面点击connect或者到主界面右上角点击connect连接
-![](image/connect.jpg)
+![](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/connect.jpg)
 
 ### 连接遥控器
 1. File > Settings > Controllers
-![](image/controller.jpg)
+![](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/controller.jpg)
 
 2. Enable controllers, 选择相应遥控器，设为Manual，并进行校准，如下
-![](image/controller1.jpg)
+![](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/controller1.jpg)
 
 ### 机身设置及校准
 进入setup界面，根据提示进行设置校准，完成后项目将显示绿色小圆点或者边框，我使用的板子POWER部分不能校准成功，如下：
 
-![](image/setup_ok.jpg)
+![](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/setup_ok.jpg)
 ### 控制起飞
 1. 点击 ARM SYSTEM 起桨，可通过遥控器控制 
-![take_off](image/fly.jpg)
+![take_off](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/fly.jpg)
 
 2. 点击 DISARM SYSTEM 停桨
-![land](image/fly_end.png)
+![land](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/fly_end.png)
 
 ### 分析
 Analyze界面可以实时挂载mavilink数据包等信息
 
-![data](image/analyze.jpg)
+![data](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/analyze.jpg)
 
 ### 打开自己想要的窗口
 
-![window](image/tool_qg.jpg)
+![window](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/tool_qg.jpg)
 
 # 快速支持MPU6500
 PX4代码默认支持mpu9250，如若想直接支持行空所使用的mpu6500,可对MPU9250.hpp文件做如下修改：

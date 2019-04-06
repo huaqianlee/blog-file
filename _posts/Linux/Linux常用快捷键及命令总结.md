@@ -189,8 +189,8 @@ dpkg -i package.deb         #安装deb包
 ##后记
 　　为了让大家相信使用了这些命令或快捷键确实会逼格提升，专门贴图两张，哈哈。。。
 ###图一 执行htop（进程管理）
-![htop](image/bloghtop.png)
+![htop](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/bloghtop.png)
 ###图二 执行ranger （文件浏览）
-![ranger](image/blogranger.png)
+![ranger](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/blogranger.png)
 
 　　有很多命令引用自[Linux常用的shell命令](http://www.xprogrammer.com/1799.html)，感谢此文作者.

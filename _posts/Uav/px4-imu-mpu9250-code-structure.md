@@ -10,11 +10,11 @@ tags: [PX4]
 ## 代码结构及流程
 最新代码库中，MPU9250的代码结构及流程如下：
    
- ![流程图](image/uav/px4/IMU_CODE_STR.png)
+ ![流程图](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/uav/px4/IMU_CODE_STR.png)
 <!--more-->
  sensor.cpp文件比较重要，Sensor数据的应用都要在此文件中实现，其中的主要方法如下：
  
-![Sensor方法](image/uav/px4/sensorcpp.jpg)
+![Sensor方法](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/uav/px4/sensorcpp.jpg)
 
 ## 附 
 以前px4是可以直接通过外部的库访问外设，新版本保留了原代码架构，但不清楚是否应用，怎么应用，路径如下：

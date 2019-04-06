@@ -111,7 +111,7 @@ MainActivity activity = (MainActivity)getActivity();//获取碎片相关联的�
 
 碎片生命周期如下：
 
-![碎片的生命周期](image/fragment_lifecycle.png)
+![碎片的生命周期](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/fragment_lifecycle.png)
 
 几个关键回调：
 * onAttach()：碎片和活动建立关联时调用。

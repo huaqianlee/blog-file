@@ -133,4 +133,4 @@ adapter.setOnItemClickListener(new NavFuncAdapter.OnItemClickListener() {
 
 
 # 效果
-![nav_item_selected](image/blog/forme/select_item_effct.gif)
+![nav_item_selected](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/blog/forme/select_item_effct.gif)

@@ -80,7 +80,7 @@ Android的异步消息处理主要由四个部分组成：
 
 流程示意图如下：
 
-![异步消息机制处理流程图](image/android/firstcode/yibu_flow.png)
+![异步消息机制处理流程图](https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/https://github.com/huaqianlee/blog-file/image/android/firstcode/yibu_flow.png)
 
 ### AsyncTask
 AsyncTask的一个简单示例：
