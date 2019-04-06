@@ -21,7 +21,7 @@ tags: 成长
 
 在这四周年之际，我用我的心和血做了这么一个电子礼物，喜欢老婆大人喜欢。
 
-![ForYou](http://7xjdax.com1.z0.glb.clouddn.com//life/ForYou.jpg)
+![ForYou](image//life/ForYou.jpg)
 >等以后回家了， 我们去打印一张大大的海报贴在家里
 
 

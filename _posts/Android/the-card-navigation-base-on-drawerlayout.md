@@ -5,7 +5,7 @@ tags: App
 ---
 前段时间开始了利用空闲时间做一个练习APP [ForMe](https://github.com/huaqianlee/ForMe)。根据设计APP需要通过左边导航栏切换主界面功能，自己平时在使用Google的NewsTab，觉得很不错，就准备参考其界面来设计。
 
-![newsTab](http://7xjdax.com1.z0.glb.clouddn.com/blog/app/newstab_view.jpg)
+![newsTab](image/blog/app/newstab_view.jpg)
 
 <!--more-->
 ## 尝试通过NavigationView实现
@@ -126,7 +126,7 @@ if (actionBar != null) {
 ```
 好了，这样子效果就出来了：
 
-![nav_view](http://7xjdax.com1.z0.glb.clouddn.com/blog/app/navigation_view.jpg)
+![nav_view](image/blog/app/navigation_view.jpg)
 
 可是这样子只能做到菜单式的侧边栏，不能实现我的需求。我尝试着找到一种方式来实现卡片式显示，但是最终没能找到。
 
@@ -378,7 +378,7 @@ NavFuncAdapter adapter = new NavFuncAdapter(funcList);
 recyclerView.setAdapter(adapter);
 ```
 这样子就实现了卡片式侧边栏了，效果如下：
-![nav_custom](http://7xjdax.com1.z0.glb.clouddn.com/nav_card_p.jpg)
+![nav_custom](image/nav_card_p.jpg)
 
 Item选中效果的实现方式见：[RecyclerView选中效果的实现](http://huaqianlee.github.io/2017/08/17/Android/the-selected-effect-of-recyclerview-item/) .
 

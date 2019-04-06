@@ -10,7 +10,7 @@ tags: [App,FirstCode]
 很早以前第一次接触Android代码的项目结构的时候确实够头疼滴.
 <!--more-->
 
-![项目结构](http://7xjdax.com1.z0.glb.clouddn.com/image/firstcode/prj_struct.png)
+![项目结构](image/image/firstcode/prj_struct.png)
 
 * .gradle & .idea  
 Android Studio自动生成, 无需关心, 版本管理时,一般将其忽略(即.gitignore文件).
@@ -254,7 +254,7 @@ finish();
 # 为了在按返回键时也返回数据,需要重写onBackPressed()方法,并加入如上内容.
 ```
 ## 活动的生命周期
-![lifecycle](http://7xjdax.com1.z0.glb.clouddn.com/image/firstcode/lifecycle.gif)
+![lifecycle](image/image/firstcode/lifecycle.gif)
 
 根据生命周期，活动存在被回收的可能性，所以为了有好的体验，需要保存数据。
 ```bash
@@ -280,19 +280,19 @@ protected void onCreate(Bundle savedInstanceState) {
 活动启动模式一共4种：standard、singleTop、singleTask和singleInstance。AndroidManifest.xml中<activity/>指定android:launchMode属性来选择。
 ### standard
 系统默认，每启动一个活动就在栈顶创建，即使已经存在。
-![standard](http://7xjdax.com1.z0.glb.clouddn.com/image/firstcode/standard.jpg)
+![standard](image/image/firstcode/standard.jpg)
 
 ### singleTop
 活动启动时，栈顶如果不存在此活动，则创建此活动。
-![singleTop](http://7xjdax.com1.z0.glb.clouddn.com/image/firstcode/singleTop.jpg)
+![singleTop](image/image/firstcode/singleTop.jpg)
 
 ### singleTask
 活动启动时，如果栈里存在此活动，则将之前的全部出栈，将此活动置于栈顶。
-![singleTask](http://7xjdax.com1.z0.glb.clouddn.com/image/firstcode/singleTask.jpg)
+![singleTask](image/image/firstcode/singleTask.jpg)
 
 ### singleInstance
 启动活动时，单独创建一个返回栈来管理，这样所有应用可以共用返回栈，访问此活动。
-![singleInstance](http://7xjdax.com1.z0.glb.clouddn.com/image/firstcode/singleInstance.jpg)
+![singleInstance](image/image/firstcode/singleInstance.jpg)
 
 ## 最佳实践及有用的技巧
 ### 随时随地退出程序

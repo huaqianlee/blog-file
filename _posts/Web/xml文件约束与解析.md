@@ -14,7 +14,7 @@ DTD(Document Type Definition)，全称为文档类型定义。 DTD文件应使�
 　
 ###外部文件
 
-　![](http://7xjdax.com1.z0.glb.clouddn.com/blogdtd.png)
+　![](image/blogdtd.png)
 >\#PCDATA:放置字符数据　
 
 <!--more-->
@@ -191,7 +191,7 @@ XML CRUD - create read update delete。JAXP包，J2SE的一部分，包含xml解
 ###XML解析方式
 
 XML解析方式分为两种：DOM（w3c推荐） 和 SAX(只能做查询)。两种区别如下：
-　　![dif](http://7xjdax.com1.z0.glb.clouddn.com/blogsaxdom.png)
+　　![dif](image/blogsaxdom.png)
     
 ###使用JAXP包进行DOM解析
 ```bash
@@ -349,7 +349,7 @@ public class Demo {
 }
 ```
 ###SAX解析
- 　![sax](http://7xjdax.com1.z0.glb.clouddn.com/blogsax.jpg)
+ 　![sax](image/blogsax.jpg)
 ```bash
 #常用方法： startElement（） endElement（） characters（）；
 public class Demo1 {

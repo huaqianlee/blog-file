@@ -10,7 +10,7 @@ tags: [源码分析,MTK]
 # 驱动架构
 ## I2C 驱动架构
 
-![i2c-arch](http://7xjdax.com1.z0.glb.clouddn.com/android/mtk/i2c_arch.jpg)
+![i2c-arch](image/android/mtk/i2c_arch.jpg)
 <!--more-->
 
 # 源码分析

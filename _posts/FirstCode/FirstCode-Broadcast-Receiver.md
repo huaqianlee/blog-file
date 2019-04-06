@@ -7,10 +7,10 @@ tags: [App,FirstCode]
 
 ## 广播机制
 ### 标准广播
-![normal_broadcast](http://7xjdax.com1.z0.glb.clouddn.com/android/firstcode/normal_broadcasts.png)
+![normal_broadcast](image/android/firstcode/normal_broadcasts.png)
 <!--more-->
 ### 有序广播
-![ordered_broadcast](http://7xjdax.com1.z0.glb.clouddn.com/android/firstcode/ordered_broadcast.png)
+![ordered_broadcast](image/android/firstcode/ordered_broadcast.png)
 
 ## 接收系统广播
 ### 动态注册监听网络变化

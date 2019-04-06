@@ -208,9 +208,9 @@ context.startService(intent);
 ### Doze模式
 Android6.0及以上为了省电新加入了Doze模式，满足未插电、屏幕关闭等一段时间将进入doze模式，对cpu、网络、Alarm等进行限制，如下为Android7.0进入Doze模式的两个阶段：
 阶段一：
-![First Level](http://7xjdax.com1.z0.glb.clouddn.com/image/firstcode/doze_first_level.png)
+![First Level](image/image/firstcode/doze_first_level.png)
 阶段二：
-![Second Level](http://7xjdax.com1.z0.glb.clouddn.com/image/firstcode/doze_second_level.png)
+![Second Level](image/image/firstcode/doze_second_level.png)
 
 如若想Alarm在Doze模式也能正常执行，则需要使用AlarmManager的如下两个方法：
 ```java 

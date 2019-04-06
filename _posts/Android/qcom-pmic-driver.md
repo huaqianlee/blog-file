@@ -19,19 +19,19 @@ f . configurable pins - functions within other categories(Multipurpose pins (MPP
 
 <!--more-->
 ### pm8916 functional block diagram
-![hw](http://7xjdax.com1.z0.glb.clouddn.com/android/qcom/pmicd1.jpg)
+![hw](image/android/qcom/pmicd1.jpg)
 
 
 ### boot architecture
-![boot_arch](http://7xjdax.com1.z0.glb.clouddn.com/android/qcom/pmicd2.jpg)
+![boot_arch](image/android/qcom/pmicd2.jpg)
      
 RPM - resource power manager
 
-![rpm](http://7xjdax.com1.z0.glb.clouddn.com/android/qcom/pmicd3.jpg)
+![rpm](image/android/qcom/pmicd3.jpg)
 
 
 
 ## Software Architecture
 ### Linux PMIC software architecture
-![sw_arch](http://7xjdax.com1.z0.glb.clouddn.com/android/qcom/pmicd4.png)
+![sw_arch](image/android/qcom/pmicd4.png)
 

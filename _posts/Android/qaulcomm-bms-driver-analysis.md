@@ -14,20 +14,20 @@ BMS(Battery Monitoring System)主要提供如下功能：
 - 正在使用的电池电压, 开漏电压(OCV).
 
 
-![temp](http://7xjdax.com1.z0.glb.clouddn.com/android/qcom/bms_1.png)
+![temp](image/android/qcom/bms_1.png)
 
 ## 硬件架构
 
 <!--more-->
-![hw_arch](http://7xjdax.com1.z0.glb.clouddn.com/android/qcom/bms_2.jpg)
+![hw_arch](image/android/qcom/bms_2.jpg)
 硬件实现过冷过热检测停止充电：
-![temp_monitor](http://7xjdax.com1.z0.glb.clouddn.com/android/qcom/bms_3.png)
+![temp_monitor](image/android/qcom/bms_3.png)
 
 <!--more-->        
 ## 工作状态机
-![bms_state](http://7xjdax.com1.z0.glb.clouddn.com/android/qcom/bms_4.jpg)
+![bms_state](image/android/qcom/bms_4.jpg)
 ## 软件架构
-![sw_arch](http://7xjdax.com1.z0.glb.clouddn.com/android/qcom/bms_5.jpg)
+![sw_arch](image/android/qcom/bms_5.jpg)
 
 SoC计算主要分为两部分:
 ```bash
@@ -73,8 +73,8 @@ Core engine
 
 ## 驱动架构分析
 ### Interface Mapping
-![IM](http://7xjdax.com1.z0.glb.clouddn.com/android/qcom/bms_6.jpg)
-![IM](http://7xjdax.com1.z0.glb.clouddn.com/android/qcom/bms_7.jpg)
+![IM](image/android/qcom/bms_6.jpg)
+![IM](image/android/qcom/bms_7.jpg)
 ### 几个主要的结构体
 ```bash
 /*This is the client/device handle returned when a SPMI device  is registered with a controller. */
@@ -138,7 +138,7 @@ struct power_supply {
 ```
 ## 驱动分析
 ### 主线一: initialization - probe
-![probe](http://7xjdax.com1.z0.glb.clouddn.com/android/qcom/bms_8.jpg)
+![probe](image/android/qcom/bms_8.jpg)
 ```bash 
 入口函数: static int qpnp_vm_bms_probe(struct spmi_device *spmi)    // 注册SMPI设备
           chip = devm_kzalloc(&spmi->dev, sizeof(*chip), GFP_KERNEL);   //给struct qpnp_bms_chip *chip(bms芯片设备)分配空间    
@@ -209,7 +209,7 @@ cfg_shutdown_soc_valid_limit  （msm-pm8916.dtsi 中定义：qcom,shutdown-soc-v
 /* Probe   Success */  
 ```
 ### 主线二: SoC work loop
-![loop](http://7xjdax.com1.z0.glb.clouddn.com/android/qcom/bms_9.jpg)
+![loop](image/android/qcom/bms_9.jpg)
 ```bash        
          static void monitor_soc_work(struct work_struct *work)
                   /*将自定义设备结构体保存在文件指针的私有数据域中,以便访问设备时可以随时拿来使用*/
@@ -237,7 +237,7 @@ cfg_shutdown_soc_valid_limit  （msm-pm8916.dtsi 中定义：qcom,shutdown-soc-v
 ```
 
 ### 主线三: Report  SoC
-![report](http://7xjdax.com1.z0.glb.clouddn.com/android/qcom/bms_10.jpg)
+![report](image/android/qcom/bms_10.jpg)
 ```bash        
     static int report_vm_bms_soc(struct qpnp_bms_chip *chip)
             soc = chip->calculated_soc

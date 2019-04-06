@@ -13,7 +13,7 @@ tags: [App,FirstCode]
 为了安全，Android6.0后引入了新特性，让APP申请的权限用户可控，Android的权限分为了两类：1. 普通权限，2.危险权限。危险权限一共有9组24个权限。
 <!--more-->
 
-![Android danger permission](http://7xjdax.com1.z0.glb.clouddn.com/android/firstcode/android_permission.jpg)
+![Android danger permission](image/android/firstcode/android_permission.jpg)
 
 权限详情参考：[官网权限介绍](http://developer.android.com/reference/android/Manifest.permission.html)。
 

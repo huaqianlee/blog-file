@@ -12,7 +12,7 @@ tags: [Log,译文]
 ##概览
 　　Android提供了一个灵活的logging系统，允许应用程序和系统组件等整个系统记录logging信息，它是独立于Linux Kernel的一个logging系统，kernel是通过"pr_info"、"printk"等存储，通过“dmesg”或“cat  /proc/kmsg”获取。不过，Android logging 系统也是将信息存在内核缓存区。其结构如下：　
 　
-　　　　![image by Tetsuyuki Kobabayshi](http://7xjdax.com1.z0.glb.clouddn.com/blogAndroid-logging-system.png)
+　　　　![image by Tetsuyuki Kobabayshi](image/blogAndroid-logging-system.png)
 <!--more-->　
 Logging system由如下几部分组成：
 - 实现loging信息存储的kernel驱动和缓存区

@@ -3,7 +3,7 @@ date: 2017-03-24 21:47:41
 categories: Life
 tags: 成长
 ---
-![myBooks](http://7xjdax.com1.z0.glb.clouddn.com/mybooks.jpg)
+![myBooks](image/mybooks.jpg)
 **书架一脚**
 
 <!--more-->

@@ -180,7 +180,7 @@ addcompletions  调用 addcompletions()
 >注：有些Android版本中vendorsetup.sh文件在vendor目录　
 
 　　如要添加自己的产品，需要在device目录下新建一个自己公司名，新建一个vendorsetup.sh，加入自己的编译项。了解了这一条指令，再来看一下执行结果，将会更有体会，因为我所有命令都写到开始的setup.sh文件中了，所以不用想官方那样多步配置编译，如下：
-　　![Make](http://7xjdax.com1.z0.glb.clouddn.com/20150711MakeAndroid.png)
+　　![Make](image/20150711MakeAndroid.png)
 
 ##lunch
 　　lunch是在envsetup.sh中定义的一个命令，让用户选择编译项，用来定义product和编译过程中用到的全局变量。关于编译项，前面只是列出，并未详解，如msm8916_32-userdebug，msm8916_32为产品名，userdebug为编译类型，详细如下：
