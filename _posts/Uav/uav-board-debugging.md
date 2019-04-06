@@ -81,14 +81,14 @@ python update_common_info.py
 　
 
 于是，将userdata分区空间改小一半，终于看到了一丝胜利的曙光，不过虽然能进入linaro系统，但是仍然有问题，空间不够，串口log如下：
-![uav_boot_log_1](https://github.com/huaqianlee/blog-file/image/uav_boot_small.png)
+![uav_boot_log_1](https://github.com/huaqianlee/blog-file/blob/master/image/uav_boot_small.png)
 
 　　
 
 
 
 最后，将userdata相应加大，板子成功启动。串口log如下： 
-![uav_boot_log_2](https://github.com/huaqianlee/blog-file/image/uav_boot_ok.png)
+![uav_boot_log_2](https://github.com/huaqianlee/blog-file/blob/master/image/uav_boot_ok.png)
 
 
 　

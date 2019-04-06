@@ -10,7 +10,7 @@ tags: [源码分析,MTK]
 # Android 支持的传感器
 现在 Android 支持多达数十种的各种各样的传感器，支持的类型如下：
 
-![Sensor_Type](https://github.com/huaqianlee/blog-file/image/android/mtk/sensor_type.jpg)
+![Sensor_Type](https://github.com/huaqianlee/blog-file/blob/master/image/android/mtk/sensor_type.jpg)
 
 # Android Sensor 架构
 <!--more-->
@@ -18,11 +18,11 @@ tags: [源码分析,MTK]
 
 Android 传感器系统架构如下：
 
-![sensor_arch](https://github.com/huaqianlee/blog-file/image/android/mtk/sensor_arch.jpg)
+![sensor_arch](https://github.com/huaqianlee/blog-file/blob/master/image/android/mtk/sensor_arch.jpg)
 
 传感器驱动一般会有如下五种数据传输形式：input event设备驱动、MISC驱动、SYS驱动、HWMON设备驱动以及ioctl。如下是一幅网上看到未知来源的图片，更清晰的描述了底层架构，如下：
 
-![sensor_arch](https://github.com/huaqianlee/blog-file/image/android/mtk/sensor_arch.png)
+![sensor_arch](https://github.com/huaqianlee/blog-file/blob/master/image/android/mtk/sensor_arch.png)
 
 # 源码分析
 传感器源码架构大致相同，本文就来分析陀螺仪部分源码。
@@ -33,7 +33,7 @@ Android 传感器系统架构如下：
 ### I2C 总线配置
 MTK 为GPIO、I2C等配置提供了 DCT 工具， 可以直接在 UI 里面配置好 I2C 相关定义（codegen.dws 文件中），配好后编译会自动生成一些相关的 DTS 文件和头文件（如 cust_i2c.dtsi）。
 
-![i2c-dct](https://github.com/huaqianlee/blog-file/image/android/mtk/i2c_dct.jpg)
+![i2c-dct](https://github.com/huaqianlee/blog-file/blob/master/image/android/mtk/i2c_dct.jpg)
 > 高通是直接在 dts 里面定义。另需要注意：一条 i2c 总线只支持一种速率，不同速率外设需要挂接到不同总线。
 
 MTK 是在 DCT 配好 i2c 相关（lk 和 kernel 都需要配）,如果有兼容 sensor 则配置在 dts 中，如下：
@@ -76,7 +76,7 @@ cust_gyro@1 { //name@0  为 first sensor 参数
 ```
 关于上面 dts 中 方向参数 direction 取值依据参考下图：
 
-![mapping_coordinate](https://github.com/huaqianlee/blog-file/image/android/mtk/mapping_coordinate.jpg)
+![mapping_coordinate](https://github.com/huaqianlee/blog-file/blob/master/image/android/mtk/mapping_coordinate.jpg)
 
 
 ### Gyro Driver
@@ -163,4 +163,4 @@ open_sensors()
 ```
 驱动数据和控制流：
 
-![flow](https://github.com/huaqianlee/blog-file/image/android/mtk/work_flow.jpg)
+![flow](https://github.com/huaqianlee/blog-file/blob/master/image/android/mtk/work_flow.jpg)

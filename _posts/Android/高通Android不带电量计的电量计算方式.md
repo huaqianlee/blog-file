@@ -125,10 +125,10 @@ soc_final = bound_soc(soc_final) // 最终电量
             否则：return pcj 、pcj_minus_one、其他临界值
 ```
 ###公式一
-![公式一](https://github.com/huaqianlee/blog-file/image/blog电量计算公式1.png)
+![公式一](https://github.com/huaqianlee/blog-file/blob/master/image/blog电量计算公式1.png)
 ###公式二
-![公式二](https://github.com/huaqianlee/blog-file/image/blog电量计算公式2.png)
+![公式二](https://github.com/huaqianlee/blog-file/blob/master/image/blog电量计算公式2.png)
 ###公式三
-![公式三](https://github.com/huaqianlee/blog-file/image/blog电量计算公式3.png)
+![公式三](https://github.com/huaqianlee/blog-file/blob/master/image/blog电量计算公式3.png)
 ###公式四
-![公式四](https://github.com/huaqianlee/blog-file/image/blog电量计算公式4.png)
+![公式四](https://github.com/huaqianlee/blog-file/blob/master/image/blog电量计算公式4.png)

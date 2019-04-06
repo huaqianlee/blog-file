@@ -31,9 +31,9 @@ tags:
 应用场景：目前主要应用在一些大型手机射击游戏中，如狂野飙车等,用于辅助GPS定位。
 如下是网上看到的两幅很形象图片：
 单轴陀螺仪:
-![single-axis](https://github.com/huaqianlee/blog-file/image/a_tuoluoyi.gif)
+![single-axis](https://github.com/huaqianlee/blog-file/blob/master/image/a_tuoluoyi.gif)
 三轴陀螺仪:
-![three-axis](https://github.com/huaqianlee/blog-file/image/tuoluoyi.gif)
+![three-axis](https://github.com/huaqianlee/blog-file/blob/master/image/tuoluoyi.gif)
 
 ##地磁/磁力计/电子罗盘(Magnetic/compass)
 工作原理：电子罗盘，也叫数字指南针，是利用地磁场来定北极的一种方法。。

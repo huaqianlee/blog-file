@@ -10,7 +10,7 @@ tags: App
 创作APP时一个模板参考的好地方：[Envato market](https://go.redirectingat.com/?id=1342X589339&site=code.tutsplus.com&xs=1&isjs=1&url=https%3A%2F%2Fcodecanyon.net%2Fcategory%2Fmobile%2Fandroid%3F_ga%3D2.255032513.873197305.1503543294-826134730.1503543294&xguid=6c32060c165aa0d81cc926f785d03c1a&xuuid=40b87ed972cd06dc4bfc1a62b8c59465&xsessid=e18f51adda215e4913eb634122cf8895&xcreo=0&xed=0&sref=https%3A%2F%2Fcode.tutsplus.com%2Ftutorials%2Fgetting-started-with-recyclerview-and-cardview-on-android--cms-23465&xtz=-480)。你可以找到成千上万的APP模板，从[Youtube](https://go.redirectingat.com/?id=1342X589339&site=code.tutsplus.com&xs=1&isjs=1&url=https%3A%2F%2Fcodecanyon.net%2Fitem%2Flayar-tancep-youtube-app-for-android%2F5190062%3F_ga%3D2.248270926.873197305.1503543294-826134730.1503543294&xguid=6c32060c165aa0d81cc926f785d03c1a&xuuid=40b87ed972cd06dc4bfc1a62b8c59465&xsessid=e18f51adda215e4913eb634122cf8895&xcreo=0&xed=0&sref=https%3A%2F%2Fcode.tutsplus.com%2Ftutorials%2Fgetting-started-with-recyclerview-and-cardview-on-android--cms-23465&xtz=-480)到[obstacleavoidance game](https://go.redirectingat.com/?id=1342X589339&site=code.tutsplus.com&xs=1&isjs=1&url=https%3A%2F%2Fcodecanyon.net%2Fitem%2Fflappybot-an-obstacle-avoidance-game%2F6827330%3F_ga%3D2.248270926.873197305.1503543294-826134730.1503543294&xguid=6c32060c165aa0d81cc926f785d03c1a&xuuid=40b87ed972cd06dc4bfc1a62b8c59465&xsessid=e18f51adda215e4913eb634122cf8895&xcreo=0&xed=0&sref=https%3A%2F%2Fcode.tutsplus.com%2Ftutorials%2Fgetting-started-with-recyclerview-and-cardview-on-android--cms-23465&xtz=-480)。
 
 或者你可以尝试一下[通用的Android app模板](https://codecanyon.net/item/universal-full-multipurpose-android-app/6512720?_ga=2.217207135.873197305.1503543294-826134730.1503543294),它能为你创作任何种类app提供一个坚实的基础。
-![Universal-Android-app](https://github.com/huaqianlee/blog-file/image/blog/recyclerview_cardview/Universal-Android-app.png)
+![Universal-Android-app](https://github.com/huaqianlee/blog-file/blob/master/image/blog/recyclerview_cardview/Universal-Android-app.png)
 <!--more-->
 
 # 前提
@@ -92,7 +92,7 @@ xml内容如下：
 </LinearLayout>
 ```
 如果这个xml文件被用作*Activity*的layout，并且给*TextView*和ImageView*设置有意义的值，那么在Android设备上面它看起来应该像这个样子：
-![device](https://github.com/huaqianlee/blog-file/image/blog/recyclerview_cardview/device_2015.png)
+![device](https://github.com/huaqianlee/blog-file/blob/master/image/blog/recyclerview_cardview/device_2015.png)
 
 ## 创建RecyclerView
 ### 在Layout中定义它
@@ -222,7 +222,7 @@ rv.setAdapter(adapter);
 ```
 ### 编译及运行
 当你在你的Android设备上运行这个例程时，你将会看类似如下图片的结果：
-![device](https://github.com/huaqianlee/blog-file/image/blog/recyclerview_cardview/device-2015-02.png)
+![device](https://github.com/huaqianlee/blog-file/blob/master/image/blog/recyclerview_cardview/device-2015-02.png)
 
 # 结论
 在这篇教程，你已经学会了怎么去使用在Android L中引入的*CardView*和*RecyclerView*控件。你也明白了在Material Design应用中怎么去使用这些控件。注意：通过*RecyclerView*可以做几乎所有*ListView*所做的事，不过为了更少的代码，使用*ListView*仍然是一个比较好的选择。

@@ -17,15 +17,15 @@ tags: [源码分析,Qualcomm]
 　
 首先来看一下官方给出的Android系统架构：
 <!--more-->　
-![arch](https://github.com/huaqianlee/blog-file/image/blogandroidarchitecture.jpg)
+![arch](https://github.com/huaqianlee/blog-file/blob/master/image/blogandroidarchitecture.jpg)
 　
 当按下电源开关后，主要执行了如下步骤：
 　
-![boot](https://github.com/huaqianlee/blog-file/image/blogbootflow.png)
+![boot](https://github.com/huaqianlee/blog-file/blob/master/image/blogbootflow.png)
 　
 另，在内核启动了第一个进程后，init->home lanucher的详细流程如下：
 　
-![boot](https://github.com/huaqianlee/blog-file/image/blog0_1273850759wbAp.gif)
+![boot](https://github.com/huaqianlee/blog-file/blob/master/image/blog0_1273850759wbAp.gif)
 >注：此图取自网络，觉得描述得很详细，故附上
 
 接下来就按照引导程序、内核启动、init进程、系统服务、Home Lanucher这样的顺序来分析Android启动的code。
@@ -72,7 +72,7 @@ MSM8916芯片内部有很多不同的处理器，如下：
 
 
 ###引导代码流程
-![](https://github.com/huaqianlee/blog-file/image/blogbootcodeflow.png)
+![](https://github.com/huaqianlee/blog-file/blob/master/image/blogbootcodeflow.png)
 
 1. 系统上电或者MSM8916 AP侧CPU重启。
 
@@ -544,7 +544,7 @@ public static void main(String argv[]) {
 ```
 
 到了这个阶段，就可以看到启动动画了。前面分析了Zygote的流程，可以总结为如下一张图：
-![from internet](https://github.com/huaqianlee/blog-file/image/blogZygote.jpg)
+![from internet](https://github.com/huaqianlee/blog-file/blob/master/image/blogZygote.jpg)
 
 在rc文件中有通过onrestart定义需要重启的动作或服务，这块就不去详细分析了，只将重启流程中的关键函数和路径列出：
 ```bash

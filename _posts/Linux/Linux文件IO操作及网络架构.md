@@ -6,13 +6,13 @@ tags: [kernel,文件IO,网络]
 图片摘自网络，这些图片清晰的描述出了文件I/O和网络操作的脉络。
 <!--more-->
 ##网络交互模型
-![网络交互模型](https://github.com/huaqianlee/blog-file/image/blog网络交互模型.jpg)
+![网络交互模型](https://github.com/huaqianlee/blog-file/blob/master/image/blog网络交互模型.jpg)
 
 ##read-recv-recvfrom
-![read-recv-recvfrom](https://github.com/huaqianlee/blog-file/image/blogread-recv-recvfrom.jpg)
+![read-recv-recvfrom](https://github.com/huaqianlee/blog-file/blob/master/image/blogread-recv-recvfrom.jpg)
 
 ##write-send-sendto
-![write-send-sendto](https://github.com/huaqianlee/blog-file/image/blogwrite-send-sendto.jpg)
+![write-send-sendto](https://github.com/huaqianlee/blog-file/blob/master/image/blogwrite-send-sendto.jpg)
 
 ##socket-bind-listen-accept-close-connect
-![socket-bind-listen-accept-close-connect](https://github.com/huaqianlee/blog-file/image/blogsocket-bind-listen-accept-close-connect.jpg)
+![socket-bind-listen-accept-close-connect](https://github.com/huaqianlee/blog-file/blob/master/image/blogsocket-bind-listen-accept-close-connect.jpg)

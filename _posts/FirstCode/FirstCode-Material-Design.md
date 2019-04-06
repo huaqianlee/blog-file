@@ -55,7 +55,7 @@ colorAccent        指定浮动按钮颜色以及一些控件选择状态
 ```
 每个属性指定颜色的位置如下：
 
-![各属性指定颜色位置](https://github.com/huaqianlee/blog-file/image/android/firstcode/toolbar_anay.jpg)
+![各属性指定颜色位置](https://github.com/huaqianlee/blog-file/blob/master/image/android/firstcode/toolbar_anay.jpg)
 
 ### 引入Toolbar
 Toolbar控件是由appcompat-v7库提供，引入布局：
@@ -145,7 +145,7 @@ setSupportActionBar(toolbar);
 ```
 效果如下：
 
-![带action按钮的Toolbar](https://github.com/huaqianlee/blog-file/image/android/firstcode/toolbar_xiaoguo.jpg)
+![带action按钮的Toolbar](https://github.com/huaqianlee/blog-file/blob/master/image/android/firstcode/toolbar_xiaoguo.jpg)
 
 ## 滑动菜单
 ### DrawerLayout
@@ -294,7 +294,7 @@ navView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSel
     }
 ```
 效果如下：
-![NavigationView滑动菜单界面](https://github.com/huaqianlee/blog-file/image/blog/app/navigation_view.jpg)
+![NavigationView滑动菜单界面](https://github.com/huaqianlee/blog-file/blob/master/image/blog/app/navigation_view.jpg)
 
 ## 悬浮按钮和可交互提示
 ### FloatingActionButton
@@ -359,7 +359,7 @@ Snackbar.make(v, "Data deleted", Snackbar.LENGTH_SHORT).setAction("Undo", new Vi
 ```
 这样替换布局后，悬浮按钮会自动上移以避免覆盖，效果如下：
 
-![效果图](https://github.com/huaqianlee/blog-file/image/android/firstcode/coorlayout.jpg)
+![效果图](https://github.com/huaqianlee/blog-file/blob/master/image/android/firstcode/coorlayout.jpg)
 >Snackbar.make时传入的view是Snackbar本身，包含在CoordinatorLayout中，所以能响应，如若传入的是外面的View，则不能响应。
 
 ## 卡片式布局
@@ -757,7 +757,7 @@ if (Build.VERSION.SDK_INT >= 21) {
 
 效果图如下：
 
-![fruit_effect](https://github.com/huaqianlee/blog-file/image/fruit_effct.gif)
+![fruit_effect](https://github.com/huaqianlee/blog-file/blob/master/image/fruit_effct.gif)
 
 ## 示例源码
 整个Material Design示例源码的地址如下：
