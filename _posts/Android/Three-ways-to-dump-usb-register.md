@@ -5,10 +5,8 @@ tags: [Qualcomm]
 ---
 ### Add node
 此方法只为一个示例，有些平台不是使用此文件，如 SDM450（MSM8953）使用的 dwc3-qcom.c 。
-
 ```
---- kernel/msm-4.9/drivers/usb/phy/phy-msm-usb_hguan_bak.c	2018-09-25 16:48:47.672236000 +0800
-+++ kernel/msm-4.9/drivers/usb/phy/phy-msm-usb.c	2018-11-29 13:18:49.598562600 +0800
+# kernel/msm-4.9/drivers/usb/phy/phy-msm-usb.c
 @@ -51,6 +51,11 @@
  
  #include <linux/msm-bus.h>
