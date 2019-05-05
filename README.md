@@ -85,6 +85,7 @@ Kotlin
 
 Git
 -----------
+- [Gitbook + Jenkins + Gitlab 搭建内网自动构建的 Gitbook](_posts/Git/gitlab-jenkins-gitbook-to-create-LAN-gitbook.md)
 - [git常用及进阶命令总结](_posts/Git/git常用及进阶命令总结.md)
 - [git常见问题总结](_posts/Git/git-experence.md)
 
