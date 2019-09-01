@@ -7,9 +7,10 @@ tags: [源码分析,Qualcomm,MTK]
 
 # 前言
 之前的几篇高通的博客是基于Android 4.4 分析，现在准备通过工作时 MTK 平台 Android 7.0 的源码来进行分析，不过也会将以前基于高通的博客归类于此文。
+<!--more-->
 
 以前看代码，喜欢按照调用流程一步步的完整跟下来，这样比较费时间，尤其觉得对于驱动部分不是很必要，所以这次就准备主要专注于关键文件和关键函数，以及软件框架。
-<!--more-->
+
 # Android架构
 
 # 源码分析
@@ -19,6 +20,9 @@ tags: [源码分析,Qualcomm,MTK]
 
 文章名 | 概述
 ---|---
+- [常用的快充技术简介](http://huaqianlee.github.io/2017/11/13/Android/What-is-fast-charge-now/)|
+[UFP was modified as DRP when we unplug OTG](http://huaqianlee.github.io/2019/08/27/Android/USB-port-error/)|Type-c 端口模型
+[pmic voter](http://huaqianlee.github.io/2019/05/15/Android/pmic-voter/)|PMIC 投票机制
 [Three ways to dump usb registers](http://huaqianlee.github.io/2018/08/23/Android/Three-ways-to-dump-usb-register/)|获取 USB register values 的三种方式
 [Android传感器（Sensor）架构简析 (╯_╰)](http://huaqianlee.github.io/2017/12/17/Android/android-sensor-arch-analysis/)|MTK 传感器架构简析 (╯_╰)
 [Android(Linux) 输入子系统解析](http://huaqianlee.github.io/2017/11/23/Android/Android-Linux-input-system-analysis/)|从 HW 到 Framework 分析输入子系统
@@ -37,6 +41,7 @@ tags: [源码分析,Qualcomm,MTK]
 ### 系统方向
 文章名 | 概述
 ---|---
+[一个 health service 不生效问题引出的一点知识](http://huaqianlee.github.io/2019/05/16/Android/A-little-knowledge-about-health/)|Healthd 重载
 [高通Android设备启动流程分析](http://huaqianlee.github.io/2015/08/23/Android/%E9%AB%98%E9%80%9AAndroid%E8%AE%BE%E5%A4%87%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B%E5%88%86%E6%9E%90-%E4%BB%8Epower-on%E4%B8%8A%E7%94%B5%E5%88%B0Home-Lanucher%E5%90%AF%E5%8A%A8/)|从power-on上电到Home Lanucher启动
 [怎么用Android日志系统更好地去调试](http://huaqianlee.github.io/2015/07/18/Android/%E6%80%8E%E4%B9%88%E7%94%A8Android%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E6%9B%B4%E5%A5%BD%E5%9C%B0%E5%8E%BB%E8%B0%83%E8%AF%95-How-to-debug-with-Android-logging/)|解析 log 实现代码及实战 demo
 [怎么抓取Android测试日志文件](http://huaqianlee.github.io/2015/07/19/Android/%E6%80%8E%E4%B9%88%E6%8A%93%E5%8F%96Android%E6%B5%8B%E8%AF%95%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6-How-to-get-android-log-file/)|解析 logcat 命令 和 log的抓取

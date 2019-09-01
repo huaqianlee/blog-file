@@ -1,7 +1,8 @@
-## My blog files
-如果对我写的文章感兴趣, 欢迎访问我的个人博客。
-
-*博客地址:* [Andy Lee's Blog](http://huaqianlee.github.io)
+title: "【置顶】博客主题分类一览"
+date: 2100-11-22 14:34:36
+categories:
+tags:
+---
 
 Linux
 -----------
@@ -11,6 +12,7 @@ Linux
 - [如何在内核里操作读写文件](http://huaqianlee.github.io/2015/03/17/Linux/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%86%85%E6%A0%B8%E9%87%8C%E6%93%8D%E4%BD%9C%E8%AF%BB%E5%86%99%E6%96%87%E4%BB%B6-create-open-read-write/)
 - [深入理解Linux启动过程](http://huaqianlee.github.io/2015/08/21/Linux/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Linux%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B/)
 - [linux系统使用问题集](http://huaqianlee.github.io/2016/01/04/Linux/linux-problem-set/)
+<!--more-->
 
 ARTS
 -----------
@@ -144,5 +146,4 @@ Other
 - [纸币器和MDB协议](http://huaqianlee.github.io/2017/11/08/Other/MDB-ICP-protocol/)
 - [Android快充介绍](_posts/Android/What-is-fast-charge-now？.md)
 
-## 附录
-_config.yml 为根目录文件的备份
+
