@@ -4,6 +4,19 @@
 *博客地址:* [Andy Lee's Blog](http://huaqianlee.github.io)
 
 
+Linux
+-----------
+- [Process and thread in linux](Process-and-thread-in-linux.md)
+- [Linux常用快捷键及命令总结](_posts/Linux/Linux常用快捷键及命令总结.md)
+- [Linux文件IO操作及网络架构](_posts/Linux/Linux文件IO操作及网络架构.md)
+- [如何在内核里操作读写文件](_posts/Linux/如何在内核里操作读写文件-create-open-read-write.md)
+- [深入理解Linux启动过程](_posts/Linux/深入理解Linux启动过程.md)
+- [linux系统使用问题集](_posts/Linux/linux-problem-set.md)
+
+ARTS
+-----------
+- [First week of ATRS: Start](_posts/ATRS/First-week-of-ATRS-Start.md)
+
 Android
 -----------
 *APP*
@@ -16,8 +29,11 @@ Android
 - [Android中adb命令的用法](_posts/Android/Android中adb-Android-Debug-Bridge-命令的用法.md)
 - [Android Stdudio常用快捷键](_posts/Android/Android-Stdudio-Linux-windows-mac常用快捷键.md)
  
-*System*
+*System && Bsp*
 - [**Android 系统源码分析综述：整理总结源码分析的所有博客**](_posts/Android/A-summary-of-Android-source-analysis.md)
+- [UFP was modified as DRP when we unplug OTG](_posts/Android/USB-port-error.md)
+- [pmic voter](_posts/Android/pmic-voter.md)
+- [一个 health service 不生效问题引出的一点知识](_posts/Android/A-little-knowledge-about-health.md)
 - [Three ways to dump usb registers](_posts/Android/Three-ways-to-dump-usb-register.md)
 - [Android传感器（Sensor）架构简析 (╯_╰)](_posts/Android/android-sensor-arch-analysis.md)
 - [Android/Linux  I2C 驱动架构分析](_posts/Android/Android-Linux-i2c-driver-arch.md)
@@ -45,6 +61,12 @@ Android
 - [高通 smb135x charger 驱动分析](_posts/Android/smb135x-charger-driver.md)
 - [怎么用Android日志系统更好地去调试](_posts/Android/怎么用Android日志系统更好地去调试-How-to-debug-with-Android-logging.md)
 - [怎么抓取Android测试日志文件](_posts/Android/怎么抓取Android测试日志文件-How-to-get-android-log-file.md)
+
+Git
+-----------
+- [Gitbook + Jenkins + Gitlab 搭建内网自动构建的 Gitbook](_posts/Git/gitlab-jenkins-gitbook-to-create-LAN-gitbook.md)
+- [git常用及进阶命令总结](_posts/Git/git常用及进阶命令总结.md)
+- [git常见问题总结](_posts/Git/git-experence.md)
 
 Uav
 -----------
@@ -83,20 +105,6 @@ Kotlin
 - [第一行代码之高级技巧](_posts/FirstCode/FirstCode-advanced-skills/)
 
 *Android群英传*
-
-Git
------------
-- [Gitbook + Jenkins + Gitlab 搭建内网自动构建的 Gitbook](_posts/Git/gitlab-jenkins-gitbook-to-create-LAN-gitbook.md)
-- [git常用及进阶命令总结](_posts/Git/git常用及进阶命令总结.md)
-- [git常见问题总结](_posts/Git/git-experence.md)
-
-Linux
------------
-- [Linux常用快捷键及命令总结](_posts/Linux/Linux常用快捷键及命令总结.md)
-- [Linux文件IO操作及网络架构](_posts/Linux/Linux文件IO操作及网络架构.md)
-- [如何在内核里操作读写文件](_posts/Linux/如何在内核里操作读写文件-create-open-read-write.md)
-- [深入理解Linux启动过程](_posts/Linux/深入理解Linux启动过程.md)
-- [linux系统使用问题集](_posts/Linux/linux-problem-set.md)
 
 Hexo
 -----------

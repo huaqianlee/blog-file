@@ -4,7 +4,7 @@ categories: ATRS
 tags: [Algorithm, Program Kill]
 ---
 
-ARTS 简单介绍
+# ARTS 简单介绍
 
 Algorithm：
 主要是为了编程训练和学习。每周至少做一个 leetcode 的算法题（先从Easy开始，然后再Medium，最后才Hard）。进行编程训练，如果不训练你看再多的算法书，你依然不会做算法题，看完书后，你需要训练。
@@ -35,15 +35,17 @@ Share：
 
 # Tips
 这周学到了两个版本管理的技巧。
-1. 快速撤销本地的所有修改和提交件。
+* 快速撤销本地的所有修改和提交件
 ```bash
 repo forall -vc "git reset --hard; git clean -fdx"
+
+# explanation
 forall - Execute for all repos.
 v - Print the output of the command
 c - Command to execute,the actual command
-```  
+```
 
-2. 将版本回退到指定时间。
+* 将版本回退到指定时间
 ```bash
 repo forall -c 'git checkout 'git rev-list --all -n1 --before="2019-08-15 15:00"''
 ```
