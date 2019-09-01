@@ -13,11 +13,14 @@ What am I ?　I don't know either, just： 爱生活，爱Android；爱编程，
 SUMMARY
 -------
 
-祖籍四川达州，現居深圳，现主要使用ubuntu与windows操作系统。热爱技术热爱开源，为Linux、Android而着迷。时常关注一些新技术，关注开源项目，并希望贡献自己一份力量。目前为止主要从事底层及系统级工作，对App及Web很感兴趣。最后，我很想學好英语。
+祖籍四川达州，現居成都，现主要使用 ubuntu/centos 与 windows 操作系统。热爱技术热爱开源，为 Linux、Android而着迷。时常关注一些新技术，关注开源项目，并希望贡献自己一份力量。目前为止主要从事底层及系统级工作，对 App 及 Web 等各种技术都很感兴趣。最后，我很想學好英语。
 
 RESUME
 ------
 **在线简历：[中文简历](../resume_cn.html)　|　[英文简历](../resume_en.html)**
+RESUME
+------
+**在线简历：[中文简历](../resume.html)　|　[英文简历](../resume_en.html)**
 
 ESSAY
 ------

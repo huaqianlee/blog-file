@@ -35,7 +35,7 @@ alps\device\mediatek\<platform>\sepolicy
 # avc: denied  { 操作权限  }  for pid=7201  comm=“进程名”  scontext=u:r:源类型:s0  tcontext=u:r:目标类型:s0  tclass=访问类型 permissive=0
 
 avc: denied {getattr read} for pid=7201 comm="xxx.xxx" scontext=u:r:system_app:s0 tcontext=u:r:shell_data_file:s0 tclass=dir permissive=0
-``` 
+```
 
 ## 权限修改
 主要有三种方式，前两种只能用来测试，第三种是推荐的正式处理方式。

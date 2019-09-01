@@ -10,7 +10,7 @@ tags: [App,FirstCode]
 很早以前第一次接触Android代码的项目结构的时候确实够头疼滴.
 <!--more-->
 
-![项目结构](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/firstcode/prj_struct.png)
+![项目结构](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/firstcode/prj_struct.png)
 
 * .gradle & .idea  
 Android Studio自动生成, 无需关心, 版本管理时,一般将其忽略(即.gitignore文件).
@@ -254,7 +254,7 @@ finish();
 # 为了在按返回键时也返回数据,需要重写onBackPressed()方法,并加入如上内容.
 ```
 ## 活动的生命周期
-![lifecycle](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/firstcode/lifecycle.gif)
+![lifecycle](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/firstcode/lifecycle.gif)
 
 根据生命周期，活动存在被回收的可能性，所以为了有好的体验，需要保存数据。
 ```bash
@@ -280,19 +280,19 @@ protected void onCreate(Bundle savedInstanceState) {
 活动启动模式一共4种：standard、singleTop、singleTask和singleInstance。AndroidManifest.xml中<activity/>指定android:launchMode属性来选择。
 ### standard
 系统默认，每启动一个活动就在栈顶创建，即使已经存在。
-![standard](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/firstcode/standard.jpg)
+![standard](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/firstcode/standard.jpg)
 
 ### singleTop
 活动启动时，栈顶如果不存在此活动，则创建此活动。
-![singleTop](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/firstcode/singleTop.jpg)
+![singleTop](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/firstcode/singleTop.jpg)
 
 ### singleTask
 活动启动时，如果栈里存在此活动，则将之前的全部出栈，将此活动置于栈顶。
-![singleTask](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/firstcode/singleTask.jpg)
+![singleTask](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/firstcode/singleTask.jpg)
 
 ### singleInstance
 启动活动时，单独创建一个返回栈来管理，这样所有应用可以共用返回栈，访问此活动。
-![singleInstance](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/firstcode/singleInstance.jpg)
+![singleInstance](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/firstcode/singleInstance.jpg)
 
 ## 最佳实践及有用的技巧
 ### 随时随地退出程序

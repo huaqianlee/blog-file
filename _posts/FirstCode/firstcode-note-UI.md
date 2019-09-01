@@ -6,7 +6,7 @@ tags: [App,FirstCode]
 [《第一行代码》第2版思维导图及所有学习笔记目录](http://huaqianlee.github.io/2017/03/24/FirstCode/The-departure-of-FirstCode-learning-notes/)
 
 本部分思维导图如下：
-![UI](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/firstcode/UI.png)
+![UI](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/firstcode/UI.png)
 <!--more-->
 
 ## 常用控件

@@ -18,7 +18,7 @@ Android
  
 *System*
 - [**Android 系统源码分析综述：整理总结源码分析的所有博客**](_posts/Android/A-summary-of-Android-source-analysis.md)
-- [Three ways to dump usb registers](_posts/Android/Three ways to dump usb register.md)
+- [Three ways to dump usb registers](_posts/Android/Three-ways-to-dump-usb-register.md)
 - [Android传感器（Sensor）架构简析 (╯_╰)](_posts/Android/android-sensor-arch-analysis.md)
 - [Android/Linux  I2C 驱动架构分析](_posts/Android/Android-Linux-i2c-driver-arch.md)
 - [Android(Linux) 输入子系统解析](_posts/Android/Android-Linux-input-system-analysis.md)
