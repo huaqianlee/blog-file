@@ -47,7 +47,7 @@ c - Command to execute,the actual command
 
 * 将版本回退到指定时间
 ```bash
-repo forall -c 'git checkout 'git rev-list --all -n1 --before="2019-08-15 15:00"''
+repo forall -c 'git checkout `git rev-list --all -n1 --before="2019-08-15 15:00"`'
 ```
 
 # Share

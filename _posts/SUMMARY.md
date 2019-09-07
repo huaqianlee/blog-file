@@ -11,8 +11,8 @@ Linux
 - [Linux文件IO操作及网络架构](http://huaqianlee.github.io/2014/11/17/Linux/Linux%E6%96%87%E4%BB%B6IO%E6%93%8D%E4%BD%9C%E5%8F%8A%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84/)
 - [如何在内核里操作读写文件](http://huaqianlee.github.io/2015/03/17/Linux/%E5%A6%82%E4%BD%95%E5%9C%A8%E5%86%85%E6%A0%B8%E9%87%8C%E6%93%8D%E4%BD%9C%E8%AF%BB%E5%86%99%E6%96%87%E4%BB%B6-create-open-read-write/)
 - [深入理解Linux启动过程](http://huaqianlee.github.io/2015/08/21/Linux/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Linux%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B/)
-- [linux系统使用问题集](http://huaqianlee.github.io/2016/01/04/Linux/linux-problem-set/)
 <!--more-->
+- [linux系统使用问题集](http://huaqianlee.github.io/2016/01/04/Linux/linux-problem-set/)
 
 ARTS
 -----------
