@@ -1,7 +1,7 @@
 title: "Linux常用快捷键及命令总结"
 date: 2014-12-21 20:10:01
-categories: Linux
-tags: shell
+categories: [Linux, Shell]
+tags: Tools
 ---
 　　或许我是一个geek范的人，又或许是想显得很有逼格， whatever， 反正我就喜欢Linux的命令行，喜欢黑黑的geek风，这样完全体现出了技术的酷炫。现将一些自己觉得很有用能让自己显得很牛的装X快捷键和指令总结如下，其中有一部分相当有用，使用后逼格瞬间提升，不信看文章最后的后记。
 

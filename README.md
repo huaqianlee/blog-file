@@ -14,7 +14,8 @@ Linux
 
 ARTS
 -----------
-- [First week of ATRS: Start](http://huaqianlee.github.io/2019/08/31/ATRS/First-week-of-ATRS-Start/)
+- [Second week of ARTS: Hurry](http://huaqianlee.github.io/2019/09/07/ARTS/Second-week-of-ARTS-Hurry/)
+- [First week of ARTS: Start](http://huaqianlee.github.io/2019/08/31/ARTS/First-week-of-ARTS-Start/)
 
 Android
 -----------

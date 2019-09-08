@@ -1,7 +1,7 @@
-title: "First week of ATRS: Start"
+title: "First week of ARTS: Start"
 date: 2019-08-31 16:39:35
-categories: ATRS
-tags: [Algorithm, Program Kill]
+categories: ARTS
+tags: [Algorithm, 成长]
 ---
 
 # ARTS 简单介绍
@@ -22,10 +22,10 @@ Share：
 # Algorithm
 本周用 c 语言完成了两道算法题。
 算法题目：[Two Sum](https://leetcode.com/problems/two-sum/)  
-我的代码：[Solutions](https://github.com/huaqianlee/LeetcodeSolutions/blob/master/algorithms/c/twoSum.c)  
+我的代码：[C Solution](https://github.com/huaqianlee/LeetcodeSolutions/blob/master/algorithms/c/twoSum.c)  
 
 算法题目：[Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)  
-我的代码：[Solutions](https://github.com/huaqianlee/LeetcodeSolutions/blob/master/algorithms/c/addTwoNumbers.c)  
+我的代码：[C Solution](https://github.com/huaqianlee/LeetcodeSolutions/blob/master/algorithms/c/addTwoNumbers.c)  
 
 # Review
 因为自己想学习一下正则表达式，所以就找了一篇英文教程：[Regex tutorial — A quick cheatsheet by examples](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285) 。 
