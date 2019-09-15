@@ -16,6 +16,7 @@ Linux
 
 ARTS
 -----------
+- [Third week of ARTS: Repo](http://huaqianlee.github.io/2019/09/07/ARTS/Third-week-of-ARTS/)
 - [Second week of ARTS: Hurry](http://huaqianlee.github.io/2019/09/07/ARTS/Second-week-of-ARTS-Hurry/)
 - [First week of ARTS: Start](http://huaqianlee.github.io/2019/08/31/ARTS/First-week-of-ARTS-Start/)
 
@@ -68,6 +69,7 @@ Android
 
 Git
 -----------
+- [How does the repo of android source code work ?](http://huaqianlee.github.io/2019/09/15/Git/How-does-android-repo-work/)
 - [Gitbook + Jenkins + Gitlab 搭建内网自动构建的 Gitbook](http://huaqianlee.github.io/2019/05/05/Git/gitlab-jenkins-gitbook-to-create-LAN-gitbook/)
 - [git常用及进阶命令总结](http://huaqianlee.github.io/2015/06/11/Git/git%E5%B8%B8%E7%94%A8%E5%8F%8A%E8%BF%9B%E9%98%B6%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/)
 - [git常见问题总结](http://huaqianlee.github.io/2015/10/22/Git/git-experence/)
