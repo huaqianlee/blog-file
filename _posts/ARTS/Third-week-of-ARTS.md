@@ -4,7 +4,7 @@ categories: ARTS
 tags: [Algorithm, 成长]
 ---
 # Algorithm
-Title：[Palindrome Number](https://leetcode.com/problems/palindrome-number/)
+Title：[Palindrome Number](https://leetcode.com/problems/palindrome-number/)  
 Solution：[C solution](https://github.com/huaqianlee/LeetcodeSolutions/blob/master/algorithms/c/isPalindrome.c)
 
 # Review

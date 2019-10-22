@@ -5,7 +5,7 @@ tags:
 ---
 I don't have a good idea what to share for ARTS this week. So I summarize a little knowledge of the shell.
 
-## what is a shell
+## What is a shell
 A shell is a software interface that is ofthen a command line interface that enables the user to interact with the computer. In linux, we can check all supported shell via the following way.
 <!--more-->
 ```bash
@@ -20,7 +20,7 @@ lee@lee-server:~$ sudo cat /etc/shells
 > bash( Bourne again shell) - rewrited sh, generate more functions.
 
 
-## what is the differnce between script execution
+## What is the differnce between script execution
 
 ### First situation
 Execute as one child process, once the child process exists and back to parent shell, the related envs will disappear. Such as:
