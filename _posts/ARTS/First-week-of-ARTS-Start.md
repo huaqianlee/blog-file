@@ -1,4 +1,4 @@
-title: "First week of ARTS: Start"
+title: "The first week of ARTS: Start"
 date: 2019-08-31 16:39:35
 categories: ARTS
 tags: [Algorithm, 成长]

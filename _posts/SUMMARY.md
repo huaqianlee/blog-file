@@ -6,6 +6,7 @@ tags:
 
 Linux
 -----------
+
 - [Process and thread in linux](http://huaqianlee.github.io/2019/08/31/Linux/Process-and-thread-in-linux/)
 - [Linux常用快捷键及命令总结](http://huaqianlee.github.io/2014/12/21/Linux/Linux%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%8F%8A%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/)
 - [Linux文件IO操作及网络架构](http://huaqianlee.github.io/2014/11/17/Linux/Linux%E6%96%87%E4%BB%B6IO%E6%93%8D%E4%BD%9C%E5%8F%8A%E7%BD%91%E7%BB%9C%E6%9E%B6%E6%9E%84/)
@@ -16,13 +17,16 @@ Linux
 
 ARTS
 -----------
+
 - [Third week of ARTS: Repo](http://huaqianlee.github.io/2019/09/07/ARTS/Third-week-of-ARTS/)
 - [Second week of ARTS: Hurry](http://huaqianlee.github.io/2019/09/07/ARTS/Second-week-of-ARTS-Hurry/)
 - [First week of ARTS: Start](http://huaqianlee.github.io/2019/08/31/ARTS/First-week-of-ARTS-Start/)
 
 Android
 -----------
+
 *APP*
+
 - [Getting Started With RecyclerView and CardView on Android](http://huaqianlee.github.io/2017/11/08/Android/Getting-Started-With-RecyclerView-and-CardView-on-Android/)
 - [通过自定义侧边导航栏的RecyclerView动态加载布局](http://huaqianlee.github.io/2017/08/18/Android/Dynamic-loading-layout-by-recyclerview-item/)
 - [按返回键只关闭DrawerLayout侧边栏不退出Activity的实现方案](http://huaqianlee.github.io/2017/08/18/Android/hides-navigation-in-drawerlayou/)
@@ -33,6 +37,7 @@ Android
 - [Android Stdudio常用快捷键](http://huaqianlee.github.io/2015/05/29/Android/Android-Stdudio-Linux-windows-mac%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/)
  
 *System && Bsp*
+
 - [**Android 系统源码分析综述：整理总结源码分析的所有博客**](_posts/Android/A-summary-of-Android-source-analysis.md)
 - [Three ways to dump usb register](http://huaqianlee.github.io/2018/08/23/Android/Three-ways-to-dump-usb-register/)
 - [pmic voter](http://huaqianlee.github.io/2019/05/15/Android/pmic-voter/)
@@ -69,6 +74,7 @@ Android
 
 Git
 -----------
+
 - [How does the repo of android source code work ?](http://huaqianlee.github.io/2019/09/15/Git/How-does-android-repo-work/)
 - [Gitbook + Jenkins + Gitlab 搭建内网自动构建的 Gitbook](http://huaqianlee.github.io/2019/05/05/Git/gitlab-jenkins-gitbook-to-create-LAN-gitbook/)
 - [git常用及进阶命令总结](http://huaqianlee.github.io/2015/06/11/Git/git%E5%B8%B8%E7%94%A8%E5%8F%8A%E8%BF%9B%E9%98%B6%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/)
@@ -76,6 +82,7 @@ Git
 
 Uav
 -----------
+
 - [PX4之外设代码结构及流程-IMU](http://huaqianlee.github.io/2017/03/29/Uav/px4-imu-mpu9250-code-structure/)
 - [PX4 for Snapdragon Flight](http://huaqianlee.github.io/2017/03/25/Uav/PX4-for-Snapdragon-Flight/)
 - [高通px4代码阅读笔记](http://huaqianlee.github.io/2016/05/11/Uav/qualcomm-px4-code-reading-note/)
@@ -86,17 +93,21 @@ Uav
 
 英语
 -----------
+
 - [英式音标与美式音标](http://huaqianlee.github.io/2017/05/08/English/Americal-and-english-phonetic/)
 
 
 Kotlin
 -----------
+
 - [Android Kotlin之曲折HelloWord](http://huaqianlee.github.io/2017/05/23/Kotlin/Kotlin-HElloWorld/)
 
 
 学习笔记
 ----------------
+
 *第一行代码*
+
 - [第一行代码思维导图及学习笔记目录](http://huaqianlee.github.io/2017/03/24/FirstCode/The-departure-of-FirstCode-learning-notes/)
 - [第一行代码之项目结构与活动](http://huaqianlee.github.io/2017/03/24/FirstCode/FirstCode-learning-note-project-structure-and-activity/)
 - [第一行代码之UI](http://huaqianlee.github.io/2017/03/25/FirstCode/firstcode-note-UI/)
@@ -114,29 +125,35 @@ Kotlin
 
 
 *Linux内核完全注释*
+
 - [Linux内核完全注释之80x86内存管理](http://huaqianlee.github.io/2017/03/24/Linux/Linux-kernel-content-80x86-mem-manage/)
 
 Hexo
 -----------
+
 - [构建个人博客](http://huaqianlee.github.io/2014/10/24/Hexo/build-person-blog-with-hexo/)
 - [hello-world](http://huaqianlee.github.io/2014/10/20/Hexo/hello-world/)
 
 Java
 -----------
+
 - [JUnit-test的用法](http://huaqianlee.github.io/2015/01/20/Java/JUnit-test%E7%9A%84%E7%94%A8%E6%B3%95/)
 - [Java注释规范](http://huaqianlee.github.io/2014/10/27/Java/The-document-convetions-for-Java/)
 
 Think
 -----------
+
 - [How-to-read](http://huaqianlee.github.io/2014/11/01/Think/How-to-read/)
 
 Web
 -----------
+
 - [xml基础](http://huaqianlee.github.io/2015/01/18/Web/xml%E5%9F%BA%E7%A1%80/)
 - [xml文件约束与解析](http://huaqianlee.github.io/2015/01/19/Web/xml%E6%96%87%E4%BB%B6%E7%BA%A6%E6%9D%9F%E4%B8%8E%E8%A7%A3%E6%9E%90/)
 
 Life
 -----------
+
 - [17 小结，18 计划!](http://huaqianlee.github.io/2018/02/12/Life/Bye-2017-Hi-2018/)
 - [2015年10月7日:小丑](http://huaqianlee.github.io/2015/10/08/Life/2015%E5%B9%B410%E6%9C%887%E6%97%A5-%E5%B0%8F%E4%B8%91/)
 - [Four years](http://huaqianlee.github.io/2013/09/19/Life/four-years/)
@@ -146,6 +163,7 @@ Life
 
 Other
 -----------
+
 - [纸币器和MDB协议](http://huaqianlee.github.io/2017/11/08/Other/MDB-ICP-protocol/)
 - [Android快充介绍](_posts/Android/What-is-fast-charge-now？.md)
 

@@ -1,4 +1,4 @@
-title: "Eighth week of ARTs"
+title: "The eighth week of ARTs"
 date: 2019-10-20 22:52:39
 categories: ARTS
 tags: [Algorithm, 成长]
@@ -10,10 +10,8 @@ tags: [Algorithm, 成长]
 Title: [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
 Solution: [Java](https://github.com/huaqianlee/LeetcodeSolutions/blob/master/algorithms/java/RemoveDuplicatesfromSortedArray.java)
 
-<!-- more -->
-
 # Review
-
+<!-- more -->
 # Tips
 Patch the staged and untracked files via `git`.
 ```bash

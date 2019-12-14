@@ -1,4 +1,4 @@
-title: "Second week of ARTS: Hurry"
+title: "The second week of ARTS: Hurry"
 date: 2019-09-07 20:49:00
 categories: ARTS
 tags: [Algorithm, 成长]
