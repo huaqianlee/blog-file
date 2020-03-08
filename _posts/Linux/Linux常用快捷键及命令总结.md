@@ -5,7 +5,7 @@ tags: Tools
 ---
 　　或许我是一个geek范的人，又或许是想显得很有逼格， whatever， 反正我就喜欢Linux的命令行，喜欢黑黑的geek风，这样完全体现出了技术的酷炫。现将一些自己觉得很有用能让自己显得很牛的装X快捷键和指令总结如下，其中有一部分相当有用，使用后逼格瞬间提升，不信看文章最后的后记。
 
-##Shell终端常用快捷键
+## Shell终端常用快捷键
 　　当进行命令行操作时，使用快捷键将极大提高工作效率，如下：
 ```bash
 Ctrl + U – 剪切光标前的内容
@@ -24,10 +24,10 @@ Ctrl + Z – 暂停应用程序
 fg – 重新将程序唤到前台
 ```
 <!--more-->
-##常用Shell命令
+## 常用Shell命令
 　　使用Linux，最酷炫的就是命令行操作，所以熟悉命令是必须，现将常用的Shell命令总结如下：
 
-###硬件相关命令
+### 硬件相关命令
 ```bash
 lscpu                   #查看的是cpu信息.
 cat /proc/cpuinfo       #查看CPU信息详细信息
@@ -42,9 +42,9 @@ ifconfig -a             #查看系统的所有网络接口
 ethtool eth0            #如果要查看某个网络接口的详细信息，例如eth0的详细参数和指标
 ```
 
-###系统相关命令
+### 系统相关命令
 -------------------------
-####通用命令
+#### 通用命令
 ```bash
 cmd --help              #查看命令详细信息
 man cmd                 #显示命令手册
@@ -58,7 +58,7 @@ uname                   #显示系统重要信息
 shutdown -r             #关键并重启
 ```
 
-####内核相关命令
+#### 内核相关命令
 ```bash
 uname -a                #查看版本当前操作系统内核信息）
 cat /proc/version       #查看当前操作系统版本信息
@@ -69,7 +69,7 @@ lsb_release -a          #用来查看linux兼容性的发行版信息
 lsmod                   #列出加载的内核模块
 ```
 
-####网络常用命令
+#### 网络常用命令
 ```bash
 ssh -l remote_username(root) remote_ip   #远程登录
 scp -r dir/file (remote_username:)remote_ip:dir #从本地copy到远端
@@ -85,7 +85,7 @@ netstat -at             #列出所有tcp端口
 netstat -au             #列出所有udp端口
 netstat -lt             #只列出所有监听tcp端口
 ```
-####管理常用命令
+#### 管理常用命令
 ```bash
 top                     #查看系统所有进程的详细信息，比如CPU、内存等,信息很多！
 df -lh                  #查看硬盘大小及使用率
@@ -105,7 +105,7 @@ uptime                  #查看系统运行时间、用户数、负载
 /sbin/chkconfig　–add　mysql #把MySQL添加到系统的启动服务组里面
 ```
 
-####文件操作常用命令
+#### 文件操作常用命令
 ```bash
 ranger               #文件浏览系统，需要先安装ranger，超级方便，用了就知道
 ls -lht                 #列出一个文件夹下所有文件及大小、访问权限
@@ -131,7 +131,7 @@ cat small_files* > large_file  合并拆分的文件
 cat file_* > file.tar.gz   合并拆分的文件
 ```
 
-####进程相关命令
+#### 进程相关命令
 ```bash
 htop                      #在终端以列表形式查看进程，需要安装htop，比ps好看好用太多了
 pstree -p pid           #查看一个进程下的所有线程
@@ -144,7 +144,7 @@ kill -9 `pgrep test`    #杀死进程
 nohup ./test.sh &       #使程序在后台运行
 ```
 
-####压缩解压缩 
+#### 压缩解压缩 
 ```bash
 gzip file1.txt file2.txt  #压缩文件 
 gzip -d file1.txt #提取文件
@@ -157,7 +157,7 @@ tar -xvf dir.tar.gz       #解压
 tar -tvf dir.tar.gz          #查看压缩文件
 ```
 
-####screen命令
+#### screen 命令
 ```bash
 #screen命令，screen命令运行的服务不受shell终端影响，即使shell终端关闭仍存在
 screen -S test          #创建一个名字为test的screen
@@ -169,13 +169,13 @@ ctrl + a,n              #当在一个screen时，切换到下一个窗口
 ctrl + a,c              #当在一个screen时，创建一个新的窗口
 ```
 
-####远程拷贝
+#### 远程拷贝
 ```bash
 scp local_file remote_username@remote_ip:remote_dir    #拷贝本地文件到远程机器上
 scp -r local_dir remote_username@remote_ip:remote_dir  #拷贝本地整个目录到远程机器上
 ```
 
-###软件包安装
+### 软件包安装
 　　如下为Ubuntu下的是命令，如果账户没有root权限的话，需要在前面添加sudo以获取root权限。其实不知道命令的话，只需要输入软件名，终端将会打印出下载安装的命令。
 ```bash
 apt-get install package     #安装
@@ -186,11 +186,11 @@ dpkg -i package.deb         #安装deb包
 ```
 
 
-##后记
+## 后记
 　　为了让大家相信使用了这些命令或快捷键确实会逼格提升，专门贴图两张，哈哈。。。
-###图一 执行htop（进程管理）
+### 图一 执行htop（进程管理）
 ![htop](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/bloghtop.png)
-###图二 执行ranger （文件浏览）
+### 图二 执行ranger （文件浏览）
 ![ranger](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/blogranger.png)
 
 　　有很多命令引用自[Linux常用的shell命令](http://www.xprogrammer.com/1799.html)，感谢此文作者.

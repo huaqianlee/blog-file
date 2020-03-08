@@ -1,4 +1,4 @@
-title: "Oh, the Git! - part 1"
+title: "Oh, the Git! - Basic"
 date: 2019-11-17 23:38:05
 categories: Git
 tags: [Tools]
@@ -15,10 +15,12 @@ Central VCS mainly includes `SVN` and `CVS`, its newwork architecture is client-
 ![Central VCS](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/vcs/Central%20VCS.jpg)
 <!-- more -->
 Advantages:
+
 + Centralized version management.
 + File version management and branch management.
 
 Disadvantages:
+
 + The client must remain connectec to the server at all times.
 
 ## Distributed VCS
@@ -57,7 +59,9 @@ git config --unset --system user.name
 ```
 
 # Basic usage
-## Init git repository 
+
+## Init git repository
+
 ```bash
 cd <project>
 git init
@@ -71,7 +75,7 @@ git init <project>
 
 Basic cmds:
 ```bash
-git add [<file> | .]  # . : All files of current directory.
+git add [<file> | .]  # . : All unstracked files of current project.
 git commit [--allow-empty] [-m <msg>]
 git push
 ```
@@ -98,6 +102,7 @@ git mv name new_name
 ```bash
 git log --oneline -n<number> # -n : last <number> record 
 git log --onelie --all -n5 --graph # --all: all branches. 
+git branch -v # Check all local branch.
 git log branch
 ```
 
@@ -118,21 +123,15 @@ tag # tag for project stage.
 # cmds
 git help --web cmd  # View cmd's help by web
 git checkout -b <branch> # Create and checkout <branch>
+git tag [-d] <tagname> [<commit>] # Create [delete] a tag reference in refs/tags/.
 git commit -am # git add + git commit -m, not suggested.
 git reset --hard # clean staging area and working dirctory
 git show # Shows one or more objects (blobs, trees, tags and commits).
 git blame # Show what revision and author last modified each line of a file.
 git stash # Stash the changes in a dirty working directory away.
 git stash pop # Pop the stashed changes.
+git cat-file -t # Check type of object.
+git cat-file -p # Check content of object
+find [dir] -type f # Find all files in current/[dir] directory.
 ```
 > `-` : single char options, like -m , -a;<br> `--`: multi char options, like --web, --hard; 
-
-
-
-
-
-
-
-
-
-
