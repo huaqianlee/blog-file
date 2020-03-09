@@ -7,29 +7,73 @@ tags: [Tools]
 `.git` directory acts a major role in `git` VCS. We can do local verson management directly depended on `.git` directory. I will parse `.git` in current topic. 
 
 # Directory tree
+
 First, I created a project and managed it through `git`, its directory tree is as follows:
+
 ```bash
-E:.
-│  README.md
-│
-├─doc
-│      README.md
-│
-├─img
-│      check.png
-│
-├─lib
-│      css_practice_1.html
-│
-└─src
-        README.md
+.
+├── doc
+│   └── README.md
+├── .git
+│   ├── COMMIT_EDITMSG
+│   ├── config
+│   ├── description
+│   ├── HEAD
+│   ├── hooks
+│   │   ├── applypatch-msg.sample
+│   │   ├── commit-msg.sample
+│   │   ├── fsmonitor-watchman.sample
+│   │   ├── post-update.sample
+│   │   ├── pre-applypatch.sample
+│   │   ├── pre-commit.sample
+│   │   ├── prepare-commit-msg.sample
+│   │   ├── pre-push.sample
+│   │   ├── pre-rebase.sample
+│   │   ├── pre-receive.sample
+│   │   └── update.sample
+│   ├── index
+│   ├── info
+│   │   └── exclude
+│   ├── logs
+│   │   ├── HEAD
+│   │   └── refs
+│   │       └── heads
+│   │           ├── dev
+│   │           ├── dev-1.0
+│   │           └── master
+│   ├── objects
+│   │   ├── 02
+│   │   │   ├── 40351d75b3f451e0ec4b399c38c3758f007152
+│   │   │   └── d8eae705ebf203142fd2f381d3b216dde2b28f
+|   |   |...
+│   │   ├── c8
+│   │   │   └── ff9c55ce2651d8380a14bee5b43b37e14fa7fc
+│   │   ├── f0
+│   │   │   └── 45488f3fa9a350ac01f48f2b000fe51a53f5aa
+│   │   ├── info
+│   │   └── pack
+│   ├── ORIG_HEAD
+│   └── refs
+│       ├── heads
+│       │   ├── dev
+│       │   ├── dev-1.0
+│       │   └── master
+│       └── tags
+│           └── kikoff_tag
+├── img
+│   └── check.png
+├── lib
+│   └── css_practice_1.html
+├── README.md
+└── src
+    └── README.md
 ```
 <!--more-->
 # .git introduction
 
 ## .git/HEAD
 
-It indicates which branch or commit the project works on. When the project works on a branch, the valuse of '.git/HEAD' is one refference. The details are as follows:
+It indicates which branch or commit the project works on. When the project works on a branch, the valuse of `.git/HEAD` is one refference. The details are as follows:
 
 ```bash
 $ cat .git/HEAD
@@ -212,33 +256,8 @@ $ ls -l .git/objects/
 total 0
 drwxr-xr-x 1 Lee 197121 0 三月    8 11:45 02/
 drwxr-xr-x 1 Lee 197121 0 三月    8 12:10 11/
-drwxr-xr-x 1 Lee 197121 0 三月    8 12:08 1f/
-drwxr-xr-x 1 Lee 197121 0 三月    8 11:45 2c/
-drwxr-xr-x 1 Lee 197121 0 三月    8 11:12 2e/
-drwxr-xr-x 1 Lee 197121 0 三月    8 11:12 31/
-drwxr-xr-x 1 Lee 197121 0 三月    8 12:08 40/
-drwxr-xr-x 1 Lee 197121 0 三月    8 12:10 44/
-drwxr-xr-x 1 Lee 197121 0 三月    7 18:20 56/
-drwxr-xr-x 1 Lee 197121 0 三月    8 11:07 5d/
-drwxr-xr-x 1 Lee 197121 0 三月    8 11:20 68/
-drwxr-xr-x 1 Lee 197121 0 三月    8 11:12 6d/
-drwxr-xr-x 1 Lee 197121 0 三月    8 11:00 6f/
-drwxr-xr-x 1 Lee 197121 0 三月    8 11:20 71/
-drwxr-xr-x 1 Lee 197121 0 三月    8 10:58 72/
-drwxr-xr-x 1 Lee 197121 0 三月    8 11:20 89/
-drwxr-xr-x 1 Lee 197121 0 三月    8 11:14 8c/
-drwxr-xr-x 1 Lee 197121 0 三月    8 10:58 9b/
-drwxr-xr-x 1 Lee 197121 0 三月    8 12:10 a1/
-drwxr-xr-x 1 Lee 197121 0 三月    7 18:20 a6/
-drwxr-xr-x 1 Lee 197121 0 三月    8 11:14 a7/
-drwxr-xr-x 1 Lee 197121 0 三月    8 11:14 b2/
-drwxr-xr-x 1 Lee 197121 0 三月    8 11:07 bd/
-drwxr-xr-x 1 Lee 197121 0 三月    8 10:58 c7/
+...
 drwxr-xr-x 1 Lee 197121 0 三月    7 18:20 c8/
-drwxr-xr-x 1 Lee 197121 0 三月    8 12:08 cc/
-drwxr-xr-x 1 Lee 197121 0 三月    8 11:07 ce/
-drwxr-xr-x 1 Lee 197121 0 三月    8 11:14 d1/
-drwxr-xr-x 1 Lee 197121 0 三月    8 11:07 d9/
 drwxr-xr-x 1 Lee 197121 0 三月    8 11:45 dd/
 drwxr-xr-x 1 Lee 197121 0 三月    8 11:00 e3/
 drwxr-xr-x 1 Lee 197121 0 三月    7 18:16 info/
@@ -299,7 +318,9 @@ There are mainly three objects:
 - commit : indicates a commit(SHA-1).
 - blob: indicates a file, if the contents of two files are same, they saves as a same blob.
 
-# more in .git
+# More in .git
+
+\# Todo
 
 ```bash
 config       FETCH_HEAD   hooks/       info/        objects/     packed-refs
@@ -308,9 +329,9 @@ description  HEAD         index        logs/        ORIG_HEAD    refs/
 
 # commit, tree and blob
 
-![commit_tree_blob_first](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/vcs/commit_tree_blob_first.png)
+`commit`, `tree` and `blob` are three main components of `.git`. I will introduce them by two examples.
 
-First , chose one commit .
+The current commit history is as follows:
 
 ```bash
 $ git log --oneline
@@ -325,7 +346,15 @@ ce4297f Add image.
 c8ff9c5 Add README
 ```
 
-## create
+## Simple one
+
+First, list relationship flowchart.
+
+![commit_tree_blob_first](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/vcs/commit_tree_blob_first.png)
+
+1. Select the second commit `726c6c0` as benchmark.
+
+2. Get the type and content of second commit `726c6c0`.
 
 ```bash
 $ git cat-file -t 726c6c0
@@ -340,13 +369,18 @@ committer lihq0416 <lihq0416@thundersoft.com> 1583636339 +0800
 Add source README.md
 ```
 
+3. Get the content of `tree` object.
+
+```bash
 $ git cat-file -p  c72f3764
 100644 blob a687b4c895de1b963fd4648cd12d7b1040b406c0    README.md
 040000 tree dd5ab753d33087eb06bd69b3a9317674638e6685    src
+```
+> `100644` - blob; `040000` - tree
 
-100644 - blob
-040000 - tree
+4. Get the contents of `blob` and `tree`.
 
+```bash
 $ git cat-file -p a687b4c
 Demonstration
 ===
@@ -354,12 +388,18 @@ Demonstration
 $ git cat-file -p dd5ab75 # tree
 100644 blob 9bdec0343dd1dee61d37be2a4d678c1a43c20b69    README.md
 
-$ git cat-file -p 9bdec03
+$ git cat-file -p 9bdec03 # Content of new blob.
 Hello, source code!
+```
 
-## Modify src readme
+## Complex one 
 
+First, list the relationship flowchart too.
 ![commit_tree_blob_second](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/vcs/commit_tree_blob_second.png)
+
+1. Select a later commit `5ea3cec` to make the structure a bit more complicated.
+
+2. Get the content of `commit`.
 
 ```bash
 $ git cat-file -p 5ea3cec
@@ -369,45 +409,71 @@ author lihq0416 <lihq0416@thundersoft.com> 1583652333 +0800
 committer lihq0416 <lihq0416@thundersoft.com> 1583652333 +0800
 
 Modify README.md of src
+```
 
-Lee@Lee-PC MINGW64 /e/code/Git/Demonstration (master)
+3. Get the content of `tree`.
+
+```bash
 $ git cat-file -p eda567
 100644 blob 401b9a8be1ba5ce77df18d4038a58dbfa29e3122    README.md
 040000 tree 04a87dd49ac3c928b872613bb07e8545ba08493a    doc
 040000 tree bd5e80e9c3527d86ffdf7669521082ec282043d9    img
 040000 tree b2713206c3d2f15dd71b25d124189edd2e8beab8    lib
 040000 tree 8a55fe88f7a7129f5467d791e4f077c22c3b3bbd    src
+```
 
+4. Get the contents of `trees` and `blob`.
 
-
-
-$ git cat-file -p  04a87dd4
-100644 blob 401b9a8be1ba5ce77df18d4038a58dbfa29e3122    README.md
-
+```bash
+1. README.md
 $ git cat-file -p 401b9a8b
 Demonstration
 ===
 For master.
 
-Lee@Lee-PC MINGW64 /e/code/Git/Demonstration (master)
-$ cat README.md
+2. doc
+$ git cat-file -p  04a87dd4
+100644 blob 401b9a8be1ba5ce77df18d4038a58dbfa29e3122    README.md
+
+# Because `doc/README.md` has the same content as root `README.md`
+# Only one `blob` is saved to save space.
+$ git cat-file -p 401b9a8b
 Demonstration
 ===
 For master.
 
-Lee@Lee-PC MINGW64 /e/code/Git/Demonstration (master)
-$ cat doc/README.md
-Demonstration
-===
-For master.
+3. img
+$ git cat-file -p bd5e80e9
+100644 blob 5d3c270574c1ee7b58851757c7b09b45b0cca460    check.png
+
+# The image is a binary
+$ git cat-file -p 5d3c270
+▒PNG
+
+IHDR{T▒▒▒IDATx▒▒yx▒U▒▒#k-▒f▒▒7▒8▒(t▒&▒▒Vh▒▒▒▒▒2"(茈▒▒▒▒A\▒.,▒
+
+4. lib
+$ git cat-file -p b271320
+100644 blob d1cd12a7b5b0fa570662c360a0aa5cacf2c11c85    css_practice_1.html
+
+$ git cat-file -p d1cd12a
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>Boxes</title>
+                        <p>
+                                Copyright by Lee.
+                        </p>
+                </div>
+        </body>
+</html>
+
+5. src
+$ git cat-file -p 8a55fe8
+100644 blob f045488f3fa9a350ac01f48f2b000fe51a53f5aa    README.md
+
+$ git cat-file -p f045488
+Hello, source code!
+
+This is a demonstration of git.
 ```
-
-all commit,tree,blob in objects.
-
-
-find  -type f
-blob file
-
-detached HEAD 分离头指针
-
-HEAD 指向 commit

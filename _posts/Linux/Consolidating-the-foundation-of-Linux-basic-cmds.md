@@ -28,7 +28,7 @@ id:5:initdefault:
 ```
 
 <!--more-->
-### Command-related Directories
+### Command-related Directoriesran
 ```
 /etc - configuration file directory
 /bin - command directory
