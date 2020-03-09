@@ -114,6 +114,7 @@ $ cat .git/config
 ```
 
 My global configuration is as follows:
+
 ```bash
 E:\code\Git\Demonstration>git config --global --list
 user.name=huaqianlee
@@ -121,6 +122,7 @@ user.email=huaqianlee@gmail.com
 ```
 
 The working configuration(user) is as follows:
+
 ```bash
 $ git log -n1
 commit 8c19a3856e27ff8e29171e49ccccdc042f1de32e (HEAD -> master)
@@ -134,6 +136,7 @@ Date:   Sun Mar 8 11:14:06 2020 +0800
 ## .git/refs/ 
 
 `.git/refs/` saves git reference, it replaces `SHA-1` with a simple string.
+
 ```bash
 $ ls .git/refs/
 heads/  tags/
@@ -352,9 +355,9 @@ First, list relationship flowchart.
 
 ![commit_tree_blob_first](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/vcs/commit_tree_blob_first.png)
 
-1. Select the second commit `726c6c0` as benchmark.
+- Select the second commit `726c6c0` as benchmark.
 
-2. Get the type and content of second commit `726c6c0`.
+- Get the type and content of second commit `726c6c0`.
 
 ```bash
 $ git cat-file -t 726c6c0
@@ -369,7 +372,7 @@ committer lihq0416 <lihq0416@thundersoft.com> 1583636339 +0800
 Add source README.md
 ```
 
-3. Get the content of `tree` object.
+- Get the content of `tree` object.
 
 ```bash
 $ git cat-file -p  c72f3764
@@ -378,7 +381,7 @@ $ git cat-file -p  c72f3764
 ```
 > `100644` - blob; `040000` - tree
 
-4. Get the contents of `blob` and `tree`.
+- Get the contents of `blob` and `tree`.
 
 ```bash
 $ git cat-file -p a687b4c
@@ -397,9 +400,9 @@ Hello, source code!
 First, list the relationship flowchart too.
 ![commit_tree_blob_second](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/vcs/commit_tree_blob_second.png)
 
-1. Select a later commit `5ea3cec` to make the structure a bit more complicated.
+- Select a later commit `5ea3cec` to make the structure a bit more complicated.
 
-2. Get the content of `commit`.
+- Get the content of `commit`.
 
 ```bash
 $ git cat-file -p 5ea3cec
@@ -411,7 +414,7 @@ committer lihq0416 <lihq0416@thundersoft.com> 1583652333 +0800
 Modify README.md of src
 ```
 
-3. Get the content of `tree`.
+- Get the content of `tree`.
 
 ```bash
 $ git cat-file -p eda567
@@ -422,8 +425,8 @@ $ git cat-file -p eda567
 040000 tree 8a55fe88f7a7129f5467d791e4f077c22c3b3bbd    src
 ```
 
-4. Get the contents of `trees` and `blob`.
-
+- Get the contents of `trees` and `blob`.
+  
 ```bash
 1. README.md
 $ git cat-file -p 401b9a8b

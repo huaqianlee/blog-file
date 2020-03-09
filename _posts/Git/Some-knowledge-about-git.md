@@ -133,5 +133,9 @@ git stash pop # Pop the stashed changes.
 git cat-file -t # Check type of object.
 git cat-file -p # Check content of object
 find [dir] -type f # Find all files in current/[dir] directory.
+git checkout # Switch branches or restore working tree files
+git checkout SHA-1 # Switch to SHA-1, detached HEAD situation.
+git checkout -b new_branch  base_branch_or_commit # Create and swith new_branch based on branch or commit.
+git diff HEAD  HEAD~1 | HEAD^ / HEAD~2 | HEAD^^
 ```
 > `-` : single char options, like -m , -a;<br> `--`: multi char options, like --web, --hard; 
