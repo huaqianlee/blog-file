@@ -74,7 +74,7 @@ man -a passwd
 ```
 
 ### help
-Before introducing this command, we need to figure out tow concepts. As follows:
+Before introducing this command, we need to figure out two concepts. As follows:
 1. Builtin commands : come with shell.
 2. External commands : the others.
 
@@ -232,6 +232,7 @@ less
 ### Compression and decompression
 Common commands:
 ```bash
+# compression rate increases in turn.
 tar 
 gzip
 bzip2
@@ -242,19 +243,21 @@ Commond suffix:
 .tar.gz 
 .tar.bz2 
 .tgz
-```
 
-```
-# Compress
+Compress:
+
+```bash
 tar -c  
 tar czf ，integrate gzip，fast but low compression rate.  common suffix is '.tar.gz'
 tar cjf , integrate bzip2 , slow but high compression rate. Common suffix is '.tar.bz2'
+```
 
-# Extract
+Extract:
+```bash
 tar xf -C <out_dir> 
     zxf
     jxf
-```    
+```
 
 
 ### Wildcard

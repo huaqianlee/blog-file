@@ -4,7 +4,7 @@ categories: Git
 tags: [Tools]
 ---
 
-`detached HEAD` is a common situation, sometimes useful, sometimes dangerous. It does point to any branches, so it will be cleaned by `git`.
+`detached HEAD` is a common situation, sometimes useful, sometimes dangerous. It doesn't point to any branches, so it will be cleaned by `git`.
 
 
 The current commit history is as follows:
@@ -31,6 +31,8 @@ $ git log --oneline --all --graph
 
 ## Create detached HEAD
 
+Create a detached HEAD by `git checkout` cmd.
+
 ```bash
 $ git checkout 8c19a38
 Note: checking out '8c19a38'.
@@ -50,6 +52,8 @@ HEAD is now at 8c19a38 Add Copyright notice.
 > The note of git is important, it provides a lot information.
 
 ## Check the current `HEAD`
+
+We can see the current `HEAD` pointer points to '8c19a38' by the following.
 
 ```bash
 $ cat .git/HEAD
@@ -84,11 +88,9 @@ index a687b4c..16b8b3f 100644
 @@ -1,3 +1,6 @@
  Demonstration
  ===
-
 +
 +detached HEAD.
 +
-
 ```
 
 - Generate commit `2457088` by `git add` and `git commit`.
@@ -118,7 +120,7 @@ $ git log --oneline --all --graph
 * c8ff9c5 Add README
 ```
 
-## Switch branch.
+## Switch branch
 
 When we switch to master branch, `git` prompts us to create a branch for detached HEAD.
 
@@ -136,8 +138,6 @@ to do so with:
 
 Switched to branch 'master'
 ```
-
-
 
 ## Check commit `2457088`
 
