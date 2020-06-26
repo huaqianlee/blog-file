@@ -81,12 +81,11 @@ N  above
 ```bash
 y -  Copy the content from the current cursor to next cursor. Controled by arrow keys or `h\j\k\l`
 yy -  Copy the current line 
-3yy 
+3yy - Copy the following three lines.
 y$ -  Copy content from cursor to end of line.
 
 d  -  Delet the content from the current cursor to next cursor. Controled by arrow keys or `h\j\k\l`
 dd  -  Delete (and copy) the current line
-3dd 
 d$ -  Cut content from cursor to end of line.
 
 p -  Paste

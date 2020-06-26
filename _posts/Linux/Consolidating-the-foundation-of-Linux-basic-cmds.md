@@ -1,6 +1,6 @@
 title: "Consolidating the foundation of Linux, basic cmds"
 date: 2020-02-06 11:43:20
-categories: [Linux,Shell]
+categories: Linux
 tags: Tools
 ---
 ## Command Interface
