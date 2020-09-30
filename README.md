@@ -89,7 +89,7 @@ Uav
 
 Kotlin
 -----------
-- [Android Kotlin之曲折HelloWord](http://huaqianlee.github.io/2017/05/23/Kotlin/Kotlin-HElloWorld/)
+- [Android Kotlin之曲折HelloWorld](http://huaqianlee.github.io/2017/05/23/Kotlin/Kotlin-HElloWorld/)
 
 
 学习笔记
