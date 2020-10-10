@@ -3,6 +3,7 @@ date: 2019-10-23 00:00:43
 categories: ARTS
 tags: [Algorithm, 成长]
 ---
+
 # Algorithm
 Title: [Remove Element](https://leetcode.com/problems/remove-element/).  
 Solution: [Java](https://github.com/huaqianlee/LeetcodeSolutions/blob/master/algorithms/java/RemoveElement.java).
@@ -20,3 +21,5 @@ repo init -u url -b <branch> --reference=<local_dir>
 It could increase download speed and save the storage when we want to keep multiple sets of code.
 
 # Share
+[How to build intranet gitbook with docker](http://huaqianlee.github.io/2020/10/10/Git/How-to-build-intranet-gitbook-with-docker/)
+

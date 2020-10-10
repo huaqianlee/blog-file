@@ -17,3 +17,4 @@ git branch --set-upstream-to=origin/branch topic-branch //  set tracking informa
 ```
 
 # Share
+[Oh, the Git! - local .git](http://huaqianlee.github.io/2020/03/07/Git/Some-knowledge-about-git-local-git/)

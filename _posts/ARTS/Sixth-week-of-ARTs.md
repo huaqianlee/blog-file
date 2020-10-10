@@ -17,3 +17,4 @@ find ./ -type f -exec sed -i 's/old_string/new_string/g' {} \;
 ```
 
 # Share
+[Consolidating the foundation of Linux, vim](http://huaqianlee.github.io/2020/02/06/Linux/Consolidating-the-foundation-of-Linux-vim/)

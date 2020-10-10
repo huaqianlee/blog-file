@@ -2,6 +2,7 @@ title: "no no no, go go go"
 date: 2017-07-20 19:29:53
 categories: Life
 tags: 成长
+notshow: true
 ---
 ![bing](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/life/bing.jpg)
 

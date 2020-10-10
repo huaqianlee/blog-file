@@ -142,7 +142,7 @@ y2/foo - yank up to the second occurrence of “foo”.
 <action>i<object>
 
 action: d (delete), y (yank), v (select in visual mode)
-object:  `w` a word, `W` a WORD (extended word), `s` a sentence, `p` a paragraph. But also, natural character such as ", ', ), }, ].
+object:  `w` a word, `W` a WORD (extended word), `s` a sentence, `p` a paragraph. But also, natural character such as `", ', ), }, ]`.
 
 Suppose the cursor is on the first o of `(map (+) ("foo"))`.
 
@@ -171,7 +171,7 @@ v2a)  -  will select (map (+) ("foo"))
 
 :set mouse=a
 
-:set hlsearch    # highlight seaching result
+:set hls[earch]    # highlight seaching result
 :set nohlsearch  # Cancel highlighting
 
 :e <patch/to/file>  # Open file.
@@ -180,7 +180,7 @@ v2a)  -  will select (map (+) ("foo"))
 :q! # Quit without saving
 :qa! # Quit even if there are modified hidden buffers
 :wq, :x, or ZZ # Save and quite,(:x only save if necessary)
-    Vim  写隐藏文件， .swap ，保存时替换
+    Vim  写隐藏文件 .swap ，保存时才替换
 
 # vi x.file y.file    
 :bn # Show next file(buffer)
@@ -221,3 +221,12 @@ Ctrl + v # Block visual mode, Operate in uinits of blocks.
 
 ## More
 > \#Todo. Select rectangular blocks: <C-v>
+
+
+# CMDs
+
+```
+# fun cmds
+:h!
+:h 42
+```

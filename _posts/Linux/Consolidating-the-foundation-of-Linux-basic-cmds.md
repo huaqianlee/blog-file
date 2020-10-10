@@ -11,7 +11,7 @@ We can enter command interface via the following ways.
 2. Hotkey: Ctrl + ALt + F1/2/3/...
 
 ### init
-`init` is the first process, it is Commonly located on `/sbin/init`, if kernel can't find `init`, it will try to run `/bin/sh`, if the operation fails , the OS will fail to start successfully. 
+`init` is the first process, it commonly locates on `/sbin/init`, if kernel can't find `init`, it will try to run `/bin/sh`, if the operation fails , the OS will fail to start successfully. 
 
 `init` has 7 runlevels, we can check the default runlevel and runlevels in `/etc/inittab`. As follows:
 ```
@@ -243,6 +243,7 @@ Commond suffix:
 .tar.gz 
 .tar.bz2 
 .tgz
+```
 
 Compress:
 
@@ -263,7 +264,7 @@ tar xf -C <out_dir>
 ### Wildcard
 ```bash
 *  any string
-？ one char,  filea, fileb  not fileab
+？ one char,  file? = filea, fileb  not fileab
 [xyz]  one of xyz
 [a~z]  range between a and z
 [!xyz] or [^xyz] not one of xyz

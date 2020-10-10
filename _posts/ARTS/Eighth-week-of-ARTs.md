@@ -3,8 +3,6 @@ date: 2019-10-20 22:52:39
 categories: ARTS
 tags: [Algorithm, 成长]
 ---
-生病、私事、连续十多天的加班。。。 等等借口让我断更 ARTS 快一个月了，比较让人沮丧，先把标题准备起，花一周把进度赶上。
-> 临时标注
 
 # Algorithm
 Title: [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
@@ -20,3 +18,5 @@ git add -N <unstracked_file_name>; git diff # diff untracked file
 ```
 
 # Share
+[Oh, the Git! - detached HEAD](http://huaqianlee.github.io/2020/03/08/Git/Some-knowledge-about-git-detached-HEAD/)
+

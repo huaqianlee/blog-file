@@ -33,5 +33,5 @@ fusermount -u ~/dir
 sshfs#$USER@<IP>:/dir /home/$USER/remote_dir fuse defaults,idmap=user 0 0
 > sshfs $USER@<IP>:/dir /home/$USER/remote_dir // mount via terminal
 
-
 # Share
+[Consolidating the foundation of Linux, basic cmds](http://huaqianlee.github.io/2020/02/06/Linux/Consolidating-the-foundation-of-Linux-basic-cmds/)

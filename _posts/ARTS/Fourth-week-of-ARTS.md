@@ -19,4 +19,4 @@ CMD | tee build-$(date "+%Y%m%d-%H%M%S").log # Generate build log
 ```
 
 # Share
-
+(Oh, the Git! - Basic)[http://huaqianlee.github.io/2019/11/17/Git/Some-knowledge-about-git/]
