@@ -3,7 +3,7 @@ date: 2020-10-10 22:23:38
 categories: Git
 tags:
 ---
-之前折腾局域网搭建 Gitbook，并写了一篇简易教程：[Gitbook + Jenkins + Gitlab 搭建内网自动构建的 Gitbook](http://huaqianlee.github.io/2019/05/05/Git/gitlab-jenkins-gitbook-to-create-LAN-gitbook/)。最近兴趣使然又用 docker 搭建一套方便部署的内网 Gitbook 镜像，也总结一篇简易教程如下。
+之前折腾局域网搭建 Gitbook，并写了一篇简易教程：[Gitbook + Jenkins + Gitlab 搭建内网自动构建的 Gitbook](http://huaqianlee.github.io/2019/05/05/Git/gitlab-jenkins-gitbook-to-create-LAN-gitbook/)。最近兴趣使然又用 docker 搭建了一套方便部署的内网 Gitbook 镜像，因此也总结一篇简易教程如下。
 
 # Install Docker
 ```bash
@@ -13,7 +13,7 @@ sudo apt install docker
 # Gitbook
 
 ## Gitbook Image
-下载 Gitbook Docker 镜像，我选择了如下 [billryan/gitbook 镜像](https://hub.docker.com/r/billryan/gitbook)：
+下载 Gitbook Docker 镜像，我选择了 [billryan/gitbook 镜像](https://hub.docker.com/r/billryan/gitbook)：
 ```bash
 docker pull billryan/gitbook
 ```
