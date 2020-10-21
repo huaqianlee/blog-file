@@ -18,6 +18,10 @@ PATH=~/bin:$PATH
 
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
+
+or
+
+sudo apt-get install repo
 ```
 
 ## 官方源码下载方式
@@ -29,8 +33,8 @@ repo sync [-c --no-tags]
 # Repo 怎么工作
 下载代码时 `repo` 主要工作流程如下：
 1. `repo init` 在当前路径创建 `.repo` 文件夹并克隆 [repo 的 git 仓库](https://android.googlesource.com/tools/repo)到 `.repo/repo`（即 `Repo Tool`）。
-2. 以 `--bare`[(reference link)](https://git-scm.com/book/en/v2/Git-on-the-Server-Getting-Git-on-a-Server#_getting_git_on_a_server) 方式克隆 `-u` 选项指定的 `git` 仓库（没有工作空间的仓库）到 `.repo/manifests.git`。 
-3. 创建 `.repo/manifests` 目录，通过创建 `.repo/manifests/.git` 作为 `.repo/manifests.git` 的符号链接将其转换为 `Git` 仓库。 
+2. 以 [`--bare`](https://git-scm.com/book/en/v2/Git-on-the-Server-Getting-Git-on-a-Server#_getting_git_on_a_server) 方式克隆 `-u` 选项指定的 `git` 仓库（没有工作空间的仓库）到 `.repo/manifests.git`。 
+3. 创建 `.repo/manifests` 目录，创建 `.repo/manifests/.git` 到 `.repo/manifests.git` 的符号链接，将 `manifests` 转换为 Git 仓库。 
 4. **Checkout** `-b` 选项指定的分支，并创建 `.repo/manifests` 目录中的指定文件（通过 `-m` 指定，通常默认为 `.repo/manifests/defualt.xml`）的符号链接 `.repo/manifest.xml`。
 5. `repo sync` 将 `manifest.xml` 和 `local_manifest.xml` 中每一个 `project` 的 `git` 仓库克隆到 `.repo/projects`。
 6. 通过链接到相应空仓库的 `.git` 创建工作路径， **checkout**  `manifest` 中指定的分支，并更新 `.repo/project.list`。 
@@ -57,7 +61,7 @@ repo sync [-c --no-tags]
 1. repo start 创建一个新的 topic 分支
 2. git add
 3. git commit
-4. repo upload (个人习惯使用的方式：git push origin HEAD:refs/for/branch)
+4. repo upload (or: git push origin HEAD:refs/for/branch)
 
 ## 常见工作命令
 |Command|Description|
@@ -77,6 +81,46 @@ repo sync [-c --no-tags]
 |git diff --cached|	Shows diff of the staged changes.|
 |git log|	Shows the history of the current branch.|
 |git log m/[codeline]..|	Shows the commits that aren't pushed.|
+
+## help
+
+```bash
+man repo
+repo help
+repo help <cmd>
+repo <command> --help
+```
+
+# Topic Branch
+
+一般我会在本地创建不同的 topic 分支来维护不同的修改，
+
+## Creating topic branches
+```bash
+$ repo start branchname .
+```
+
+## To check new branch
+```bash
+$ repo status .
+```
+
+## To assign the branch to a particular project
+```bash
+$ repo start branchname project
+```
+
+## 切换分支
+```bash
+$ git checkout branchname
+```
+
+## To see a list of existing branches
+```bash
+$ git branch
+or...
+$ repo branches
+```
 
 # Reference
 [stack overflow.](https://stackoverflow.com/questions/6149725/how-does-the-android-repo-manifest-repository-work)  

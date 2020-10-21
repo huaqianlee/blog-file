@@ -73,7 +73,7 @@ First, I created a project and managed it through `git`, its directory tree is a
 
 ## .git/HEAD
 
-It indicates which branch or commit the project works on. When the project works on a branch, the valuse of `.git/HEAD` is one refference. The details are as follows:
+It indicates which branch or commit the project works on. When the project works on a branch, the valuse of `.git/HEAD` is one reference. The details are as follows:
 
 ```bash
 $ cat .git/HEAD
@@ -109,7 +109,7 @@ $ cat .git/config
         ignorecase = true
 [user]
         name = lihq0416
-        email = lihq0416@thundersoft.com
+        email = lihq0416@alsa.com
 
 ```
 
@@ -126,7 +126,7 @@ The working configuration(user) is as follows:
 ```bash
 $ git log -n1
 commit 8c19a3856e27ff8e29171e49ccccdc042f1de32e (HEAD -> master)
-Author: lihq0416 <lihq0416@thundersoft.com>  # the local user.
+Author: lihq0416 <lihq0416@alsa.com>  # the local user.
 Date:   Sun Mar 8 11:14:06 2020 +0800
 
     Add Copyright notice.
@@ -177,14 +177,14 @@ Check the content `.git/refs/heads/master`.
 $ git cat-file -p 1ff08f2 # cat content of object.
 tree ccb86ecb23a86d363868ede3f8597dade731aeac
 parent 8c19a3856e27ff8e29171e49ccccdc042f1de32e
-author lihq0416 <lihq0416@thundersoft.com> 1583640484 +0800
-committer lihq0416 <lihq0416@thundersoft.com> 1583640484 +0800
+author lihq0416 <lihq0416@alsa.com> 1583640484 +0800
+committer lihq0416 <lihq0416@alsa.com> 1583640484 +0800
 
 Modify README.md.
 
 $ git show 1ff08f2 # show the details.
 commit 1ff08f245a3eaae8c5404cf3da2977a4637d3d68 (HEAD -> master)
-Author: lihq0416 <lihq0416@thundersoft.com>
+Author: lihq0416 <lihq0416@alsa.com>
 Date:   Sun Mar 8 12:08:04 2020 +0800
 
     Modify README.md.
@@ -242,8 +242,8 @@ commit
 $ git cat-file -p 6fc4b44
 tree e38a164f48baba5a6b6251d77926be66e77ae1c0
 parent 726c6c01c5bdfee5c477962f69f5313d868398db
-author lihq0416 <lihq0416@thundersoft.com> 1583636454 +0800
-committer lihq0416 <lihq0416@thundersoft.com> 1583636454 +0800
+author lihq0416 <lihq0416@alsa.com> 1583636454 +0800
+committer lihq0416 <lihq0416@alsa.com> 1583636454 +0800
 
 Copy doc README.md
 ```
@@ -263,8 +263,9 @@ drwxr-xr-x 1 Lee 197121 0 三月    8 12:10 11/
 drwxr-xr-x 1 Lee 197121 0 三月    7 18:20 c8/
 drwxr-xr-x 1 Lee 197121 0 三月    8 11:45 dd/
 drwxr-xr-x 1 Lee 197121 0 三月    8 11:00 e3/
+# if `02/,11/ ...` are too much, pack them into pack/, otherwise `info and pack are empty.
 drwxr-xr-x 1 Lee 197121 0 三月    7 18:16 info/
-drwxr-xr-x 1 Lee 197121 0 三月    7 18:16 pack/ # if `02/ ...` is too much, pack them.
+drwxr-xr-x 1 Lee 197121 0 三月    7 18:16 pack/ 
 ```
 
 List the contens of `c8/` and `dd/`, the content appends path name to the SHA-1.
@@ -288,8 +289,8 @@ commit
 
 $ git cat-file -p c8ff9c55
 tree 567fa4f607ea3685f7957cf42d1569ada65eb53b
-author lihq0416 <lihq0416@thundersoft.com> 1583576427 +0800
-committer lihq0416 <lihq0416@thundersoft.com> 1583576427 +0800
+author lihq0416 <lihq0416@alsa.com> 1583576427 +0800
+committer lihq0416 <lihq0416@alsa.com> 1583576427 +0800
 
 Add README
 
@@ -366,8 +367,8 @@ commit
 $ git cat-file -p 726c6c0
 tree c72f3764e2179a8c61f0b948aca0b3720624b818
 parent c8ff9c55ce2651d8380a14bee5b43b37e14fa7fc
-author lihq0416 <lihq0416@thundersoft.com> 1583636339 +0800
-committer lihq0416 <lihq0416@thundersoft.com> 1583636339 +0800
+author lihq0416 <lihq0416@alsa.com> 1583636339 +0800
+committer lihq0416 <lihq0416@alsa.com> 1583636339 +0800
 
 Add source README.md
 ```
@@ -408,8 +409,8 @@ First, list the relationship flowchart too.
 $ git cat-file -p 5ea3cec
 tree eda5671a377d2fcd258cfabbe13d0eaaff59a69a
 parent 2b6e8269574c910b51492ce4c6731a1820b8b5da
-author lihq0416 <lihq0416@thundersoft.com> 1583652333 +0800
-committer lihq0416 <lihq0416@thundersoft.com> 1583652333 +0800
+author lihq0416 <lihq0416@alsa.com> 1583652333 +0800
+committer lihq0416 <lihq0416@alsa.com> 1583652333 +0800
 
 Modify README.md of src
 ```

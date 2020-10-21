@@ -1,9 +1,9 @@
-title: "A little basic knowledge of the shell"
+title: "A little basic knowledge of shell"
 date: 2019-09-08 13:07:57
 categories: Linux
 tags: Tools
 ---
-I don't have a good idea what to share for ARTS this week. So I summarize a little knowledge of the shell.
+I don't know what to share for ARTS this week. So I summarize a little knowledge of the shell.
 
 ## What is a shell
 A shell is a software interface that is ofthen a command line interface that enables the user to interact with the computer. In linux, we can check all supported shell via the following way.
@@ -17,7 +17,7 @@ lee@lee-server:~$ sudo cat /etc/shells
 /bin/tcsh
 /bin/csh
 ```
-> bash( Bourne again shell) - rewrited sh, generate more functions.
+> bash( Bourne again shell) - rewrited sh, generating more functions.
 
 
 ## What is the differnce between script execution
@@ -49,7 +49,7 @@ lee      21776 21596  0 11:22 pts/3    00:00:00 ps -f
 ```
 
 We should avoid to use built-in cmd in pip ,such as , ls , cd ,etc.
-> built-in cmd: execute in the current shell. external cmd: create one new process, like top. 
+> built-in cmd: execute in the current shell. <br/>external cmd: create one new process, like top. 
 
 
 ## Input and output redirection
@@ -77,7 +77,7 @@ var=$(ls -l /etc)
 or
 var=`ls -l /etc`
 ```
-> quote: \$\{var\}, sometimes we can only use \$var, sometimes we can't, like, \$\{var\}test != $vartest.
+> Note: \$\{var\}, sometimes we can only use \$var, sometimes we can't, i.e., \$\{var\}test != $vartest.
 
 ### Scope of the variable
 Variable only works in the current terminal or the current shell script. 
@@ -102,9 +102,9 @@ $$  # the current process's PID
 $0  # the current process name 
 # Get the parameters passed to the current process
 $1 $2 ... ${10} ... ${n}
-# Initial for null variable
-echo ${2}_   # if [ null ],then: _ else value_ fi
-echo ${2-_}  # if [ null ],then: _ else value fi
+# Initial for null variable, avoid nothing to display.
+echo ${2}_   # if [ -n "$2" ],then: display '_' else display 'value_' fi # value --> value of $2
+echo ${2-_}  # if [ -n "$2" ],then:  display '_' else display 'value' fi
 ```
 
 ## Config of linux
