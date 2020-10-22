@@ -158,10 +158,49 @@ git reset --soft|hard|mixed <commit>
 
 ## rebase
 
+Works with [detached HEAD](http://huaqianlee.github.io/2020/03/08/Git/Some-knowledge-about-git-detached-HEAD/).
 ```bash
-git rebase -i sha-1
-# restore commits
-# 
+git rebase -i start_sha-1  [end_sha-1]
+# sha-1 is the oldest commit's parent, whose we want to modify
+# If the oldest commit is the first commit, choose the oldest one and add it manully in interactive interface.
+# if we specify end_sha-1, one detached HEAD will be created.
+# if end_sha-1 is not specified, use the lastest sha-1, all sha-1 from start_sha-1 will change, HEAD and <branch> will point to HEAD of detached HEAD.
+```
+An interactive interface will pop up, as follows:
+```bash
+# When we finish the interactive interface, another new interface will pop up.
+# The latest commit is at the bottom.
+
+pick 2dc628e modified resume link
+pick 0c11aed update resume
+pick 375c9df Update in 2020.10
+pick 585c3e7 update resume.
+# Commands:
+# p, pick <commit> = use commit
+# r, reword <commit> = use commit, but edit the commit message
+# e, edit <commit> = use commit, but stop for amending
+# s, squash <commit> = use commit, but meld into previous commit
+# f, fixup <commit> = like "squash", but discard this commit's log message
+# x, exec <command> = run command (the rest of the line) using shell
+# b, break = stop here (continue rebase later with 'git rebase --continue')
+# d, drop <commit> = remove commit
+# l, label <label> = label current HEAD with a name
+# t, reset <label> = reset HEAD to a label
+# m, merge [-C <commit> | -c <commit>] <label> [# <oneline>]
+# .       create a merge commit using the original merge commit's
+# .       message (or the oneline, if no original merge commit was
+# .       specified). Use -c <commit> to reword the commit message.
+#
+# These lines can be re-ordered; they are executed from top to bottom.
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+#
+# However, if you remove everything, the rebase will be aborted.
+#
+# Note that empty commits are commented out
+
+
+
 ```
 
 ## stash
@@ -171,6 +210,7 @@ git stash # Stash the changes in a dirty working directory away.
 git stash list # List all stash modifications.
 git stash pop # Pop the lateset stashed changes.
 git stash apply # Apply the lateset stashed changes, and keep it in list.
+git stash drop # Delete stash files.
 ```
 
 ## branch
@@ -201,7 +241,7 @@ tag # tag for project stage.
 git help --web cmd  # View cmd's help by web
 git tag [-d] <tagname> [<commit>] # Create [delete] a tag reference in refs/tags/.
 git commit -am # git add + git commit -m, not suggested.
-git reflog # record when the tips of branches and other references were updated in the local repository
+git reflog # check history version, record when the tips of branches and other references were updated in the local repository.
 
 git show # Shows one or more objects (blobs, trees, tags and commits).
 git blame # Show what revision and author last modified each line of a file.

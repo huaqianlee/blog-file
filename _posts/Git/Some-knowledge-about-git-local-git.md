@@ -145,6 +145,12 @@ heads - branch HEAD
 tags - milestone, tag reference
 ```
 
+## index
+
+Git puts the file size, creation time, and last modification information in the index. 
+
+Git judges whether the blob has changed by comparing the current status with the content of index.
+
 ###  .git/refs/heads/
 
 `.git/refs/heads` saves all branch name, as follows:
