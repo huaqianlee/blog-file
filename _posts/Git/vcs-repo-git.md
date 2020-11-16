@@ -4,7 +4,7 @@ categories: Git
 tags: [Tools,Repo]
 ---
 
-> 本文的动态图皆来自于莉迪亚·哈莉（Lydia Hallie） 的文章 [CS Visualized: Useful Git Commands](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1).<br/> 本文整理自自己在公司做的一次技术分享的幻灯片：[《原来你是这样的 VCS！》](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/vcs/media/Oh_The_VCS.pdf) 。
+> 本文的动态图皆来自于莉迪亚·哈莉（Lydia Hallie） 的文章 [CS Visualized: Useful Git Commands](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1)。
 
 # VCS 的发展历史
 
