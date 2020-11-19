@@ -221,6 +221,7 @@ Ctrl + v # Block visual mode, Operate in uinits of blocks.
 
 ## More
 > \#Todo. Select rectangular blocks: <C-v>
+[Consolidating the foundation of Linux, vim tips](http://huaqianlee.github.io/2020/11/19/Linux/Consolidating-the-foundation-of-Linux-vim-tips/).
 
 
 # CMDs
