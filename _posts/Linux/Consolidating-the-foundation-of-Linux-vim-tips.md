@@ -6,6 +6,7 @@ tags: [Tools,Vim]
 # Vim Tips
 
 Record my commonly used commands in the form of a memo, and will continue to increase according to usage in the future.
+<!--more-->
 
 | #                         | Commands                                                          | Comment                                                                                              |
 | ------------------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
@@ -66,7 +67,7 @@ Record my commonly used commands in the form of a memo, and will continue to inc
 | 6                         | `w, e , b` `2w,3e`                                                | Go to the start/end of next word, start of previous word                                             |
 | 7                         | `W,E,B`                                                           | Go to the start/end of next/previous Group                                                           |
 | 8                         | `fa/F`,`,` `;`                                                    | Go to next/previous 'a' on the line,`3fa` go to 3rd 'a', `,` `;` next/previous                       |
-| 9                         | `t,/T` `,` `;`                                                     | Go to before/after `,`, `,` `;` next/previous                                                        |
+| 9                         | `t,/T` `,` `;`                                                    | Go to before/after `,`, `,` `;` next/previous                                                        |
 | 10                        | `%`                                                               | Go to next corresponding item, likes `([{}],#ifdef/#endif`)                                          |
 | 11                        | `*,#`                                                             | Go to next/previous occurence of the word, `:set hls` will highlight them                            |
 | 12                        | `x`,`J`                                                           | Delete char, rm line break                                                                           |
@@ -92,8 +93,8 @@ Record my commonly used commands in the form of a memo, and will continue to inc
 | **Visual Mode:**          | `v V Ctrl-V Ctrl-Q` ...                                           | Enter visual Mode, CTRL-Q insteads Ctrl-V(used to paste) in Insert and Command-line mode.            |
 | 0                         | `:help visual-index`                                              | All commands for visual mode                                                                         |
 | 1                         | `v/V/Ctrl-V`                                                      | Select char/line/block                                                                               |
-| 2                         | `Ctrl-V` + `Shift-I` + `ESC`                                      | Add same content at beginning of all lines                                                           |
-| 3                         | `Ctrl-V` + `$` + `Shift-A` + `ESC`                                | Add same content at the end of all lines                                                             |
+| 2                         | `Ctrl-V` + `Shift-I` + `ESC`                                      | Add same content at beginning of all lines of block                                                  |
+| 3                         | `Ctrl-V` + [`$`] + `Shift-A` + `ESC`                              | Add same content at the end of block[or all lines]                                                   |
 | 4                         | `y`,`d`...                                                        | Yank,delete selected content in visual mode                                                          |
 | 5                         | `Y ,yy`                                                           | Yank the current line                                                                                |
 | 6                         | `J`                                                               | Join all lines together                                                                              |
