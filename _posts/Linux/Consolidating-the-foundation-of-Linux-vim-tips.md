@@ -103,7 +103,7 @@ Record my commonly used commands in the form of a memo, and will continue to inc
 | **Op pending Mode**       | `c d y < >` ...                                                   |                                                                                                      |
 | 1                         | `c[N]{motion} c2w,ce,c$`                                          | Delete motion text and start insert                                                                  |
 | 2                         | `y,d{motion} y$,d$,dt{?}`, `Np`                                   | Yank/Delete {motion} text, paste N times                                                             |
-| 3                         | `y`,`d`...                                                        | Yank,delete the selected content                                                                     |
+| 3                         | `y`,`d`,`D/d$`...                                                 | Yank,delete the selected content, delete until the end                                               |
 | 4                         | `Y ,yy`                                                           | Yank the current line                                                                                |
 | 5                         | `yl`                                                              | Yanks a letter                                                                                       |
 | 6                         | `yaw`                                                             | Yanks a word                                                                                         |
