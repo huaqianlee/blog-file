@@ -433,6 +433,11 @@ cat << EOF > output.sh
     echo "This is output"
     echo $1
 EOF
+
+cat << "EOF" > output.sh
+echo "This is output"
+echo $1 # keep output '$1'
+EOF
 ```
 
 ## Comment
