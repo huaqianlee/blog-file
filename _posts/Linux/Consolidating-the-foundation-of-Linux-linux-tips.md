@@ -184,9 +184,9 @@ export CDPATH='$CDPATH:...'
 export CDPATH='~:/var/log:/etc'
 lee@lee-pc:~$ cd fonts
 /etc/fonts
-`````
+```
 
 # Modify user
 ```bash
 sudo chown -R $(whoami) file
-`````
+```
