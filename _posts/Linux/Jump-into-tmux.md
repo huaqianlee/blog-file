@@ -20,13 +20,37 @@ tmux
 tmux new -s session_name
 ```
 
+# Stop
+
+```bash
+# Kill server and all sessions
+tmux kill-server
+pkill -f tmux
+
+tmux kill-session -a # Close all other sessions
+
+tmux kill-session -t <name> # Kill the specific session
+```
+
+# Manual
+
+Actually, the following command is all we need to know at the first time:
+```bash
+man tmux
+```
+
 # Commands Cheat Sheet
+C-b + pageUp   -> enter vim editing mode
+C-B[ -> enter vimediting mode
 
 | #       | Commands                                     | Comments                                                                           |
 | ------- | -------------------------------------------- | ---------------------------------------------------------------------------------- |
 | Session | `C-b s`                                      | List the sessions                                                                  |
-|         | `C-b $`                                      | Rename the current session                                                         |  |  | `C-b ?` | Display help page, to get a list of all commands |
+|         | `C-b $`                                      | Rename the current session                                                         |
+|         | `C-b ?`                                      | Display help page, to get a list of all commands                                   |
 |         | `C-b d`                                      | Detach from the Tmux session, the program running in the Tmux will continue to run |
+|         | `C-b D`                                      | Choose one session to detach                                                       |
+|         | `C-b L`                                      | Swicth the attached clinet back to the last session                                |
 |         | `tmux ls`                                    | To get a list of the currently runnning sessions                                   |
 |         | `tmux attach[-session] -t name`              | Re-attach to <name> tmux session                                                   |
 |         | `tmux rename[-session] -t old_name new_name` | Rename old_name session to new_name                                                |
@@ -36,6 +60,8 @@ tmux new -s session_name
 |         | `C-b p`                                      | Switch to the previous window                                                      |
 |         | `C-b n`                                      | Switch to the next window                                                          |
 |         | `C-b <number>`                               | Switch to window <number>                                                          |
+|         | `C-b !`                                      | Break the current pane out to a new window                                         |
+|         | `C-b f`                                      | Promt to search for text in open windows                                           |
 | Pane    | `C-b %`                                      | Split current pane horizontally into two panes                                     |
 |         | `C-b "`                                      | Split current pane vertically into two panes                                       |
 |         | `C-b o`                                      | Go to the next pane                                                                |
@@ -48,6 +74,9 @@ tmux new -s session_name
 |         | `C-b C-arrows`                               | Resize pane in direction of <arrow key>4                                           |
 |         | `C-b q`                                      | Make tmux briefly flash the number of each pane.                                   |
 |         | `C-b x`                                      | Close the current pane                                                             |
+|         | `C-b [`, `C-b PgUp`                          | Enter vim editting mode, copy mode                                                 |
+|         | `C-b ]`                                      | Paste the most recently copied buffer                                              |
+|         | `C-b t`                                      | Show time in the current pane                                                      |
 
 # Configuration
 
