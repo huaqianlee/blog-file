@@ -25,7 +25,7 @@ Here is a cheetsheet about parameters of shell.
 | Parameters | Comments                              |
 |------------|---------------------------------------|
 | $0         | script name                           |
-| $<n>       | the <n>th parameter                   |
+| $\<n\>       | the \<n\>th parameter                   |
 | $#         | nums of parameters                    |
 | $@         | All parameters, could be a list       |
 | $*         | All parameters, but behave as a whole |
