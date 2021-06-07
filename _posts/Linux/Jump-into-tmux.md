@@ -40,8 +40,6 @@ man tmux
 ```
 
 # Commands Cheat Sheet
-C-b + pageUp   -> enter vim editing mode
-C-B[ -> enter vimediting mode
 
 | #       | Commands                                     | Comments                                                                           |
 | ------- | -------------------------------------------- | ---------------------------------------------------------------------------------- |
