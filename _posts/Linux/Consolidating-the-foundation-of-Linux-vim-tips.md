@@ -136,6 +136,7 @@ Here is [Consolidating the foundation of Linux, vim](http://huaqianlee.github.io
 |                                | `di(,di)`                                                                      | delete 'message == "sesame open"'                                                                    |
 |                                | `da(,da)`                                                                      | delete '(message == "sesame open")'                                                                  |
 |                                | `ysiw"`                                                                        | add "" to word, word -> "word"                                                                       |
+|                                | `ysiW"`                                                                        | add "" to string                                                                       |
 |                                | `cs"'`                                                                         | "word" to 'word'                                                                                     |
 |                                | `cs[<em>`                                                                      | [Mine] -> <em>Mine</em>                                                                              |
 |                                | `S<em>`                                                                        | 'word -> <em>word</em>' in visual mode                                                               |
@@ -385,6 +386,16 @@ Here is [Consolidating the foundation of Linux, vim](http://huaqianlee.github.io
 |                                | `:RainbowLoad`                                                                 |                                                                                                      |
 
 # More tips
+
+## write with sudo
+```bash
+:w !sudo tee %
+
+# :w – Write a file (actually buffer).
+# !sudo – Call shell with sudo command.
+# tee – The output of write (vim :w) command redirected using tee.
+# % – The % is nothing but current file name.
+```
 
 ## `c2i{` to  modify the content in {}.
 

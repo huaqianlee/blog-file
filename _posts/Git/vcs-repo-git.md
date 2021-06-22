@@ -211,6 +211,16 @@ git push set-upstream origin branch
 git pull <remote> <branch>              # 指定 merge 的远程和本地分支
 ```
 
+## git submodule
+
+```bash
+git clone --recursive git://github.com/foo/bar.git
+
+# for already existed
+git submodule update --init --recursive
+git mv old/path/to/module new/path/to/module
+```
+
 ## Search history 
 
 ```bash

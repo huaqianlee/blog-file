@@ -113,7 +113,7 @@ Record the commands that I use more frequently in the form of a memo, and will c
 |                  | `fuser mount -u name`                                                                                                                          | unmount sshfs <name>, ` umount -l name` for busy error                           |
 | **Supper Mode:** |                                                                                                                                                |                                                                                  |
 |                  | `rename 's/old_name/new-name/' *.txt`                                                                                                          | rename files                                                                     |
-|                  | `cp \| mv test.sh{,.bk}`                                                                                                                       | rename quickly                                                                   |
+|                  | `cp \| mv test.sh{,.bk}`, `mv test{.sh,}`                                                                                                                       | rename quickly, remove suffix                                                                   |
 |                  | `find . -type f -exec cat {} +`                                                                                                                | `find` and `cat` flies recursively                                               |
 |                  | `find . -type f -exec ls {} +`                                                                                                                 | `find . type f -exec ls {} \;`                                                   |
 |                  | `find ./ -type f -exec sed -i 's/old/new/g' {} \;`                                                                                             | Replace all old in the current directory with new                                |
@@ -190,4 +190,23 @@ lee@lee-pc:~$ cd fonts
 # Modify user
 ```bash
 sudo chown -R $(whoami) file
+```
+
+# Get IP and Netmask
+```bash
+# IP
+hostname -I
+ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'
+
+# Netmask
+ifconfig | sed -En 's/255.0.0.0//;s/.*netmask (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'
+
+# Only wlan0
+ifconfig wlan0 | ...
+```
+
+# others
+
+```bash
+ls /proc/device-tree/soc/leds-gpios/
 ```
