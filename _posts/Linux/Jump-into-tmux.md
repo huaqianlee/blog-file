@@ -3,7 +3,7 @@ date: 2021-04-29 23:06:19
 categories: Linux
 tags:
 ---
-之前为了让终端炫酷好用，配置了 `Terminator + Oh My ZSH + autosuggestions + highlighting + Agnoster theme + powerline fonts + solarized colors`，可是终端的反应速度受到了影响，移植性也不高，最主要的是对于我来说，`Terminator` 不够 `Terminal + Tmux` 帅，所以最近决定切回 `Terminal + Tmux `。
+之前为了让终端炫酷好用，配置了 `Terminator + Oh My ZSH + autosuggestions + highlighting + Agnoster theme + powerline fonts + solarized colors`，可是终端的反应速度受到了影响，移植性也不高，最主要的是对于我来说，`Terminator` 不够 `Terminal + Tmux` 酷，所以最近决定切回 `Terminal + Tmux `。
 
 `Terminal` 是 `Ubuntu` 自带的终端，就不做介绍了。今天主要聊聊`Tmux` 的基本用法，做一个备忘录。 `Tmux` 除了分屏功能外，还有一个功能我很喜欢，即 `persistent`，也就是运行在 `Tmux` 中的程序在其断开前会一直保持运行状态。譬如：远程登录服务器，通过 `Tmux` 运行程序，即使本地登录客户端断开，程序也会保持运行，除非我们在服务器端退出 `Tmux` 或者重启服务器。
 
