@@ -1,6 +1,8 @@
 title: 'Consolidating the foundation of Linux, sed and awk'
 date: 2021-04-29 23:08:19
-categories: Linux
+categories:
+- Linux Tree
+- Shell
 tags:
 ---
 

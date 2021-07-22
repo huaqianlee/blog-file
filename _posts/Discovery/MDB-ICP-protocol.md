@@ -1,6 +1,8 @@
 title: "纸币器和MDB协议"
 date: 2017-11-08 22:22:45
-categories: Other
+categories: 
+- Discovery
+- Misc
 tags: Protocol
 ---
 ## MDB协议

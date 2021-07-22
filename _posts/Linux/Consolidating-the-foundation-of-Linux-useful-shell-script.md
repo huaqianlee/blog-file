@@ -1,6 +1,8 @@
 title: 'Consolidating the foundation of Linux, useful shell script'
 date: 2021-04-29 23:08:16
-categories: Linux
+categories: 
+- Linux Tree
+- Shell
 tags:
 ---
 

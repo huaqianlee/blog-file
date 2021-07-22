@@ -1,6 +1,8 @@
 title: "如何在内核里操作文件(create/open/read/write)"
 date: 2015-03-17 22:15:42
-categories: Linux
+categories:
+- Linux Tree
+- Misc
 tags: [kernel,文件IO]
 ---
 　　因之前工作需要在kernel里存取数据到文件中，特意研究了一下怎么做，我们应尽可能避免直接操作文件I/O，选择通过调用VFS（虚拟文件系统）的函数来实现，我的实现demo如下：

@@ -1,6 +1,8 @@
 title: "Linux文件I/O操作及网络架构"
 date: 2014-11-17 20:15:42
-categories: Linux
+categories:
+- Linux Tree
+- Misc
 tags: [kernel,文件IO,网络]
 ---
 图片摘自网络，这些图片清晰的描述出了文件I/O和网络操作的脉络。

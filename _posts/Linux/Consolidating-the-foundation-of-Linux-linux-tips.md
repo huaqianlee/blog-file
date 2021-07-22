@@ -1,6 +1,8 @@
 title: 'Consolidating the foundation of Linux, linux tips'
 date: 2020-11-25 22:39:20
-categories: Linux
+categories:
+- Linux Tree
+- Shell
 tags:
 ---
 # Linux Tips

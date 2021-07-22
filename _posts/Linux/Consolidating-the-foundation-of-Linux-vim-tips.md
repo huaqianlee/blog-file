@@ -1,6 +1,8 @@
 title: 'Consolidating the foundation of Linux, vim tips'
 date: 2020-11-19 21:55:12
-categories: Linux
+categories:
+- Linux Tree
+- Vim
 tags: [Tools,Vim]
 ---
 # Vim Tips

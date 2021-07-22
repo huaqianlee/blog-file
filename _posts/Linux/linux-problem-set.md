@@ -1,6 +1,8 @@
 title: "linux系统使用问题集"
 date: 2016-01-04 21:40:23
-categories: Linux
+categories:
+- Linux Tree
+- Misc
 tags: 
 ---
 ##问题一 ubuntu 密码正确进不了系统

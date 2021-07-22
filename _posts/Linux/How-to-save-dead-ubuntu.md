@@ -1,6 +1,8 @@
 title: Ubuntu 卡死了怎么办？
 date: 2019-11-25 22:42:53
-categories: Linux
+categories:
+- Linux Tree
+- Misc
 tags: Issues
 ---
 在使用 Ubuntu 的时候，有时候会遇到卡死的问题，然后电脑完全不能使用。这时候怎么办呢，我通常是通过如下两种方式进行处理：  

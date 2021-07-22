@@ -1,6 +1,8 @@
 title: "深入理解Linux启动过程(译)"
 date: 2015-08-21 21:23:41
-categories: Linux
+categories:
+- Linux Tree
+- Misc
 tags: 译文
 ---
 >**第一篇完全译文，因为自己对技术和英文的热爱，所以决定翻译此文，水平有限，所以肯定会有不恰当的地方，欢迎移驾至原地址：http://www.ibm.com/developerworks/linux/library/l-linuxboot/**

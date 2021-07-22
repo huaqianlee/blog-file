@@ -1,6 +1,8 @@
 title: "Linux内核完全注释之80x86内存管理"
 date: 2017-03-24 22:28:51
-categories: Linux
+categories:
+- Linux Tree
+- Misc
 tags: Linux内核完全注释
 ---
 [Linux内核完全注释PDF下载](http://pan.baidu.com/s/1kVgED6n)

@@ -1,6 +1,8 @@
 title: Jump into Tmux + Terminal
 date: 2021-04-29 23:06:19
-categories: Linux
+categories:
+- Linux Tree
+- Misc
 tags:
 ---
 之前为了让终端炫酷好用，配置了 `Terminator + Oh My ZSH + autosuggestions + highlighting + Agnoster theme + powerline fonts + solarized colors`，可是终端的反应速度受到了影响，移植性也不高，最主要的是对于我来说，`Terminator` 不够 `Terminal + Tmux` 酷，所以最近决定切回 `Terminal + Tmux `。

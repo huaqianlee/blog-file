@@ -1,6 +1,8 @@
 title: How to develop and debug kernel?
 date: 2020-11-16 21:57:31
-categories: Android
+categories:
+- Linux Tree
+- Kernel
 tags:
 ---
 

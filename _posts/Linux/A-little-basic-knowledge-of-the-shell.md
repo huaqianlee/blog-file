@@ -1,6 +1,8 @@
 title: "A little basic knowledge of shell"
 date: 2019-09-08 13:07:57
-categories: Linux
+categories:
+- Linux Tree
+- Shell
 tags: Tools
 ---
 I don't know what to share for ARTS this week. So I summarize a little knowledge of the shell.

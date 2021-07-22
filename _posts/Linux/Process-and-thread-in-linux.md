@@ -1,6 +1,8 @@
 title: "Process and thread in linux"
 date: 2019-08-31 17:35:46
-categories: Linux
+categories:
+- Linux Tree
+- Misc
 tags:
 ---
 > 没有太多时间去查看详细源代码，所以仍然有很多不清晰或者理解不到位的地方，后续将 Linux 相关知识学习得更深入的时候再来更新一次。  
