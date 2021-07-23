@@ -1,6 +1,8 @@
 title: "第一行代码之碎片"
 date: 2017-05-10 12:24:05
-categories: 学习笔记
+categories:
+- Android Tree
+- Notation
 tags: [App,FirstCode]
 ---
 [《第一行代码》第2版思维导图及所有学习笔记目录](http://huaqianlee.github.io/2017/03/24/FirstCode/The-departure-of-FirstCode-learning-notes/)

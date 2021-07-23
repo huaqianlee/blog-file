@@ -1,6 +1,8 @@
 title: "第一行代码之手机多媒体"
 date: 2017-05-06 23:57:26
-categories: 学习笔记
+categories:
+- Android Tree
+- Notation
 tags: [App,FirstCode]
 ---
 [《第一行代码》第2版思维导图及所有学习笔记目录](http://huaqianlee.github.io/2017/03/24/FirstCode/The-departure-of-FirstCode-learning-notes/)

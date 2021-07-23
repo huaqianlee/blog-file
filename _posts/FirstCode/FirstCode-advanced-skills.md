@@ -1,6 +1,8 @@
 title: "第一行代码之高级技巧"
 date: 2017-05-13 19:09:08
-categories: 学习笔记
+categories:
+- Android Tree
+- Notation
 tags: [App,FirstCode]
 ---
 [《第一行代码》第2版思维导图及所有学习笔记目录](http://huaqianlee.github.io/2017/03/24/FirstCode/The-departure-of-FirstCode-learning-notes/)

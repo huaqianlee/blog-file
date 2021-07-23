@@ -2,7 +2,7 @@ title: "【置顶】Android 系统源码分析综述：整理总结源码分析�
 date: 2013-09-19 21:55:43
 categories: 
 - Android Tree
-- BSP
+- Misc
 tags: [源码分析,Qualcomm,MTK]
 ---
 > 工作、生活重心等都发生了较大变化，不会计划性更新此部分了，先取消置顶，但有空也会写写，等有较高质量的时候再考虑恢复置顶。  
