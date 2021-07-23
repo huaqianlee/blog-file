@@ -1,6 +1,8 @@
 title: "怎么抓取Android日志文件"
 date: 2015-07-19 11:43:04
-categories: Android
+categories:
+- Android Tree
+- Misc
 tags: Log
 ---
 　　[Android日志系统详解](http://huaqianlee.github.io/2015/07/18/Android/Android-Logging-system-Android%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3/)
@@ -9,7 +11,7 @@ tags: Log
 
 　　前两篇blog分别介绍了Android logging系统及编程时怎么应用，关于kernel中的log系统，前面只是大概提及了一下，下次再详细分析。相信大家都知道调试时需要打开USB调试模式，接下来就分析一下怎么抓取日志文件。
 
-##logcat命令详解
+## logcat命令详解
 　　logcat是最常用的命令之一，其语法如下；
 <!--more-->
 ```bash
@@ -77,7 +79,7 @@ or defaults to "brief"
     long — 显示所有信息,日志消息另起一行显示,且每个日志间空一行
 ```
 
-##log文件抓取方式
+## log文件抓取方式
 ```bash
 #实时打印
 logcat main # APP日志
@@ -141,5 +143,5 @@ Inactive:          62316 kB
 Active(anon):     294644 kB
 ```
 
-##后记
+## 后记
 　　写这篇blog主要是因为前两篇有些内容没有表达出来，而在强迫症驱使下完成的。因为自己现在经验尚浅，可能有很多不完善和错误的地方，欢迎大家指出。另，如果想通过logcat直接打印kernel日志的话,可以参考[http://blog.csdn.net/ryfjx6/article/details/7096018](http://blog.csdn.net/ryfjx6/article/details/7096018)。

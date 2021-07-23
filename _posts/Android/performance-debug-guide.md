@@ -1,6 +1,8 @@
 title: Android 性能调试手册
 date: 2020-10-10 23:17:46
-categories: Android
+categories:
+- Android Tree
+- OS
 tags: Performance
 ---
 

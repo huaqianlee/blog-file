@@ -1,6 +1,8 @@
 title: "MTK Modem 问题集"
 date: 2017-07-12 23:01:42
-categories: Android
+categories:
+- Android Tree
+- Misc
 tags: MTK
 ---
 最近开始做MTK相关的工作，在第一步编译Modem时就遇到了挺多问题。特在此文整理和Modem相关的问题。

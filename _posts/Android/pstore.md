@@ -1,6 +1,8 @@
 title: Pstore 的一些记录
 date: 2020-11-13 00:00:51
-categories: Android
+categories:
+- Android Tree
+- Kernel
 tags:
 ---
 

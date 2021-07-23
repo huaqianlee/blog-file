@@ -1,6 +1,8 @@
 title: "Android Selinux 权限及问题"
 date: 2017-11-14 22:26:02
-categories: Android
+categories:
+- Android Tree
+- Security
 tags: [App, MTK]
 ---
 

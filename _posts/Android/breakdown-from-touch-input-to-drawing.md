@@ -1,6 +1,8 @@
 title: APP 启动，触摸事件和 UI 绘制的简单分析示例
 date: 2020-10-10 23:17:21
-categories: Android
+categories:
+- Android Tree
+- OS
 tags: Performance
 ---
 

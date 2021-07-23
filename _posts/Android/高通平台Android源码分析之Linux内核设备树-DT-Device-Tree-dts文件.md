@@ -1,6 +1,8 @@
 title: "高通平台Android源码分析之Linux内核设备树(DT - Device Tree)"
 date: 2015-08-19 22:11:46
-categories: Android
+categories:
+- Android Tree
+- Kernel
 tags: [源码分析,Qualcomm,kernel,译文,dts文件]
 ---
 刚开始接触Android源码的时候，发现在kernel里面多了一种dts文件，因为当初自学Linux时和在第一家公司做物联网模型时都是用的比较老的内核，内核代码还比较混乱，没有采用dts这种方便简洁的格式。后面才知道这是因为Linus的一句”this whole arm thing is a fucking pain in ass“促进改革的，记得Linux早期代码里面板级细节都是在C文件中描述的，代码就显得十分臃肿和混乱。如此优化之后就显得简洁多了，并且也更易于学习、移植。
@@ -12,7 +14,7 @@ tags: [源码分析,Qualcomm,kernel,译文,dts文件]
 * 高通Android源码中dts文件引用流程；
 <!--more-->
 
-##Device Tree组成及用法
+## Device Tree组成及用法
 Device Tree由一系列node（节点）和property（属性）组成，节点本身可包含更多的子节点。属性是成对出现的name-value键值对。在device tree中主要描述如下信息：
 * CPU的数量及类别
 * 内存基地址和size
@@ -25,11 +27,11 @@ Device Tree由一系列node（节点）和property（属性）组成，节点本
 Device Tree在内核的作用有点类似于描述出PCB上的CPU、内存、总线、设备及IRQ GPIO等组成的tree结构。然后经由bootloader传递给内核，内核再根据此设备树解析出需要的i2c、spi等设备，然后将内存、IRQ、GPIO等资源绑定到相应的设备。
 >lk中通过tag传递到kernel，文件路径：bootable/bootloader/lk/app/aboot/aboot.c，由DEVICE_TREE宏开关控制
 
-##DTS(device tree source)
+## DTS(device tree source)
 dts文件是一种ASCII文本格式的device tree描述文件，其结构明了，第一次看到都能大概猜出其描述意图。在内核中arm部分，基本上一个.dts文件对应一个arm的machine，一般位于kernel/arch/arm/boot/dts。由于一个soc可能对应多个machine，
 所以一般讲多个machine通用的部分提炼为一个.dsti文件，有点类似于头文件的作用，引用方式也类似：#include "xxx.dtsi"，dtsi文件也可以相互引用。
 
-###dts中的基本元素
+### dts中的基本元素
 dts中的基本元素为节点和属性，节点可以包含属性和子节点，属性为name-value键值对，如下：
 ```dts
 / {
@@ -74,7 +76,7 @@ mixed-property = "a string", [0x01 0x23 0x45 0x67], <0x12345678>;
 string-list = "red fish", "blue fish";
 ```
 
-##Sample Machine
+## Sample Machine
 理解设备树怎么被用的最好办法，就是做一遍，接下来就通过一步一步构建描述一个简单machine的device tree来理解设备树。假设machine的硬件配置如下：
 * 一个32bit的ARM CPU
 * 处理器的local bus的内存映射分布了串口、spi总线控制器、i2c控制器、中断控制器和外部总线桥
@@ -89,7 +91,7 @@ string-list = "red fish", "blue fish";
     * Maxim DS1338时钟芯片，从设备I2C地址 1101000(0x58)
   * 64MB Nor flash,基地址为0x30000000
 
-###初始化结构
+### 初始化结构
 首先，为machine创建一个框架结构，一个有效设备树的最简单的结构，如下：
 ```dts
 / {
@@ -100,7 +102,7 @@ compatible指定系统的名字，格式： compatible = "< manufacturer>,< mode
 　
 理论上来说，compatible是操作系统所有数据标示machine的唯一标示符，os将通过顶层compatible寻找相应的值。
 
-###CPUs
+### CPUs
 第二步，描述CPU的"cpus"节点，其包含每一个CPU描述信息的子节点，在这个例子中，CPU为一个双核的arm cortex A9处理器，所以其描述如下：
 ```dts
 / {
@@ -117,14 +119,14 @@ compatible指定系统的名字，格式： compatible = "< manufacturer>,< mode
 };
 ```
 
-###节点名
+### 节点名
 每一个节点必须有一个节点名，格式： < name>[@< unit-address>]。
 * < name>：为最长31个字符的ascii字符串，一般用其代表的设备类型命名，ie. 一个3com Ethernet adapter的节点名：ethernet，不用3com509。
 * unit-address： 描述设备的地址，一般情况下，其提供访问设备的基地址，节点的reg property也用此参数，见下文。
 
 同层次兄弟节点的节点名必须是独一无二的，不过多个节点可以使用一样的通用name，只要地址不同就可以了。ie. serial@101f1000 & serial@101f2000
 
-###Devices
+### Devices
 每一个device在系统中由一个设备树节点描述，所以接下来，第三步是为设备填充树的节点。不过，现在我为新节点创建一个空节点，直到我们知道地址范围和如何处理irqs请求之后再填写相应内容。如下：
 ```dts
 / {
@@ -185,7 +187,7 @@ compatible指定系统的名字，格式： compatible = "< manufacturer>,< mode
 * flash节点的compatible属性有两个字符串值。
 * 如前所述，节点名反映设备类型，而非详细型号。
 
-####compatible详解
+#### compatible详解
 设备树中每个节点都需要有compatible属性，compatible属性决定每一个设备驱动绑定哪一个设备。如上所介绍，compatible是一个字符串序列，第一个字符串指定精确设备，第二字符串指定兼容设备。
 
 例如：Freescale MPC8349片上有一个根据国家半导体ns16550接口实现的串行设备，定义为：compatible = "fsl,mpc8349-uart", "ns16550". 第一个字符串指定精确设备，第二个指定国家半导体16550 uart兼容设备。
@@ -194,7 +196,7 @@ compatible指定系统的名字，格式： compatible = "< manufacturer>,< mode
 这种做法允许将存在的设备驱动绑定到一类更新的设备，并且仍然能识别到精确的设备。
 >警告：不要使用通配符赋值，如："fsl,mpc83xx-uart"等。为了兼容后续设备，一般会选择一个特定实现，如上的："ns16550"。
 
-###设备寻址
+### 设备寻址
 关于设备寻址，设备树中通过如下属性encode地址信息：
 ```bash
 reg ：每个可寻址的设备有一个reg cells.
@@ -204,7 +206,7 @@ reg ：每个可寻址的设备有一个reg cells.
 #size-cells
 ```
 
-#####CPU寻址
+##### CPU寻址
 CPU节点寻址是寻址里面最简单的，每个CPU被一个独一无二的ID标记，没有size与CPU ids关联。如下：
 ```dts
     cpus {
@@ -222,7 +224,7 @@ CPU节点寻址是寻址里面最简单的，每个CPU被一个独一无二的ID
 ```
 >如果一个节点有reg属性，则节点名必须包含unit-address，并且取reg属性的第一个address值。
 
-###有内存映像地址的设备
+### 有内存映像地址的设备
 与cpu中只有address值不同，有内存映像地址的设备还需分配地址范围值，每个子节点reg元素定义地址长度值的数量由父节点的#size-cells指定。如下：
 ```dts
 / {
@@ -292,7 +294,7 @@ external-bus {  //父节点
 由于地址域被节点和其子节点一起定义，所以父节点可以为总线定义任何寻址方式。除了直接父亲以外的所有节点和子节点都不用关心本地的寻址域，不用关心地址从哪映射到哪。
 >如不明白，请继续往下看，相信接下来的部分会帮你解惑
 
-###无内存映像的设备
+### 无内存映像的设备
 无内存映像的设备没有直接访问cpu的权限，父设备的驱动将间接访问cpu，其cpu一样reg属性会有一个地址值，但没有地址长度或范围，如下：
 ```dts
 i2c@1,0 {
@@ -307,7 +309,7 @@ i2c@1,0 {
 };
 ```
 
-###地址转换
+### 地址转换
 前面讲了怎么给设备分配本地地址，但没有说明怎么映射到cpu能直接访问的地址。接下来就详细分析一下这一部分：
 
 根节点描述cpu地址空间视图，根节点的子节点不需要做任何显性的映射直接使用cpu的地址域。比如：serial@101f0000直接分配到地址0x101f0000.
@@ -366,7 +368,7 @@ ranges参数的值是一个地址转换列表，每一个条目由如下几部�
 
 缺乏ranges参数意味着，一个设备只能被其父节点访问而不能被cpu直接访问。
 
-###中断
+### 中断
 中断信号可以来自machine的任何设备，中断信号在设备树中被描述为节点之间的links。主要有如下4中属性：
 * interrupt-controller：一个空属性，定义节点为中断控制器；
 * \#interrupt-cells：表明连接此中断控制器的interrupts属性cell大小（类似于#address-cells和#size-cells）；
@@ -481,13 +483,13 @@ The 3rd cell is the flags, encoded as follows:
        the interrupt is wired to that CPU.  Only valid for PPI interrupts.  
 ```
 
-###设备特有数据
+### 设备特有数据
 除了上面讲的常用属性，任意需要的属性和子节点都可以被加入到设备树，不过新device-specific属性应将制造商名作为前缀命名，以避免与标准的属性冲突；
 >其实还有一些要求，不过主要针对内核开发者的，而我还没有那个水平，就没详细看了 
 
 
-###特殊节点
-####aliases节点
+### 特殊节点
+#### aliases节点
 一个specific节点通常以完全路径的形式引用，如：/external-bus/ethernet@0,0 ， 但是这样太复杂了，不利于阅读。所以通常会用以一个短的别名命名的aliases节点去指定设备的完全路径，如下：
 ```dts
 aliases {
@@ -497,7 +499,7 @@ aliases {
 ```
 >注：property = &Label 不同于如上中断phandle引用的phandle = <&Lable>
 
-####chosen节点
+#### chosen节点
 chosen节点不指明真实的设备，其为硬件和操作系统数据传输服务，如：启动参数。通常chosen节点在dts源文件中写为空，在启动时再填充，在例中增加如下：
 ```dts
 chosen {
@@ -505,7 +507,7 @@ chosen {
     };
 ```
 
-##DTC (device tree compiler)
+## DTC (device tree compiler)
 DTC将.dts编译为.dtb的工具。DTC的源代码位于内核的scripts/dtc目录，在Linux内核使能了Device Tree的情况下，编译内核的时候主机工具dtc会被编译出来，对应scripts/dtc/Makefile中的“hostprogs-y := dtc”。
 在Linux内核的arch/arm/boot/dts/Makefile中，描述了当某种SoC被选中后，哪些.dtb文件会被编译出来，如与VEXPRESS对应的.dtb包括：
 ```bash
@@ -522,14 +524,14 @@ ifeq ($(CONFIG_USE_OF),y)
 KBUILD_DTBS := dtbs
 endif
 ```
-###Device Tree Blob (dtb)
+### Device Tree Blob (dtb)
 dtb是dts被DTC编译后生成的二进制格式Device Tree描述，可由Linux内核解析。系统设计时通常会单独留下一个很小的flash空间存放.dtb文件，bootloader在引导kernel的过程中，会先读取该.dtb到内存。
 
-###Binding
+### Binding
 对于Device Tree中的结点和属性具体是如何来描述设备的硬件细节的，内核里有相应的文档，位于：Documentation/devicetree/bindings目录，其下又分为很多子目录。
 
 
-##dts解析API
+## dts解析API
 >注：此部分基本完全摘自参考文档
 
 在Linux的BSP和驱动代码中，解析dts的API通常被以“of_”作为前缀，它们的实现代码位于内核的drivers/of目录。接下来就介绍一下常用的API。
@@ -634,8 +636,8 @@ EXPORT_SYMBOL_GPL(of_clk_get_parent_name);
 透过Device Tree或者设备的中断号，实际上是从.dts中的interrupts属性解析出中断号。若设备使用了多个中断，index指定中断的索引号。
 还有一些OF API，这里不一一列举，具体可参考include/linux/of.h头文件。
 
-##高通Android源码中dts文件
-###AndroidBoard.mk
+## 高通Android源码中dts文件
+### AndroidBoard.mk
 Android编译过程（如想了解更多可参考：[Android编译过程详解](http://huaqianlee.github.io/2015/07/11/Android/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%B8%80/)）中会解析到device\qcom\msm8916_32\AndroidBoard.mk，此文件中选择了kernel的默认配置文件，如下：
 ```mk
 # device\qcom\msm8916_32\AndroidBoard.mk
@@ -667,7 +669,7 @@ include kernel/AndroidKernel.mk
 $(INSTALLED_KERNEL_TARGET): $(TARGET_PREBUILT_KERNEL) | $(ACP)
     $(transform-prebuilt-to-target)
 ```
-###msm8916_defconfig
+### msm8916_defconfig
 此文件中主要是一些编译开关，包括dts文件的编译开关，如下：
 ```mk
 # kernel\arch\arm\configs\msm8916_defconfig
@@ -677,7 +679,7 @@ CONFIG_ARCH_MSM8916=y  // dts文件的编译开关，当然也在其他地方用
 ...
 ```
 
-###Makefile
+### Makefile
 dts文件目录的mk文件决定需要加载哪些dts文件，这些文件最终打包到dt.img，再经由mkbootimg工具和其他镜像一起打包到boot.img。关键源码如下：
 ```mk
 # kernel\arch\arm\boot\dts\qcom\Makefile
@@ -706,7 +708,7 @@ dtb-$(CONFIG_ARCH_MSM8916) += msm8916-qrd-skuh-$(OEM_PROJECT_NAME).dtb
 #msm8939-mtp-smb1360.dtb
 ...
 ```
-###dts中的platform info
+### dts中的 platform info
 msm8916-cdp.dts文件中定义平台信息，如下：
 ```dts
 # kernel\arch\arm\boot\dts\qcom\msm8916-cdp.dts
@@ -735,7 +737,7 @@ msm8916-cdp.dts文件中定义平台信息，如下：
 ...
 ```
 
-###Reference
+### Reference
 我的这篇博文只是写了一些基本的东西，主要参考下面这些文档，并且很多内容直接翻译自下面的文档，如果想了解更多请查阅如下引用文档：
 [kernel\Documentation\devicetree](http://pan.baidu.com/s/1c0mBcek)：*源码中的文档，很有参考价值，其实需要的基本能在里面找到，我已上传至百度云，可以click下载查看*
 http://devicetree.org/Device_Tree_Usage ：*很多内容译自此处*

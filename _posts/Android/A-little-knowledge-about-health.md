@@ -1,6 +1,8 @@
 title: "一个 health service 不生效问题引出的一点知识"
 date: 2019-05-16 23:57:34
-categories: Android
+categories: 
+- Android Tree
+- Native
 tags: [Bug,Qualcomm]
 ---
 从 Android P 开始，Google 开始推荐厂家再定制一个 health 。前不久遇到一个定制 health 中的信息未成功反应到 Framework 的问题，在分析解决问题的过程中，学习到了一点新知识，所以就在这篇文章里根据解决问题的流程做一个小小的记录。

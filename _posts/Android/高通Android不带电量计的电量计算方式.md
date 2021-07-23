@@ -1,14 +1,16 @@
 title: "Android不带电量计的电量计算"
 date: 2015-01-21 20:10:01
 categories: 
-- Android
+- Android Tree
+- Kernel
 tags:
 - 源码分析
 - Qualcomm
+- Power
 ---
 　　一直比较好奇，Android的电量是怎么计算出来的，今天就借用qualcomm平台的8916芯片研究了一下，因为其不带电量计，所以是通过一个bms系统计算出来的，下面就来详细分析一下计算方法。
 
-##SOC（state of charge 荷电状态 - 电量） 
+## SOC（state of charge 荷电状态 - 电量） 
 英文缩写:
 FCC　　Full-charge capacity      
 RC 　　Remaining capacity (剩余电量)
@@ -20,7 +22,7 @@ OCV　　Open circuit voltage
 <!--more-->
 SOC=(RC-CC-UUC)/(FCC-UUC)
 RUC=RC-CC-UUC
-##电池电量决定因素
+## 电池电量决定因素
 
 　　电池电量百分比主要有电池dtsi文件中百分比参数计算而得，如下：
 ```bash
@@ -48,9 +50,9 @@ RUC=RC-CC-UUC
 	
 	};
 ```
-##关键结构
+## 关键结构
 
-###dts table structure：
+### dts table structure：
 
 ```bash
 /**
@@ -72,16 +74,16 @@ struct pc_temp_ocv_lut {
 };
 ```
 
-##calculate percentcharge  function
+## calculate percentcharge  function
 ```bash
 int linear_interpolate(int y0, int x0, int y1, int x1, int x)
 	if (y0 == y1 || x == x0)	return y0;
 	if (x1 == x0 || x == x1)	return y1;
 	return y0 + ((y1 - y0) * (x - x0) / (x1 - x0));
 ```
-##驱动分析
+## 驱动分析
 
-###关键函数： 
+### 关键函数： 
 ```bash
 // File:  qpnp-vm-bms.c
     lookup_soc_ocv(struct qpnp_bms_chip *chip, int ocv_uv, int batt_temp)、
@@ -103,7 +105,7 @@ else
         ... // charging - reset all the counters
 soc_final = bound_soc(soc_final) // 最终电量
 ```
-###百分比计算函数：
+### 百分比计算函数：
 ```bash
     interpolate_pc(chip->batt_data->pc_temp_ocv_lut,batt_temp, ocv_uv / 1000);  //calculate the  capacity percent
 	if (batt_temp == pc_temp_ocv->temp[j] * DEGC_SCALE) {  /* found an exact match for temp in the table */
@@ -124,11 +126,11 @@ soc_final = bound_soc(soc_final) // 最终电量
                     转换为公式见下公式四;                      
             否则：return pcj 、pcj_minus_one、其他临界值
 ```
-###公式一
+### 公式一
 ![公式一](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/blog电量计算公式1.png)
-###公式二
+### 公式二
 ![公式二](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/blog电量计算公式2.png)
-###公式三
+### 公式三
 ![公式三](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/blog电量计算公式3.png)
-###公式四
+### 公式四
 ![公式四](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/blog电量计算公式4.png)

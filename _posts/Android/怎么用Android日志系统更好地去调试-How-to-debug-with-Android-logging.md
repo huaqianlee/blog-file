@@ -1,6 +1,8 @@
 title: "How to debug with Android logging"
 date: 2015-07-18 15:43:04
-categories: Android
+categories:
+- Android Tree
+- Misc
 tags: Log
 ---
 　　[Android日志系统详解](http://huaqianlee.github.io/2015/07/18/Android/Android-Logging-system-Android%E6%97%A5%E5%BF%97%E7%B3%BB%E7%BB%9F%E8%AF%A6%E8%A7%A3/)

@@ -1,6 +1,8 @@
 title: "高通平台Android源码bootloader分析之sbl1(三)"
 date: 2015-08-18 00:48:26
-categories: Android
+categories:
+- Android Tree
+- Misc
 tags: [源码分析,Qualcomm]
 ---
 [高通平台Android源码bootloader分析之sbl1(一)](http://huaqianlee.github.io/2015/08/15/Android/%E9%AB%98%E9%80%9A%E5%B9%B3%E5%8F%B0Android%E6%BA%90%E7%A0%81bootloader%E5%88%86%E6%9E%90%E4%B9%8Bsbl1-%E4%B8%80/)
@@ -10,7 +12,7 @@ tags: [源码分析,Qualcomm]
 
 前两篇博文分析了启动流程、代码流程、cdt，接下来就分析另外几个需要格外关注的部分。
 
-##log系统
+## log系统
 sbl1中的log系统也是sbl1部分调试会经常接触得部分高通平台在sbl中做的log系统并不是很强大， 但是对于我们调试已经远远足够了。
 ###sbl1_boot_logger_init
 sbl1_boot_logger_init是log系统的初始化函数，被sbl1_main_ctl函数调用（详细参考：高通平台Android源码bootloader分析之sbl1(一)），其源码如下：
@@ -37,7 +39,7 @@ static void sbl1_boot_logger_init(  boot_log_init_data *boot_log_data,  boot_pbl
 }/* sbl1_boot_logger_init */
 ```
 
-###boot_log_init
+### boot_log_init
 boot_log_init被上面函数调用，位于boot_logger.c中，log的打印函数也全在此文件，其源码如下：
 ```c
 #boot_images\core\boot\secboot3\src\boot_logger.c
@@ -70,7 +72,7 @@ void boot_log_message(char * message)
 void boot_log_message_optional_data(char * message,char * optional_data)
 ```
 
-###log用法
+### log用法
 打印log时可以打印到串口和ram，如下：
 ```bash
 # 直接使用如下两个函数即可
@@ -83,7 +85,7 @@ static char error_message[BOOT_ERROR_MSG_LEN];
 snprintf(error_message, BOOT_ERROR_MSG_LEN, "Error code %lx at %s Line %lu var = %d", err_code, filename_ptr, line，var);   
 boot_log_message(error_message);
 ```
-##下载模式
+## 下载模式
 高通目前主要支持两种下载模式：紧急下载模式和普通下载模式。
 
 其代码我就不去详细分析了，只来看一下几个关键函数，主要源码路径：
@@ -93,7 +95,7 @@ boot_images\core\boot\secboot3\hw\msm8916\sbl1\sbl1_target.c
 boot_images\core\boot\secboot3\hw\msm8916\sbl1\sbl1_mc.c
 ```
 
-###boot_dload_check
+### boot_dload_check
 boot_dload_check函数检测是否需要进入QPST下载，然后进入下载模式。
 ```c
 # boot_images\core\boot\secboot3\src\boot_dload.c
@@ -138,7 +140,7 @@ void boot_dload_check(   bl_shared_data_type *bl_shared_data )
 
 ```
 
-###紧急下载模式
+### 紧急下载模式
 紧急下载模式进入又分为两种情况：
 + 自动进入：裸片或者sbl1异常，系统自动进入紧急下载模式；
 + 手动进入：
@@ -146,7 +148,7 @@ void boot_dload_check(   bl_shared_data_type *bl_shared_data )
    * 软件设置magic numbers，热重启，PBL检测到magic numbers后进入紧急下载模式。
 
 
-####boot_dload_transition_pbl_forced_dload
+#### boot_dload_transition_pbl_forced_dload
 boot_dload_transition_pbl_forced_dload函数由上boot_dload_check函数调用，其设置magic numbers，然后重启，当PBL检测到设置的magic numbers则会强制进入下载模式。源码如下：
 ```c
 # boot_images\core\boot\secboot3\src\boot_dload.c
@@ -170,10 +172,10 @@ void boot_dload_transition_pbl_forced_dload( void )
 } /* boot_dload_transition_pbl_forced_dload() */
 ```
 
-###普通下载模式
+### 普通下载模式
 一般情况下，在通过PBL下载了软件后 ，除非device挂掉，不会再通过PBL进入紧急下载，这时会通过sbl对软件更新。在上boot_dload_check函数中会检查USB D+是否接地，是否了设置下载模式cookie（通过boot_dload_set_cookie()设置），如果皆为否，则进入普通下载模式。
 
-####boot_dload_set_cookie
+#### boot_dload_set_cookie
 当sbl1发生异常时，sbl_error_handler函数（位于sbl1_mc.c）会调用此函数设置cookie，此函数比较简单，源码如下：
 ```c
 # boot_images\core\boot\secboot3\src\boot_dload.c
@@ -183,13 +185,13 @@ void boot_dload_set_cookie()
                                   SBL_DLOAD_MODE_BIT_MASK);
 }
 ```
-####sbl_dload_entry
+#### sbl_dload_entry
 sbl_dload_entry函数指针默认指向紧急下载入口boot_dload_transition_pbl_forced_dload函数，由PBL通过firehose协议实现下载。如下：
 ```c
 # boot_images\core\boot\secboot3\hw\msm8916\sbl1\sbl1_target.c
 void (*sbl_dload_entry)(void) = boot_dload_transition_pbl_forced_dload; 
 ```
-####sbl1_dload_entry 
+#### sbl1_dload_entry 
 不过如果没有定义sbl错误时进入PBL错误处理的宏，sbl_dload_entry函数指针将被重定向到sbl1_dload_entry函数，其在sbl1中直接通过sahara协议下载。如下：
 ```c
 # boot_images\core\boot\secboot3\hw\msm8916\sbl1\sbl1_mc.c
@@ -232,11 +234,8 @@ void sbl1_dload_entry ()
 }/* sbl_dload_entry() */
 ```
 
-##升级模式
+## 升级模式
 上面的下载模式对于开发来说不是很方便，接下来分析一下更适合开发、生产的下载模式，也分为两种，如下：
 1. 通过组合按键进入：比如power键+音量下键进入PBL紧急下载。
 2. 通过命令进入：开机后连接USB， 通过adb reboot edl/dload 进入PBL紧急下载或sbl普通下载。
-
-未完待续。。。。
->由于最近时间比较紧张，需要做的事比较多，并且余下的部分也没怎么接触过，对于我来说也不是很重要，所以剩余部分就留在以后有空再来分析了
 

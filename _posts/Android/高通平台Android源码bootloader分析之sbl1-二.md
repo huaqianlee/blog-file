@@ -1,6 +1,8 @@
 title: "高通平台Android源码bootloader分析之sbl1(二)"
 date: 2015-08-15 20:44:46
-categories: Android
+categories:
+- Android Tree
+- Misc
 tags: [源码分析,Qualcomm]
 ---
 [高通平台Android源码bootloader分析之sbl1(一)](http://huaqianlee.github.io/2015/08/15/Android/%E9%AB%98%E9%80%9A%E5%B9%B3%E5%8F%B0Android%E6%BA%90%E7%A0%81bootloader%E5%88%86%E6%9E%90%E4%B9%8Bsbl1-%E4%B8%80/)
@@ -16,7 +18,7 @@ tags: [源码分析,Qualcomm]
 　
 本篇博文就先来分析一下CDT， 其他部分后面再分析。
 <!--more-->
-##CDT
+## CDT
 CDT主要提供Platform ID、ddr硬件配置等平台设备数据。很多module利用这些信息去减少依赖及执行动态初始化。CDT通常被厂家写入EEPROM中，如没有eeprom则会在编译bootloader时链入。
 　
 sbl中主要涉及到如下关键文件：
@@ -26,7 +28,7 @@ boot_images\core\systemdrivers\platforminfo\src\PlatformInfo.c
 boot_images\core\boot\secboot3\scripts\cdt_generator.py
 boot_images\core\boot\secboot3\scripts\jedec_lpddr3_single_channel.xml
 ```
-###boot程序加载CDT
+### boot程序加载CDT
 对于CDT，boot程序主要有如下动作：
 1. sbl1校验eMMC的boot分区中的CDT分区，如果ok，则加载CDT镜像，如果不ok，则执行第2步；
 2. sbl1从sbl1.mbn中加载默认cdt分区表（config_data_table[]）；
@@ -34,14 +36,14 @@ boot_images\core\boot\secboot3\scripts\jedec_lpddr3_single_channel.xml
 4. lk获取平台信息，加载dt头，然后搜寻相应的dt入口；
 5. lk通过正确的dt入口地址跳转到kernel。
 
-####关键函数：
+#### 关键函数：
 ```bash
 #sbl1
 boot_updat_config_data_table（boot_images\core\boot\secboot3\src\boot_config_emmc.c）
 #lk
 dev_tree_get_entry_info(bootable\bootloader\lk\platform\msm_shared\dev_tree.c)
 ```
-####关键枚举：
+#### 关键枚举：
 ```bash
 #boot_images\core\api\systemdrivers\DDIChipInfo.h
 DALCHIPINFO_ID_APQ8026     = 199,
@@ -55,7 +57,7 @@ DALPLATFORMINFO_TYPE_CDP          = DALPLATFORMINFO_TYPE_SURF,  /**< Target is a
 DALPLATFORMINFO_TYPE_MTP_MSM      = 0x08,  /**< Target is a MSM MTP device. */
 DALPLATFORMINFO_TYPE_QRD          = 0x0B,  /**< Target is a QRD device. */
 ```
-####DT头
+#### DT头
 ```dts
 #kernel\arch\arm\boot\dts\qcom\msm8916-cdp.dts
 / {
@@ -78,7 +80,7 @@ DALPLATFORMINFO_TYPE_QRD          = 0x0B,  /**< Target is a QRD device. */
 ```
 >dt.img的格式，参考dtbtool.txt和bootable\bootloader\lk\platform\msm_shared\smem.h
 
-####CDT描述的xml文件
+#### CDT描述的xml文件
 ```xml
 #boot_images\core\boot\secboot3\scripts\jedec_lpddr3_single_channel.xml
       <device id="cdb0">
@@ -106,10 +108,10 @@ typedef PACKED struct
   PlatformInfoKVPSCDTType  aKVPS[];
 } PlatformInfoCDTType;
 ```
-###platform info
+### platform info
 在上一篇博文分析的sbl执行流程中，有两个和platform info有关的两个关键函数，如下：
 
-####boot_config_data_table_init
+#### boot_config_data_table_init
 此函数主要初始化配置数据表，如果eeprom/emmc中存在cdt，则更新编译时链入的cdt表。
 ```c
 #boot_images\core\boot\secboot3\src\boot_config_data.c
@@ -151,7 +153,7 @@ void boot_config_data_table_init(bl_shared_data_type* bl_shared_data)
                                     bootlog_buffer);
 }
 ```
-####config_data_table
+#### config_data_table
 config_data_table定义了与上xml文件对应的配置表，存储在memory，用于初始化cdt，如此表存在则此表数据为最终数据。源码如下：
 ```c
 # boot_images\core\boot\secboot3\hw\msm8916\boot_cdt_array.c
@@ -184,7 +186,7 @@ uint8 config_data_table[CONFIG_DATA_TABLE_MAX_SIZE] =
 uint32 config_data_table_size = 420; // cdt表size
 ```
 
-####sbl1_hw_platform_smem
+#### sbl1_hw_platform_smem
 此函数主要解析cdt表获得sw-platform id，调用platform id api并传送指针到获得的id，然后调用hw_init_smem存储platform id到SMEM。
 ```c
 #boot_images\core\boot\secboot3\hw\msm8909\sbl1\sbl1_mc.c
@@ -213,7 +215,7 @@ void sbl1_hw_platform_smem(bl_shared_data_type* bl_shared_data)
   }  
 }
 ```
-###platform info匹配
+### platform info匹配
 platform info中的platform id十分重要，lk、kernel中dts都是根据platform id及subtype id等platform info来匹配的。lk和kernel中涉及到的主要函数和代码路径如下：
 ```bash
 #lk
@@ -242,7 +244,7 @@ kernel\arch\arm\boot\dts\qcom
   kernel     通过传入dts地址创建设备          setup.c
 -------------------------------------------------------------
 ```
-###DDR配置
+### DDR配置
 ddr相关的东西我很少动， 也就不深入分析了，列出几个关键函数，如果需要深入了解的话再分析。ddr初始化主要涉及3个函数，见如下load_qsee_pre_procs函数指针数组：
 ```c
  boot_procedure_func_type load_qsee_pre_procs[] = 

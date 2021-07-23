@@ -1,6 +1,8 @@
 title: "About ActivityNotFoundException Unable to find explicit activity class && Android.mk解析"
 date: 2015-07-12 14:06:35
-categories: Android
+categories: 
+- Android Tree
+- Misc
 tags: [Bug,编译]
 ---
 　　[Android编译过程详解之一](http://huaqianlee.github.io/2015/07/11/Android/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%B8%80/)
@@ -8,7 +10,7 @@ tags: [Bug,编译]
 　　[Android编译过程详解之三](http://huaqianlee.github.io/2015/07/12/Android/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%B8%89/)
 　　[Android.mk解析](http://huaqianlee.github.io/2015/07/12/Android/About-ActivityNotFoundException-Unable-to-find-explicit-activity-class-Android-mk%E8%A7%A3%E6%9E%90/)
 
-##ActivityNotFoundException 　
+## ActivityNotFoundException 　
 　　最近将Android从4.4移植到5.1时，添加一个从拨号界面输入\*#360\*#进入battery info查看界面的功能时（如感兴趣，详情见[Android电池监控系统(bms)之一电池系统架构](http://huaqianlee.github.io/2015/06/06/Android/Android%E7%94%B5%E6%B1%A0%E7%9B%91%E6%8E%A7%E7%B3%BB%E7%BB%9F-BMS-%E4%B9%8B%E7%94%B5%E6%B1%A0%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84/)），activity跳转部分代码如下： 
 ```java
         else if(input.equals(BATTERY_INFO))
@@ -50,7 +52,7 @@ tags: [Bug,编译]
 2. 包名或者类名书写错误，不统一。
 3. 自己定义的包名或者类名与系统自带类重复。
 
-##Android.mk解析
+## Android.mk解析
 　　因为上面问题时由签名引起的，所以就深入看了一下什么地方指定签名，后发现在APP目录中的Android.mk中制定。Android.mk将source打包为如下几种modules：
 　　　1. APK程序
   　　　　一般的Android程序，编译打包生成apk文件
@@ -140,20 +142,20 @@ include $(call all-makefiles-under,$(LOCAL_PATH)) #表示需要编译该目录�
 endif
 Lee:还有很多其他定义和语法，这里就不一一分析，不过从变量名就能窥知一二
 ```
-###编译类型的说明
-####eng 
+### 编译类型的说明
+#### eng 
 - 默认类型，该编译类型适用于开发阶段。
 - 安装包含 eng, debug, user，development 标签的模块
 - 安装所有没有标签的非APK模块
 - 安装所有产品定义文件中指定的APK模块
 
-####user  
+#### user  
 - 该编译类型适合用于最终发布阶段。
 - 安装所有带有 user 标签的模块
 - 安装所有没有标签的非 APK 模块
 - 安装所有产品定义文件中指定的 APK 模块，APK 模块的标签将被忽略
 
-####userdebug
+#### userdebug
 该编译类型适合用于debug阶段。该类型和user一样，另：
 - 会安装包含debug标签的模块
 - 编译出的系统具有root访问权限
@@ -169,7 +171,7 @@ $(call all-Iaidl-files-under, <src>) ：获取指定目录下的所有 AIDL 文�
 $(call all-makefiles-under, <folder>)：获取指定目录下的所有 Make 文件。
 $(call intermediates-dir-for, <class>, <app_name>, <host or target>, <common?> )：获取 Build 输出的目标文件夹路径。
 ```
-###LOCAL_CERTIFICATE 
+### LOCAL_CERTIFICATE 
 　　分析了Android.mk,再来详细说说我之前问题相关的一个属性：LOCAL_CERTIFICATE ，用于指定签名是使用的key，如不指定默认testkey。
 　
 分析这个属性就先得谈谈此apkAndroidManifest.xm了中的sharedUserId属性说起，如下：

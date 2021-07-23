@@ -1,6 +1,8 @@
 title: "实现真正意义上的第一个APP之启程"
 date: 2017-07-11 21:20:58
-categories: Android
+categories:
+- Android Tree
+- Application
 tags: App
 ---
 自学了这么久的Android，各种例程和Demo敲了不少，但是还未自己从头设计实现过一个完整的APP，今天准备根据自己的需求定制一款APP：ForMe（暂定此名）。第一次完全自己设计实现，可能会有很多问题，自己边学边优化。

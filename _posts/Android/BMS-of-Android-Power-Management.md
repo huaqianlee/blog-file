@@ -1,7 +1,9 @@
 title: "Android 电源管理之电池管理系统(BMS)"
 date: 2017-11-21 21:56:28
-categories: Android
-tags: [源码分析,MTK]
+categories: 
+- Android Tree
+- Misc
+tags: [源码分析,Power,MTK]
 ---
 >Android 源码分析系列综述博文： [Android 系统源码分析综述](http://huaqianlee.github.io/2100/11/21/Android/A-summary-of-Android-source-analysis/)
 

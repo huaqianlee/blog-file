@@ -1,6 +1,8 @@
 title: "Android传感器（Sensor）架构简析 (╯_╰)"
 date: 2017-12-17 10:49:12
-categories: Android
+categories:
+- Android Tree
+- Misc
 tags: [源码分析,MTK]
 ---
 > 这真的是一篇简析。。。 (╯_╰)  本来准备详细分析整个 sensor 架构的，实在时间紧张，只能先简析了。

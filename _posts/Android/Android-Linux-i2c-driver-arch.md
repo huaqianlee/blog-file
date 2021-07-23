@@ -1,6 +1,8 @@
 title: "Android/Linux  I2C 驱动架构分析"
 date: 2017-12-03 21:37:07
-categories: Android
+categories:
+- Android Tree
+- Kernel
 tags: [源码分析,MTK]
 ---
 # 前言

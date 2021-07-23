@@ -1,6 +1,8 @@
 title: "RecyclerView Item选中效果及点击事件的实现"
 date: 2017-08-17 19:46:41
-categories: Android
+categories:
+- Android Tree
+- Application
 tags: App
 ---
 最近需要对RecyclerView的Item实现选中效果和Item点击事件，尝试了两种方式。

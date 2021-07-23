@@ -1,6 +1,8 @@
 title: "Three ways to dump usb register"
 date: 2018-08-23 22:07:48
-categories: Android
+categories:
+- Android Tree
+- Kernel
 tags: [Qualcomm]
 ---
 ### Add node

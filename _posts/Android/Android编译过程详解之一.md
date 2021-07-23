@@ -1,6 +1,8 @@
 title: "Android编译过程详解之一"
 date: 2015-07-11 19:43:04
-categories: Android
+categories:
+- Android Tree
+- Misc
 tags: [编译,源码分析,Qualcomm]
 ---
 **　　Platform Information :
@@ -23,7 +25,7 @@ tags: [编译,源码分析,Qualcomm]
 　2. ./go.sh  [target] or make  [target]　编译
 <!--more-->　
 接下来就按照步骤来详细分析一下流程：
-##source setup.sh project-name debug
+## source setup.sh project-name debug
 　　setup.sh是自定义的一个脚本文件，用来配置环境变量，其主要内容如下：
 ```bash
 /*配置用到的jdk、jre*/
@@ -55,7 +57,7 @@ fi
 
 echo "Your input is wrong please check again"
 ```
-###source build/envsetup.sh
+### source build/envsetup.sh
 　　此命令是将envsetup.sh中的命令加载到环境变量，build位于Android源码路径根目录（本文提到所有路径都是以 Android 源码树作为背景的，“/”或顶层路径指的是源码树的根目录，与文件系统无关），主要命令如下：
 ```bash
 - lunch:   指定编译项，即编译目标和编译类型（lunch <product_name>-<build_variant>）
@@ -182,7 +184,7 @@ addcompletions  调用 addcompletions()
 　　如要添加自己的产品，需要在device目录下新建一个自己公司名，新建一个vendorsetup.sh，加入自己的编译项。了解了这一条指令，再来看一下执行结果，将会更有体会，因为我所有命令都写到开始的setup.sh文件中了，所以不用想官方那样多步配置编译，如下：
 　　![Make](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/20150711MakeAndroid.png)
 
-##lunch
+## lunch
 　　lunch是在envsetup.sh中定义的一个命令，让用户选择编译项，用来定义product和编译过程中用到的全局变量。关于编译项，前面只是列出，并未详解，如msm8916_32-userdebug，msm8916_32为产品名，userdebug为编译类型，详细如下：
 * eng: 工程机，
 

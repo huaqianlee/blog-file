@@ -1,7 +1,9 @@
 title: "高通 linear charger 驱动分析"
 date: 2015-06-24 21:53:29
-categories: Android
-tags: [源码分析,Qualcomm]
+categories:
+- Android Tree
+- Kernel
+tags: [源码分析,Power,Qualcomm]
 ---
 > File :  qpnp-linear-charger.c
 acc: alam charger current (not sure, think so now)　
@@ -128,11 +130,13 @@ qpnp_lbc_chg_done_irq_handler()
                 qpnp_lbc_jeita_adc_notification  // notification
                 qpnp_adc_tm_channel_measure(chip->adc_tm_dev,&chip->adc_param); // request ADC
         qpnp_lbc_bat_if_configure_btc(chip) // configure btc        
-        determine_initial_status(chip); /* Get/Set charger's initial status */
+        determine_initial_status(chip); /* Get/Set charger\'s initial status */
         qpnp_lbc_request_irqs(chip); // initialize LBC MISC
         /* Configure initial alarm for VDD trim */ 配置initial vdd调整报警
         alarm_start_relative(&chip->vddtrim_alarm, kt);//Sets a relative alarm to fire
-```        
+```   
+
+
 ### 主线二 : 
 ```bash
             qpnp_batt_power_get_property

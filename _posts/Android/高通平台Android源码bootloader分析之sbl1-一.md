@@ -1,6 +1,8 @@
 title: "高通平台Android源码bootloader分析之sbl1(一)"
 date: 2015-08-15 20:44:33
-categories: Android
+categories:
+- Android Tree
+- Misc
 tags: [源码分析,Qualcomm]
 ---
 [高通平台Android源码bootloader分析之sbl1(一)](http://huaqianlee.github.io/2015/08/15/Android/%E9%AB%98%E9%80%9A%E5%B9%B3%E5%8F%B0Android%E6%BA%90%E7%A0%81bootloader%E5%88%86%E6%9E%90%E4%B9%8Bsbl1-%E4%B8%80/)
@@ -10,9 +12,9 @@ tags: [源码分析,Qualcomm]
 
 
 
-高通8k平台的boot过程搞得比较复杂， 我也是前段时间遇到一些问题深入研究了一下才搞明白。不过虽然弄得很复杂，我们需要动的东西其实很少，modem侧基本就sbl1（全称：Secondary boot loader）的代码需要动一下，ap侧就APPSBL代码需要动（对此部分不了解，可参照：[bootable源码解析](http://huaqianlee.github.io/2015/07/25/Android/Android%E6%BA%90%E7%A0%81bootable%E8%A7%A3%E6%9E%90%E4%B9%8BLK-bootloader-little-kernel/)），其他的都是高通搞好了的，甚至有些我们看不到代码。今天就要分析一下开机前几秒钟起着关键作用的sbl1， 这套代码在modem侧的boot_images\中。
+高通8k平台的boot过程搞得比较复杂， 我也是前段时间遇到一些问题深入研究了一下才搞明白。不过虽然弄得很复杂，我们需要动的东西其实很少，modem侧基本就sbl1（全称：Secondary boot loader）的代码需要动一下，ap侧就APPSBL代码需要动（对此部分不了解，可参照：[bootable 源码解析](http://huaqianlee.github.io/2015/07/25/Android/Android%E6%BA%90%E7%A0%81bootable%E8%A7%A3%E6%9E%90%E4%B9%8BLK-bootloader-little-kernel/)），其他的都是高通搞好了的，甚至有些我们看不到代码。今天就要分析一下开机前几秒钟起着关键作用的sbl1， 这套代码在modem侧的boot_images\中。
 
-##启动流程
+## 启动流程
 首先来看一下高通的bootloader流程框图，主要由ap、RPM及modem三部分构成，由于我工作主要涉及到ap侧，所以对RPM和modem侧代码不了解，以后有空时间的话到可以研究一下，框图如下：
 <!--more-->
 ![boot arch](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/20155304921b788-8a63-472f-be7c-2220a98cf428.jpg)
@@ -43,7 +45,7 @@ tags: [源码分析,Qualcomm]
 modem侧主要是射频网络相关的代码，我没有研究过也不了解，RPM侧的代码也没怎么研究，高通文档对其介绍如下：
 ![RPM](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/blogRPM.png)
 
-##sbl1流程分析
+## sbl1流程分析
 接下来我就来跟一下sbl1的代码，总结出关键流程，此部分代码皆在modem侧。我平时主要会涉及的几个重要文件：
 ```bash
 boot_images\core\boot\secboot3\hw\msm8916\sbl1\sbl1_hw.c
@@ -54,7 +56,7 @@ boot_images\core\systemdrivers\pmic\drivers\smb\src\pm_smb.c // 如果带smb135x
 ```
 
 首先从其入口文件sbl1.s开始，如下：
-###sbl1入口： sbl1.s
+### sbl1入口： sbl1.s
 此部分代码路径在：boot_images/core/boot/secboot3/hw/msm8916/sbl1/sbl1.s，此文件引导处理器，主要有实现如下操作：
 * 设置硬件，继续boot进程。
 * 初始化ddr。
@@ -82,7 +84,7 @@ IMPORT boot_crash_dump_regs_ptr
 ...
 # 关于中断向量配置等汇编语句，就没有去详细看了，我们一般也不会涉及到这么底层的东西
 ```
-###sbl1_main_ctl
+### sbl1_main_ctl
 此函数位于boot_images\core\boot\secboot3\hw\mdm9x45\sbl1\sbl1_mc.c，主要完成初始化RAM等工作， 注此函数决不return。部分关键源码如下，我加汉字解释的是我认为我们应该关注的部分：
 ```c
 /* Calculate the SBL start time for use during boot logger initialization. */
@@ -112,7 +114,7 @@ sbl1_hw_init();
 /*执行sbl1的目标依赖进程*/
 boot_config_process_bl(&bl_shared_data, SBL1_IMG, sbl1_config_table);
 ```
-###sbl1_config_table
+### sbl1_config_table
 sbl1_config_table为一个结构体数组，里面存储了加载QSEE、RPM、APPSBL等镜像所需要的配置参数及执行函数，位于boot_images\core\boot\secboot3\hw\msm8909\sbl1\sbl1_config.c。其关键代码如下：
 ```c
 boot_configuration_table_entry sbl1_config_table[] = 
@@ -135,7 +137,7 @@ boot_configuration_table_entry sbl1_config_table[] =
 /* SBL1 -> APPSBL （即lk部分） */
 ...
 ```
-###load_qsee_pre_procs
+### load_qsee_pre_procs
 load_qsee_pre_procs为一个函数结构体数组，在QSEE加载之前执行。源码注释写得很清楚并且容易理解，我就不多此一举去翻译了，关键源码如下：
 ```c
   /* Save reset register logs */
@@ -186,7 +188,7 @@ load_qsee_pre_procs为一个函数结构体数组，在QSEE加载之前执行。
   /* Last entry in the table. */
   NULL 
 ```
-###load_qsee_post_procs
+### load_qsee_post_procs
 load_qsee_post_procs同样也为一个函数结构体数组，其在加载QSEE之后执行。关键源码如下：
 ```c
  /* Enable the secure watchdog
@@ -254,7 +256,7 @@ load_qsee_post_procs同样也为一个函数结构体数组，其在加载QSEE�
   /* Last entry in the table. */
   NULL 
 ```
-###pm_chg_charger_detect_state
+### pm_chg_charger_detect_state
 pm_chg_charger_detect_state函数是启动工程中非常重要的一个函数，它将监测电池的状态，然后决定启动过程，调用关系和解析如下：
 ```bash
 sbl1_hw_init_secondary
@@ -267,7 +269,7 @@ sbl1_hw_init_secondary
        ->pm_chg_enable_usb_charging
 ```
 
-###pm_chg_sbl_charging_state_entry
+### pm_chg_sbl_charging_state_entry
 pm_chg_sbl_charging_state_entry是充电状态机的入口函数， 如果充电状态不正确的话会造成死机，代码如下：
 ```c
 pm_err_flag_type  pm_chg_sbl_charging_state_entry(void)   //called at the end of pm_driver_init
@@ -297,7 +299,7 @@ pm_err_flag_type  pm_chg_sbl_charging_state_entry(void)   //called at the end of
 }
 ```
 
-###pm_chg_process_sbl_charger_states
+### pm_chg_process_sbl_charger_states
 pm_chg_process_sbl_charger_states函数也是启动过程中非常重要的一个函数，此函数里面有一个死循环，用来更新充电状态或者关机，其被pm_chg_sbl_charging_state_entry函数调用（见上调用关系）。插上充电器开机前几秒就出现的重启问题， 多半是此部分出了状况。代码如下：
 ```c
 static pm_err_flag_type  pm_chg_process_sbl_charger_states(void)

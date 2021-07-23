@@ -1,7 +1,9 @@
 title: "Android电池监控系统(BMS)之一电池系统架构"
 date: 2015-06-06 22:17:36
-categories: Android
-tags: [电源管理,源码分析]
+categories:
+- Android Tree
+- Misc
+tags: [电源管理,Power,源码分析]
 ---
 *Platform Information :
 　System:    Ａndroid4.4.4 

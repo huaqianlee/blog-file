@@ -1,6 +1,8 @@
 title: "Android编译过程详解之三"
 date: 2015-07-12 16:43:04
-categories: Android
+categories:
+- Android Tree
+- Misc
 tags: [编译,源码分析,Qualcomm]
 ---
 　　[Android编译过程详解之一](http://huaqianlee.github.io/2015/07/11/Android/Android%E7%BC%96%E8%AF%91%E8%BF%87%E7%A8%8B%E8%AF%A6%E8%A7%A3%E4%B9%8B%E4%B8%80/)
@@ -51,14 +53,14 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/sdk_mips.mk \
     $(LOCAL_DIR)/large_emu_hw.mk
 endif
-<!--more-->
 2. device\qcom\msm8916_32\AndroidProducts.mk  # 自定义产品配置文件，内容如下：
 　PRODUCT_MAKEFILES := \
 	　$(LOCAL_DIR)/msm8916_32.mk
 ```
-##产品版本定义文件
+## 产品版本定义文件
 对于我用到文件则为msm8916_32.mk，主要定义此产品版本要编入哪些东西，主要变量如下：
-###产品版本定义文件定义变量
+### 产品版本定义文件定义变量
+
 |常量|说明|
 |----|----|
 |PRODUCT_NAME|最终用户将看到的完整产品名，会出现在“关于手机”信息中|
@@ -75,7 +77,8 @@ endif
 |PRODUCT_PACKAGE_OVERLAYS|指出是否要使用默认的资源或添加产品特定定义来覆盖|
 |PRODUCT_CONTRIBUTORS_FILE|HTML 文件，其中包含项目的贡献者|
 |PRODUCT_TAGS|该产品的标签，以空格分格|
-###msm8916_32.mk
+
+### msm8916_32.mk
 此文件除了引入定义以上变量以外，还有如下关键代码：　
 ```bash
 $(call inherit-product, device/qcom/common/common.mk) # 继承common.mk，此文件定义了很多值为配置文件、脚本文件的常量
@@ -83,16 +86,16 @@ $(call inherit-product, device/qcom/common/common.mk) # 继承common.mk，此文
 -include $(QCPATH)/common/config/rendering-engine.mk # （字体渲染引擎开关）font rendering engine feature switch
 -include $(TOP)/customer/oem_common.mk # 自定义，引入一些定制变量
 ```
-##BoardConfig.mk
+## BoardConfig.mk
 　　该文件用来配置硬件主板，它其中定义的都是设备底层的硬件特性。例如：该设备的主板相关信息，Wifi 相关信息，还有 bootloader，内核，radioimage 等信息。对于该文件的示例，请参看 Android 源码树已经有的文件。
-##vendorsetup.sh
+## vendorsetup.sh
 　　该文件中作用是通过 add_lunch_combo 函数在 lunch 函数中添加一个菜单选项。该函数的参数是产品名称加上编译类型，中间以“-”连接，例如：add_lunch_combo full_lt26-userdebug。/build/envsetup.sh 会扫描所有 device 和 vender 二 级目 录下的名称 为"vendorsetup.sh"文件，并根据其中的内容来确定 lunch 函数的 菜单选项。
 
 
-##后记
+## 后记
 　　只有代码不会说谎，此文可能过时, 不过可以给你一个大致的脉络，然后再跟一下代码，就ok了。另，如需了解模块mk文件，参考我的另一篇博文：[Android.mk解析](http://huaqianlee.github.io/2015/07/12/Android/About-ActivityNotFoundException-Unable-to-find-explicit-activity-class-Android-mk%E8%A7%A3%E6%9E%90/)。我写这系列博客，主要参考了Google官网和另外两篇网上Google出来的文章，地址见下References，感谢Google，感谢另两篇文章的作者。
 　　　
-##References
+## References
 [http://source.android.com/source/initializing.html](http://source.android.com/source/initializing.html) （需翻墙）
 [http://source.android.com/source/building.html](http://source.android.com/source/building.html) （需翻墙）
 [http://www.cnblogs.com/mr-raptor/archive/2012/06/07/2540359.html](http://www.cnblogs.com/mr-raptor/archive/2012/06/07/2540359.html)

@@ -1,6 +1,8 @@
 title: "Getting Started With RecyclerView and CardView on Android"
 date: 2017-11-08 22:23:59
-categories: Android
+categories:
+- Andrdoid Tree
+- Application
 tags: App
 ---
 >偶然看到这篇文章，觉得写得很好，简单明了，所以尝试将其翻译一下。

@@ -1,7 +1,9 @@
 title: "高通 smb135x charger 驱动分析"
 date: 2015-06-24 21:52:49
-categories: Android
-tags: [源码分析,Qualcomm]
+categories:
+- Android Tree
+- Kernel
+tags: [源码分析,Power,Qualcomm]
 ---
 ## analysis log
 

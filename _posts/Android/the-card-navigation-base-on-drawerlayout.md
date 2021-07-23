@@ -1,6 +1,8 @@
 title: "基于DrawerLayout打造卡片式Navigation"
 date: 2017-08-17 19:46:16
-categories: Android
+categories:
+- Android Tree
+- Application
 tags: App
 ---
 前段时间开始了利用空闲时间做一个练习APP [ForMe](https://github.com/huaqianlee/ForMe)。根据设计APP需要通过左边导航栏切换主界面功能，自己平时在使用Google的NewsTab，觉得很不错，就准备参考其界面来设计。

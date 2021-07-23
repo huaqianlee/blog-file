@@ -1,7 +1,9 @@
 title: "UFP was modified as DRP when we unplug OTG"
 date: 2019-08-27 22:11:32
-categories: Android
-tags: [Qualcomm,Bug]
+categories:
+- Android Tree
+- Kernel
+tags: [Qualcomm,USB,Bug]
 ---
 
 # Term 

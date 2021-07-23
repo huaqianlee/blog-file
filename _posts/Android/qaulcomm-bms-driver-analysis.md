@@ -1,7 +1,9 @@
 title: "高通电池管理系统（BMS）驱动分析"
 date: 2015-06-24 21:52:24
-categories: Android
-tags: [源码分析,Qualcomm]
+categories:
+- Android Tree
+- Kernel
+tags: [源码分析,Power,Qualcomm]
 ---
 >File: qpnp-vm-bms.c -  Battery monitor system　
  

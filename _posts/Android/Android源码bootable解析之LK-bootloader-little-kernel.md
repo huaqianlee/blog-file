@@ -1,11 +1,13 @@
 title: "Android源码bootable解析之bootloader LK(little kernel)"
 date: 2015-07-25 15:56:13
-categories: Android
+categories:
+- Android Tree
+- Misc
 tags: [源码分析,Qualcomm]
 ---
 记得当初学Linux时候，bootloader 代码相对来说还比较简单，主要几个汇编文件加上几个C文件，编译一个uboot就ok了。做Android驱动后，发现Android专门做了一个目录bootable来实现boot等相关功能。功能也比较多，所以就准备来研究一下这一部分。今天就先研究一下LK，LK全称为Little Kernel，是AP模块bootloader中实现的一个微型系统。
 
-##boot架构
+## boot架构
 <!--more-->
 首先来了解一下bootable代码的目录结构，其下主要有三个子目录，如下：     
 ```bash
@@ -28,10 +30,10 @@ tags: [源码分析,Qualcomm]
 -diskinstaller #打包镜像
 ```
 
-##LK流程分析
+## LK流程分析
 在LK的链接文件ssystem-onesegment.ld 或  system-twosegment.ld （位于bootable/bootloadler/lk/arch/arm/，此文件用来指定代码的内存分布等）中，LK指定lk/arch/crt0.s中的_start函数为入口函数，crt.s主要初始化CPU，然后长跳转（bl）到lk/kernel/main.c中kmain函数，初始化lk系统，接着初始化boot，跳转到kernel。接下来按照此流程来分析一下。
 
-###kmain()
+### kmain()
 与 boot 启动初始化相关函数为 arch_early_init、  platform_early_init 、bootstrap2/bootstrap_nandwrite，这些函数比较重要,待会儿再详解,如下:
 ```bash
 void kmain(void)
@@ -56,7 +58,7 @@ void kmain(void)
 #endif
 }
 ```
-###arch_early_init()
+### arch_early_init()
 因为高通平台用的arm架构,所以文件路径为:\bootable\bootloader\lk\arch\arm\arch.c.
 ```bash
 void arch_early_init(void)
@@ -86,7 +88,7 @@ void arch_early_init(void)
 }
 ```
 
-###platform_early_init
+### platform_early_init
 每个平台的初始化不一样,我使用的msm8916,路径为:\bootable\bootloader\lk\platform\msm8916\platform.c,如下:
 ```bash
 void platform_early_init(void)
@@ -97,7 +99,7 @@ void platform_early_init(void)
 	qtimer_init(); 
 }
 ```
-###bootstrap2 
+### bootstrap2 
 此函数由kmain中创建的线程调用，路径为:bootable\bootloader\lk\kernel\main.c。
 ```bash
 static int bootstrap2(void *arg)
@@ -111,7 +113,7 @@ static int bootstrap2(void *arg)
 }
 ```
 
-###aboot_init
+### aboot_init
 此函数由上apps_init函数调用，路径: bootable\bootloader\lk\app\aboot\aboot.c.
 ```bash
 /* Setup page size information for nv storage */
@@ -178,7 +180,7 @@ normal_boot:
 }
 ```
 
-###boot_linux_from_flash
+### boot_linux_from_flash
 
 路径: bootable\bootloader\lk\app\aboot\aboot.c。此函数实现内核的加载，boot镜像boot.img由如下几部分构成：kernel头、kernel、ramdisk(虚拟磁盘)、second stage（可以没有）。
 ```bash
@@ -332,7 +334,7 @@ continue_boot:
 ```
 >因为时间有限,并没有详细去跟代码。很多细节都是大概扫了一下函数内容或者根据注释得出结果，如有错误,欢迎指出,共同学习,共同进步。
 
-#附
+# 附
 boot.img的头格式定义在：bootable\bootloader\lk\app\nandwrite\bootimg.h。如下：
 ```c
 struct boot_img_hdr

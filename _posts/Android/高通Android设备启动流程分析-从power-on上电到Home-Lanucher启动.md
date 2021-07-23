@@ -1,6 +1,8 @@
 title: "高通Android设备启动流程分析(从power-on上电到Home Lanucher启动)"
 date: 2015-08-23 22:07:48
-categories: Android
+categories:
+- Android Tree
+- Misc
 tags: [源码分析,Qualcomm]
 ---
 *Platform Information :
@@ -30,36 +32,37 @@ tags: [源码分析,Qualcomm]
 
 接下来就按照引导程序、内核启动、init进程、系统服务、Home Lanucher这样的顺序来分析Android启动的code。
 
-##引导程序
+## 引导程序
 引导程序在Android操作系统开始运行前的一个小程序，其主要为内核启动服务。引导程序执行的第一段代码，因此它是针对特定的主板与芯片的。设备制造商要么使用很受欢迎的引导程序比如redboot、uboot或者开发自己的引导程序，它不是Android操作系统的一部分。引导程序是OEM厂商或者运营商加锁和限制的地方。
 
 引导程序分两个阶段执行。第一个阶段，检测外部的RAM以及加载对第二阶段有用的程序；第二阶段，引导程序设置网络、内存等等。这些对于运行内核是必要的，为了达到特殊的目标，引导程序可以根据配置参数或者输入数据设置内核。
 
-###power-on及系统启动
+### power-on及系统启动
 当按下电源键或者系统重启之后，引导芯片代码PBL（Primary Boot Loader，类似于x86的BIOS）从预定义的地方（固化在ROM）开始执行，PBL由高通做好了的烧写在芯片中，PBL将启动设备、支持紧急下载等，然后加载引导程序sbl1，然后跳转到sbl1执行。
 
-###处理器启动地址
+### 处理器启动地址
 MSM8916芯片内部有很多不同的处理器，如下：
 
-|子系统|处理器|启动地址|
-|:-----:|:------:|:-------:|
-|APPS|Cortex-a53|0xfc010000|
-|RPM|Cortex-m3|0x00200000/0x0|
-|Modem|MSS_QDSP6|可配置的|
-|Pronto|ARM9<sup>TM|0x0/0xffff0000/硬件重映射|
+| 子系统 |   处理器    |         启动地址          |
+| :----: | :---------: | :-----------------------: |
+|  APPS  | Cortex-a53  |        0xfc010000         |
+|  RPM   |  Cortex-m3  |      0x00200000/0x0       |
+| Modem  |  MSS_QDSP6  |         可配置的          |
+| Pronto | ARM9<sup>TM | 0x0/0xffff0000/硬件重映射 |
 
-###启动栈
-|组件|处理器|加载源地址|执行地址|功能|
-|:-----:|:------:|:-------:|:------:|:-------:|
-|APPS PBL|Cortex-A53|NA|APPS ROM|启动设备，检测接口，支持紧急下载，通过L2TCM加载和校验SBL1 ELF段,加载校验RPM code RAM|
-|SBL1|Cortex-A53|eMMC|L2 TCM(segment1)/OCIMEM/RPM code RAM(segment2)|初始化内存子系统（总线，DDR，时钟，CDT），加载校验TZ、Hyperviser、RPM_FW、APPSBL镜像，通过USB2.0和Sahara协议memory dump，看门狗调试retention（如：L2 flush），RAM dump到eMMC/SD卡等的支持，大容量存储支持，USB驱动支持，USB充电，温度检测，PMIC驱动的支持，配置DDR以及crash调试的flush L1/L2/ETB支持等相关配置|
-|QSEE/TZ|Cortex-A53|eMMC|LPDDR2/3|等同于TZBSP，设置运行时安全环境，配置xPU，支持fuse驱动，校验子系统镜像，丢弃RESET调试功能|
-|QHEE（Hypervisior）|Cortex-A53|eMMC|LPDDR2/3|Hypervisor镜像负责设置VMM，配置SMMU以及控制xPU存取|
-|RPM_FW|Cortex-M3|eMMC|RPM code RAM|电源资源管理|
-|APPSBL/启动管理器和系统加载器|Cortex-A53|eMMC|LPDDR2/3|启动画面，加载校验内核|
-|HLOS|Cortex-A53|eMMC|LPDDR2/3|引导HLOS镜像，例如a53 HLOS内核镜像，Pronto镜像等|
-|Modem PBL|MSS_QDSP6|NA|Modem ROM Hexagon<sup>TM  TCM|设置Hexagon  TCM，从LPDDR2/3拷贝MBA到Hexagon  TCM并校验|
-|MBA|MSS_QDSP6|eMMC|Hexagon TCM|校验modem镜像，xPU为modem和memory dump保护DDR|
+### 启动栈
+
+|             组件              |   处理器   | 加载源地址 |                    执行地址                    |                                                                                                                                                      功能                                                                                                                                                      |
+| :---------------------------: | :--------: | :--------: | :--------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|           APPS PBL            | Cortex-A53 |     NA     |                    APPS ROM                    |                                                                                                              启动设备，检测接口，支持紧急下载，通过L2TCM加载和校验SBL1 ELF段,加载校验RPM code RAM                                                                                                              |
+|             SBL1              | Cortex-A53 |    eMMC    | L2 TCM(segment1)/OCIMEM/RPM code RAM(segment2) | 初始化内存子系统（总线，DDR，时钟，CDT），加载校验TZ、Hyperviser、RPM_FW、APPSBL镜像，通过USB2.0和Sahara协议memory dump，看门狗调试retention（如：L2 flush），RAM dump到eMMC/SD卡等的支持，大容量存储支持，USB驱动支持，USB充电，温度检测，PMIC驱动的支持，配置DDR以及crash调试的flush L1/L2/ETB支持等相关配置 |
+|            QSEE/TZ            | Cortex-A53 |    eMMC    |                    LPDDR2/3                    |                                                                                                           等同于TZBSP，设置运行时安全环境，配置xPU，支持fuse驱动，校验子系统镜像，丢弃RESET调试功能                                                                                                            |
+|      QHEE（Hypervisior）      | Cortex-A53 |    eMMC    |                    LPDDR2/3                    |                                                                                                                               Hypervisor镜像负责设置VMM，配置SMMU以及控制xPU存取                                                                                                                               |
+|            RPM_FW             | Cortex-M3  |    eMMC    |                  RPM code RAM                  |                                                                                                                                                  电源资源管理                                                                                                                                                  |
+| APPSBL/启动管理器和系统加载器 | Cortex-A53 |    eMMC    |                    LPDDR2/3                    |                                                                                                                                             启动画面，加载校验内核                                                                                                                                             |
+|             HLOS              | Cortex-A53 |    eMMC    |                    LPDDR2/3                    |                                                                                                                                引导HLOS镜像，例如a53 HLOS内核镜像，Pronto镜像等                                                                                                                                |
+|           Modem PBL           | MSS_QDSP6  |     NA     |         Modem ROM Hexagon<sup>TM  TCM          |                                                                                                                            设置Hexagon  TCM，从LPDDR2/3拷贝MBA到Hexagon  TCM并校验                                                                                                                             |
+|              MBA              | MSS_QDSP6  |    eMMC    |                  Hexagon TCM                   |                                                                                                                                 校验modem镜像，xPU为modem和memory dump保护DDR                                                                                                                                  |
 
 >**eMMC** ：Embeded Multi Media Card，内嵌式记忆体，内部存储
 **APPS PBL**：Application Processor Primary Boot Loader，应用处理器初级引导程序
@@ -71,7 +74,7 @@ MSM8916芯片内部有很多不同的处理器，如下：
 **MBA**：Modem Boot Authenticator，调制解调器侧引导校验程序
 
 
-###引导代码流程
+### 引导代码流程
 ![](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/blogbootcodeflow.png)
 
 1. 系统上电或者MSM8916 AP侧CPU重启。
@@ -94,23 +97,23 @@ MSM8916芯片内部有很多不同的处理器，如下：
 
 10. HLOS通过PIL加载外围设备镜像Pronto到DDR，在通过TZ校验。
 
-###第一阶段引导程序和第二阶段引导程序
+### 第一阶段引导程序和第二阶段引导程序
 由PBL加载的sbl1是第一阶段引导程序，APP SBL为第二阶段引导程序。这两部分代码的作用在上面**启动栈**和**引导代码流程**中已有一个简单的描述，如果想了解更多请参考我另外两篇博文：
 
 [Android源码bootable解析之bootloader LK(little kernel)](http://huaqianlee.github.io/2015/07/25/Android/Android%E6%BA%90%E7%A0%81bootable%E8%A7%A3%E6%9E%90%E4%B9%8BLK-bootloader-little-kernel/)
 [高通平台Android源码bootloader分析之sbl1(一)](http://huaqianlee.github.io/2015/08/15/Android/%E9%AB%98%E9%80%9A%E5%B9%B3%E5%8F%B0Android%E6%BA%90%E7%A0%81bootloader%E5%88%86%E6%9E%90%E4%B9%8Bsbl1-%E4%B8%80/)
 
-##内核
+## 内核
 Android的内核就是用的Linux的内核，只是针对移动设备做了一些优化，所有Android内核与linux内核启动的方式差不多。内核主要设置缓存、被保护存储器、计划列表，加载驱动等。当内核完成这些系统设置后，它首先在系统文件中寻找”init”文件，然后启动root进程或者系统的第一个进程。这部分可以参考我的另一篇博文：
 
 [深入理解linux启动过程](http://huaqianlee.github.io/2015/08/21/Linux/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Linux%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B/)
 
-##init进程
+## init进程
 init进程时Android的第一个用户空间进程，是所有进程的父进程。init进程主要有两个任务，一是挂载目录，比如/sys、/dev、/proc，二是读取解析init.rc脚本，将其中的元素整理成自己的数据结构（链表）。
 
 init进程实现路径： system\core\init
 
-###init.c
+### init.c
 首先来看一下init进程的实现代码init.c， 其关键代码如下：
 ```c
 # system\core\init\init.c
@@ -202,9 +205,9 @@ int main(int argc, char **argv)
     }
 ```
 
-###init.rc
+### init.rc
 
-####.rc文件的语法
+#### .rc文件的语法
 init.rc文件是Android的有特定格式和规则的脚本文件，位于：system\core\rootdir\init.rc，称为Android的初始化语言。当进入adb shell后，我们能在根目录看到一个只读的虚拟内存文件init.rc，源文件init.rc被打包在boot.img中ramdisk.img中。其有四类声明：
 1. Action - 动作
 2. Command - 命令
@@ -237,7 +240,7 @@ import /init.${ro.hardware}.rc
 import /init.trace.rc
 ```
 
-####init.rc
+#### init.rc
 init.rc脚本的主要内容如下：
 ```bash
 # system\core\rootdir\init.rc
@@ -292,7 +295,7 @@ service servicemanager /system/bin/servicemanager # 系统服务管理器，管�
 ```
 >servicemanager主要注册获取服务，源码路径：frameworks\base\cmds\servicemanager\Service_manager.c。
 
-####回调函数
+#### 回调函数
 
 Action包含的不同command对应不同func回调函数，具体对应情况可查看Keywords.h，如下：
 ```h
@@ -323,7 +326,7 @@ KEYWORD(chmod,       COMMAND, 2, do_chmod)
 ...
 ```
 
-####init.rc脚本文件的解析
+#### init.rc脚本文件的解析
 关于init.rc脚本文件的解析，就不详细描述了，只列出关键文件和关键函数，如下：
 ```c
 # system\core\init\init.c
@@ -339,44 +342,44 @@ state.parse_line() // 从属于section的子行
 init_parse_config_file(import->filename) //解析import小节
 ```
 
-####core服务和main服务
+#### core服务和main服务
 boot子阶段会通过class_start对应的回调函数do_class_start开启core服务和main服务，这两类服务通过如下两句表明身份：
 ```rc
 class core # 声明section为core服务
 class main # 声明section为main服务
 ```
 ##### core服务
-|core类型的服务|对应的可执行文件|说明|
-|:--------------:|:------------:|:-------:|
-|ueventd|/sbin/ueventd||	
-|logd|/system/bin/logd|| 
-|healthd|/sbin/healthd|电源管理服务|	 
-|console|/system/bin/sh||	 
-|adbd|/sbin/adbd||	 
-|servicemanager|/system/bin/servicemanager|service manager service服务，Android的核心之一，zygote在此服务中加载|
-|vold	|/system/bin/vold|||
+| core类型的服务 |      对应的可执行文件      |                                 说明                                 |
+| :------------: | :------------------------: | :------------------------------------------------------------------: |
+|    ueventd     |       /sbin/ueventd        |                                                                      |
+|      logd      |      /system/bin/logd      |                                                                      |
+|    healthd     |       /sbin/healthd        |                             电源管理服务                             |
+|    console     |       /system/bin/sh       |                                                                      |
+|      adbd      |         /sbin/adbd         |                                                                      |
+| servicemanager | /system/bin/servicemanager | service manager service服务，Android的核心之一，zygote在此服务中加载 |
+|      vold      |      /system/bin/vold      |                                                                      |  |
 
 ##### main服务
-|main类型的服务|对应的可执行文件|说明|
-|:--------------:|:------------:|:-------:|
-|netd|/system/bin/netd||
-|debuggerd|/system/bin/debuggerd||
-|ril-daemon|/system/bin/rild||	 
-|surfaceflinger|/system/bin/surfaceflinger||	 
-|zygote|/system/bin/app_process|Android创建内部创建新进程的核心服务|
-|drm|/system/bin/drmserver||	 
-|media|/system/bin/mediaserver|| 
-|bootanim|/system/bin/bootanimation|| 
-|installd|/system/bin/installd||
-|flash_recovery|/system/etc/install-recovery.sh	||
-|racoon|/system/bin/racoon||	 
-|mtpd|/system/bin/mtpd||	 
-|keystore|/system/bin/keystore||	 
-|dumpstate|/system/bin/dumpstate||	 
-|sshd|/system/bin/start-ssh||
-|mdnsd|/system/bin/mdnsd|||
+| main类型的服务 |        对应的可执行文件         |                说明                 |
+| :------------: | :-----------------------------: | :---------------------------------: |
+|      netd      |        /system/bin/netd         |                                     |
+|   debuggerd    |      /system/bin/debuggerd      |                                     |
+|   ril-daemon   |        /system/bin/rild         |                                     |
+| surfaceflinger |   /system/bin/surfaceflinger    |                                     |
+|     zygote     |     /system/bin/app_process     | Android创建内部创建新进程的核心服务 |
+|      drm       |      /system/bin/drmserver      |                                     |
+|     media      |     /system/bin/mediaserver     |                                     |
+|    bootanim    |    /system/bin/bootanimation    |                                     |
+|    installd    |      /system/bin/installd       |                                     |
+| flash_recovery | /system/etc/install-recovery.sh |                                     |
+|     racoon     |       /system/bin/racoon        |                                     |
+|      mtpd      |        /system/bin/mtpd         |                                     |
+|    keystore    |      /system/bin/keystore       |                                     |
+|   dumpstate    |      /system/bin/dumpstate      |                                     |
+|      sshd      |      /system/bin/start-ssh      |                                     |
+|     mdnsd      |        /system/bin/mdnsd        |                                     |  |
 
-##属性服务
+## 属性服务
 众所周知在windows中有一个注册表机制，在注册表中提供了大量的key-value属性。在Android(或Linux)中也有类似的机制：属性服务（property service）。init在启动的过程中会启动属性服务（Socket服务），并且在内存中建立一块存储区域，用来存储这些属性。当读取这些属性时，直接从这一内存区域读取，如果修改属性值，需要通过Socket连接属性服务完成。在init.c文件中main函数通过property_service_init_action调用了start_property_service函数来启动属性服务。
 
 属性文件是由系统依次读取位于不同目录的配置文件，关于属性文件的解析也涉及到很多内容，这里就不去详细分析了，关键函数和路径如下：
@@ -421,12 +424,12 @@ getprop ro.build.product
 msm8916_32
 ```
 
-##Zygote
+## Zygote
 Zygote是Android中非常重要十分核心的一个服务，将由其去运行系统服务及孵化Activity进程等，接下来就好好分析一下Zygote。
 
 在Java中，不同的虚拟机实例会为不同的应用分配不同的内存，每一个实例都有它自己的核心库类文件和堆对象的拷贝。但Android系统如果为每一个应用启动不同的Dalvik虚拟机实例，就会消耗大量的内存以及时间。因此，为了克服这个问题，Android系统创造了”Zygote”。Zygote让Dalvik虚拟机共享代码、低内存占用以及最小的启动时间成为可能。Zygote是一个虚拟器进程，在系统引导的时候启动。Zygote预加载以及初始化核心库类。通常，这些核心类是只读的，也是Android SDK或者核心框架的一部分。
 
-###Zygote的启动
+### Zygote的启动
 首先，先看一下Zygote在相关zygote.rc文件中的定义：
 ```bash
 service zygote /system/bin/app_process -Xzygote /system/bin --zygote --start-system-server # 此处定义了启动zygote时会启动那些进程
@@ -560,7 +563,7 @@ void handle_signal(void)
 static int wait_for_one_process(int block) // 此函数中将发出restarting信号，然后init.c中的main函数收到此信号后将重启相应进程
 ```
 
-##Home Lanucher启动
+## Home Lanucher启动
 上ZygoteInit.java中mian函数在loop之前会调用一个关键函数startSystemServer，其除了准备一些参数外还将fork进程。其中就包括SystemServer，在SystemServer中最终会调用到ActivityManagerService，然后Home Lanucher就由ActivityManagerService中的方法来启动。关键源码和路径如下：
 ```bash
 # frameworks\base\services\java\com\android\server\SystemServer.java
@@ -578,7 +581,7 @@ boolean startHomeActivityLocked(int userId, String reason) {
 
 花了这么长的时间，终于把这个流程走完了。 不过还是有很多地方偷懒了，没有详细研究，只了解了一个大概，然后做了记录。如有错误请谅解！
 
-##Reference
+## Reference
 在我分析启动流程时，主要参考引用了如下地址，后3篇博文对init.c和init.rc分析得十分详细，感兴趣可以参考一下这几篇博文。
 [Android官网](http://developer.android.com/index.html)
 [Android设备启动流程](http://android.jobbole.com/67931/)

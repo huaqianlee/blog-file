@@ -1,7 +1,9 @@
 title: "pmic voter"
 date: 2019-05-15 23:48:59
-categories: Android
-tags: [源码分析,Qualcomm]
+categories:
+- Android Tree
+- Kernel
+tags: [源码分析,Power,Qualcomm]
 ---
 前不久在高通 SDM450 平台接触了 voter 机制（投票机制）。最近终于得空，结合一个问题简单研究了一下。现将研究流程简单记录一下,由于时间有限，所以是实用为目的，没有做详细的分析，不过结合着这篇分析和源码一起参考，应该能快速地应用 voter 做一些事情。
 

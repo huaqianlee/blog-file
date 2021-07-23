@@ -1,6 +1,8 @@
 title: "通过自定义侧边导航栏的RecyclerView动态加载布局"
 date: 2017-08-18 22:45:08
-categories: Android
+categories:
+- Android Tree
+- Application
 tags: App
 ---
 ## 准备布局文件

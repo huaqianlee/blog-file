@@ -1,11 +1,13 @@
 title: "Android中adb(Android Debug Bridge)命令的用法"
 date: 2015-07-19 19:29:58
-categories: Android
+categories:
+- Android Tree
+- Misc
 tags: [Tools,译文]
 ---
 　　昨天写Android日志系统相关博客时发觉自己对adb命令认知十分不够，所以特意去[http://developer.android.com/tools/help/adb.html](http://developer.android.com/tools/help/adb.html)学习了一下,今天准备按照自己的理解加以修改总结并整理出一篇博文。
 
-##概览
+## 概览
 　　adb是Android Debug Bridge的简写，按字面意思理解就是在开发者和Android之间搭建的一个debug桥。adb是一个连接仿真实例或者Android设备的命令行工具，是一个客服端-服务器模式的程序，包括如下三部分：
 　
 　　1. 一个运行在开发用的Android手机或者仿真器上面的client，我们可以通过adb命令调用client。其他像ADT插件和DDMS也会创建client。
@@ -16,7 +18,7 @@ tags: [Tools,译文]
 >adb tool 可以再<sdk>/platform-tools/中找到　
 
 <!--more-->
-##adb工具的构成关系
+## adb工具的构成关系
 　　当启动adb client时，client会检查是否有server在运行，若无则启动一个server进程。server进程启动后，会绑定到TCP端口号为5037的端口，然后监听从adb clients发送来的命令（所有adb clients 使用同一端口5037与server通信）。然后，server通过扫描手机或仿真器用到的5555到5585之间的奇数端口号，在所有运行的实例之间建立连接。server在发现adb daemon的地方为那个端口建立连接。每个仿真器或者设备需给console连接提供一个偶数端口号，为adb连接提供一个奇数端口号。例如：
 ```bash
 Emulator 1, console: 5554
@@ -27,33 +29,33 @@ and so on...
 ```
 >当server为所有仿真器创建了连接后,我们可以通过adb 命令进入这些实例,而且可以从任何client(或者script脚本)控制所有的仿真器.　
 
-##adb调试
+## adb调试
 　　首先需要同USB将电脑和设备相连,然后在开发者模式中打开USB debugging。4.2以上的系统默认都是隐藏了开发者模式，所以需要去到**Setting>About phone>**菜单下点击**Build number**七次以显示开发者模式,然后到开发者模式菜单下打开USB debugging。
 
-##语法
+## 语法
 　　我们能通过设备的命令行(shell终端)或者script脚本发出adb命令。用法如下：
 ```bash
 adb [-d|-e|-s <serialNumber>] <command>
 ```
 >如果仅仅一个仿真器或设备被连接,这adb命令将自己发送本机.如果有多个的话,需要用-d -s 或 -e来指明目标设备.　
 
-##adb命令详解
+## adb命令详解
 　
-####目标设备
+#### 目标设备
 ```bash
 -d      #指向连接的USB设备,如果USB设备超过一个则返回错误
 -e      #指向运行的仿真器,如果超过一个仿真器则返回错误
 -s<serialNumber>  #指向指定的仿真器或设备,如emulator-5556,详见下查询仿真器或设备
 ```
 　
-####通用
+#### 通用
 ```bash
 devices   #打印所有连接的仿真器或设备,见下查询仿真器或设备
 help    # 打印所有adb命令
 version   #打印adb工具的版本号
 ```
 　
-####调试
+#### 调试
 ```bash
 logcat [option] [filter-specs]    #打印log
 bugreport      #打印dumpsys,dumpstate及logcat日志
@@ -62,14 +64,14 @@ jdwp       #打印设备上的可用JDWP进程,可通过jdwp:<pid>连接指定JD
                 jdb -attach localhost:8000|
 ```
 　
-####数据
+#### 数据
 ```bash
 install <apk>          #安装apk到仿真器或设备
 pull <remote> <local>   #拷贝指定文件到PC
 push <local> <remote>   #拷贝指定文件到设备
 ```
 　
-####端口和网络
+#### 端口和网络
 ```bash
 forward <local> <remote>    #指定socket连接的PC端口号,仿真器或设备端口号,如下:
                                 tcp:<portnum>
@@ -79,7 +81,7 @@ forward <local> <remote>    #指定socket连接的PC端口号,仿真器或设备
 ppp <tty> [parm]...  #通过USB运行PPP,不应该无故打开PPP连接
 ```
 　
-####脚本语言
+#### 脚本语言
 ```bash
 get-serialno   #打印adb实体序列号,见下查询仿真器或设备
 get-state    #打印仿真器或设备adb状态
@@ -90,19 +92,19 @@ adb wait-for-device shell getprop # 一连上就getprop
 adb wait-for-device install <app>.apk #一连上就安装app
 ```
 　
-####Server
+#### Server
 ```bash
 start-server  #检查是否有server运行,若无,则启动
 kill-server   #终止server进程 
 ```
 　
-####Shell
+#### Shell
 ```bash
 shell #为仿真器或者设备打开一个远程shell终端,exit退出
 shell [shellCommand] #打开一个远程终端,执行某指令后退出
 ```
 
-###查询仿真器或者设备
+### 查询仿真器或者设备
 　　在执行adb命令前,我们可以通过命令去查看仿真器或设备的连接清单，命令如下:
 ```bash
 adb devices
@@ -126,7 +128,7 @@ emulator-5554  device
 emulator-5556  device
 emulator-5558  device
 ```
-###发送命令到指定仿真器或设备
+### 发送命令到指定仿真器或设备
 　　如果有多个仿真器或者设备同时运行，我们必须通过指定一个目标，否则将报错。我们可以通过-s来指定，用法如下：
 ```bash
 adb -s <serialNumber> <command>  #serialNumber可以用adb devices查看
@@ -136,14 +138,14 @@ adb -s emulator-5556 install helloWorld.apk
 ```
 　　如果有多个实例有效，只有一个仿真器，我们可以通过-e来指定仿真器。反之，若只有一个Android 设备，我们可以同-d来指定。
 
-###安装app
+### 安装app
 　　adb工具提供了从pc拷贝apk并安装到指定仿真器或设备的命令，不过必须指定.apk文件的路径，如下
 ```bash
 adb install <path_to_apk>
 ```
 >Android studio/Eclipse也是通过adb安装apk的，不过其ADT插件已经封装了这个过程
 
-###端口转发
+### 端口转发
 　　我们可以用forward命令设置任意端口为forwarding端口，转发指定主机端口到仿真器或设备上的一个不同端口。也能设置转发到抽象的UNIX域sockets，如下：
 ```bash
 adb forward tcp:6100 tcp:7100 #设置主机端口6100转发到目标端口7100
@@ -151,7 +153,7 @@ adb forward tcp:6100 tcp:7100 #设置主机端口6100转发到目标端口7100
 adb forward tcp:6100 local:logd 
 ```
 
-###导入导出文件
+### 导入导出文件
  　　我们可以通过pull命令从仿真器或设备导出任意路径的文件，通过push导入文件到仿真器或设备的任意路径，如下：
 ```bash
 #remote 仿真器或设备文件路径 local PC文件路径
@@ -159,7 +161,7 @@ adb pull <remote> <local> #导出文件
 adb push <local> <remote> #导入文件
 ```
 
-##通过无线使用adb
+## 通过无线使用adb
 　　虽然我们通常连接USB来使用adb，但是我们也能通过WiFi来使用。
 1. 让Android设备与PC处于同一WiFi网络环境，不过并不是所有的接入点都能成功，我们需要防火墙配置正确来支持adb。
 　
@@ -202,7 +204,7 @@ List of devices attached
 adb kill-server
 adb start-server
 ```
-##其他命令
+## 其他命令
 　　虽然官方文档已经介绍得挺详细了，但还是有一些命令没介绍到，如下：
 ```bash
 adb uninstall <package name> #卸载指定app，参数为包名

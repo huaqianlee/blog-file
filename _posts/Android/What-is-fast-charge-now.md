@@ -1,6 +1,8 @@
 title: "常用的快充技术简介"
 date: 2017-11-13 00:01:36
-categories: Android
+categories:
+- Android Tree
+- Misc
 tags: [Qualcomm, MTK]
 ---
 技术发展越来越快，快充技术也一样，那现在怎么样才能算快充，有哪些快充技术呢？
