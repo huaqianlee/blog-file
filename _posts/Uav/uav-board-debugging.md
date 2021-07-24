@@ -1,6 +1,8 @@
 title: "无人机开发主板调试"
 date: 2016-04-02 21:01:57
-categories: Uav
+categories:
+- Discovery
+- Uav
 tags: 调试
 ---
 

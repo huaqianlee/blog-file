@@ -1,6 +1,8 @@
 title: "Gitbook + Jenkins + Gitlab 搭建内网自动构建的 Gitbook"
 date: 2019-05-05 20:04:59
-categories: Git
+categories:
+- Tools
+- Git
 tags:
 ---
 最近在本地搭建了一个 Gitbook ，用于内网访问。总结一下简单流程形成此文，细节设置可以参考官网。

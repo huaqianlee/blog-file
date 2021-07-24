@@ -1,6 +1,8 @@
 title: "PX4 for Snapdragon Flight"
 date: 2017-03-25 19:45:25
-categories: Uav
+categories:
+- Discovery
+- Uav
 tags: 
  - PX4
 ---

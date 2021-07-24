@@ -1,6 +1,8 @@
 title: 原来你是这样的 VCS！
 date: 2020-11-13 00:01:38
-categories: Git
+categories:
+- Tools
+- Git
 tags: [Tools,Repo]
 ---
 

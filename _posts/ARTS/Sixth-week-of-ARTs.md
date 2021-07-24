@@ -1,6 +1,8 @@
 title: "The sixth week of ARTs"
 date: 2019-10-06 22:44:44
-categories: ARTS
+categories:
+- Laboratory
+- ARTS
 tags: [Algorithm, 成长]
 ---
 # Algorithm

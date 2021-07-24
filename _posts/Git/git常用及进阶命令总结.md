@@ -1,6 +1,8 @@
 title: "Git常用及进阶命令总结"
 date: 2015-06-11 22:10:41
-categories: Git
+categories:
+- Tools
+- Git
 tags: Tools
 ---
 　　Git是Linux撞始人Linus Towards花一周写出来的分布式版本控制系统，大神终究是大神，这么牛逼的东西只需要一周。之前花了一百多刀买了Linus的原版自传《Just for fun》，基本上是他自己写的，很幽默，有兴趣可以看看。Linus很傲，但是傲得有资本，唯一能无视Jobs的现实扭曲力场，对Jobs的盛情邀请say no转身而去的人。　
@@ -10,7 +12,7 @@ tags: Tools
 **最重要的命令: git <command> --help**
 
 <!--more-->
-##Git配置
+## Git配置
 ```bash
 git config --global user.name "huaqianlee"   
 git config --global user.email "huaqianlee@gmail.com" 
@@ -25,8 +27,8 @@ git config -l  # 列举所有配置
 ```
 >用户的git配置文件~/.gitconfig
 
-##Git常用及进阶命令
-###常用命令
+## Git常用及进阶命令
+### 常用命令
 ```bash
 git help  #查看帮助，命令忘记了就靠它
 git init    #初始化话目录为git仓库
@@ -35,20 +37,20 @@ git clean -fX  # 删除无用文件
 git clean # 删除所有untracked文件
 ```
 
-###添加
+### 添加
 ```bash
 git add file   #添加文件到暂存区
 git add .        #将所有修改或者新加文件添加到暂存区
 git add -A     # 添加所有文件(除删除的文件,自动 git rm)  
 ```
 
-###删除
+### 删除
 ```bash
 git rm file         #删除文件
 git rm <file> --cached  # 从版本库中删除文件，但不删除文件
 ```
 
-###撤销回退
+### 撤销回退
 ```bash
 git checkout -- xx  #撤销xx文件修改
 git checkout .     #撤销工作区修改
@@ -66,7 +68,7 @@ git add (--all)/git rm/... # 当上次提交异常时，不能成功撤销，需
 git revert --continue # 处理完后，重新提交
 ```
 
-###提交
+### 提交
 ```bash
 git commit  <file> #提交单个文件
 git commit –m “description”   #提交暂存区到服务器
@@ -75,7 +77,7 @@ git commit -am "some comments"
 git commit --amend      # 修改最后一次提交记录
 ```
 
-###查看状态记录
+### 查看状态记录
 ```bash
 git status        #查看仓库状态
 git show ($id)  # 显示某次提交的内容
@@ -89,7 +91,7 @@ git log -- grep "name" # 搜索包含name的log
 git log record-ID  -l -p #查看指定ID记录，-l:显示一行，-p:显示详细修改
 ```
 
-###查看差异
+### 查看差异
 ```bash
 git diff <file>     # 比较当前文件和暂存区文件差异
 git diff   #比较所有文件
@@ -101,7 +103,7 @@ git diff --cached   # 比较暂存区和版本库差异
 git diff --stat     # 仅仅比较统计信息
 ```
 
-###本地分支管理  
+### 本地分支管理  
 ```bash
 git branch  #查看本地分支
 git branch  -r    # 查看远程分支
@@ -132,14 +134,14 @@ git checkout -b newbranch <last_commit> # 依据需要合并的最后一条 comm
 git rebase --onto master <first_commit>^  # 从新分支中需要合并的第一条 commit 开始合并
 ```
 
-###补丁应用
+### 补丁应用
 ```bash
 git diff > ../sync.patch         # 生成补丁
 git apply ../sync.patch          # 打补丁
 git apply --check ../sync.patch  # 测试补丁能否成功
 ```
 
-###暂存管理
+### 暂存管理
 ```bash
 git stash  #暂存当前工作，恢复现场后可继续工作
 git stash list  #查看暂存文件列表
@@ -148,7 +150,7 @@ git stash drop  #删除暂存文件
 git stash pop  #恢复并删除文件
 ```
 
-###远程分支管理
+### 远程分支管理
 ```bash
 git pull                         # 抓取远程仓库所有分支更新并合并到本地
 git pull --no-ff                 # 抓取远程仓库所有分支更新并合并到本地，不要快进合并
@@ -165,7 +167,7 @@ git push origin <local_branch>:<remote_branch>  # 创建远程分支
 git push origin :<remote_branch>  #先删除本地分支(git br -d <branch>)，然后再push删除远程分支
 ```
 
-###远程仓库管理
+### 远程仓库管理
 ```bash
 git remote  #查看远程库的信息
 git remote –v  #查看远程库地址和名称
@@ -185,7 +187,7 @@ git push -u origin develop  # 首次将本地develop分支提交到远程develop
 git remote set-head origin master   # 设置远程仓库的HEAD指向master分支
 ```
 
-###命令设置跟踪远程库和本地库
+### 命令设置跟踪远程库和本地库
 ```bash
 git branch --set-upstream master origin/master
 git branch --set-upstream develop origin/develop

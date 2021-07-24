@@ -1,6 +1,8 @@
 title: "Oh, the Git! - Basic"
 date: 2019-11-17 23:38:05
-categories: Git
+categories:
+- Tools
+- Git
 tags: [Tools]
 ---
 # Preface

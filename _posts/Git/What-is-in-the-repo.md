@@ -1,6 +1,8 @@
 title: What is in the .repo?
 date: 2020-10-17 11:20:25
-categories: Git
+categories:
+- Tools
+- Git
 tags: [Tools,Repo]
 ---
 

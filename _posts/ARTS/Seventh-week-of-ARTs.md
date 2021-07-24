@@ -1,6 +1,8 @@
 title: "The seventh week of ARTs"
 date: 2019-10-13 22:45:09
-categories: ARTS
+categories:
+- Laboratory
+- ARTS
 tags: [Algorithm, 成长]
 ---
 # Algorithm

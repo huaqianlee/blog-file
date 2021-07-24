@@ -1,6 +1,8 @@
 title: "The third week of ARTS: Repo"
 date: 2019-09-13 16:34:02
-categories: ARTS
+categories:
+- Laboratory
+- ARTS
 tags: [Algorithm, 成长]
 ---
 # Algorithm

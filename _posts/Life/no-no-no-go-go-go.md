@@ -1,6 +1,8 @@
 title: "no no no, go go go"
 date: 2017-07-20 19:29:53
-categories: Life
+categories:
+- Balderdash
+- Life
 tags: 成长
 notshow: true
 ---

@@ -1,6 +1,8 @@
 title: "手机无人机常用sensor介绍"
 date: 2016-05-07 00:12:14
-categories: Uav
+categories:
+- Discovery
+- Uav
 tags:
 ---
 

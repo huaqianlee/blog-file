@@ -1,6 +1,8 @@
 title: "Four years"
 date: 2017-09-19 18:59:10
-categories: Life
+categories:
+- Balderdash
+- Life
 tags: 成长
 ---
   ......

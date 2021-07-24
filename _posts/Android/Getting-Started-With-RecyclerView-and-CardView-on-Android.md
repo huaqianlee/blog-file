@@ -1,7 +1,7 @@
 title: "Getting Started With RecyclerView and CardView on Android"
 date: 2017-11-08 22:23:59
 categories:
-- Andrdoid Tree
+- Android Tree
 - Application
 tags: App
 ---

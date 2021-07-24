@@ -1,6 +1,8 @@
 title: "The fourth week of ARTS"
 date: 2019-09-22 22:44:01
-categories: ARTS
+categories:
+- Laboratory
+- ARTS
 tags: [Algorithm, 成长]
 ---
 # Algorithm

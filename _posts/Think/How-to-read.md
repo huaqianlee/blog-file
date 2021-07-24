@@ -1,6 +1,8 @@
 title: How to read
 date: 2014-11-01 00:26:22
-categories: Think
+categories:
+- Balderdash
+- Thinking
 tags: Experience
 ---
 　　我这里想谈的是关于技术等方面学习的阅读. 不知道其他人怎么样,关于我一直以来总是有一个错误的方法去阅读书籍.　　

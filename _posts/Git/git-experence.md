@@ -1,6 +1,8 @@
 title: "Git 常见问题集"
 date: 2015-10-22 12:49:10
-categories: Git
+categories:
+- Tools
+- Git
 tags: Tools
 ---
 ## 问题一 .gitignore无效，不能过滤某些文件或路径。

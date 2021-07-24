@@ -1,6 +1,8 @@
 title: "所买的书"
 date: 2017-03-24 21:47:41
-categories: Life
+categories:
+- Balderdash
+- Life
 tags: 成长
 ---
 ![myBooks](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/mybooks.jpg)

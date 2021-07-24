@@ -1,6 +1,8 @@
 title: "Ashamed"
 date: 2017-03-17 19:53:12
-categories: Life
+categories:
+- Balderdash
+- Life
 tags: 成长
 ---
 惭愧! 惭愧!

@@ -1,6 +1,8 @@
 title: "The eighth week of ARTs"
 date: 2019-10-20 22:52:39
-categories: ARTS
+categories:
+- Laboratory
+- ARTS
 tags: [Algorithm, 成长]
 ---
 

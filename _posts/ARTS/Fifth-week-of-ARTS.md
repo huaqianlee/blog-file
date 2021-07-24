@@ -1,6 +1,8 @@
 title: "The fifth week of ARTS"
 date: 2019-09-29 22:44:56
-categories: ARTS
+categories:
+- Laboratory
+- ARTS
 tags: [Algorithm, 成长]
 ---
 # Algorithm

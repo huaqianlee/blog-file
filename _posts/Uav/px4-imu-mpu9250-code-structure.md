@@ -1,6 +1,8 @@
 title: "PX4之外设代码结构及流程-IMU"
 date: 2017-03-29 22:08:54
-categories: Uav
+categories:
+- Discovery
+- Uav
 tags: [PX4]
 ---
 最新PX4的代码库有很大的改变，使用了一个轻量级的、统一的驱动抽象层：DriverFramework。 POSIX和 QuRT的驱动都写入这个驱动框架当中。

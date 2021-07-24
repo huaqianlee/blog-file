@@ -1,6 +1,8 @@
 title: "高通无人机8074 BLSP接口说明"
 date: 2016-04-27 00:11:58
-categories: Uav
+categories:
+- Discovery
+- Uav
 tags:
 ---
 ## 概述

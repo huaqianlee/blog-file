@@ -1,6 +1,8 @@
 title: "How does the repo of android source code work ?"
 date: 2019-09-15 17:40:17
-categories: Git
+categories:
+- Tools
+- Git
 tags: [Tools,Repo]
 ---
 在 `android` 源码中，主要用 [**Repo**](https://android.googlesource.com/tools/repo) 和 [**Git**](https://git-scm.com/) 来进行版本管理。`Repo` 是一个由谷歌构建，运行在 Git 之上的仓库管理工具，其让多项目管理变得更容易，尤其对于基本的网络操作，譬如，下载由上百个项目组成的 Android 源码。

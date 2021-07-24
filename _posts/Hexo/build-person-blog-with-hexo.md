@@ -1,6 +1,8 @@
 title: Build person blog with hexo and  github
 date: 2014-10-24 01:12:15
-categories: Hexo
+categories:
+- Tools
+- Hexo
 tags: Tools
 ---
 　　基于Hexo和Github的个人博客构建，我参照[hexo你的博客](http://ibruce.info/2013/11/22/hexo-your-blog/)、[hexo官方文档](http://hexo.io/docs/)及[github官方文档](https://help.github.com/articles/set-up-git/)完成了自己的个人blog。通过前段时间学习Android和这些天build自己的github、个人blog，关于学习新东西有一个新的体会，就是官方文档和帮助是最好的资料，虽然是英文的，但是看官方的源文档能提升自己的效率。
@@ -22,7 +24,7 @@ $ hexo d -g
 - [Markdown_cn](http://wowubuntu.com/markdown/#overview)
 ---
 
-##Github　　
+## Github　　
 
 要成功构建blog首先得有Github账号和Github　Pages. 　　
 
@@ -30,18 +32,18 @@ $ hexo d -g
 - 建立一个与用户名对应的repository来构建Github　pages,仓库名必须为your_user_name.github.com或者your_user_name.github.io．也可以[creating pages with the automatic generator](https://help.github.com/articles/creating-pages-with-the-automatic-generator/).
 - [添加ssh公钥到Github](https://help.github.com/articles/generating-ssh-keys/),如果安装[Github for windows](https://windows.github.com/)可以省掉这一步,因为软件已经自动生成了.
 
-##环境安装　　
+## 环境安装　　
 
 安装hexo十分容易，不过在安装之前需要先做一些准备工作：　　
 
 - [Node.js](http://nodejs.org/)
 - [Git](http://git-scm.com/)　　
 
-###安装git　　
+### 安装git　　
 
 关于Git版本我个人安装[msysgit](http://msysgit.github.io/)；如果装[Github for windows](https://windows.github.com/)，其会自动为电脑安装git，而且还有另外一个好处，它会自动为github创建一个ssh密匙，为我们省去很多工作。　　
 
-###安装Node.js　　
+### 安装Node.js　　
 
 最好的方法是通过[nvm](https://github.com/creationix/nvm)安装.　　
 
@@ -65,7 +67,7 @@ $ nvm install 0.10  #版本号
 
 当然也可以通过上面Node.js下载安装.　　
 
-###安装hexo　　
+### 安装hexo　　
 
 当上面的所有准备工作做好后,可以安装hexo通过npm.
 
@@ -73,7 +75,7 @@ $ nvm install 0.10  #版本号
 $npm install -g hexo
 ```
 
-###初始化
+### 初始化
 
 当Hexo安装完成后,运行接下来的命令,hexo将编译所有需要的文件到目标路径.
 
@@ -97,7 +99,7 @@ $ npm install
 
 详细配置信息及文件内容格式参照 [hexo configuration](http://hexo.io/docs/setup.html)
 
-###生成静态页面
+### 生成静态页面
 
 进入hexo目标目录,执行如下命令,生成静态文件至hexo\pulbic.
 
@@ -113,7 +115,7 @@ hexo server
 在浏览器输入<http://localhost:4000>即可看到效果.
 
 
-###写文章
+### 写文章
 
 执行如下命令,生成制定名称的文章至hexo\source\_post\pstName.md.
 ```bash
@@ -124,13 +126,15 @@ hexo new [layout] "postName"
 ```bash
 title: { { title } }
 date: { { date } }
-categories: # 添加
+categories:
+- Tools
+- # 添加
 tags:
 ---
 *注意大括号之间多加了空格,否则会被转义,而不能正常显示
 * 所有文件后面必须有个一个空格,否则会报错
 ```
-###fancybox (此段摘录自[hexo你的博客](http://ibruce.info/2013/11/22/hexo-your-blog/))
+### fancybox (此段摘录自[hexo你的博客](http://ibruce.info/2013/11/22/hexo-your-blog/))
 可能有人对这个Reading页面中图片的fancybox效果感兴趣，这个是怎么做的呢。
 很简单，只需要在你的文章*.md文件的头上添加photos项即可，然后一行行添加你要展示的照片：
 ```bash
@@ -157,18 +161,20 @@ photos:
 ```bash
 hexo new photo "photoPostName" #新建照片文章
 ```
-####description
+#### description
 markdown文件头中也可以添加description，以覆盖全局配置文件中的description内容，请参考下文_config.yml的介绍。
 ```bash
 title: hexo你的博客
 date: 2013-11-22 17:11:54
-categories: default
+categories:
+- Tools
+- default
 tags: [hexo]
 description: 你对本页的描述
 ---
 *hexo默认会处理全部markdown和html文件，如果不想让hexo处理你的文件，可以在文件头中加入layout: false。
 ```
-###文章摘要
+### 文章摘要
 在需要显示摘要的地方添加如下代码即可：
 ```bash
 以上是摘要
@@ -180,7 +186,7 @@ more以上内容即是文章摘要，在主页显示，more以下内容点击『
 hexo中所有文件的编码格式均是UTF-8。
 ```
 
-##主题安装
+## 主题安装
 
 到hexo的主题列表[Hexo Themes](https://github.com/hexojs/hexo/wiki/Themes)安装自己中意的主题.我比较喜欢简洁版的,所以clone安装的[winterland](https://github.com/winterland1989/hexo-theme-winterland).主题的安装方法基本每个主题的READEM.md都有描述.
 

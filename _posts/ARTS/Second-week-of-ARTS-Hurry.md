@@ -1,6 +1,8 @@
 title: "The second week of ARTS: Hurry"
 date: 2019-09-07 20:49:00
-categories: ARTS
+categories:
+- Laboratory
+- ARTS
 tags: [Algorithm, 成长]
 ---
 # Algorithm

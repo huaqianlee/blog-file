@@ -1,6 +1,8 @@
 title: "高通px4代码阅读笔记"
 date: 2016-05-11 21:45:25
-categories: Uav
+categories:
+- Discovery
+- Uav
 tags: 
  - PX4
  - 源码分析
