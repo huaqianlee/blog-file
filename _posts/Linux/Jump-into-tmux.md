@@ -1,5 +1,5 @@
 title: Jump into Tmux + Terminal
-date: 2021-04-29 23:06:19
+date: 2020-11-09 23:06:19
 categories:
 - Linux Tree
 - Misc

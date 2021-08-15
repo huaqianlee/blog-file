@@ -1,5 +1,5 @@
 title: 'Consolidating the foundation of Linux, vim tips'
-date: 2020-11-19 21:55:12
+date: 2020-11-05 21:55:12
 categories:
 - Linux Tree
 - Vim
@@ -17,7 +17,7 @@ Here is [Consolidating the foundation of Linux, vim](http://huaqianlee.github.io
 |                                | `apt install vim-gtk3 , or vim-gnome`                                          | Install gvim                                                                                         |
 |                                | `?ve[rsion]`                                                                   | Print the vim information                                                                            |
 |                                | `/etc/vim/vimrc`<br>`/usr/share/vim/vim81`                                     |                                                                                                      |
-|                                | `vimdiff`, `gvimdiff`, `:vert diffsplit`                                       | diff comparision                                                                                     |
+|                                | `vimdiff`, `gvimdiff`, `:vert diffsp[lit]`                                     | diff comparision                                                                                     |
 | **Help:**                      |                                                                                |                                                                                                      |
 |                                | `vimtutor`                                                                     | vim tutor with shell                                                                                 |
 |                                | `:help user-manual`                                                            | User manual overview                                                                                 |
@@ -51,9 +51,9 @@ Here is [Consolidating the foundation of Linux, vim](http://huaqianlee.github.io
 |                                | `:set [no]ic, 'ignorecase'`                                                    | ignore upper/lower case when searching or not                                                        |
 |                                | `\c`                                                                           | Ignore capital, likes `/ignor\c`,`:s/old\c/new/g`                                                    |
 |                                | `:set [no]is, 'incsearch'`                                                     | show partial matches for a search phrase or not                                                      |
-|                                | `sp[lit] vsp`                                                                  | `:help split`,Split screen horizontal or vertical                                                    |
+|                                | `sp[lit] vs[p]`                                                                | `:help split`,Split screen horizontal or vertical                                                    |
 |                                | `：vertical res/res + num`                                                     | Set the width or height                                                                              |
-|                                | `Ctrl-W + Ctrl-W/HJKL`                                                         | Move between/among splitted screens                                                                  |
+|                                | `Ctrl-W + W/HJKL`, `Ctrl-[Shift]-Tab`                                          | Move between/among splitted screens                                                                  |
 |                                | `Ctrl-W _`(resp. `Ctrl-W \|`)                                                  | Maximise the size of the split (resp. vertical split)                                                |
 |                                | `Ctrl-W +`(resp. `Ctrl-W -`)                                                   | Grow (resp. shrink) split                                                                            |
 |                                | `Ctrl-W =`                                                                     | Evenly allocate size                                                                                 |
@@ -77,7 +77,7 @@ Here is [Consolidating the foundation of Linux, vim](http://huaqianlee.github.io
 |                                | `[N]G, :N`                                                                     | Go to line N                                                                                         |
 |                                | `gg`,`G`                                                                       | Go to the start of the file, to last line                                                            |
 |                                | `w, e , b` `2w,3e`                                                             | Go to the start/end of next word, start of previous word                                             |
-|                                | `W,E,B`                                                                        | Go to the start/end of next/previous Group                                                           |
+|                                | `W,E,B`                                                                        | Go to the start/end of next/previous Group(including space)                                          |
 |                                | `fa/F`,`,` `;`                                                                 | Go to next/previous 'a' on the line,`3fa` go to 3rd 'a', `,` `;` next/previous                       |
 |                                | `t,/T` `,` `;`                                                                 | Go to before/after `,`, `,` `;` next/previous                                                        |
 |                                | `%`                                                                            | Go to next corresponding item, likes `([{}],#ifdef/#endif`)                                          |
@@ -146,8 +146,9 @@ Here is [Consolidating the foundation of Linux, vim](http://huaqianlee.github.io
 |                                | `ds"`, `dst`                                                                   | remove "" , HTML tab                                                                                 |
 |                                | `:1,10y`, `y10G`                                                               | yank 10 lines                                                                                        |
 |                                | `vim -c 'normal 5G36|'`                                                        | execute normal command to jump to  line 5 column 36                                                  |
-|                                | `\v`, `ve"0p`                                                                  | replace the word under the cursor, efficient with '*', 'n'                                           |
-| *move*                         | `f[ind]`, `t[ill]`                                                             |                                                                                                      |
+|                                | `\v`, `ve"0p`                                                                  | replace the word under the cursor, efficient with '*', 'n'. `\v` -> `viw"0p`                         |
+|                                | `:%s/**C-R /**/new/g`                                                          | replace the current searching(`C-R /`) content                                                       |
+| **move**                       | `f[ind]`, `t[ill]`                                                             |                                                                                                      |
 |                                | `gj`, `gk`                                                                     | move screen line                                                                                     |
 |                                | `(, )`                                                                         | previous / next senstence                                                                            |
 |                                | `{, }`                                                                         | previous / next paragraph                                                                            |
@@ -166,6 +167,8 @@ Here is [Consolidating the foundation of Linux, vim](http://huaqianlee.github.io
 |                                | `n, N`                                                                         | repeat the recent searching by /, ?                                                                  |
 |                                | `.`                                                                            | Repeat last change                                                                                   |
 | **Windows and Tabs**           | `help :tab`                                                                    |                                                                                                      |
+|                                | `:Ve, Te`                                                                      |                                                                                                      |
+|                                | `Click`                                                                        | Swith tabs, if click blank, create one tab                                                           |
 |                                | `Ctrl-w s,v`                                                                   | sp, vs                                                                                               |
 |                                | `Ctrl-w w,W`                                                                   | next or last                                                                                         |
 |                                | `Ctrl-W n`, `:new`                                                             | New window                                                                                           |
@@ -269,6 +272,8 @@ Here is [Consolidating the foundation of Linux, vim](http://huaqianlee.github.io
 |                                | `:copen`                                                                       | Open quickfix                                                                                        |
 |                                | `:cn`, `:cN, :cp`, `:cf, :cr`, `:cl`                                           | next, previous, first, last                                                                          |
 | **Coding**                     | `:set makeprg=make\ -j4`, `make`                                               | building                                                                                             |
+|                                | `:make`,`F5`                                                                   | build                                                                                                |
+|                                | `:AsyncRun ./test`                                                             | Run test asynchronously and redirect to quickfix window                                              |
 |                                | `gp, grepprg`                                                                  | 'help gp' for ':grep'                                                                                |
 |                                | `:set tw=64 fo+=n + gq`                                                        | set linewidth = 64, number list to format content of code                                            |
 |                                | `gq`, `:help gq`, `help fo-tale`                                               | Format the lines                                                                                     |
@@ -280,6 +285,8 @@ Here is [Consolidating the foundation of Linux, vim](http://huaqianlee.github.io
 |                                | `:help keywordprg`                                                             | to check help of K                                                                                   |
 |                                | `Ctrl-p`,`Ctrl-n`                                                              | Looking backforward, looking forward                                                                 |
 |                                | `Ctrl-X Ctrl-F`                                                                | autocomplete filename or directory, 'Ctrl-p', 'Ctrl-n' to choose                                     |
+|                                | `Ctrl-X Ctrl-K`                                                                | autocomplete vocabulary                                                                              |
+|                                | `Ctrl-X Ctrl-O`                                                                | autocomplete code                                                                                    |
 |                                | `gf`, `gx`                                                                     | Jump to the file, link under the cursor                                                              |
 |                                | `Ctrl-w f`                                                                     | Jump to the file and open a new window                                                               |
 | **Writing**                    |                                                                                |                                                                                                      |
@@ -288,14 +295,15 @@ Here is [Consolidating the foundation of Linux, vim](http://huaqianlee.github.io
 |                                | `:%s/\r$//`                                                                    | Dlelete <CR> of EOL, from DOS to Unix                                                                |
 |                                | `:help fo-table`                                                               | `t, c, q, r, o, l, n, w, a`, chinese: `m, M, B`                                                      |
 |                                | `:set fo+=r ..., -=r ...`                                                      | set option flags                                                                                     |
-|                                | `:set listchars`                                                               | highlight the end-of-line spaces and <LR>                                                            |
+|                                | `set listchars+=tab:>-,space:_`                                                | set the tab, end-of-line spaces and <LR>                                                             |
+|                                | `:set list | nolist`                                                           | highlight the end-of-line spaces and <LR>                                                            |
 |                                | `:set linebreak`                                                               | Wrap long lines at 'space, ', ., ?...' rather than at the last char                                  |
 |                                | `gq{motion}`                                                                   | Format the lines (like 72/80 chars each line)that {motion} moves over                                |
 |                                | `J`                                                                            | Connect mutiple lines to one line, the reverse of 'gq'                                               |
 | **Undotree**                   | `:UndotreeToggle`                                                              | Open undotree window                                                                                 |
 |                                | `J, K`                                                                         | move in history list                                                                                 |
-|                                | `:Rename`, `Move`                                                              | file handle                                                                                          |
-| **fzf**                        | `:Files`                                                                       | Open fuzzy matching to find unknown-name file                                                        |
+| **vim-eunuch**                 | `:Rename`, `Move`                                                              | file handle                                                                                          |
+| **fzf**                        | `:Files`,`:FZF`                                                                | Open fuzzy matching to find unknown-name file                                                        |
 | **Binary**                     | `vim -b`, `:e ++binary`                                                        | Edit binary                                                                                          |
 |                                | `gvim->tools->convert to Hex`                                                  |                                                                                                      |
 |                                | `:%!xxd`, `%!xxd -r`                                                           | Covert to Hex                                                                                        |
@@ -310,7 +318,7 @@ Here is [Consolidating the foundation of Linux, vim](http://huaqianlee.github.io
 |                                | `:G[it] pull, log ...`                                                         |                                                                                                      |
 |                                | `:Gwrite`, `:Gread`                                                            | Save and git add, git checkout or ...                                                                |
 |                                | `:Gmove`, `GRename`, `GDelete`                                                 |                                                                                                      |
-|                                | `:0Gclog`                                                                      | Check the history with quickfix                                                                      |
+|                                | `:[0]Gclog`                                                                    | Check the history with quickfix                                                                      |
 |                                | `:Git blame`, `:Git`, `:Gvdiff`                                                | git blame, git status, git diff --stage                                                              |
 | *`:G` to enter fugitive first* | `:help fugitive-staging-maps`                                                  |                                                                                                      |
 |                                | `s`, `u`                                                                       | git add, revoke 's'                                                                                  |
@@ -361,7 +369,8 @@ Here is [Consolidating the foundation of Linux, vim](http://huaqianlee.github.io
 |                                | `\|<cmd>`                                                                      | Execute cscope cmd in a new herizontal window                                                        |
 |                                | `\|\|<CMD>`                                                                    | Execute cscope cmd in a new vertical window                                                          |
 |                                | `apt install cscope`                                                           |                                                                                                      |
-|                                | `cscope  -b`                                                                   |                                                                                                      |
+|                                | `cscope -Rbq -i names.file `                                                   | Generate cscope database                                                                             |
+|                                | `cscope -Rbkq -i names.file `                                                  | Kernel mode                                                                                          |
 |                                | `g`                                                                            | find the global definition                                                                           |
 |                                | `s`                                                                            | find the reference of symbol                                                                         |
 |                                | `d`                                                                            | find the called function                                                                             |
@@ -427,7 +436,9 @@ eabar<Esc>  -> Modify foo under the cursor to foobar , ea -> append at end of fo
 @           -> execute
 q           -> stop to record
 @a          -> repeat modification
-`````
+qv			-> Select last selected content
+@@			-> repeat last macro
+```
 
 ## Register
 
@@ -458,8 +469,8 @@ Insert mode -> Ctrl-R<register>
 
 ## swith two contents 
 - `d` -> delete first content, unnamed register saved it
-- - `p` -> select next content, p , unnamed register will saved new content
-- - `P` -> Paste next content to first location 
+- `p` -> select next content, p , unnamed register will saved new content
+- `P` -> Paste next content to first location 
 
 ## Skills
 ```

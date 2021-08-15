@@ -1,5 +1,5 @@
 title: 'Consolidating the foundation of Linux, shell'
-date: 2021-04-29 23:08:16
+date: 2020-11-09 23:08:16
 categories:
 - Linux Tree
 - Shell
