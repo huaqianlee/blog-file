@@ -74,7 +74,7 @@ MIPI（Mobile Industry Processor Interface， 移动产业处理器接口） All
 CSI-2 替 MIPI 定义了两种高速数据传输接口（物理层选项）和一组控制接口的标准。
 - D-PHY 物理层选项
 - C-PHY 物理层选项
-- CCI(Camera Control Interface)
+- CCI (Camera Control Interface)
 
 ## D-PHY
 MIPI 联盟定义的常见的 D-PHY 接口支持高速（HS）和低速（LP）模式，为 1 路单向差分接口，分为：
