@@ -67,7 +67,7 @@ tags:
 - Write
     - Change story to your own
     - A few thoughts and ideas of books, movies, etc.
-    - Jornal
+    - Journal
     - Write what you hear (skip, guess, confirm the gaps not heard)
     - Edit & improve it.
     - Write/Comment online.
