@@ -1,7 +1,7 @@
 title: How to prepare SDK for Yocto Linux/Ubuntu on Qualcomm
 date: 2021-12-25 22:30:32
 categories:
-- Linux Treejnk
+- Linux Tree
 - Ycoto
 tags:
 ---
