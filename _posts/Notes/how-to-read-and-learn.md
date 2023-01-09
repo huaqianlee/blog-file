@@ -1,10 +1,12 @@
-title: how to read and learn?
-date: 2022-12-25 14:40:27
+title: How to read and learn?
+date: 2022-03-25 14:40:27
 categories:
 - Balderdash
 - Notes
 tags:
 ---
+> Reading notation. 
+
 # Reading
 
 ## Ways

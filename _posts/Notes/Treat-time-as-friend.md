@@ -1,5 +1,5 @@
 title: Treat time as friend
-date: 2022-12-25 14:39:38
+date: 2022-03-25 14:39:38
 categories:
 - Balderdash
 - Notes
