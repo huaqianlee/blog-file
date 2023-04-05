@@ -6,7 +6,7 @@ Andy Lee　
 
 **Welcome to my personal homepage !**
 
->*此博客主要记录我的学习笔记和一些经验想法，前期写文章时版权意识比较薄弱，有时会从找到的资源里直接截图或 copy ，要是不小心有侵权行为，烦请告知，我将第一时间删除！自己以后也会抽出时间梳理并移除相关内容。*
+>*此博客主要记录我的学习笔记和一些经验想法，前期写文章时版权意识比较薄弱，要是不小心有侵权行为，烦请告知，我将第一时间删除！*
 
 SUMMARY
 ------------------
@@ -27,5 +27,6 @@ CONTACT ME
 Github : [http://github.com/huaqianlee](http://github.com/huaqianlee)
 Twitter：[https://twitter.com/huaqianlee](https://twitter.com/huaqianlee)
 Facebook：[https://facebook.com/huaqianlee](https://facebook.com/huaqianlee)
+豆瓣: [https://www.douban.com/me](https://www.douban.com/people/huaqianlee/?_i=6991802SRZwd52)
 Wechat:
 ![Wechat](https://andylee-1258982386.cos.ap-chengdu.myqcloud.com/about/MyWechat.jpg)

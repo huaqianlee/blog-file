@@ -223,7 +223,7 @@ Ctrl + v # Block visual mode, Operate in uinits of blocks.
 
 ## More
 
-[Consolidating the foundation of Linux, vim tips](http://huaqianlee.github.io/2020/11/19/Linux/Consolidating-the-foundation-of-Linux-vim-tips/).
+[Consolidating the foundation of Linux, vim tips](http://huaqianlee.github.io/2020/11/05/Linux/Consolidating-the-foundation-of-Linux-vim-tips/).
 
 
 # CMDs

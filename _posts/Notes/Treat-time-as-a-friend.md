@@ -1,4 +1,4 @@
-title: Treat time as friend
+title: Treat time as a friend
 date: 2022-03-25 14:39:38
 categories:
 - Balderdash
