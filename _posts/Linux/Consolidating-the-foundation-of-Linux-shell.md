@@ -52,7 +52,7 @@ Here is some expression cheatsheet.
 |         | -le                | less than or equal to              |
 | String  | -z "$str1"         | str1 is empty or not               |
 |         | -n "$str1"         | str1 is not empty or not           |
-|         | "$str1" == "$str2" | str1 equals to str2 or not         |
+|         | "$str1" = "$str2" | str1 equals to str2 or not         |
 |         | "$str1" != "$str2" | str1 doesn't equals to str2 or not |
 |         | "$str1" =~ "$str2" | str1 includes str2 or not          |
 | File    | -f $filename       | is file                            |
@@ -60,8 +60,8 @@ Here is some expression cheatsheet.
 |         | -d $filename       | is directory                       |
 |         | -s $filename       | is not empty file                  |
 |         | ! -s $filename     | is empty file                      |
-| Logical | -o, \|\|           | or                                 |
-|         | -a, &&             | and                                |
+| Logical | -o, \|\|, or           | or                                 |
+|         | -a, &&, and             | and                                |
 > `man bash`
 
 # Syntax
@@ -448,7 +448,8 @@ Here is three ways to comment.
 
 ```bash
 # 1. 
-\#
+#
+
 # 2. 
 :'
 

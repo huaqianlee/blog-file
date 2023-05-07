@@ -16,6 +16,7 @@ tags:
 
 `4. In-depth reading is very easy to produce peace in heart.`
 深度阅读非常容易产生高心流  
+<!--more-->
 
 `5. For mental worker, the best rest is not to make up for sleep, but to do sports, especially what you like.`
 对脑力劳动者来说，最好的休息不是补觉，而是进行体育类运动，特别是你喜欢的  
