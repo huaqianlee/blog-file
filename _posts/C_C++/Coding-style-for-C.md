@@ -149,8 +149,8 @@ switch (action) {
 // Functions
 int main(int argc, char *argv[])
 {
-	// Do something ...
-	return 0;
+    // Do something ...
+    return 0;
 }
 ```
 
@@ -158,7 +158,7 @@ Note that the closing brace is empty on a line of its own, except in the cases w
 
 ```c
 do {
-	// Do something ...
+    // Do something ...
 } while (condition);
 ```
 
@@ -166,11 +166,11 @@ and
 
 ```c
 if (x == y) {
-	// Do something ...
+    // Do something ...
 } else if (x > y) {
-	// Do something ...
+    // Do something ...
 } else {
-	// Do something ...
+    // Do something ...
 }
 ```
 
@@ -188,19 +188,19 @@ and
 
 ```c
 if (condition)
-	do_this();
+    do_this();
 else
-	do_that();
+    do_that();
 ```
 
 This does not apply if only one branch of a conditional statement is a single statement, it must keep the consistency.
 
 ```c
 if (condition) {
-	do_this();
-	do_that();
+    do_this();
+    do_that();
 } else {
-	otherwise();
+    otherwise();
 }
 ```
 
@@ -208,20 +208,20 @@ All while and do statements must have braces when a loop contains more than a si
 
 ```c
 while (ture)
-	do_something();
+    do_something();
 
 do
-	do_something();
+    do_something();
 while (true);
 
 while (true) {
-	do_this();
-	do_that();
+    do_this();
+    do_that();
 }
 
 do {
-	do_this();
-	do_that();
+    do_this();
+    do_that();
 } while (true);
 ```
 
@@ -236,16 +236,16 @@ Parentheses () with key words and function policy.
 
 ```c
 if (condition) {
-	// Do something ...
+    // Do something ...
 }
 
 while (condition) {
-	// Do something ...
+    // Do something ...
 }
 
 void func(int arg1, int arg2)
 {
-	// Do something ...
+    // Do something ...
 }
 
 func(arg1, arg2);
@@ -309,9 +309,9 @@ and no space around the `.` and `->` structure member operators.
 The common approach is:
 ```c
 if (condition) {
-	// Do something ...
+    // Do something ...
 } else if (condition) {
-	// Do something ...
+    // Do something ...
 } else {
     // not handled cases or log message
 }
@@ -333,9 +333,9 @@ case 2:
     // Do something ...
     break;
 case 3:	{
-	int ret = 0;
-	// Do something ...
-	break;
+    int ret = 0;
+    // Do something ...
+    break;
 }
 default:
     // Do something ...
@@ -355,7 +355,7 @@ So, please
 - No Mixed Case
 - No encoding type within the name
 - Global variables only when necessary
-- Local variables short ant to the point
+- Local variables short and to the point
 
 If you find all your names could be Thing and Dolt then you should probably revisit your design.
 
@@ -500,13 +500,13 @@ Each variable gets its own type and line, although an exception can be made when
 
 ```c
 struct foo {
-	struct foo *next;	/* List of active foo */
-	struct mumble amumble;	/* Comment for mumble */
-	int bar;
-	unsigned int baz:1,	/* Bitfield; line up entries if desired */
-		     fuz:5,
-		     zap:2;
-	uint8_t flag;
+    struct foo *next;	/* List of active foo */
+    struct mumble amumble;	/* Comment for mumble */
+    int bar;
+    unsigned int baz:1,	/* Bitfield; line up entries if desired */
+                 fuz:5,
+                 zap:2;
+    uint8_t flag;
 };
 
 struct foo *foohead;		/* Head of global foo list */
@@ -547,9 +547,9 @@ If the macro is more than a single statement, use `do {...} while(0)`, so that a
 ```c
 #define MAX(a,b) ((a > b) ? a : b)
 #define	MACRO(v, w, x, y)   \
-	do {					\
-	v = (x) + (y);			\
-	w = (y) + 2;			\
+    do {					\
+    v = (x) + (y);			\
+    w = (y) + 2;			\
 } while (0)
 
 // Don't
@@ -601,8 +601,8 @@ Do not use the `extern` keyword with function declarations as this makes lines l
 /* .c file */
 int foo(int arg1, int arg2)
 {
-	// Do something
-	return 0;
+    // Do something
+    return 0;
 }
 
 /* .h file */
@@ -636,7 +636,7 @@ Inline functions should be in a .h file. If your inline functions are very short
 
 static incline bool is_error_size(int size)
 {
-	return IS_ERR(size);
+    return IS_ERR(size);
 }
 
 ```
@@ -738,7 +738,7 @@ Prefer inline functions, enums, and const variables to macros.
 #define  MAX(x,y)   (((x) > (y) ? (x) : (y))    // Get the maximum
 
 inline int max(int x, int y) {
-	 return (x > y ? x : y);
+    return (x > y ? x : y);
 }
 ```
 
@@ -749,8 +749,8 @@ Macros that affect control flow:
 ```c
 #define FOO(x)                              \
     do {                                    \
-            if (blah(x) < 0)                \
-                    return -EBUGGERED;      \
+        if (blah(x) < 0)                \
+            return -EBUGGERED;      \
     } while (0)
 ```
 
@@ -759,11 +759,11 @@ Macros that affect control flow:
 `ret` is a common name for a local variable,  `__foo_ret` is less likely to collide with an existing variable.
 
 ```c
-#define FOO(x)                          \
-({                                      \
-        typeof(x) ret;                  \
-        ret = calc_ret(x);              \
-        (ret);                          \
+#define FOO(x)                      \
+({                                  \
+    typeof(x) ret;                  \
+    ret = calc_ret(x);              \
+    (ret);                          \
 })
 ```
 
@@ -773,13 +773,13 @@ Macros that affect control flow:
 
 ```c
 if (22 == foo)
-	start_thermo_nuclear_war();
+    start_thermo_nuclear_war();
 else if (19 == foo)
-	refund_lotso_money();
+    refund_lotso_money();
 else if (16 == foo)
-	infinite_loop();
+    infinite_loop();
 else
-	cry_cause_im_lost();
+    cry_cause_im_lost();
 
 
 #define   PRESIDENT_WENT_CRAZY  (22)
@@ -789,11 +789,11 @@ enum  {
 };
 
 if (PRESIDENT_WENT_CRAZY == foo)
-	start_thermo_nuclear_war();
-else if (WE_GOOFED            == foo)
-	refund_lotso_money();
-else if (THEY_DIDNT_PAY       == foo)
-	infinite_loop();
+    start_thermo_nuclear_war();
+else if (WE_GOOFED == foo)
+    refund_lotso_money();
+else if (THEY_DIDNT_PAY == foo)
+    infinite_loop();
 else
     happy_days_i_know_why_im_here();
 ```
@@ -809,12 +809,12 @@ Before:
 static void hid_process_event (struct hid_device *hid, struct hid_field *field,
                                   struct hid_usage *usage, __s32 value)
 {
-        hid_dump_input(usage, value);
-        if (hid->claimed & HID_CLAIMED_INPUT)
-                hidinput_hid_event(hid, field, usage, value);
+    hid_dump_input(usage, value);
+    if (hid->claimed & HID_CLAIMED_INPUT)
+        hidinput_hid_event(hid, field, usage, value);
 #ifdef CONFIG_USB_HIDDEV
-        if (hid->claimed & HID_CLAIMED_HIDDEV)
-                hiddev_hid_event(hid, usage->hid, value);
+    if (hid->claimed & HID_CLAIMED_HIDDEV)
+        hiddev_hid_event(hid, usage->hid, value);
 #endif
 }
 ```
@@ -823,23 +823,23 @@ After:
 ```c
 // include/linux/hiddev.h
 #ifdef CONFIG_USB_HIDDEV
-        extern void hiddev_hid_event (struct hid_device *, unsigned int usage,
-                                          int value);
+    extern void hiddev_hid_event (struct hid_device *, unsigned int usage,
+                                  int value);
 #else
-        static inline void hiddev_hid_event (struct hid_device *hid,
-                                                  unsigned int usage, int value)
-                                                 { }
+    static inline void hiddev_hid_event (struct hid_device *hid,
+                                          unsigned int usage, int value)
+                                         { }
 #endif
 
 // drivers/usb/hid_core.c
 static void hid_process_event (struct hid_device *hid, struct hid_field *field,
                                   struct hid_usage *usage, __s32 value)
 {
-        hid_dump_input(usage, value); 
-        if (hid->claimed & HID_CLAIMED_INPUT)
-                hidinput_hid_event(hid, field, usage, value);
-        if (hid->claimed & HID_CLAIMED_HIDDEV)
-                hiddev_hid_event(hid, usage->hid, value);
+    hid_dump_input(usage, value); 
+    if (hid->claimed & HID_CLAIMED_INPUT)
+        hidinput_hid_event(hid, field, usage, value);
+    if (hid->claimed & HID_CLAIMED_HIDDEV)
+        hiddev_hid_event(hid, usage->hid, value);
 }
 ```
 
@@ -849,21 +849,21 @@ Use `#if` MACRO not `#ifdef` MACRO. Someone might write code like:
 
 ```c
 #ifdef DEBUG
-        temporary_debugger_break();
+    temporary_debugger_break();
 #endif
 ```
 
 Always use `#if`, if you have to use the preprocessor. This works fine, and does the right thing, even if `DEBUG` is not defined at all (!)
 ```c
 #if DEBUG
-        temporary_debugger_break();
+    temporary_debugger_break();
 #endif
 ```
 
 If you really need to test whether a symbol is defined or not, test it with the defined() construct, which allows you to add more things later to the conditional without editing text that's already in the program:
 ```c
 #if !defined(USER_NAME)
- #define USER_NAME "C Language"
+#define USER_NAME "C Language"
 #endif
 ```
 
@@ -887,11 +887,11 @@ Is named so that the meaning of a true return is absolutely obvious.
 ```c
 // Don't
 if (true == is_valid())
-	do_something();
+    do_something();
 
 // Better
 if (is_valid())
-	do_something();
+    do_something();
 ```
 
 Otherwise:
@@ -909,21 +909,21 @@ if(0 == (size%2))
 ## Usually avoid Embedded Assignments
 
 ```c
-   a = b + c;
-   d = a + r;
+a = b + c;
+d = a + r;
 ```
 
 Should not be replaced by
 
 ```c
-   d = (a = b + c) + r;
+d = (a = b + c) + r;
 ```
 
 There is a time and a place for embedded assignment statements. In some constructs there is no better way to accomplish the results without making the code bulkier and less readable.
 
 ```c
 while (EOF != (c = getchar())) {
-      process the character
+    // process the character
 }
 ```
 
@@ -943,20 +943,20 @@ int fun(int a)
 
     buffer = kmalloc(SIZE, GFP_KERNEL);
     if (!buffer)
-            return -ENOMEM;
+        return -ENOMEM;
 
     if (condition) {
-            while (loop) {
-                    ...
-            }
-            result = 1;
-            goto out_free_buffer;
+        while (loop) {
+                ...
+        }
+        result = 1;
+        goto out_free_buffer;
     }
     ...
 out_free_buffer:
     // clean up the mess
-	kfree(buffer);
-	return result;
+    kfree(buffer);
+    return result;
 }
 ```
 
@@ -1013,10 +1013,10 @@ extern "C" {
 
 Always document a null body for a `for` or `while` statement so that it is clear that the null body is intentional and not missing code.
 ```c
-   while (*dest++ = *src++)
-   {
-         ;
-   }
+while (*dest++ = *src++)
+{
+    ;
+}
 ```
 
 ## Error Return Check Policy
@@ -1062,11 +1062,11 @@ If you do need a long statement, add comments to closing braces is good.
 ```c
 while (condition) {
     if (valid){
-		/* Do something ... */
-	/* if valid */
+        /* Do something ... */
+    /* if valid */
     } else {
-		// Do something ...
-	} /* not valid */
+        // Do something ...
+    } /* not valid */
 } /* end condition */
 ```
 
@@ -1077,12 +1077,13 @@ while (condition) {
 ```c
 void example()
 {
-	great looking code
+    do_something();
 
-	#if 0
-	// lots of code
-	#endif
-	// more code
+    #if 0
+    // lots of code
+    #endif
+
+    do_more();
 }
 ```
 
